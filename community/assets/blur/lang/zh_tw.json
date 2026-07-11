@@ -1,0 +1,15 @@
+{
+  "blur.midnightconfig.title": "模糊 (Blur) 配置",
+  "blur.midnightconfig.category.style": "樣式",
+  "blur.midnightconfig.category.screens": "屏幕",
+  "blur.midnightconfig.blurExclusions": "模糊排除",
+  "blur.midnightconfig.fadeTimeMillis": "淡入時間（毫秒）",
+  "blur.midnightconfig.fadeOutTimeMillis": "淡出時間（毫秒）",
+  "blur.midnightconfig.ease": "簡單動畫",
+  "blur.midnightconfig.radius": "半徑",
+  "blur.midnightconfig.gradientStart": "漸變起始色",
+  "blur.midnightconfig.gradientEnd": "漸變結束色",
+  "blur.midnightconfig.gradientStartAlpha": "漸變起始阿爾法通道",
+  "blur.midnightconfig.gradientEndAlpha": "漸變結束阿爾法通道",
+  "blur.midnightconfig.showScreenTitle": "顯示屏幕標題"
+}

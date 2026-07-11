@@ -1,0 +1,19 @@
+{
+  "drippyloadingscreen.background.color": "顏色 [HEX]",
+  "drippyloadingscreen.background.color.config": "配置顏色背景",
+  "drippyloadingscreen.background.color.config.color": "HEX顏色：",
+  "drippyloadingscreen.background.color.config.invalid_color": "§x你需要先輸入有效的HEX顏色！",
+  "drippyloadingscreen.background.color.desc": "一個簡單的十六進位制顏色背景。",
+  "drippyloadingscreen.elements.vanilla_bar": "原版式遊戲載入進度條[Drippy]",
+  "drippyloadingscreen.elements.vanilla_bar.color": "顏色 [HEX]",
+  "drippyloadingscreen.elements.vanilla_bar.desc": "這是一種類似原版的遊戲載入進度條。僅當使用Drippy佈局時才會顯示實際進度。",
+  "drippyloadingscreen.settings.allow_universal": "允許通用佈局：%s",
+  "drippyloadingscreen.settings.allow_universal.desc": "如果應用通用佈局到載入螢幕上。",
+  "drippyloadingscreen.settings.customize_loading_screen": "自訂載入螢幕",
+  "drippyloadingscreen.settings.early_fade_out_elements": "早期淡出元素：%s",
+  "drippyloadingscreen.settings.early_fade_out_elements.desc": "如果載入螢幕元素應該在背景之前開始淡出。",
+  "drippyloadingscreen.settings.fade_out_loading_screen": "淡出載入螢幕：%s",
+  "drippyloadingscreen.settings.fade_out_loading_screen.desc": "是否應淡出載入螢幕。",
+  "drippyloadingscreen.settings.wait_for_textures_in_loading": "在載入中等待材質：%s",
+  "drippyloadingscreen.settings.wait_for_textures_in_loading.desc": "如果模組應在載入螢幕中等待紋理以防止\n重新載入資源時螢幕閃爍。\n\n如果您遇到卡頓，請停用此功能。"
+}

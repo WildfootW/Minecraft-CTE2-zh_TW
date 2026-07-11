@@ -1,0 +1,11 @@
+{
+  "gui.day": "天",
+  "gui.hour": "小時",
+  "gui.minus": "減",
+  "gui.minute": "分鐘",
+  "gui.plus": "加",
+  "gui.reset": "重設",
+  "gui.second": "秒",
+  "minecraft.blocks": "方塊",
+  "minecraft.blocks.counting": "%s 個方塊"
+}

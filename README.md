@@ -13,13 +13,16 @@ Craft to Exile 2(CTE2)v1.1.3 模組包的完整台灣繁體中文化(繁中機�
 
 翻譯原則:Path of Exile 概念採**流亡黯道(Garena 台服)慣用譯名**(昇華、傳奇、詞綴、通貨、混沌石…),Minecraft 原版詞彙採台灣官方譯名(終界、地獄、苦力怕…),任務書與物品名稱**雙向對齊**(任務叫你拿的東西,名字跟物品顯示一致)。詳細規範見 [docs/](docs/)。
 
+此外,repo 內建了社群翻譯包(見下方[社群翻譯來源](#社群翻譯來源與致謝)),涵蓋其餘 200+ 個一般模組(暮光森林、Botania、家具、村莊結構等),打包後**一個資源包搞定全部**。
+
 ## 目錄結構
 
 ```
-resourcepack/   資源包原始檔(pack.mcmeta + assets/**/lang/zh_tw.json,共 63 個模組命名空間)
+resourcepack/   本專案翻譯原始檔(pack.mcmeta + assets/**/lang/zh_tw.json,63 個模組命名空間)
+community/      內建的社群翻譯包(已依優先序合併,約 770 個 lang 檔 + Patchouli 手冊翻譯)
 ftbquests/      任務書翻譯(chapters/、reward_tables/、chapter_groups.snbt)
 docs/           翻譯規範、術語表、英中標題對照表(title_map.tsv)
-build.ps1       一鍵把 resourcepack/ 打包成資源包 zip
+build.ps1       一鍵打包:community/ 墊底 + resourcepack/ 覆蓋 → 單一資源包 zip
 ```
 
 ---
@@ -97,16 +100,6 @@ resourcePacks:["vanilla","mod_resources", ... ,"resources/CTE2-v1.1.3-zh_tw-Wild
 
 > 編輯 options.txt 前務必先關閉遊戲,否則會被遊戲覆寫。
 
-## 步驟 7(選配,強烈建議):一般模組漢化
-
-本包專注於 CTE2 核心內容 + 無人翻譯的模組;其餘 200+ 個一般模組(暮光森林、Botania、家具、村莊結構等)建議再疊社群漢化包:
-
-- **ModsTranslationPack**(1.20.x 通用模組漢化)
-- **ParaTranslationPack**(補充漢化)
-- **CTE2 舊版社群漢化包**(如毛餅 v0.9.5 包,可補到更多雜項)
-
-全部放進同一個 `config\openloader\resources\` 資料夾,並在資源包選單中**排在本包之下**(options.txt 裡排在本包**之前**)。載入順序:愈後面優先度愈高,本包保持最後,確保 CTE2 核心內容以本包為準。
-
 ## 完成!
 
 進世界後:任務書(背包裡的書或快捷鍵)、Mine and Slash 介面(預設 `H`)、裝備 tooltip、進生態域的標題卡、村民對話,應該都是繁體中文了。
@@ -122,13 +115,31 @@ CurseForge 更新模組包會重置 `config\ftbquests\quests\`,重做「步驟 4
 任務書檔案(步驟 4)要裝在**伺服器端**的 `config\ftbquests\quests\`;資源包(步驟 2-3、6)裝在**每個玩家的客戶端**。
 
 **Q:部分物品還是英文?**
-可能是步驟 7 的社群包沒裝,或該模組本來就沒有任何翻譯。歡迎開 issue 回報。
+該模組可能本來就沒有任何中文翻譯(本包 + 內建社群包已涵蓋絕大多數)。歡迎開 issue 回報。
 
 **Q:為什麼 repo 不直接放 zip?**
 純文字檔對 git 友善(可 diff、可 PR、改一行不用重傳整包),zip 由 `build.ps1` 隨時可重建。
 
-## 授權與致謝
+## 社群翻譯來源與致謝
 
-- 翻譯文本為 Claude(Anthropic)機器翻譯,未經全面人工校對,如有錯漏歡迎開 issue 回報
+`community/` 內建的社群翻譯包取自巴哈姆特 Minecraft 板的 CTE2 漢化分享串(依打包時的疊合優先序,由低到高):
+
+| 包 | 說明 |
+|---|---|
+| ModsTranslationPack-1.20.x | 1.20.x 通用模組繁中包(含 Patchouli 手冊翻譯) |
+| ParaTranslationPack-1.20.x | 補充翻譯包(LICENSE 見 [docs/](docs/)) |
+| Craft-to-Exile-2-v0.6.2 | CTE2 舊版社群漢化 |
+| Craft-to-Exile-2-v0.9.2-vk | CTE2 舊版社群漢化(vk) |
+| CTE2-v0.9.5-maobing | CTE2 舊版社群漢化(毛餅) |
+
+來源討論串:
+- https://forum.gamer.com.tw/C.php?bsn=18673&snA=202909
+- https://forum.gamer.com.tw/C.php?bsn=18673&snA=204101
+
+感謝以上社群譯者的貢獻。若原作者對收錄方式有任何意見,請開 issue 聯繫,將立即配合處理。
+
+## 授權
+
+- 本專案新增之翻譯文本(resourcepack/、ftbquests/)為 Claude(Anthropic)機器翻譯,未經全面人工校對,如有錯漏歡迎開 issue 回報
 - Craft to Exile 2 及各模組之內容版權歸原作者所有;本 repo 僅含翻譯文本,不含任何模組程式或素材
 - 術語參考:流亡黯道(Path of Exile 台服)、Minecraft 台灣官方譯名

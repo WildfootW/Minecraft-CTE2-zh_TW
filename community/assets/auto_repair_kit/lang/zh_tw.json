@@ -1,0 +1,11 @@
+{
+  "auto_repair_kit.name": "自動修復工具包",
+  "item.auto_repair_kit.leather_kit": "皮革修復工具包",
+  "item.auto_repair_kit.iron_kit": "鐵修復工具包",
+  "item.auto_repair_kit.gold_kit": "金修復工具包",
+  "item.auto_repair_kit.diamond_kit": "鑽石修復工具包",
+  "item.auto_repair_kit.netherite_kit": "獄髓修復工具包",
+  "auto_repair_kit.charges": "充能次數：%1$s / %2$s",
+  "auto_repair_kit.charge_mats": "可為工具包充能的物品：",
+  "auto_repair_kit.press_shift": "按下 [Shift] 以查看如何為工具包充能。"
+}

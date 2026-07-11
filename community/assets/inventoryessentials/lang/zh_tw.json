@@ -1,0 +1,23 @@
+{
+  "key.categories.inventoryessentials": "物品欄基本功能",
+  "key.inventoryessentials.single_transfer": "轉移一個",
+  "key.inventoryessentials.single_transfer_modifier": "轉移一個（按住）",
+  "key.inventoryessentials.bulk_transfer": "轉移所有該類型",
+  "key.inventoryessentials.bulk_transfer_modifier": "轉移所有該類型（按住）",
+  "key.inventoryessentials.bulk_transfer_modifier_1": "轉移所有該類型（按住）",
+  "key.inventoryessentials.bulk_transfer_all": "轉移所有",
+  "key.inventoryessentials.bulk_transfer_all_modifier": "轉移所有（按住）",
+  "key.inventoryessentials.bulk_drop": "大量丟棄",
+  "key.inventoryessentials.bulk_drop_modifier": "大量丟棄（按住）",
+  "key.inventoryessentials.bulk_drop_modifier_1": "大量丟棄（按住）",
+  "key.inventoryessentials.screen_bulk_drop": "從螢幕上大量丟棄",
+  "key.inventoryessentials.screen_bulk_drop_modifier": "從螢幕上大量丟棄（按住）",
+  "key.inventoryessentials.drag_transfer": "懸停轉移（按住）",
+  "config.inventoryessentials.title": "物品欄基本功能",
+  "config.inventoryessentials.forceClientImplementation": "強制客戶端實現（僅限開發）",
+  "config.inventoryessentials.forceClientImplementation.tooltip": "即使在已安裝該模組的伺服器上也使用客戶端實現 - 這僅對開發目的有用。",
+  "config.inventoryessentials.allowBulkTransferAllOnEmptySlot": "允許在空插槽上轉移所有",
+  "config.inventoryessentials.allowBulkTransferAllOnEmptySlot.tooltip": "如果點擊了一個空插槽，是否應該轉移所有物品？",
+  "config.inventoryessentials.whereDidTheConfigsGo": "配置已移至控制",
+  "config.inventoryessentials.whereDidTheConfigsGo.tooltip": "您現在可以進入控制選項並解除綁定相應的物品欄基本功能鍵！"
+}

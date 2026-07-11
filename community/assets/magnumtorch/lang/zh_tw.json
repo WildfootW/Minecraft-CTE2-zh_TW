@@ -1,0 +1,15 @@
+{
+  "block.magnumtorch.diamond_magnum_torch": "鑽石萬能火把",
+  "block.magnumtorch.emerald_magnum_torch": "綠寶石萬能火把",
+  "block.magnumtorch.amethyst_magnum_torch": "紫水晶萬能火把",
+  "block.magnumtorch.magnum_torch.info": "在一大片範圍內阻止怪物生成。",
+  "block.magnumtorch.magnum_torch.info.more": "按住 %s 以查看更多資訊",
+  "block.magnumtorch.magnum_torch.info.shift": "Shift",
+  "block.magnumtorch.magnum_torch.info.mob_types": "生物類型：%s",
+  "block.magnumtorch.magnum_torch.info.blacklist": "黑名單：%s",
+  "block.magnumtorch.magnum_torch.info.whitelist": "白名單：%s",
+  "block.magnumtorch.magnum_torch.info.shape_type": "形狀：%s",
+  "block.magnumtorch.magnum_torch.info.horizontal_range": "水平範圍：%s",
+  "block.magnumtorch.magnum_torch.info.vertical_range": "垂直範圍：%s",
+  "itemGroup.magnumtorch.main": "萬能火把"
+}

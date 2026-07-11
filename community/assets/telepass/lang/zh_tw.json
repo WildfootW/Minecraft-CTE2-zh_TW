@@ -1,0 +1,10 @@
+{
+  "config.telepass.diamond_durability": "定義鑽石傳送器的使用次數 [預設：1000]",
+  "config.telepass.gold_durability": "定義黃金傳送器的使用次數 [預設：15]",
+  "item.telepass.diamond_telepass": "鑽石傳送器",
+  "item.telepass.dimension": "§c連結的玩家§r %s §c在另一個維度中，傳送已取消§r",
+  "item.telepass.gold_telepass": "黃金傳送器",
+  "item.telepass.offline": "§c連結的玩家§r %s §c離線中，傳送已取消§r",
+  "item.telepass.self": "§c你不能傳送到自己！§r",
+  "itemGroup.telepass": "傳送器"
+}
