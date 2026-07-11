@@ -100,6 +100,14 @@ resourcePacks:["vanilla","mod_resources", ... ,"resources/CTE2-v1.1.3-zh_tw-Wild
 
 > 編輯 options.txt 前務必先關閉遊戲,否則會被遊戲覆寫。
 
+## 步驟 7(選配):H 鍵輪盤選單中文化
+
+按 `H` 的輪盤選單(MineMenu)文字存在**設定檔**而非語言檔,資源包翻不到。要中文化的話,**先關閉遊戲**,把 repo 的 `extras\minemenu\menu.json` 複製到:
+
+```
+<實例>\minemenu\menu.json
+```
+
 ## 完成!
 
 進世界後:任務書(背包裡的書或快捷鍵)、Mine and Slash 介面(預設 `H`)、裝備 tooltip、進生態域的標題卡、村民對話,應該都是繁體中文了。
