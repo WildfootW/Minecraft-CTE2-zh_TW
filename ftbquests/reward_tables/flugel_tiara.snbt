@@ -16,7 +16,7 @@
 					variant: 1
 				}
 			}
-			title: "芙魯格 造型"
+			title: "天翼族之冠 原版造型"
 		}
 		{
 			icon: "botania:quartz_dark"
@@ -124,5 +124,5 @@
 			title: "究極巨雞 造型"
 		}
 	]
-	title: "芙魯格頭飾（Flugel Tiara）"
+	title: "天翼族之冠"
 }
