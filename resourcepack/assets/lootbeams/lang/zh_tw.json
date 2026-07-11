@@ -1,0 +1,10 @@
+{
+  "lootbeams.vanilla_rarity.common": "普通",
+  "lootbeams.vanilla_rarity.uncommon": "罕見",
+  "lootbeams.vanilla_rarity.rare": "稀有",
+  "lootbeams.vanilla_rarity.epic": "史詩",
+  "lootbeams.mod_rarity.non_soul": "非魂魄",
+  "lootbeams.lightconfig.lighteffectfilter.whitelist_by_tag.desc": "格式與資料包格式相同，以「#」開頭。",
+  "lootbeams.light_config.lightEffectFilter.blacklist_by_tag.desc": "格式與資料包格式相同，以「#」開頭。",
+  "lootbeams.lightconfig.beam.allow_use_name_color_as_beam_color.desc": "當內部提供者與設定皆未提供顏色時，模組將使用名稱顏色作為光柱顏色"
+}

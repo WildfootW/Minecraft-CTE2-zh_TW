@@ -1,0 +1,13 @@
+{
+  "message.vrapi.no_api_server": "伺服器未安裝 API 模組；模組化 VR 功能可能無法運作！",
+  "message.vrapi.version_mismatch": "版本不符！伺服器版本為 %d，但你的版本為 %d！",
+
+
+  "message.vrapi.dev.in_vr": "現在正在偽裝成 VR 模式！",
+  "message.vrapi.dev.out_of_vr": "不再偽裝成 VR 模式！",
+  "category.vrapi.dev_keys": "mc-vr-api 開發者按鍵",
+  "key.vrapi.position_left": "設定控制器 1 位置",
+  "key.vrapi.position_right": "設定控制器 0 位置",
+  "key.vrapi.position_hmd": "設定頭戴顯示器位置",
+  "key.vrapi.toggle_vr": "切換 VR 模式"
+}

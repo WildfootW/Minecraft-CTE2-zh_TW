@@ -1,0 +1,14 @@
+{
+  "badwithernocookiereloaded.general.tooltip": "可取消的全域基本音效與事件",
+  "badwithernocookiereloaded.xtra.tooltip": "可取消的額外區域性音效",
+  "badwithernocookiereloaded.localized settings.silenceus": "範例：entity.sheep.step－其他音效請使用 /listen",
+
+  "text.autoconfig.bwncr.title": "Bad Wither No Cookie - Reloaded",
+  "text.autoconfig.bwncr.option.general": "一般",
+  "text.autoconfig.bwncr.option.general.silenceWither": "靜音凋零",
+  "text.autoconfig.bwncr.option.general.silenceTrader": "靜音商人",
+  "text.autoconfig.bwncr.option.general.silenceDragon": "靜音終界龍",
+  "text.autoconfig.bwncr.option.general.silenceLightning": "靜音閃電",
+  "text.autoconfig.bwncr.option.general.silenceUs": "靜音本模組",
+  "text.autoconfig.bwncr.option.general.debugMode": "除錯模式"
+}

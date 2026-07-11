@@ -1,0 +1,53 @@
+{
+	"weaponmaster_ydm.screen":"YDM's Weapon Master",
+	"key.weaponmaster_ydm.category":"YDM's Weapon Master",
+	"key.weaponmaster_ydm.opengui":"開啟設定",
+	"weaponmaster_ydm.screen2":"更多設定",
+	"weaponmaster_ydm.screen3":"黑名單/白名單設定",
+	"weaponmaster_ydm.screen4":"傳奇物品設定",
+	"weaponmaster_ydm.screen.reset_to_previous": "重置",
+	"weaponmaster_ydm.screen.reset": "重置",
+	"weaponmaster_ydm.screen.reset_to_null":"全部重置為 0",
+	"weaponmaster_ydm.screen.blacklist": "黑名單",
+	"weaponmaster_ydm.screen.whitelist": "白名單",
+	"weaponmaster_ydm.screen.addtext":"新增",
+	"weaponmaster_ydm.screen.shiftscroll":"Shift+滾輪",
+	"weaponmaster_ydm.screen.remove":"移除",
+	"weaponmaster_ydm.screen.save":"儲存",
+	"weaponmaster_ydm.screen.copy_server_settings":"複製伺服器設定",
+
+	"gui.weaponmaster_ydm.slot.scale":"縮放：",
+
+	"gui.weaponmaster_ydm.slot.posx":"位置 X：",
+	"gui.weaponmaster_ydm.slot.posy":"位置 Y：",
+	"gui.weaponmaster_ydm.slot.posz":"位置 Z：",
+
+	"gui.weaponmaster_ydm.slot.rotx":"旋轉 X：",
+	"gui.weaponmaster_ydm.slot.roty":"旋轉 Y：",
+	"gui.weaponmaster_ydm.slot.rotz":"旋轉 Z：",
+
+	"weaponmaster_ydm.screen.other_settings":"更多",
+	"weaponmaster_ydm.screen.shield":"盾牌",
+	"weaponmaster_ydm.screen.banner":"旗幟",
+
+	"weaponmaster_ydm.screen.mainhand":"主手",
+	"weaponmaster_ydm.screen.offhand":"副手",
+	"weaponmaster_ydm.screen.quiver":"箭袋",
+
+	"gui.weaponmaster_ydm.attach.head":"頭部",
+	"gui.weaponmaster_ydm.attach.body":"身體",
+	"gui.weaponmaster_ydm.attach.larm":"左臂",
+	"gui.weaponmaster_ydm.attach.rarm":"右臂",
+	"gui.weaponmaster_ydm.attach.lleg":"左腿",
+	"gui.weaponmaster_ydm.attach.rleg":"右腿",
+	"gui.weaponmaster_ydm.rotate":"拖曳以旋轉",
+	"gui.weaponmaster_ydm.slot.shield":"盾牌",
+	"gui.weaponmaster_ydm.slot.banner":"旗幟",
+	"gui.weaponmaster_ydm.slot.mainhand":"主手",
+	"gui.weaponmaster_ydm.slot.offhand":"副手",
+	"gui.weaponmaster_ydm.slot.quiver":"箭袋",
+	"gui.weaponmaster_ydm.mover":"修改位置的來源：",
+	"gui.weaponmaster_ydm.arrowright":"->",
+	"gui.weaponmaster_ydm.attach":"附加至身體部位："
+
+}

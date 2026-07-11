@@ -1,0 +1,17 @@
+{
+  "text.structurecredits.message": "§7歡迎來到：%1$s §7－作者：%2$s",
+  "text.structurecredits.message_dimensional_dungeon": "§7歡迎來到：%1$s §7－作者：%2$s",
+
+  "text.structurecredits.message_no_creator": "§7歡迎來到：%1$s",
+  "text.structurecredits.message_no_creator_dimensional_dungeon": "§7歡迎來到：%1$s",
+
+  "category.structurecredits.keys": "建築製作群",
+  "key.structurecredits.deactivate_key": "停用建築訊息",
+  "text.structurecredits.deactivated": "§7已停用建築訊息。",
+  "text.structurecredits.activated": "§7已啟用建築訊息。",
+
+  "key.structurecredits.show_again_key": "再次顯示建築訊息",
+  "key.structurecredits.dont_show_key": "不再顯示此建築的訊息",
+  "text.structurecredits.dont_show": "§7此建築將不會顯示訊息。",
+  "text.structurecredits.already_dont_show": "§7此建築已設定為不顯示訊息。"
+}

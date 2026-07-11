@@ -1,0 +1,7 @@
+{
+  "item.infinitygolem.infinity_golem_spawn_egg": "無限魔像刷怪蛋",
+  "entity.infinitygolem.infinity_golem": "無限魔像",
+  "entity.infinitygolem.shockwave": "震波",
+  "entity.infinitygolem.magma_blast": "岩漿爆破",
+  "attribute.infinitygolem.action_state": "行動狀態"
+}

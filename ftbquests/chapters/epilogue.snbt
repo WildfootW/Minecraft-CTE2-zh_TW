@@ -1,0 +1,1733 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "epilogue"
+	group: "1E3C4B5FFAE48A39"
+	icon: "bosses_of_mass_destruction:blazing_eye"
+	id: "5A7D6B87115D3B91"
+	order_index: 6
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["6149D163ABF06A15"]
+			description: [
+				"終於……你在各種冒險途中做的筆記,把你帶到了&eThe Otherside&r。"
+				""
+				"從你在&e主世界&r的卑微起點,到穿越&e地獄&r與&e幽暗地城（Underdark）&r的危險旅程,再到&e永晝之境（Everbright）&r與&e永曉之境（Everdawn）&r的相遇,以及在&e終界&r的九死一生,你如今終於來到了你認為是邪惡根源之處。"
+				""
+				"村子裡那位研究員是怎麼稱呼它的來著?&b原初泰坦（Primal Titans）&r之間的「爭執」?根據那位研究員所說,只要消滅在&e終界&r與&eThe Otherside&r出現的四隻元素生物應該就夠了。"
+				""
+				"準備好展開你的最終任務吧!把牠們殺掉之後,牠們應該不會再回來了吧……？"
+			]
+			icon: "minecraft:paper"
+			id: "749D138B0222E744"
+			rewards: [{
+				id: "6222458583FAAFB2"
+				item: "lightmanscurrency:coin_copper"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.25d
+			subtitle: "最後遺失的一頁"
+			tasks: [{
+				id: "67B1853D30A8EE31"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "原初邪惡"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["749D138B0222E744"]
+			description: [
+				"&e夜巫妖（Night Lich）&r棲息在&e終界&r&e水晶峭壁（Crystal Crags）&r中的&e巫妖塔（Lich Tower）&r裡。想找到這座建築,你可以合成&e靈魂之星（Soul Star）&r。使用&e靈魂之星&r會消耗掉它,並指出最近的&e巫妖塔&r方向!"
+				""
+				"&c夜巫妖最低會在等級90、神話（Mythic）稀有度時出現。&r"
+				""
+				"夜巫妖擁有:"
+				"&b+50% 物理轉冰冷傷害&r"
+				"&b+50% 冰凍機率&r"
+				"&b+25% 碎裂機率&r"
+				"&b+50% 元素抗性&r"
+				"&a15% 機率掉落希德符文（Sid Rune）&r"
+			]
+			id: "07EBFDA1B8808DAF"
+			rewards: [
+				{
+					id: "21701E1566499449"
+					item: "dungeon_realm:uber_fragment"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					icon: "ftb_ph:ascend"
+					id: "591C192B05D51076"
+					title: "昇華者 (1/4)"
+					type: "custom"
+				}
+			]
+			size: 1.25d
+			subtitle: "冰"
+			tasks: [{
+				entity: "bosses_of_mass_destruction:lich"
+				icon: "bosses_of_mass_destruction:ancient_anima"
+				id: "0A39027CB9F70D32"
+				type: "kill"
+				value: 1L
+			}]
+			title: "冰封之塔"
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["749D138B0222E744"]
+			description: [
+				"&e地獄拳套（Nether Gauntlet）&r可以在&eThe Otherside&r的&e繁花洞穴（Blooming Caverns）&r生態域中的&e拳套競技場（Gauntlet Arenas）&r裡找到。"
+				""
+				"&c地獄拳套最低會在等級90、神話稀有度時出現。&r"
+				""
+				"地獄拳套擁有:"
+				"&b+50% 物理轉火焰傷害&r"
+				"&b+75% 燃燒機率&r"
+				"&b+40% 閃避&r"
+				"&b+75% 火焰抗性&r"
+				"&a15% 機率掉落希德符文&r"
+			]
+			id: "005E75571665043C"
+			rewards: [
+				{
+					id: "100B3BFFAADCD105"
+					item: "dungeon_realm:uber_fragment"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					icon: "ftb_ph:ascend"
+					id: "656169856B5F549C"
+					title: "昇華者 (1/4)"
+					type: "custom"
+				}
+			]
+			size: 1.255d
+			subtitle: "火"
+			tasks: [{
+				entity: "bosses_of_mass_destruction:gauntlet"
+				icon: "bosses_of_mass_destruction:blazing_eye"
+				id: "67B908871A5282C2"
+				type: "kill"
+				value: 1L
+			}]
+			title: "熾熱深淵"
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["749D138B0222E744"]
+			description: [
+				"你可以在&eThe Otherside&r的&e回聲森林（Echoing Forests）&r中找到&e虛空之華（Void Blossom）&r。你可以使用&e虛空百合（Void Lilies）&r來指出這些&e虛空之華&r的方向。"
+				""
+				"&c虛空之華最低會在等級90、神話稀有度時出現。&r"
+				""
+				"虛空之華擁有:"
+				"&b+100% 物理轉混沌傷害&r"
+				"&b+33% 中毒機率&r"
+				"&b每秒回復1%生命值&r"
+				"&b+75% 混沌抗性&r"
+				"&c-25% 火焰抗性&r"
+				"&a15% 機率掉落希德符文&r"
+			]
+			id: "56B2B51011037E61"
+			rewards: [
+				{
+					id: "15F97D81BF787C79"
+					item: "dungeon_realm:uber_fragment"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					icon: "ftb_ph:ascend"
+					id: "78E77C83F56373C6"
+					title: "昇華者 (1/4)"
+					type: "custom"
+				}
+			]
+			size: 1.25d
+			subtitle: "混沌"
+			tasks: [{
+				entity: "bosses_of_mass_destruction:void_blossom"
+				icon: "bosses_of_mass_destruction:void_lily"
+				id: "507D5A8FDD10ECE3"
+				type: "kill"
+				value: 1L
+			}]
+			title: "蔓延藤蔓之地"
+			x: -1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["749D138B0222E744"]
+			description: [
+				"&e黑曜巨像（Obsidilith）&r棲息在&e終界&r&e太古水潭（Primordial Pools）&r中的&e黑曜巨像競技場（Obsidilith Arena）&r裡。"
+				""
+				"&c黑曜巨像最低會在等級90、神話稀有度時出現。&r"
+				""
+				"黑曜巨像擁有:"
+				"&b+100% 物理轉閃電傷害&r"
+				"&b+50% 通電機率&r"
+				"&b+25% 感電機率&r"
+				"&b+100% 護甲&r"
+				"&b+50% 閃電抗性&r"
+				"&a15% 機率掉落希德符文&r"
+			]
+			id: "6B2C722AC00A07C0"
+			rewards: [
+				{
+					id: "631C758E74857E09"
+					item: "dungeon_realm:uber_fragment"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					icon: "ftb_ph:ascend"
+					id: "4253CD136D9F9A5E"
+					title: "昇華者 (1/4)"
+					type: "custom"
+				}
+			]
+			size: 1.25d
+			subtitle: "雷電"
+			tasks: [{
+				entity: "bosses_of_mass_destruction:obsidilith"
+				icon: "bosses_of_mass_destruction:obsidian_heart"
+				id: "32DF2007C57A60F9"
+				type: "kill"
+				value: 1L
+			}]
+			title: "電流要塞"
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["749D138B0222E744"]
+			description: ["有人在你抵達前就已經清空了某個結構?你可以對任何&b原初泰坦的結構&r使用&e硫磺花蜜（Brimstone Nectar）&r來重置它們!"]
+			id: "71F71326D81053D9"
+			rewards: [{
+				id: "1E5C69E4282912F2"
+				item: "bosses_of_mass_destruction:brimstone_nectar"
+				type: "item"
+			}]
+			subtitle: "重置首領結構"
+			tasks: [{
+				id: "6BA69F80620210D3"
+				item: "bosses_of_mass_destruction:brimstone_nectar"
+				type: "item"
+			}]
+			title: "牠們回來了!"
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["749D138B0222E744"]
+			description: [
+				"當你一張又一張地圖打下去時,你聽見了另一個&e巫妖&r的回響……牠棲息在&e暮光森林（Twilight Forest）&r。一道新的傳送門出現了,你踏了進去,發現了一個全新的維度。"
+				""
+				"要進入暮光森林,你需要在&eThe Otherside&r的草地上做出一個2x2的淺水池,並讓周圍環繞著植物和/或樹葉。你可能需要自備草皮。接著丟入一顆鑽石,看著傳送門成形。"
+				""
+				"&l&c來自暮光森林的怪物最低會在等級90出現!&r&r"
+			]
+			id: "77E6AE329E337151"
+			rewards: [
+				{
+					count: 3
+					id: "0D4BA9A55B97BA9E"
+					item: "mmorpg:currency/affix_common_reroll"
+					type: "item"
+				}
+				{
+					id: "1488B29B5798BA1F"
+					item: "mmorpg:stone/4"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "終章"
+			tasks: [{
+				dimension: "twilightforest:twilight_forest"
+				icon: "twilightforest:twilight_portal_miniature_structure"
+				id: "51F52DF9B052A4B9"
+				title: "造訪暮光森林"
+				type: "dimension"
+			}]
+			title: "未知的彼方"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["77E6AE329E337151"]
+			description: [
+				"&e樹籬迷宮（Hedge Mazes）&r座落在&e暮光森林&r裡星羅棋布的小型空地間,對於初來乍到的探索者而言是相當奇特的景觀。就像散布在這片地景上的殘破石柱、紀念碑等地標一樣,人們對這些迷宮為何而建議論紛紛,至今仍未有定論。"
+				""
+				"典型迷宮的牆壁由樹籬方塊構成,茂密多刺的枝葉能阻止冒險者直接把彎曲的通道砍出一條路。螢火蟲和南瓜燈很常見,能為迷宮提供照明,與其他昏暗處形成對比。有時能在迷宮中看見樹冠樹(Canopy Trees),在樹籬牆中形成一種高聳的柱子。"
+				""
+				"樹籬迷宮另一個常見的主要特徵,是迷宮內部一些開放的小「房間」。這些房間內總是會有一個魔法刷怪磚,以及1到2個箱子和更多南瓜燈。牠們通常會生成&e敵對狼群、蟲群蜘蛛或樹籬蜘蛛&r,但與其他地方的刷怪磚不同,明亮的光線並不會阻止它們運作。"
+			]
+			id: "54B478D596CE17D6"
+			rewards: [
+				{
+					count: 2
+					id: "2D561080DD23BA36"
+					item: "lightmanscurrency:coin_gold"
+					type: "item"
+				}
+				{
+					id: "3C2A412FD724071E"
+					item: "mmorpg:currency/upgrade_common_affix"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "終章"
+			tasks: [{
+				icon: "twilightforest:hedge"
+				id: "01A930C680639445"
+				structure: "twilightforest:hedge_maze"
+				title: "尋找樹籬迷宮"
+				type: "structure"
+			}]
+			title: "天然迷宮"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["54B478D596CE17D6"]
+			description: ["&e敵對狼（Hostile Wolves）&r是只能在&e樹籬迷宮&r中找到的奇特狼群。傳說這些狼痛恨人類,因為人類總是偷走牠們的寶藏。可惜的是,這些狼無法被馴服。"]
+			icon: "doggytalents:dog_plushie_toy_item"
+			id: "2BE20402219A9B78"
+			rewards: [
+				{
+					count: 3
+					id: "5B3AB3D09BD7747A"
+					item: "mmorpg:material/meat/4"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "2D1C81F8C6BAB0D7"
+					item: "lightmanscurrency:coin_gold"
+					type: "item"
+				}
+			]
+			subtitle: "暮光森林"
+			tasks: [{
+				entity: "twilightforest:hostile_wolf"
+				icon: "ftb_ph:hostile_wolf"
+				id: "4C5ACBBF6C6B901D"
+				type: "kill"
+				value: 10L
+			}]
+			title: "無法無天的凶性"
+			x: 4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["54B478D596CE17D6"]
+			description: ["&e樹籬蜘蛛（Hedge Spiders）&r除了獨特的綠色之外,幾乎與一般主世界的蜘蛛一模一樣。這個物種與主世界同類唯一的差別,在於牠們能在光線明亮的&e樹籬迷宮&r中生成。傳說這些蜘蛛勇敢到足以從探索者手中守護牠們的寶藏。"]
+			icon: "chipped:stringy_cobweb"
+			id: "039BE2259D553B13"
+			rewards: [
+				{
+					count: 3
+					id: "22076FAC6370473E"
+					item: "mmorpg:material/farming/4"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "0D037E40BE697582"
+					item: "lightmanscurrency:coin_gold"
+					type: "item"
+				}
+			]
+			subtitle: "暮光森林"
+			tasks: [{
+				entity: "twilightforest:hedge_spider"
+				icon: "ftb_ph:hedge_spider"
+				id: "793117DC4193D9C8"
+				type: "kill"
+				value: 10L
+			}]
+			title: "受困"
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["77E6AE329E337151"]
+			description: [
+				"&e中空丘陵（Hollow Hills）&r從&e暮光森林&r原本平坦的地形中隆起,是顯眼的泥土土丘,內部藏著一個巨大的中空洞穴,裡頭滿是鐘乳石與石筍,其中一些是由珍貴礦石與礦物構成的。探索者發現這些巨大的圓頂丘陵共有三種不同大小,都大到足以被偵測到並標記在&e魔法地圖（Magic Map）&r上,並以相應的圖示標示其大小。有些丘陵被發現內部還切穿著其他洞穴與峽谷,因此那些在地底挖掘隧道的冒險者,可能在探索過程中發現自己身處某座丘陵內部。"
+				""
+				"小型丘陵直徑約30公尺,通常含有煤炭、鐵礦等基礎礦物,偶爾能發現紅石與螢光石。探索者可以期待找到幾個裝有常見工具與物品的寶箱,例如食物、箭、梯子和火把,但偶爾也可能找到珍貴的礦石磁鐵,連同一顆鑽石與&e鋼葉（Steeleaf）&r。&e蟲群蜘蛛、紅帽哥布林與狗頭人&r棲息在這些丘陵中,此外也有主世界常見的其他生物。"
+			]
+			id: "75103126CFA64857"
+			rewards: [
+				{
+					count: 2
+					id: "1C323A27F2B1118B"
+					item: "mmorpg:material/mining/4"
+					type: "item"
+				}
+				{
+					id: "111D5F6783D074B7"
+					item: "mmorpg:stone/4"
+					type: "item"
+				}
+			]
+			subtitle: "暮光森林"
+			tasks: [{
+				icon: "twilightforest:hollow_twilight_oak_log"
+				id: "54592C0A736AE877"
+				structure: "twilightforest:small_hollow_hill"
+				title: "尋找小型中空丘陵"
+				type: "structure"
+			}]
+			title: "小土丘"
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["54B478D596CE17D6"]
+			description: [
+				"&e納迦庭院（Naga Courtyard）&r是一座由各種石材與納迦石建成的大型封閉結構。在納迦庭院內部,有各式各樣暮光橡樹葉組成的樹籬、拋光安山岩與雕紋納迦石構成的柱子,以及其他裝飾特徵。結構中央有一個首領刷怪磚,裡頭關著&e納迦（Naga）&r。"
+				""
+				"擊殺納迦將解鎖進度中的下一座結構——&e巫妖塔&r,並移除該結構的保護。"
+				""
+				"&c納迦會以神話稀有度出現。&r"
+				""
+				"納迦擁有:"
+				"&b+100% 物理轉混沌傷害&r"
+				"&b+40% 中毒機率&r"
+				"&b+30% 混沌穿透&r"
+				"&b+50% 冰冷抗性&r"
+				"&b+50% 混沌抗性&r"
+			]
+			id: "09AFF8CC33BD244B"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: {
+						Count: 1
+						id: "minecraft:written_book"
+						tag: {
+							author: "Unknown"
+							generation: 3
+							pages: [
+								"{\"text\":\"Entry #12\n\nLast afternoon, Captain Cornelia went to the seabed in search of any additional resources. There are rumors among the crew that the real subject of her expedition is something else.\"}"
+								"{\"text\":\"More than a day has passed since the captain's dive. She was wearing the only diving suit we had, so we couldn't help her in any way. Worst of all, she had the master key with her. As our hopes of rescue dwindle, the threat of rebellion grows.\"}"
+							]
+							resolved: 1b
+							title: "Pillagers Ship Logbook"
+						}
+					}
+					id: "23AD45244978A5A3"
+					title: "2 技能點"
+					type: "custom"
+				}
+				{
+					id: "37776D6144DBDA7D"
+					item: "mmorpg:potions/full_reset_talent"
+					type: "item"
+				}
+				{
+					id: "529776CB2E015F07"
+					item: "mmorpg:potions/full_reset_spell"
+					type: "item"
+				}
+				{
+					id: "1F4F10A8BE8F9410"
+					item: "mmorpg:potions/full_reset_passive"
+					type: "item"
+				}
+				{
+					id: "59E013EF3A97101E"
+					item: "mmorpg:potions/full_reset_ascendancy"
+					type: "item"
+				}
+				{
+					id: "3CEAB295D78E83AA"
+					item: "mmorpg:potions/full_reset_stat"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "5D51EB762212D5EC"
+					item: "mmorpg:currency/socket_adder"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			size: 1.25d
+			subtitle: "終章"
+			tasks: [{
+				consume_items: true
+				id: "5408016296E2B4E9"
+				item: "twilightforest:naga_trophy"
+				type: "item"
+			}]
+			title: "獨蛇無二"
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["09AFF8CC33BD244B"]
+			description: [
+				"&e巫妖塔&r由單一中央尖塔構成,許多較小的塔樓與房間從側邊隨意突出,直接與下一座塔樓相連,或透過橋樑連接。"
+				""
+				"巫妖塔中會自然生成或透過刷怪磚生成大量敵對生物。常見的原版生物也會自然生成。&e死亡祕典（Death Tome）&r也會在巫妖塔中生成,而這是唯一能找到這種生物的結構。"
+				""
+				"為了解鎖巫妖塔,必須先擊敗&e納迦&r。"
+				""
+				"巫妖塔同時也是解鎖另外三個生態域與結構的關鍵:"
+				""
+				"- 驅散&e暮光沼澤（Twilight Swamp）&r周圍的蚊群,讓你能探索&e迷宮（Labyrinth）&r。"
+				"- 驅散籠罩&e黑暗森林（Dark Forest）&r的黑暗,讓你能探索&e哥布林騎士要塞（Goblin Knight Stronghold）&r。"
+				"- 驅散&e雪原森林（Snowy Forest）&r上空的暴風雪,讓你能進入&e雪怪洞穴（Yeti Cave）&r。"
+			]
+			id: "05E813C595DBC7AB"
+			rewards: [
+				{
+					count: 5
+					id: "550F848D0AFF9FDF"
+					item: "mmorpg:material/mining/4"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "7AC5E8E78128C2BA"
+					item: "lightmanscurrency:coin_gold"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "終章"
+			tasks: [{
+				icon: "twilightforest:lich_tower_miniature_structure"
+				id: "41B2B655D8ABB2AF"
+				structure: "twilightforest:lich_tower"
+				title: "尋找巫妖塔"
+				type: "structure"
+			}]
+			title: "力量之塔"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["05E813C595DBC7AB"]
+			description: [
+				"&e死亡祕典&r是漂浮在巫妖塔樓梯間與圖書館中的危險書籍。牠們會發射投射物,使命中的生物短暫減速。死亡祕典被擊中時偶爾會掉落書頁。"
+				""
+				"死亡祕典死亡時也可能掉落&e魔法地圖焦點（Magic Map Focus）&r。"
+				""
+				"死亡祕典擁有:"
+				"&b+50% 物理轉閃電傷害&r"
+				"&b+50% 物理轉混沌傷害&r"
+			]
+			icon: "mca:book_death"
+			id: "7CEF2BA760AB0B2E"
+			rewards: [
+				{
+					count: 2
+					id: "14CD63892C5E3F41"
+					item: "mmorpg:currency/socket_adder"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "3E5F010430704713"
+					item: "mmorpg:currency/affix_tier_up_down"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "5CB516DD49306C90"
+					item: "mmorpg:currency/enchant_reroll"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "792CBFC517AE25A6"
+					item: "mmorpg:currency/unique_reroll"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "30AE5F37C62C7EB7"
+					item: "lightmanscurrency:coin_gold"
+					type: "item"
+				}
+			]
+			subtitle: "暮光森林"
+			tasks: [{
+				entity: "twilightforest:death_tome"
+				icon: "ftb_ph:death_tome"
+				id: "154CA20889C9EDB5"
+				type: "kill"
+				value: 10L
+			}]
+			title: "魔法圖書館"
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["05E813C595DBC7AB"]
+			description: [
+				"&e暮光巫妖（Twilight Lich）&r,也常被簡稱為&e巫妖&r,棲息在&e巫妖塔&r頂端。牠外型是一具高大的人形骷髏,披著紫色斗篷,戴著碩大的金冠。牠周圍環繞著一圈盾牆,能保護自己免受任何傷害,但或許這些盾牌是能被打破的。"
+				""
+				"冒險者回報,只要抓準時機揮擊,就能把投射物彈開。每當玩家把巫妖的投射物反彈回去,牠就會失去一面盾牌。"
+				""
+				"&c巫妖會以神話稀有度出現。&r"
+				""
+				"巫妖擁有:"
+				"&b+100% 物理轉閃電傷害&r"
+				"&b+50% 通電機率&r"
+				"&b+25% 感電機率&r"
+				"&b+25% 閃電穿透&r"
+				"&b+75% 元素抗性&r"
+				"&b+50% 混沌抗性&r"
+				""
+				"&6此任務將解鎖戰役商店中的新商店。"
+			]
+			id: "1F3C2718AE550D5C"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: {
+						Count: 1
+						id: "minecraft:written_book"
+						tag: {
+							author: "Unknown"
+							generation: 3
+							pages: [
+								"{\"text\":\"Entry #12\n\nLast afternoon, Captain Cornelia went to the seabed in search of any additional resources. There are rumors among the crew that the real subject of her expedition is something else.\"}"
+								"{\"text\":\"More than a day has passed since the captain's dive. She was wearing the only diving suit we had, so we couldn't help her in any way. Worst of all, she had the master key with her. As our hopes of rescue dwindle, the threat of rebellion grows.\"}"
+							]
+							resolved: 1b
+							title: "Pillagers Ship Logbook"
+						}
+					}
+					id: "78E598DDB8CEEE03"
+					title: "2 技能點"
+					type: "custom"
+				}
+				{
+					id: "15E955610563E40C"
+					item: "dungeon_realm:uber_fragment"
+					type: "item"
+				}
+				{
+					id: "41295C50FCBC7A5D"
+					item: "mmorpg:gems/topaz/6"
+					type: "item"
+				}
+				{
+					id: "44C98A1EC1B45829"
+					item: "simplehats:toy_story_alien"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			size: 1.25d
+			subtitle: "終章"
+			tasks: [{
+				consume_items: true
+				id: "5156617EB99C3B38"
+				item: "twilightforest:lich_trophy"
+				type: "item"
+			}]
+			title: "首腦中的首腦"
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1F3C2718AE550D5C"]
+			description: [
+				"&e中空丘陵&r是絕佳的礦石與寶藏來源,丘陵越大,裡頭的戰利品就越珍貴。這些寶藏往往由黑暗中大量的危險生物所看守,粗心的探索者很容易因此喪命。可惜的是,丘陵似乎越大,住在裡面的生物也越多。探索者應牢記洞穴探勘的基本原則,絕不可直接往下挖進中空丘陵;而是應該從側面接近,並攜帶充足的光源來照亮內部,因為四處轉角都可能有刷怪磚。"
+				""
+				"中型丘陵直徑約60公尺,中心高度超過25公尺。內部空間變得更寬敞,但也因此吸引了更多、更致命的生物。這裡能找到金礦與青金石,偶爾也能看見鑽石與綠寶石,雖然較為罕見。隨著礦石價值提升,寶藏也水漲船高——中型丘陵通常能找到多達6個寶箱,裡頭裝有&e鐵木錠與變化粉末&r,以及月蟲女王、孔雀羽扇等獨特神器。&e火焰甲蟲與紅帽爆破手&r也住在中型丘陵裡,除此之外也能看見小型丘陵中出現的生物。"
+			]
+			id: "2820ABD72802B6F2"
+			rewards: [
+				{
+					count: 4
+					id: "4B00DACD9470CF87"
+					item: "mmorpg:material/mining/4"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "4A53AC07D15CF95F"
+					item: "mmorpg:stone/4"
+					type: "item"
+				}
+			]
+			subtitle: "暮光森林"
+			tasks: [{
+				icon: "twilightforest:hollow_time_log"
+				id: "583B2BF97EA1E832"
+				structure: "twilightforest:medium_hollow_hill"
+				type: "structure"
+			}]
+			title: "中型土丘"
+			x: 9.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1F3C2718AE550D5C"]
+			description: ["&e迷宮&r是與進度緊密相關的重要地標。牠外觀看似&e暮光沼澤&r中一座不起眼的小丘,但實際上通往一座地底結構的入口,內部有著綿延的迷宮通道。在迷宮的深層,一間被圍欄封閉的房間裡有個首領刷怪磚,關著&e菇蘑牛人（Minoshroom）&r。"]
+			id: "1C58F38B9890D6BA"
+			rewards: [
+				{
+					count: 2
+					id: "68678804DB1B0A4A"
+					item: "lightmanscurrency:coin_gold"
+					type: "item"
+				}
+				{
+					id: "6B43C3B5A633A10F"
+					item: "mmorpg:gems/opal/5"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "終章"
+			tasks: [{
+				icon: "twilightforest:maze_map"
+				id: "3E00882F2A14F4C6"
+				structure: "twilightforest:labyrinth"
+				title: "尋找迷宮"
+				type: "structure"
+			}]
+			title: "魔法迷宮"
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1C58F38B9890D6BA"]
+			description: [
+				"&e菇蘑牛人&r是一隻潛伏在&e迷宮&r底部囚牢中的小首領。&e菇蘑牛人&r是蘑菇牛與牛頭怪的詭異混種。"
+				""
+				"菇蘑牛人擁有:"
+				"&b+10 護甲穿透（依等級縮放）&r"
+				"&b+50% 命中率&r"
+				"&b+30% 物理抗性&r"
+				"&b+20% 生命回復&r"
+			]
+			icon: "twilightforest:minoshroom_trophy"
+			id: "78EB450B57F9B7E7"
+			rewards: [
+				{
+					count: 3
+					id: "19BA04335CBBAEF0"
+					item: "mmorpg:stone/4"
+					type: "item"
+				}
+				{
+					id: "4D369FC4FA80DC2F"
+					item: "mmorpg:currency/upgrade_common_affix"
+					type: "item"
+				}
+				{
+					count: 5
+					id: "02C4B1A5FC2F4BF9"
+					item: "mmorpg:currency/level_up_orb"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			size: 1.25d
+			subtitle: "終章"
+			tasks: [{
+				consume_items: true
+				id: "5BBA7A672D914F6C"
+				item: "twilightforest:minoshroom_trophy"
+				type: "item"
+			}]
+			title: "哞～～～～～"
+			x: 10.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1C58F38B9890D6BA"]
+			description: [
+				"&e迷宮史萊姆（Maze Slimes）&r是主世界史萊姆在&e暮光森林&r的變種。這些史萊姆呈灰色,並在&e迷宮&r中生成。"
+				""
+				"迷宮史萊姆擁有:"
+				"&b+25% 護甲&r"
+				"&b+25% 物理抗性&r"
+				"&b+50% 閃電抗性&r"
+			]
+			id: "26D545606AA14974"
+			rewards: [
+				{
+					id: "3C9B5B2C5838A9E2"
+					item: "mmorpg:stone/3"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "1D7B27AF6930907B"
+					item: "mmorpg:currency/orb_of_quality"
+					type: "item"
+				}
+			]
+			subtitle: "暮光森林"
+			tasks: [{
+				entity: "twilightforest:maze_slime"
+				icon: "twilightforest:mazestone"
+				id: "5F809DB4B920DBD2"
+				type: "kill"
+				value: 10L
+			}]
+			title: "混凝土……史萊姆?"
+			x: 10.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["78EB450B57F9B7E7"]
+			description: ["&e九頭蛇巢穴（Hydra Lair）&r外型類似巨大的&e中空丘陵&r,聳立在平坦沼澤地之上,為&e火焰沼澤（Fire Swamp）&r核心的多頭九頭蛇提供了天然巢穴。&e九頭蛇（Hydra）&r似乎親自把丘陵掏空,為自己提供了遮蔽,並迫使任何想挑戰牠的人都得正面迎擊。面對九頭蛇的區域也毫無植被或掩體,讓人無處可藏。"]
+			id: "1A2A1F3575A8159B"
+			rewards: [
+				{
+					count: 2
+					id: "4E1C822C955889FC"
+					item: "lightmanscurrency:coin_gold"
+					type: "item"
+				}
+				{
+					id: "1829DFB6A35F0F6B"
+					item: "mmorpg:gems/topaz/5"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "終章"
+			tasks: [{
+				icon: "twilightforest:hydra_chop"
+				id: "10F427A4198C5961"
+				structure: "twilightforest:hydra_lair"
+				title: "尋找九頭蛇巢穴"
+				type: "structure"
+			}]
+			title: "巢穴"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1A2A1F3575A8159B"]
+			description: [
+				"&e九頭蛇&r棲息在&e火焰沼澤&r中一座獨特、裂開的&e九頭蛇巢穴&r裡。九頭蛇外型是一頭巨大的生物,兩條粗短的腿支撐著寬闊的鱗甲身軀。多條蛇頸的末端是與終界龍略有幾分神似的頭部。整隻生物覆蓋著藍綠色與深藍色的鱗片。"
+				""
+				"&c九頭蛇會以神話稀有度出現。&r"
+				""
+				"九頭蛇擁有:"
+				"&b+100% 物理轉火焰傷害&r"
+				"&b+60% 燃燒機率&r"
+				"&b+40% 火焰穿透&r"
+				"&b+25% 傷害減免&r"
+				"&b+35% 閃電抗性&r"
+			]
+			id: "18C4B8D73A50CFAC"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: {
+						Count: 1
+						id: "minecraft:written_book"
+						tag: {
+							author: "Unknown"
+							generation: 3
+							pages: [
+								"{\"text\":\"Entry #12\n\nLast afternoon, Captain Cornelia went to the seabed in search of any additional resources. There are rumors among the crew that the real subject of her expedition is something else.\"}"
+								"{\"text\":\"More than a day has passed since the captain's dive. She was wearing the only diving suit we had, so we couldn't help her in any way. Worst of all, she had the master key with her. As our hopes of rescue dwindle, the threat of rebellion grows.\"}"
+							]
+							resolved: 1b
+							title: "Pillagers Ship Logbook"
+						}
+					}
+					id: "43D1F2E8681A6250"
+					title: "2 技能點"
+					type: "custom"
+				}
+				{
+					id: "06CDDFAA60B2313C"
+					item: "dungeon_realm:uber_fragment"
+					type: "item"
+				}
+				{
+					id: "442655A6C145A711"
+					item: "mmorpg:gems/emerald/6"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			size: 1.25d
+			subtitle: "終章"
+			tasks: [{
+				consume_items: true
+				id: "1A83F081741ED7A4"
+				item: "twilightforest:hydra_trophy"
+				type: "item"
+			}]
+			title: "多頭巨獸"
+			x: 13.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["78EB450B57F9B7E7"]
+			description: [
+				"&e米夫燉肉（Meef Stroganoff）&r相當有飽足感且效果強大,只要吃上一碗,就能讓任何冒險者獲得足夠的體力,探索最炎熱的生態域。"
+				""
+				"食用&e米夫燉肉&r後,玩家將獲得&e火焰沼澤&r與&e九頭蛇&r的進入權限。"
+			]
+			id: "7187E491F0DB8671"
+			rewards: [
+				{
+					count: 2
+					id: "5C46D448EFC87623"
+					item: "lightmanscurrency:coin_gold"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "4E328E95911DAEA1"
+					item: "mmorpg:currency/affix_tier_up_down"
+					type: "item"
+				}
+				{
+					id: "58D2C2F14A786F55"
+					item: "mmorpg:material/farming/4"
+					type: "item"
+				}
+				{
+					id: "7275AB1F3B39A5DF"
+					item: "mmorpg:material/meat/4"
+					type: "item"
+				}
+			]
+			subtitle: "暮光森林"
+			tasks: [{
+				id: "3D81F5F7AA614C5D"
+				item: "twilightforest:meef_stroganoff"
+				type: "item"
+			}]
+			title: "豐盛的一餐"
+			x: 12.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1F3C2718AE550D5C"]
+			description: [
+				"&e黑暗森林&r是一個植被茂密的生態域,濃密的樹冠幾乎擋住了森林地面上所有的光線。黑木樹是這個生態域中最常見的樹種,搭配一些較小的植被,如高草和花朵覆蓋著草地。偶爾會有蘑光菇生長在這個區域,提供微弱的光源。"
+				""
+				"儘管一片黑暗,殭屍和骷髏之類的怪物並不會在地表生成。然而,&e迷霧狼（Mist Wolves）&r和&e蜘蛛王（King Spiders）&r等其他怪物則會生成,讓穿越黑暗森林變得更加危險。"
+			]
+			id: "7E14A7756FB4B78B"
+			rewards: [
+				{
+					id: "7B40532F3F039222"
+					item: "mmorpg:material/farming/4"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "666D99C820AFA04B"
+					item: "lightmanscurrency:coin_gold"
+					type: "item"
+				}
+				{
+					id: "53505C138F5F5996"
+					item: "mmorpg:gems/tourmaline/5"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "終章"
+			tasks: [{
+				biome: "twilightforest:dark_forest"
+				icon: "twilightforest:canopy_sapling"
+				id: "3B00F80F4C4025E2"
+				title: "造訪黑暗森林"
+				type: "biome"
+			}]
+			title: "被黑暗蒙蔽雙眼"
+			x: 7.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["7E14A7756FB4B78B"]
+			description: [
+				"&e迷霧狼&r是在&e黑暗森林&r中生成的神秘怪物。這些怪物會在森林的黑暗中等待獵物。牠們在黑暗中會變得透明,只有在光線明亮的地方才會顯出實體。如果牠們在黑暗中攻擊玩家,牠們的攻擊可能使玩家失明,但這種狀態似乎不會在光源附近發生。"
+				""
+				"迷霧狼擁有:"
+				"&b+50% 物理轉混沌傷害&r"
+				"&b+30% 閃避率&r"
+				"&b+30% 法術閃避率&r"
+				"&b+25% 元素抗性&r"
+			]
+			icon: "outer_end:ender_roots"
+			id: "700E3C92E9C27B04"
+			rewards: [
+				{
+					count: 2
+					id: "63E33F53FF3193C1"
+					item: "mmorpg:gems/azurite/5"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "58F31A094952CF4B"
+					item: "lightmanscurrency:coin_gold"
+					type: "item"
+				}
+			]
+			subtitle: "暮光森林"
+			tasks: [{
+				entity: "twilightforest:mist_wolf"
+				icon: "ftb_ph:mist_wolf"
+				id: "493B46FB942D8A16"
+				type: "kill"
+				value: 10L
+			}]
+			title: "隱匿於迷霧中"
+			x: 9.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["7E14A7756FB4B78B"]
+			description: [
+				"&e蜘蛛王&r只會在&e黑暗森林&r中出現,牠們現身的第一個跡象通常是黑暗中發出紅光的雙眼。牠們的體型、速度與韌性都是一般蜘蛛的兩倍,背上還騎著一名&e骷髏德魯伊（Skeleton Druid）&r,使其成為難以應付的強敵。"
+				""
+				"蜘蛛王擁有:"
+				"&b+100% 物理轉混沌傷害&r"
+				"&b+30% 混沌穿透&r"
+			]
+			icon: "born_in_chaos_v1:spider_mandible"
+			id: "67CCD11ABBB75DF3"
+			rewards: [
+				{
+					id: "2404378E98FDF0DD"
+					item: "mmorpg:gems/emerald/5"
+					type: "item"
+				}
+				{
+					id: "499095977A582D7B"
+					item: "mmorpg:gems/garnet/5"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "547FDEA4C9F24547"
+					item: "lightmanscurrency:coin_gold"
+					type: "item"
+				}
+			]
+			subtitle: "暮光森林"
+			tasks: [{
+				entity: "twilightforest:king_spider"
+				icon: "ftb_ph:king_spider"
+				id: "315594F7D6D8B953"
+				type: "kill"
+				value: 5L
+			}]
+			title: "令人生畏的蜘蛛"
+			x: 6.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["7E14A7756FB4B78B"]
+			description: ["古老而荒涼的&e哥布林騎士要塞&r,座落在&e黑暗森林&r異常濃密的樹冠之間。在黑暗中很難發現它們的蹤跡,因為地表上幾乎只剩下斷垣殘壁與裂開的磚塊。然而在地底之下,卻是一整片由房間、走廊與墓室構成的龐大建築群。"]
+			id: "11768894E8B672B5"
+			rewards: [
+				{
+					count: 2
+					id: "5F891BF39E8515BC"
+					item: "mmorpg:material/mining/4"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "1A8290CD9BB7C782"
+					item: "mmorpg:material/farming/4"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "4972BFCA3275C5DA"
+					item: "lightmanscurrency:coin_gold"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "終章"
+			tasks: [{
+				icon: "twilightforest:stronghold_shield"
+				id: "54FDAF28D194B2C1"
+				structure: "twilightforest:knight_stronghold"
+				title: "尋找哥布林騎士要塞"
+				type: "structure"
+			}]
+			title: "哥布林篡奪者"
+			x: 7.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["11768894E8B672B5"]
+			description: [
+				"&e騎士幻影（Knight Phantoms）&r棲息在&e哥布林騎士要塞&r一間磚砌的房間裡。牠們外觀是一套幽靈般的幻影盔甲,攻擊時會呈現出詭異的鬼魅模樣。"
+				""
+				"擊敗&e6隻騎士幻影&r將推進黑暗森林階段,移除&e黑暗森林中心（Dark Forest Center）&r的保護,讓你能夠進入&e烏爾地獄幽靈（Ur-Ghast）&r與牠的&e黑暗高塔&r。"
+				""
+				"騎士幻影擁有:"
+				"&b+100% 物理轉閃電傷害&r"
+				"&b+25% 暴擊率&r"
+				"&b+50% 閃避率&r"
+				"&b+50% 法術閃避率&r"
+			]
+			id: "42922690F74AC7FE"
+			rewards: [
+				{
+					count: 3
+					id: "5D5B35924A7177B3"
+					item: "mmorpg:stone/4"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "5E60295E386C4F31"
+					item: "mmorpg:currency/affix_tier_up_down"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "501346F0CBF0B449"
+					item: "mmorpg:gems/opal/5"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			size: 1.25d
+			subtitle: "終章"
+			tasks: [{
+				consume_items: true
+				id: "70290AE8EF83F6A1"
+				item: "twilightforest:knight_phantom_trophy"
+				type: "item"
+			}]
+			title: "受詛咒的騎士"
+			x: 7.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["42922690F74AC7FE"]
+			description: [
+				"令人敬畏的&e黑暗高塔&r不祥地聳立在&e黑暗森林&r之上。這些巨大的建築高聳入雲,彷彿要刺穿天空一般,內部藏有各式各樣獨特的房間、障礙、寶藏與怪物,等著你在通往塔頂的史詩旅程中探索與戰鬥。這些高塔通常座落在黑暗森林的最核心處,那裡濃密、令人窒息的枝葉會轉變成一種奇異的、宛如秋天般的色調,或許正是受到高塔邪惡影響所致。"
+				""
+				"&e胭紅生物（Carminite creatures）大多造成火焰傷害。&r"
+			]
+			id: "0E85C58F1DA0564C"
+			rewards: [
+				{
+					count: 2
+					id: "411163FE27556CEA"
+					item: "lightmanscurrency:coin_gold"
+					type: "item"
+				}
+				{
+					id: "0DA6290C80A32C41"
+					item: "mmorpg:gems/ruby/5"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "終章"
+			tasks: [{
+				icon: "born_in_chaos_v1:spawn_structures_dark_tower"
+				id: "03F883F2D01DF89A"
+				structure: "twilightforest:dark_tower"
+				title: "尋找黑暗高塔"
+				type: "structure"
+			}]
+			title: "黑暗尖塔"
+			x: 9.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["0E85C58F1DA0564C"]
+			description: [
+				"&e烏爾地獄幽靈&r在巨大的&e黑暗高塔&r頂端飛行盤旋。牠外型是一隻龐大的超自然生物,身上有許多巨大、擺動的觸手。牠全身覆蓋著讓冒險者不禁害怕是鮮血、又或許是胭紅石的物質。這隻生物與&e胭紅幽靈守衛（Carminite Ghastguard）&r相似,因為牠們都有跟蹤玩家的能力,也與地獄限定的&e地獄幽靈&r有幾分相似,但體型大上許多,也危險得多。"
+				""
+				"&c烏爾地獄幽靈會以神話稀有度出現。&r"
+				""
+				"烏爾地獄幽靈擁有:"
+				"&b+100% 物理轉火焰傷害&r"
+				"&b+25% 燃燒機率&r"
+				"&b+100% 燃燒傷害&r"
+				"&b+5% 最大火焰抗性&r"
+				"&b+100% 火焰抗性&r"
+			]
+			id: "5BB55F41502BE69C"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: {
+						Count: 1
+						id: "minecraft:written_book"
+						tag: {
+							author: "Unknown"
+							generation: 3
+							pages: [
+								"{\"text\":\"Entry #12\n\nLast afternoon, Captain Cornelia went to the seabed in search of any additional resources. There are rumors among the crew that the real subject of her expedition is something else.\"}"
+								"{\"text\":\"More than a day has passed since the captain's dive. She was wearing the only diving suit we had, so we couldn't help her in any way. Worst of all, she had the master key with her. As our hopes of rescue dwindle, the threat of rebellion grows.\"}"
+							]
+							resolved: 1b
+							title: "Pillagers Ship Logbook"
+						}
+					}
+					id: "26A037B5BB43D730"
+					title: "2 技能點"
+					type: "custom"
+				}
+				{
+					id: "70D77D8F4DC32B5F"
+					item: "dungeon_realm:uber_fragment"
+					type: "item"
+				}
+				{
+					id: "4AC6E089CE9FA0A2"
+					item: "mmorpg:gems/ruby/6"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			size: 1.25d
+			subtitle: "終章"
+			tasks: [{
+				consume_items: true
+				id: "1484F0626CF00EDA"
+				item: "twilightforest:ur_ghast_trophy"
+				type: "item"
+			}]
+			title: "鮮血,還是胭紅石?"
+			x: 10.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["1F3C2718AE550D5C"]
+			description: [
+				"&e雪原森林&r是一個異常寒冷的生態域,與暮光森林維度其他大部分地區形成鮮明對比。探索者注意到牠與主世界的雪原針葉林生態域有許多相似之處,大片雲杉樹叢間覆蓋著積雪,取代了常見的樹冠樹,其中一些長得同樣高大。為何在整體溫和潮濕的維度中會存在這樣冰冷的氣候,至今仍是個謎,不過有人懷疑座落在冷杉樹叢間的巨大&e冰川（Glacier）&r可能與此有關。"
+				""
+				"穿越這些區域時務必小心,因為&e寒冬狼（Winter Wolves）&r與危險的&e雪怪（Yetis）&r都在這片土地上遊蕩。接近這些生物時應格外謹慎,尤其是深入&e雪怪洞穴&r時,因為這些冰洞中可能藏有數十隻雪怪。統領同類的&e雪怪之王（Alpha Yeti）&r,對於好奇或愚蠢者的闖入絕不會客氣。"
+			]
+			id: "15B1E394B4FBB981"
+			rewards: [
+				{
+					id: "0B1583B14CE6405B"
+					item: "mmorpg:material/farming/4"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "0CAE6DB8E7EDB259"
+					item: "lightmanscurrency:coin_gold"
+					type: "item"
+				}
+				{
+					id: "00866B8B5706A607"
+					item: "mmorpg:gems/azurite/5"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "終章"
+			tasks: [{
+				biome: "twilightforest:snowy_forest"
+				icon: "blue_skies:snowbloom"
+				id: "7ED21F382B9E41B3"
+				title: "造訪雪原森林"
+				type: "biome"
+			}]
+			title: "大雪封山"
+			x: 7.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["15B1E394B4FBB981"]
+			description: [
+				"&e寒冬狼&r是一種棲息在&e雪原森林&r的大型藍白色犬科生物。這些怪物與&e黑暗森林&r的同類相似,但擁有白色的毛皮。牠們會在自己的領地中追擊並攻擊玩家,既會用撕咬攻擊,也會用施加減速效果的冰凍吐息攻擊。"
+				""
+				"寒冬狼擁有:"
+				"&b+100% 物理轉冰冷傷害&r"
+				"&b+30% 冰冷穿透&r"
+				"&b+30% 冰冷抗性&r"
+			]
+			icon: "born_in_chaos_v1:fangofthe_hound_leader"
+			id: "38BFA9B6AC5CBD12"
+			rewards: [
+				{
+					id: "477E6F483D6AABCD"
+					item: "mmorpg:currency/sharpening_stone_3"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "6C66DC9E98CDE941"
+					item: "lightmanscurrency:coin_gold"
+					type: "item"
+				}
+			]
+			subtitle: "暮光森林"
+			tasks: [{
+				entity: "twilightforest:winter_wolf"
+				icon: "ftb_ph:winter_wolf"
+				id: "4BF835E79D59F65E"
+				type: "kill"
+				value: 10L
+			}]
+			title: "令人膽寒的嗷嗚"
+			x: 9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["15B1E394B4FBB981"]
+			description: [
+				"&e雪怪&r是棲息在&e雪原森林&r或&e雪怪洞穴&r中的大型白色方塊狀生物。牠們的性情半被動,只有在玩家靠近約4格範圍內時才會產生興趣。牠們沒有直接造成傷害的攻擊手段,而是會抓起目標,並往隨機方向丟出去。冒險者不會被雪怪直接傷害,但摔落傷害可就痛了。如果遭到攻擊,牠們就會變得具攻擊性,開始追擊目標。"
+				""
+				"雪怪擁有:"
+				"&b每秒回復0.5%生命值&r"
+				"&b+30% 冰冷抗性&r"
+			]
+			icon: {
+				Count: 1
+				id: "twilightforest:yeti_helmet"
+				tag: {
+					Damage: 0
+					Enchantments: [{
+						id: "minecraft:protection"
+						lvl: 2s
+					}]
+				}
+			}
+			id: "10B572A9358F338B"
+			rewards: [
+				{
+					count: 5
+					id: "021419E747103F83"
+					item: "mmorpg:stone/3"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "7661B1B922262EAF"
+					item: "mmorpg:material/meat/4"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "20201B9A398A123F"
+					item: "lightmanscurrency:coin_gold"
+					type: "item"
+				}
+			]
+			subtitle: "暮光森林"
+			tasks: [{
+				entity: "twilightforest:yeti"
+				icon: "ftb_ph:yetitwilight"
+				id: "0C5B0388632D3E64"
+				type: "kill"
+				value: 10L
+			}]
+			title: "雪怪"
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4B93763BFB5F5E0D"]
+			description: [
+				"令人生畏的&e雪怪之王&r體型遠比同族群中的其他雪怪龐大許多。牠有六根巨大的藍色犄角,並且始終對玩家抱持攻擊性。"
+				""
+				"擊敗&e雪怪之王&r將移除&e冰川&r的保護,讓你能夠進入&e冰雪女王（Snow Queen）&r與她的&e極光宮殿（Aurora Palace）&r。"
+				""
+				"雪怪之王擁有:"
+				"&b+50% 物理轉冰冷傷害&r"
+				"&b+8 護甲穿透（依等級縮放）&r"
+				"&b+30% 冰冷穿透&r"
+				"&b+25% 物理抗性&r"
+				"&b+50% 冰冷抗性&r"
+			]
+			id: "44B4EC276B4CD776"
+			rewards: [
+				{
+					count: 3
+					id: "2BA208A9FDAC9C96"
+					item: "mmorpg:stone/4"
+					type: "item"
+				}
+				{
+					count: 10
+					id: "79ACA445473BD88D"
+					item: "mmorpg:material/meat/4"
+					type: "item"
+				}
+				{
+					id: "26B9B73CD18DC085"
+					item: "mmorpg:gems/amethyst/5"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			size: 1.25d
+			subtitle: "終章"
+			tasks: [{
+				consume_items: true
+				id: "04298BD3152A19E7"
+				item: "twilightforest:alpha_yeti_trophy"
+				type: "item"
+			}]
+			title: "雪怪之王"
+			x: 7.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["44B4EC276B4CD776"]
+			description: [
+				"&e極光宮殿&r矗立在荒涼的&e冰川&r之上,對暮光森林的冒險者而言是一幅驚艷而美麗的景象,牆面不斷變換著各種色彩,直衝天際。可惜美麗只是表象,宮殿內潛藏著危險,牠們絕不會猶豫捍衛自己的魔法家園。"
+				""
+				"擊敗&e雪怪之王&r的冒險者會發現,只要&e觸碰牠柔軟的毛皮&r,就能將其中一部分的魔法力量轉移到自己身上,驅散狂風,讓宮殿敞開供人探索。"
+			]
+			icon: "twilightforest:blue_castle_door"
+			id: "2FDCA05F4CD502C8"
+			rewards: [
+				{
+					count: 2
+					id: "591FB17C2BAA0199"
+					item: "lightmanscurrency:coin_gold"
+					type: "item"
+				}
+				{
+					id: "2F9DB93942234A2C"
+					item: "mmorpg:gems/sapphire/5"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "終章"
+			tasks: [
+				{
+					icon: "twilightforest:aurora_pillar"
+					id: "3E8D88BC87345DAC"
+					structure: "twilightforest:aurora_palace"
+					title: "尋找極光宮殿"
+					type: "structure"
+				}
+				{
+					id: "3F7D90DB38D24943"
+					item: "twilightforest:alpha_yeti_fur"
+					type: "item"
+				}
+			]
+			title: "美麗的宮殿"
+			x: 9.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["2FDCA05F4CD502C8"]
+			description: [
+				"&e冰雪女王&r棲身在&e極光宮殿&r頂端附近一間結滿冰霜的房間裡。她或許是暮光森林中所能遇見最接近人類外貌的生物,外型像一名女子,卻有著碩大的紫羅蘭色雙眼與蒼白的藍色肌膚。她會立刻對任何靠近的入侵者產生敵意,迅速展開三種主要攻擊模式其中之一。"
+				""
+				"冰雪女王乘坐著由魔法冰塊組成的碟形雪橇飛行。這座雪橇是強力的防禦手段,既能讓女王升空、脫離近戰攻擊範圍,又能&e阻擋任何從下方發動的遠程攻擊&r。要成功攻擊冰雪女王,你必須預判她的動向,&e只在她靠得夠近、讓你能繞過冰橇時出手攻擊&r。"
+				""
+				"&c冰雪女王會以神話稀有度出現。&r"
+				""
+				"冰雪女王擁有:"
+				"&b+100% 物理轉冰冷傷害&r"
+				"&b+80% 冰凍機率&r"
+				"&b+25% 碎裂機率&r"
+				"&b+30% 冰冷穿透&r"
+				"&b+30% 傷害減免&r"
+			]
+			id: "1E2D94E70E2A1134"
+			rewards: [
+				{
+					auto: "enabled"
+					icon: {
+						Count: 1
+						id: "minecraft:written_book"
+						tag: {
+							author: "Unknown"
+							generation: 3
+							pages: [
+								"{\"text\":\"Entry #12\n\nLast afternoon, Captain Cornelia went to the seabed in search of any additional resources. There are rumors among the crew that the real subject of her expedition is something else.\"}"
+								"{\"text\":\"More than a day has passed since the captain's dive. She was wearing the only diving suit we had, so we couldn't help her in any way. Worst of all, she had the master key with her. As our hopes of rescue dwindle, the threat of rebellion grows.\"}"
+							]
+							resolved: 1b
+							title: "Pillagers Ship Logbook"
+						}
+					}
+					id: "7EF3ECDA9B97A8F7"
+					title: "2 技能點"
+					type: "custom"
+				}
+				{
+					id: "1DC1DDFC5481AC98"
+					item: "dungeon_realm:uber_fragment"
+					type: "item"
+				}
+				{
+					id: "13F0A36E7B35C9D3"
+					item: "mmorpg:gems/sapphire/6"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			size: 1.25d
+			subtitle: "終章"
+			tasks: [{
+				consume_items: true
+				id: "30915EF9976C000F"
+				item: "twilightforest:snow_queen_trophy"
+				type: "item"
+			}]
+			title: "冰之女王"
+			x: 10.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["09AFF8CC33BD244B"]
+			description: [
+				"擊殺&e納迦&r後,會出現一座&e重生紀念碑（Respawn Monument）&r。你可以在紀念碑周圍以圓形擺放&e鐵木方塊&r,藉此啟動該方塊,重新生成首領,擺放方式如下:"
+				""
+				"{image:cte2:textures/Naga-Respawn.png width:160 height:140 align:center}"
+				""
+				"接著,在紀念碑本體上放置一顆&e凋零骷髏頭顱&r,朝向&e北方&r。&c牠必須朝向北方!&r"
+			]
+			id: "249CFC4219E590E5"
+			rewards: [{
+				count: 5
+				id: "1F089CDD411E7807"
+				item: "lightmanscurrency:coin_gold"
+				type: "item"
+			}]
+			subtitle: "重生"
+			tasks: [{
+				advancement: "dimasic_server:nagaresp"
+				criterion: ""
+				id: "4443B8B332438AA1"
+				type: "advancement"
+			}]
+			x: 6.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["1F3C2718AE550D5C"]
+			description: [
+				"擊殺&e巫妖&r後,會出現一座&e重生紀念碑&r。你可以在紀念碑周圍以圓形擺放&e金磚&r,藉此啟動該方塊,重新生成首領,擺放方式如下:"
+				""
+				"{image:cte2:textures/Lich_respawn.png width:160 height:140 align:center}"
+				""
+				"接著,在紀念碑本體上放置一顆&e凋零骷髏頭顱&r,朝向&e北方&r。&c牠必須朝向北方!&r"
+			]
+			id: "478246DF0A50447C"
+			rewards: [{
+				count: 5
+				id: "53945B5AF1249FE5"
+				item: "lightmanscurrency:coin_gold"
+				type: "item"
+			}]
+			subtitle: "重生"
+			tasks: [{
+				advancement: "dimasic_server:lichresp"
+				criterion: ""
+				id: "46647FC4FDDBF7CE"
+				type: "advancement"
+			}]
+			x: 9.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5BB55F41502BE69C"]
+			description: [
+				"擊殺&e烏爾地獄幽靈&r後,會出現一座&e重生紀念碑&r。你可以在紀念碑周圍以圓形擺放&e哭泣的黑曜石&r,藉此啟動該方塊,重新生成首領,擺放方式如下:"
+				""
+				"{image:cte2:textures/Ur-Ghast_Respawn.png width:160 height:140 align:center}"
+				""
+				"接著,在紀念碑本體上放置一顆&e凋零骷髏頭顱&r,朝向&e北方&r。&c牠必須朝向北方!&r"
+			]
+			id: "52FABBC48E005524"
+			rewards: [{
+				count: 5
+				id: "1FED6032BF28DDCD"
+				item: "lightmanscurrency:coin_gold"
+				type: "item"
+			}]
+			subtitle: "重生"
+			tasks: [{
+				advancement: "dimasic_server:urghastresp"
+				criterion: ""
+				id: "16328367B255603E"
+				type: "advancement"
+			}]
+			x: 10.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["1E2D94E70E2A1134"]
+			description: [
+				"擊殺&e冰雪女王&r後,會出現一座&e重生紀念碑&r。你可以在紀念碑周圍以圓形擺放&e青金石磚&r,藉此啟動該方塊,重新生成首領,擺放方式如下:"
+				""
+				"{image:cte2:textures/Snow-Queen_Respawn.png width:160 height:140 align:center}"
+				""
+				"接著,在紀念碑本體上放置一顆&e凋零骷髏頭顱&r,朝向&e北方&r。&c牠必須朝向北方!&r"
+			]
+			id: "15CD2A688D39C87D"
+			rewards: [{
+				count: 5
+				id: "3467E2DEDB8FA565"
+				item: "lightmanscurrency:coin_gold"
+				type: "item"
+			}]
+			subtitle: "重生"
+			tasks: [{
+				advancement: "dimasic_server:snawqueenresp"
+				criterion: ""
+				id: "4F68D5C6E346A550"
+				type: "advancement"
+			}]
+			x: 10.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["18C4B8D73A50CFAC"]
+			description: [
+				"擊殺&e九頭蛇&r後,會出現一座&e重生紀念碑&r。你可以在紀念碑周圍以圓形擺放&e遠古殘骸&r,藉此啟動該方塊,重新生成首領,擺放方式如下:"
+				""
+				"{image:cte2:textures/Hydra_Respawn.png width:160 height:140 align:center}"
+				""
+				"接著,在紀念碑本體上放置一顆&e凋零骷髏頭顱&r,朝向&e北方&r。&c牠必須朝向北方!&r"
+			]
+			id: "1DD47026109BE225"
+			rewards: [{
+				count: 5
+				id: "6A599A8C876376B3"
+				item: "lightmanscurrency:coin_gold"
+				type: "item"
+			}]
+			subtitle: "重生"
+			tasks: [{
+				advancement: "dimasic_server:hydraresp"
+				criterion: ""
+				id: "5757A2AFA61E5A7F"
+				type: "advancement"
+			}]
+			x: 13.5d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"5BB55F41502BE69C"
+				"1E2D94E70E2A1134"
+				"18C4B8D73A50CFAC"
+				"1F3C2718AE550D5C"
+				"09AFF8CC33BD244B"
+			]
+			description: ["在終章中擊敗所有&e暮光森林&r首領即可完成此成就。接著就戴上你的新帽子炫耀一番吧!"]
+			hide_dependency_lines: true
+			icon: "simplehats:pog"
+			id: "481C3C4D8D5AF5B8"
+			rewards: [
+				{
+					id: "6350309B873FAF80"
+					item: "simplehats:pog"
+					type: "item"
+				}
+				{
+					id: "675B5B35C383CF3D"
+					item: "lightmanscurrency:coin_netherite"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					icon: "ftb_ph:passive"
+					id: "3C311586BF920909"
+					title: "4 被動點"
+					type: "custom"
+				}
+			]
+			shape: "hexagon"
+			subtitle: "成就"
+			tasks: [{
+				id: "4405B159442E256A"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "擊敗所有暮光森林首領!"
+			x: 13.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["15B1E394B4FBB981"]
+			description: ["&e雪怪洞穴&r座落在&e雪原森林&r的丘陵與冷杉樹之間,外觀是一座方形的小丘。四個入口通往結冰的內部,那裡的鐘乳石垂掛著浮冰,地面也覆蓋著浮冰。許多兇猛的&e雪怪&r在這片酷寒的洞穴中棲身,由一頭&e雪怪之王&r統領。"]
+			id: "4B93763BFB5F5E0D"
+			rewards: [
+				{
+					count: 3
+					id: "1F78FFBE5A9A85B2"
+					item: "mmorpg:material/fishing/4"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "56F92CFDECE8EB68"
+					item: "lightmanscurrency:coin_gold"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "終章"
+			tasks: [{
+				icon: "blue_skies:snowcap_mushroom_block"
+				id: "0A566E2109FCE4C5"
+				structure: "twilightforest:yeti_cave"
+				title: "尋找雪怪洞穴"
+				type: "structure"
+			}]
+			title: "冰冷簡陋的住所"
+			x: 7.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["77E6AE329E337151"]
+			description: [
+				"&o尋找特定結構、擊殺首領?聽起來夠簡單……你拿出探索者指南針,結果——等等,怎麼回事?它不能用?&r"
+				""
+				"在暮光森林裡,你得靠自己的導航能力。你需要仰賴暮光森林的&e地圖焦點（Map Focus）&r!"
+			]
+			icon: "twilightforest:magic_map"
+			id: "5081032C6E395EA9"
+			rewards: [{
+				id: "0AE3865B01EA1ACD"
+				item: "twilightforest:raven_feather"
+				type: "item"
+			}]
+			subtitle: "終章"
+			tasks: [{
+				id: "2BF7F6856AC56540"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "遊牧之旅"
+			x: 3.0d
+			y: 1.5d
+		}
+	]
+	subtitle: ["Lv. 90"]
+	title: "終章"
+}

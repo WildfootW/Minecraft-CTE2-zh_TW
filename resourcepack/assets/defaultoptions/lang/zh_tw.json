@@ -1,0 +1,7 @@
+{
+  "config.defaultoptions.title": "預設選項",
+  "config.defaultoptions.defaultDifficulty": "預設難度",
+  "config.defaultoptions.defaultDifficulty.tooltip": "新建立世界時所選擇的預設難度。",
+  "config.defaultoptions.lockDifficulty": "鎖定難度",
+  "config.defaultoptions.lockDifficulty.tooltip": "若要讓新世界的難度鎖定為指定的預設值，請設為 true。玩家若無外部工具將無法解鎖此設定！這大概不是個好主意，不建議使用。我到底為什麼要加這個選項？"
+}

@@ -1,0 +1,932 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "jolly_cooperation"
+	group: "5C56FC6157E20EBE"
+	icon: "minecraft:rose_bush"
+	id: "05E0BC63F8DC87E2"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"&eLightman's Currency&r 引進了硬幣作為貨幣、各種交易站、拍賣行等等。 "
+				""
+				"你放置的任何 &eLightman's Trader&r（交易員）只有你或你的 Lightman's &e隊伍&r 才能修改。點擊物品欄右上角的小史蒂夫圖示即可建立隊伍帳號。介面上也有一個 &e通知&r 按鈕，用來顯示交易員與隊伍帳號的相關事件。隊伍帳號可用來在玩家之間共享利潤與成本。"
+				""
+				"&e貨幣&r 可透過 &e擊殺&r 怪物、&e戰利品&r 以及 &e任務&r 取得。"
+				""
+				"使用 &e/lctrade&r 指令可以和附近的其他玩家交易。"
+			]
+			id: "06B577BB603F2F0A"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "374773DC08579C0F"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "合成一台自動販賣機（Vending Machine）"
+			tasks: [{
+				id: "3A6E6453C16F4C89"
+				item: "lightmanscurrency:vending_machine"
+				type: "item"
+			}]
+			title: "Lightman's Currency"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["06B577BB603F2F0A"]
+			description: [
+				"大部分的物品交易員方塊可以交易任何物品，但像 &e書&r 或 &e盔甲&r 這類特定物品類型，需要專門的 &e交易員&r。 "
+				""
+				"使用 &e收銀機（Cash Register）&r 右鍵點擊任何已放置的交易員即可 &e連結&r 並 &e綁定&r 到該 &e收銀機&r。收銀機放置後，交易員內所有可交易的項目都會 &e顯示&r 在 &e收銀機介面&r 中。"
+			]
+			id: "64C7494796410D04"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "4A6C9A71A022A0C1"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "合成一台收銀機（Cash Register）"
+			tasks: [{
+				id: "2DCBF62C3EC5F4FE"
+				item: "lightmanscurrency:cash_register"
+				type: "item"
+			}]
+			title: "交易站"
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["64C7494796410D04"]
+			description: [
+				"&eATM&r 可以 &e保管你的錢&r、在個人帳號與隊伍帳號之間 &e轉帳&r，還能 &e兌換&r 不同面額的硬幣。"
+				""
+				"&e撲滿（Piggy Bank）&r 只要手持硬幣右鍵點擊就能存錢。不過想把錢拿出來的話，就得 &e打破它&r。"
+				""
+				"&e金錢箱（Money Chest）&r 是 ATM 的替代方案，但 &e只能存錢&r。如果你不 &e信任&r 銀行的 ATM，可以改把硬幣存放在金錢箱裡。"
+				""
+				"使用 &e/lcbaltop&r 指令可以查看誰的銀行帳戶 &e存款最多&r。"
+			]
+			id: "6C57A4CBA635B27E"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "086A687857069566"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "各合成一個"
+			tasks: [
+				{
+					id: "0D6098AA97808306"
+					item: "lightmanscurrency:atm"
+					type: "item"
+				}
+				{
+					id: "37A73CBAF5EED880"
+					item: "lightmanscurrency:piggy_bank"
+					type: "item"
+				}
+				{
+					id: "70503A6E08BBB908"
+					item: "lightmanscurrency:coin_chest"
+					type: "item"
+				}
+			]
+			title: "金錢存放"
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["6C57A4CBA635B27E"]
+			description: [
+				"&e交易終端機（Trading Terminal）&r 讓你能與 &e全球網路&r 上的任何其他交易員交易。你還能連上伺服器的 &e拍賣行&r，這是一般玩家無法使用的功能。"
+				""
+				"&e物品網路交易員（Item Network Trader）&r 分為 &e4&r 個等級，只能透過交易終端機 &e存取&r。"
+				""
+				"你可以在任何一般交易員的 &e升級插槽&r 中放入 &e網路升級模組（Network Upgrade）&r，將其 &e升級&r 成可透過網路或親自造訪存取。"
+				""
+				"&e拍賣台（Auction Stand）&r 讓玩家能在 &e拍賣結束前的時限內&r 對物品 &e出價&r。"
+			]
+			id: "2BB4B6FE41F4CC58"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "2BD9D6EA6E99502E"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "各合成一個"
+			tasks: [
+				{
+					id: "5BE8EC6FBAEA12B4"
+					item: "lightmanscurrency:item_trader_server_sml"
+					type: "item"
+				}
+				{
+					id: "414707595643EEB0"
+					item: "lightmanscurrency:network_upgrade"
+					type: "item"
+				}
+				{
+					id: "01FE70F053D60BE3"
+					item: "lightmanscurrency:auction_stand_oak"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["2BB4B6FE41F4CC58"]
+			description: [
+				"&e票券系統&r 是個好方法，可以限制只有 &e付費的顧客才能進入&r 指定區域，或是 &e啟動紅石裝置&r。千萬別讓別人拿到你製作的 &e主票（Master Ticket）&r。"
+				""
+				"&e拉霸機（Slot Machine）&r 讓你能自訂付費顧客的 &e中獎機率與可能獎勵&r。"
+			]
+			id: "322F44860B462AEF"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "112776A78DA44E79"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "各合成一個"
+			tasks: [
+				{
+					id: "36CBBF5574C67135"
+					item: "lightmanscurrency:ticket_kiosk"
+					type: "item"
+				}
+				{
+					id: "76481E26B68A5DC5"
+					item: "lightmanscurrency:paygate"
+					type: "item"
+				}
+				{
+					id: "656E0AEF24D841CB"
+					item: "lightmanscurrency:ticket_machine"
+					type: "item"
+				}
+				{
+					id: "08328D273151AA2A"
+					item: "lightmanscurrency:slot_machine"
+					type: "item"
+				}
+			]
+			title: "票券與拉霸機"
+			x: 0.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["322F44860B462AEF"]
+			id: "652C2A6786830558"
+			rewards: [
+				{
+					command: "/mine_and_slash give xp_times_lvl @p 500"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "76F366A39BE3CBF5"
+					silent: true
+					title: "500 經驗值 x 等級"
+					type: "command"
+				}
+				{
+					id: "7421D41C27D9A612"
+					item: "simplehats:halo"
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			subtitle: "挑戰"
+			tasks: [
+				{
+					count: 4L
+					id: "60D301B383B7C824"
+					item: "lightmanscurrency:coinpile_copper"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "2F2002492C9614D8"
+					item: "lightmanscurrency:coinpile_iron"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "409E4DE17EB4AD7F"
+					item: "lightmanscurrency:coinpile_gold"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "0C83A084CC749C05"
+					item: "lightmanscurrency:coinpile_emerald"
+					type: "item"
+				}
+				{
+					id: "0FB71A19BB5F835D"
+					item: "lightmanscurrency:coinpile_diamond"
+					type: "item"
+				}
+			]
+			title: "豪賭客"
+			x: 0.0d
+			y: -8.0d
+		}
+		{
+			description: [
+				"&eJoy of Painting&r 讓你能把任意尺寸的 &e畫布&r 放在 &e畫架&r 上創作藝術品。在你的 &e調色盤&r 上加入染料並混合，就能調出獨特的顏色。&e調色盤&r 可以在 &e交易終端機&r 上購買。畫完之後別忘了幫你的畫作 &e簽名&r。"
+				""
+				"要合成 &e調色盤&r，你需要 3 個木板和至少 1 個染料。這是動態配方，所以不會出現在 JEI 裡。"
+			]
+			id: "792587BFEA5FB382"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "0E94772DB7822516"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "各合成一個"
+			tasks: [
+				{
+					id: "5D1C69FA31081C44"
+					item: "xercapaint:item_easel"
+					type: "item"
+				}
+				{
+					id: "7924B42762A8EFFC"
+					item: "xercapaint:item_palette"
+					type: "item"
+				}
+				{
+					id: "39A4B0FB7967A97B"
+					item: "xercapaint:item_canvas"
+					type: "item"
+				}
+			]
+			title: "Joy of Painting"
+			x: 2.0d
+			y: 1.5d
+		}
+		{
+			description: [
+				"&eMusical Instrument Minecraft Interface&r 讓你能透過 &e連接到電腦的 MIDI 裝置&r、&e檔案&r，或是 &e網路上的直接連結&r 來 &e播放 MIDI&r。"
+				""
+				"完整的模組 &e使用說明&r 可以在 &e模組指南書&r 中找到。像是 &e多人樂器演奏&r 之類的部分功能這裡就不多做說明。"
+				""
+				"首先，從網路上 &e下載&r 一首 MIDI 歌曲，並將它放進 &e指定的資料夾&r。"
+				""
+				"&e發射器（Transmitter）&r 用來把 MIDI 檔案中的音符傳送給 MIMI 裡的樂器。"
+				""
+				"要使用 &e發射器&r，先合成一個，把它放進你的主手或副手，然後右鍵點擊開啟發射器介面（詳見下方說明）。發射器的運作方式有點像終界箱，每個玩家只會有一個，而該玩家所有的發射器物品都會是同一個。"
+				""
+				"你可以使用「&b/mimi config&r」指令來調整音訊輸出等設定。"
+			]
+			id: "4EB78B5D6F8061E9"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "554EE015F2507D1C"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "各合成一個"
+			tasks: [
+				{
+					id: "4F23B706CC2324EB"
+					item: "mimi:guide"
+					type: "item"
+				}
+				{
+					id: "43B80F923FC3A2CB"
+					item: "mimi:transmitter"
+					type: "item"
+				}
+				{
+					id: "2ED6A543049B0B62"
+					item: "mimi:piano"
+					type: "item"
+				}
+			]
+			title: "音樂製造家"
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["309792D482119CAD"]
+			id: "659BC549DBEF88F7"
+			rewards: [
+				{
+					command: "/mine_and_slash give xp_times_lvl @p 525"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "3889F09AFDC21CA0"
+					silent: true
+					title: "525 經驗值 x 等級"
+					type: "command"
+				}
+				{
+					id: "6D212FA3A888DEE3"
+					item: "simplehats:discoball"
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			subtitle: "挑戰"
+			tasks: [
+				{
+					id: "47AD9E90B03F4DB1"
+					item: "mimi:banjo"
+					type: "item"
+				}
+				{
+					id: "7E41E58B5E74D3B0"
+					item: "mimi:acguitar"
+					type: "item"
+				}
+				{
+					id: "56D43392BB56F7BA"
+					item: "mimi:elecguitar"
+					type: "item"
+				}
+				{
+					id: "785F904C8061C3A3"
+					item: "mimi:bassguitar"
+					type: "item"
+				}
+				{
+					id: "467709160C457369"
+					item: "mimi:violin"
+					type: "item"
+				}
+				{
+					id: "28A00BDFBE87255A"
+					item: "mimi:microphone"
+					type: "item"
+				}
+				{
+					id: "1FB2835B5D6A93BE"
+					item: "mimi:trumpet"
+					type: "item"
+				}
+				{
+					id: "38934E313D24B898"
+					item: "mimi:frenchhorn"
+					type: "item"
+				}
+				{
+					id: "7B4D310CB1E27CFB"
+					item: "mimi:saxophone"
+					type: "item"
+				}
+				{
+					id: "7F0657D7E9DFD8ED"
+					item: "mimi:clarinet"
+					type: "item"
+				}
+				{
+					id: "2BB1616BA365C884"
+					item: "mimi:flute"
+					type: "item"
+				}
+				{
+					id: "2739476A8CEBB15B"
+					item: "mimi:ocarina"
+					type: "item"
+				}
+				{
+					id: "0567DAB0D990E3B6"
+					item: "mimi:synlead"
+					type: "item"
+				}
+				{
+					id: "4D884F1E82BA36FA"
+					item: "mimi:kalimba"
+					type: "item"
+				}
+				{
+					id: "12BE5EA3BE95256F"
+					item: "mimi:bagpipe"
+					type: "item"
+				}
+				{
+					id: "1051698400C45193"
+					item: "mimi:oboe"
+					type: "item"
+				}
+				{
+					id: "2472D4AAC36C0DC2"
+					item: "mimi:accordion"
+					type: "item"
+				}
+				{
+					id: "0C1314DCB6C97BB6"
+					item: "mimi:harmonica"
+					type: "item"
+				}
+				{
+					id: "4936A5A89E23BD80"
+					item: "mimi:handbell"
+					type: "item"
+				}
+				{
+					id: "2C472301BC4C42EE"
+					item: "mimi:glockenspiel"
+					type: "item"
+				}
+				{
+					id: "5CCBD8322359627D"
+					item: "mimi:musicbox"
+					type: "item"
+				}
+				{
+					id: "2BBD7855C228EF2F"
+					item: "mimi:bassoon"
+					type: "item"
+				}
+				{
+					id: "21DA66CBB72A6853"
+					item: "mimi:woodblock"
+					type: "item"
+				}
+				{
+					id: "0D1DF75F16A2F3CF"
+					item: "mimi:bottle"
+					type: "item"
+				}
+				{
+					id: "54B0B2BB73B656CA"
+					item: "mimi:panflute"
+					type: "item"
+				}
+				{
+					id: "4683423FD1BEFEBE"
+					item: "mimi:recorder"
+					type: "item"
+				}
+				{
+					id: "42755B39EF617F8E"
+					item: "mimi:piano"
+					type: "item"
+				}
+				{
+					id: "632BE4A56AB6F421"
+					item: "mimi:drums"
+					type: "item"
+				}
+				{
+					id: "595D576DA1CEB23D"
+					item: "mimi:organ"
+					type: "item"
+				}
+				{
+					id: "30A1D51D610F9BD7"
+					item: "mimi:steeldrum"
+					type: "item"
+				}
+				{
+					id: "28E5DF11B2BAA23A"
+					item: "mimi:xylophone"
+					type: "item"
+				}
+				{
+					id: "32AAD54A012E17CE"
+					item: "mimi:vibraphone"
+					type: "item"
+				}
+				{
+					id: "1B31B9552DC755C0"
+					item: "mimi:marimba"
+					type: "item"
+				}
+				{
+					id: "046909048DB7BF5F"
+					item: "mimi:celesta"
+					type: "item"
+				}
+				{
+					id: "104DE9FDAB590DC7"
+					item: "mimi:tubularbells"
+					type: "item"
+				}
+				{
+					id: "39CF393D39899A9E"
+					item: "mimi:harpsichord"
+					type: "item"
+				}
+				{
+					id: "68DEAB1EDFC98630"
+					item: "mimi:keyboard"
+					type: "item"
+				}
+				{
+					id: "225D7169B6A6FC97"
+					item: "mimi:edrums"
+					type: "item"
+				}
+			]
+			title: "大樂團演奏家"
+			x: 2.0d
+			y: -8.0d
+		}
+		{
+			description: ["&eLootr&r 是一個模組，它會把世界中生成的每個戰利品箱、木桶，以及帶有箱子的礦車，變成擁有 &e玩家專屬戰利品&r 的特殊版本。"]
+			id: "6E3023586AC43198"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "59AE27F4FBAA9B83"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "打開你的第一個 Lootr 容器"
+			tasks: [{
+				advancement: "lootr:1chest"
+				criterion: ""
+				id: "106E39AB117654B4"
+				type: "advancement"
+			}]
+			title: "Lootr"
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6E3023586AC43198"]
+			id: "193B377248414AFF"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "6700E56A6207ED42"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "打開 10 個 Lootr 容器"
+			tasks: [{
+				advancement: "lootr:10loot"
+				criterion: ""
+				id: "1AA46A7D8EE1171F"
+				type: "advancement"
+			}]
+			x: -2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["193B377248414AFF"]
+			id: "39CC9458268DAF56"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "32D00F66966D0979"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "打開 25 個 Lootr 容器"
+			tasks: [{
+				advancement: "lootr:25loot"
+				criterion: ""
+				id: "75727D55D4BE0E34"
+				type: "advancement"
+			}]
+			x: -2.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["082038507F4E98DF"]
+			id: "070790DD12F2C9A6"
+			rewards: [
+				{
+					command: "/mine_and_slash give xp_times_lvl @p 500"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "25E5D3BD5CFDDE5C"
+					silent: true
+					title: "500 經驗值 x 等級"
+					type: "command"
+				}
+				{
+					id: "59D0D1FDEF0E7795"
+					item: "simplehats:doubletake"
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			subtitle: "挑戰"
+			tasks: [{
+				advancement: "lootr:100loot"
+				criterion: ""
+				id: "2486E63A4C408549"
+				type: "advancement"
+			}]
+			title: "強盜"
+			x: -2.0d
+			y: -8.0d
+		}
+		{
+			description: [
+				"合成一個 &e傳送卡（Telepass）&r 並將它連結到自己身上。其他玩家之後就能用那張傳送卡 &e瞬間傳送&r 到你身邊。"
+				""
+				"&e黃金傳送卡&r 是 &e一次性&r 使用，而 &e鑽石傳送卡&r 則有 &e耐久度&r。兩者都可以 &e附魔&r。"
+			]
+			id: "0152DC99C57C0731"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "0C7EFE6485B640A3"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "合成一個鑽石傳送卡（Diamond Telepass）"
+			tasks: [{
+				id: "13F379B253EDA98D"
+				item: {
+					Count: 1
+					id: "telepass:diamond_telepass"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["39CC9458268DAF56"]
+			id: "082038507F4E98DF"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "23A0D529C076FB7E"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "打開 50 個 Lootr 容器"
+			tasks: [{
+				advancement: "lootr:50loot"
+				criterion: ""
+				id: "4B724240CC7B8D95"
+				type: "advancement"
+			}]
+			x: -2.0d
+			y: -6.0d
+		}
+		{
+			dependencies: [
+				"070790DD12F2C9A6"
+				"652C2A6786830558"
+				"659BC549DBEF88F7"
+			]
+			icon: "alexsmobs:soul_heart"
+			id: "70DA25C53FFEB49F"
+			rewards: [
+				{
+					command: "/tellraw @a {\"text\":\"\",\"color\":\"blue\",\"extra\":[{\"selector\":\"@p\"},{\"text\":\" has achieved Team Player\"}]}"
+					elevate_perms: true
+					icon: "minecraft:cookie"
+					id: "3B58A7BF33FCBB9E"
+					title: "點我來炫耀一下"
+					type: "command"
+				}
+				{
+					command: "/mine_and_slash give xp_times_lvl @p 750"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "07421521F3C1CB44"
+					silent: true
+					title: "750 經驗值 x 等級"
+					type: "command"
+				}
+				{
+					count: 6
+					id: "0279EAA6BA4B9D19"
+					item: "lightmanscurrency:coin_diamond"
+					title: "金錢"
+					type: "item"
+				}
+				{
+					id: "2E2C8624A41D58EF"
+					item: "simplehats:floatinghearts"
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			size: 2.0d
+			subtitle: "成就"
+			tasks: [{
+				id: "1C2D9D8441D68E4C"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "團隊夥伴"
+			x: 0.0d
+			y: -10.0d
+		}
+		{
+			description: [
+				"&eFLAN&r 用來宣告領地。手持 &e金鋤頭&r 右鍵點擊地面即可開始宣告領地。 "
+				""
+				"你可以手持 &e木棍&r 在任何地方右鍵點擊，查看那塊地是誰的、邊界又在哪裡。"
+				""
+				"使用 &e/flan menu&r 編輯你的領地。使用 &e/flan delete&r 移除你目前所站的領地。使用 &e/flan switchMode&r 建立子領地。"
+				""
+				"&e全域權限&r 是給所有 &e不屬於&r 任何權限群組的人的權限。"
+				""
+				"&e右鍵點擊&r 權限群組即可設定它們各自的權限。"
+				""
+				"&4&l在多人遊戲中，若領地擁有者 90 天未上線，該領地將會被刪除。&r&n&r"
+				""
+				"&e初始領地方塊數：&r 2000"
+				"每 &e10 秒&r &e+1&r 方塊"
+				"&e最大領地方塊數：&r 25600"
+				"&e達到上限所需時間：&r66 小時"
+				"&e初始宣告深度：&r 20 格"
+				"&e最大領地數量：&r5"
+				""
+				"如果你在領地下方 &e建造&r，宣告深度會 &e自動&r 繼續向下延伸。"
+			]
+			id: "447144432E16E12F"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "75FDF97DC42DDF10"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			size: 1.5d
+			subtitle: "各合成一個"
+			tasks: [{
+				id: "118E2836C81016A3"
+				item: {
+					Count: 1
+					id: "minecraft:golden_hoe"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "圈地"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4EB78B5D6F8061E9"]
+			description: ["樂器可以 &e調音&r 以改變其音色與運作方式。合成一個 &e調音台（Tuning Table）&r，並前往 &e模組指南書&r 中的對應章節，查看可調音樂器的 &e完整清單&r 以及所需的物品。"]
+			id: "34D93634E3BD0A59"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "373E7EA816B5F7E0"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "合成一個調音台（Tuning Table）"
+			tasks: [{
+				id: "568DA92753424F60"
+				item: "mimi:tuningtable"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["34D93634E3BD0A59"]
+			description: [
+				"&e機械指揮家（Mechanical Maestro）&r 只要給它 &e樂器&r 和 &e配線盤（Switchboard）&r，就會 &e自動演奏音樂&r。它需要 &e紅石訊號&r 才能運作。"
+				""
+				"&e監聽器（Listener）&r 和 Recei&ever&r 方塊會偵測 &e附近演奏的音符&r，若符合設定的篩選條件，就會輸出 &e紅石訊號&r。"
+			]
+			id: "13BFD3FE012DE2AE"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "160744DEF54A6086"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "各合成一個"
+			tasks: [
+				{
+					id: "0608E7A2EAE0494D"
+					item: "mimi:mechanicalmaestro"
+					type: "item"
+				}
+				{
+					id: "19DFD7EE72173C45"
+					item: "mimi:listener"
+					type: "item"
+				}
+				{
+					id: "3FDBE267EACCBA27"
+					item: "mimi:receiver"
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["13BFD3FE012DE2AE"]
+			description: [
+				"&e伺服器發射器（Server Transmitter）&r 是發射器的方塊形態，不需要玩家手持就能播放 MIDI 檔案。不過它只能播放伺服器提供的歌曲。你可以把 MIDI 檔案放進 MIMI 設定資料夾中的 \"server_midi_files\" 資料夾（單人遊戲與區域網路的主機同樣適用），再點擊重新載入按鈕，即可將檔案加入伺服器發射器。"
+				""
+				"手持式發射器的設定是以玩家為單位儲存，但 &e伺服器發射器&r 的設定則是分別儲存在每個方塊上。播放歌曲時，伺服器發射器方塊會發出紅石訊號。"
+			]
+			id: "309792D482119CAD"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "251B7685E57F4467"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "各合成一個"
+			tasks: [{
+				id: "60B81DC36D3F79DE"
+				item: "mimi:transmitterblock"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -6.0d
+		}
+		{
+			description: ["你可以透過 DPS 疊層來查看你的 DPS。按下 &eShift + ]&r 叫出它，再用 &eShift + [&r 移動它的位置！"]
+			icon: "born_in_chaos_v1:evilometer"
+			id: "41B73C0882D4CAA4"
+			rewards: [{
+				id: "7F0E7DA137959919"
+				item: "lightmanscurrency:coin_iron"
+				type: "item"
+			}]
+			subtitle: "DPS 檢測！"
+			tasks: [{
+				id: "54512F768D4A938F"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "傷害計量器"
+			x: -3.5d
+			y: 1.5d
+		}
+	]
+	title: "愉快的合作"
+}

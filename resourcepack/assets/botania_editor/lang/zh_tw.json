@@ -1,0 +1,21 @@
+{
+  "config.jade.plugin_botania_editor.botania_flower": "Botania 花朵",
+  "config.jade.plugin_botania_editor.botania_spreader": "Botania 散發器",
+  "config.jade.plugin_botania_editor.botania_spreader_advanced": "Botania 散發器（進階）",
+  "config.jade.plugin_botania_editor.botania_mana": "Botania 魔力",
+  "botania_editor.mana_display": "魔力：%d / %d",
+  "botania_editor.burst_info": "每次爆發魔力：%d",
+  "botania_editor.loss_info": "每刻魔力流失：%d",
+  "botania_editor.orechid_stats": "每方塊花費：%d／每方塊延遲：%d",
+  "botania_editor.orechid_range": "水平範圍：%d，垂直範圍：%d",
+  "botania_editor.prod": "每刻產量：%d",
+  "botania_editor.decay": "衰減：%d 刻",
+  "botania_editor.prodOrb": "每經驗球產量：%d",
+  "botania_editor.prodExp": "每玩家經驗產量：%d",
+  "botania_editor.prodExplosion": "每次爆炸產量：%d",
+  "botania_editor.prodSlice": "每切片產量：%d",
+  "botania_editor.prodMult": "產量倍率：%d 倍",
+  "botania_editor.prodSheep": "每隻羊產量：%d",
+  "botania_editor.prodBabySheep": "每隻小羊產量：%d",
+  "botania_editor.prodItem": "每個物品產量：%d"
+}

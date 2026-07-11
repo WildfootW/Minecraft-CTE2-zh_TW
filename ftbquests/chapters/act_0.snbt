@@ -1,0 +1,972 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "act_0"
+	group: "1E3C4B5FFAE48A39"
+	icon: "minecraft:book"
+	id: "44789E48CD607F46"
+	images: [{
+		color: 8026746
+		height: 15.0d
+		image: "watut:textures/particles/book.png"
+		rotation: 0.0d
+		width: 15.0d
+		x: 3.0d
+		y: 2.5d
+	}]
+	order_index: 0
+	progression_mode: "linear"
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"&n歡迎來到 Craft to Exile 2&r——一款高度客製化的模組包，把 Minecraft 變成一款動作 RPG。"
+				""
+				"第一個任務章節「序章」的目的，是要讓你概略了解這個模組包所導入的一些系統，這些系統可能和你在大多數 Minecraft 模組包中習慣的玩法不太一樣。"
+				""
+				"&e點擊勾選框即可完成序章的每個「頁面」。&r"
+				""
+				"想了解更多資訊，歡迎造訪我們的 &9Wiki&r（連結也可以在主選單找到）。"
+				""
+				"也歡迎加入我們的 &9Discord&r 伺服器（連結同樣在主選單），我們可以幫你解決遊戲中的任何問題，或是單純聊聊這個模組包！"
+			]
+			icon: "minecraft:writable_book"
+			id: "30403B3DE1E47F33"
+			rewards: [
+				{
+					id: "662E6BDEDAE044A6"
+					item: "sophisticatedbackpacks:iron_backpack"
+					type: "item"
+				}
+				{
+					count: 12
+					id: "4E506FC73E0B1EAC"
+					item: "minecraft:bread"
+					title: "麵包"
+					type: "item"
+				}
+			]
+			subtitle: "目錄"
+			tasks: [{
+				id: "77FDE21B75D712EC"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "歡迎來到 Craft to Exile 2！"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["624D8CD0A4A6668B"]
+			description: [
+				"CTE2 支援組隊任務與組隊遊玩。&e所有隊伍／組隊選項都可以透過背包存取！&r"
+				""
+				"組隊遊玩共有 3 種不同的指令可以使用："
+				""
+				"&eMine and Slash 的隊伍&r，可以讓你們共享經驗值，並互相治療／增益。此外，你還能在介面上看到隊友的生命值／魔法護盾數值！"
+				""
+				"FTB Teams 可以讓你們共享任務進度。FTB Teams 也有自訂的隊伍聊天選單，預設按「-」即可開啟。"
+				""
+				"Lightman's Teams 可以讓你們共享金錢與商人通知。"
+			]
+			icon: "ftbquests:book"
+			id: "48075B2F138A9C2C"
+			rewards: [{
+				id: "7F6AE3A345D1324D"
+				item: "lightmanscurrency:coin_iron"
+				title: "金錢"
+				type: "item"
+			}]
+			shape: "circle"
+			subtitle: "第2b頁"
+			tasks: [{
+				id: "37CC2CFDC34FC657"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "組隊遊玩"
+			x: 3.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["04849611F904771C"]
+			description: [
+				"多虧了 Mine and Slash，CTE2 擁有一套完全客製化的升等進程系統。"
+				""
+				"擊殺怪物可以獲得經驗值，每次升等都會獲得屬性點。你可以在主選單中透過&e按下「H」&r來分配這些點數。事實上，大部分的選單都能從這個選單輪盤中存取！"
+				""
+				"{image:cte2:textures/character_stats.png width:160 height:128 align:1}"
+				""
+				"你的角色屬性也可以透過其他方式提升，例如：裝備（Gear）以及我們稍後會提到的天賦點數。"
+			]
+			icon: "minecraft:book"
+			id: "624D8CD0A4A6668B"
+			rewards: [
+				{
+					id: "5B3178D7FC9CF9B3"
+					item: "mmorpg:potions/reset_points_stat"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 400"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "4A429E1B6344E4A4"
+					silent: true
+					title: "400 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "第2頁"
+			tasks: [{
+				id: "352F3C2796BACD2F"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "角色屬性"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["624D8CD0A4A6668B"]
+			description: [
+				"&e天賦樹&r（Talent Tree）能為你的角色帶來更進一步的&e客製化&r，可以在 Mine and Slash 中樞介面中找到。"
+				""
+				"{image:cte2:textures/talent_tree.png width:160 height:115 align:1}"
+				""
+				"每升一級會獲得&e1 點天賦點&r。你必須先選擇一個起始位置，接著&e把點數分配到節點&r，且節點必須與你目前已擁有的其他節點相連。每個&e節點&r都會提供屬性&e加成&r，某些情況下甚至能改變你的核心遊玩方式！"
+			]
+			icon: "minecraft:book"
+			id: "53A5ECD28E7E16E1"
+			rewards: [
+				{
+					id: "7F66934DFD28206B"
+					item: "mmorpg:potions/reset_points_talent"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 200"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "3BC953334872A751"
+					silent: true
+					title: "200 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "第3頁"
+			tasks: [{
+				id: "07B9CDCDF05CC52E"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "天賦樹"
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["53A5ECD28E7E16E1"]
+			description: [
+				"{image:cte2:textures/gui.png width:160 height:105 align:1}"
+				""
+				"&e角色（Characters）&r選單可以讓你儲存並讀取不同的角色。它會儲存角色的所有資訊，但裝備除外！你最多可以儲存 3 個角色。新建立的角色會從 1 級開始，但會共享任務完成後解鎖的內容，例如&e天賦點與昇華點數&r。"
+				""
+				"&e分解（Salvaging）&r選單能讓你在拾取物品時，把不需要的戰利品轉換成有用的合成材料。"
+				""
+				"&e職業（Classes）&r選單可以讓你的角色走向專精。你會在這裡學習技能，並用點數來強化它們。在 CTE2 中，你可以同時&e專精兩種不同的職業&r！"
+				""
+				"&e珠寶（Jewels）&r選單會在你把點數分配到天賦樹的珠寶插槽後啟用。裝備珠寶可以提升你的角色屬性！"
+				""
+				"此外，在介面下方（放鎬子圖示的地方），你可以看到你的&e專業（Profession）&r等級。"
+			]
+			icon: "minecraft:book"
+			id: "0C1568D71346C427"
+			rewards: [
+				{
+					count: 4
+					id: "6BA00FC78BAE6C85"
+					item: "lightmanscurrency:coin_iron"
+					title: "金錢"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 200"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "3B10C874A7833200"
+					silent: true
+					title: "200 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "第4頁"
+			tasks: [{
+				id: "60453E7473A695D0"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "介面的其他部分"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0C1568D71346C427"]
+			description: [
+				"在 CTE2 中，共有 3 種「主要」戰鬥風格。你可以選擇當&4近戰戰士&r、&9法術施法者&r，或是&2遠程弓箭手&r。當然，這只是最基本的分類，因為每個角色都能有非常廣泛的客製化與展現空間。"
+				""
+				"你想成為噴火戰士嗎？還是死靈系法師？又或者是丟陷阱的獵人？"
+				""
+				"CTE2 在角色客製化方面提供了非常多的內容。希望你能找到最適合自己的遊玩風格！"
+			]
+			icon: "minecraft:book"
+			id: "3059FF2D6DB1AC9F"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "780B73E925FBD004"
+					table_id: 405550839613976496L
+					type: "choice"
+				}
+				{
+					count: 64
+					id: "1B21344DA58F8D97"
+					item: "minecraft:arrow"
+					title: "箭矢"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 200"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "3098C9D09E030015"
+					silent: true
+					title: "200 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "第5頁"
+			tasks: [{
+				id: "7EA3FFEFB226B157"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "你的第一把武器"
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3059FF2D6DB1AC9F"]
+			description: [
+				"Craft to Exile 2 徹底翻新了戰鬥系統。&e武器擁有動作動畫與連段&r，並依你所持武器的種類而擁有不同的特性。"
+				""
+				"此外，你可以按&e「Alt」進行翻滾閃避&r，此動作有短暫的冷卻時間。"
+				""
+				"別忘了 CTE2 中的普通攻擊！它們在戰鬥中相當強力，還能與技能搭配使用。"
+			]
+			icon: "minecraft:book"
+			id: "546A9D082F1A2160"
+			rewards: [
+				{
+					id: "4D3BA6D80A06AD15"
+					item: "minecraft:zombie_spawn_egg"
+					title: "殭屍刷怪蛋"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 200"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "539974DB413EB4B5"
+					silent: true
+					title: "200 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "第6頁"
+			tasks: [{
+				id: "222D99698592B33D"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "戰鬥"
+			x: 3.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0A39A9996E8D63F4"]
+			description: [
+				"技能需要消耗&9魔力&r或&a能量&r，用於戰鬥之中。你可以透過職業分頁學習技能，並將其裝備在技能介面中的&9方形&r插槽裡："
+				""
+				"{image:cte2:textures/skill_gem.png width:140 height:105 align:1}"
+				""
+				"你可以透過升級技能，或是將其連結到輔助寶石來修改、強化技能，輔助寶石要放在&5圓形&r插槽中。這些寶石能提升連結技能的&e資源消耗&r與威力。"
+				""
+				"技能可連結的輔助寶石數量有上限（詳見「&5輔助插槽：&r」）。技能能擁有的插槽數量取決於&e技能等級&r，16 級時最多可有 5 個插槽。&e技能至少要達到 4 級，才能獲得第一個插槽。&r &c插槽數量&l同時&r也受到&e玩家等級&r的限制（每 10 級增加 1 個插槽，從 1 個開始）。&r"
+				""
+				"在&e最下面&r一排，裝備增幅寶石可以消耗增幅容量來提供屬性加成。你可以在右側以&d粉紅色&r看到目前剩餘的增幅容量。"
+			]
+			icon: "minecraft:book"
+			id: "22EAD61501470768"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "5F7B46C685D188ED"
+					table_id: 981191123936022223L
+					type: "choice"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00B6E55860C350A9"
+					table_id: 5889716173591028936L
+					type: "choice"
+				}
+				{
+					id: "0FA3268AB0494B94"
+					item: "mmorpg:potions/reset_points_spell"
+					type: "item"
+				}
+				{
+					id: "104170C66DCC1E67"
+					item: "mmorpg:potions/reset_points_passive"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 200"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "555EEACB001F9F25"
+					silent: true
+					title: "200 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "第8頁"
+			tasks: [{
+				id: "703C97D9D47FEB19"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "技能、輔助與增幅寶石"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["546A9D082F1A2160"]
+			description: [
+				"在戰鬥中測試你的新武器與所學知識吧！"
+				""
+				"&e請勿在村莊裡召喚生物，鐵魔像可能會殺死你的殭屍！在白天召喚也要小心！建議在洞穴裡召喚。&r"
+				""
+				"&o開戰前請務必先分配好屬性點，因為武器都有最低屬性需求！&r"
+			]
+			icon: "minecraft:book"
+			id: "0A39A9996E8D63F4"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 700"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "1EDA06CB95371D19"
+				silent: true
+				title: "700 經驗值"
+				type: "command"
+			}]
+			subtitle: "第7頁"
+			tasks: [{
+				advancement: "minecraft:adventure/kill_a_mob"
+				criterion: ""
+				icon: "ftb_ph:zombie"
+				id: "54F60D14EA2C9CC2"
+				title: "擊殺 1 隻殭屍"
+				type: "advancement"
+			}]
+			title: "首殺"
+			x: 2.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["22EAD61501470768"]
+			description: [
+				"在 Minecraft 中，&4生命值&r是你的生命力，一旦歸零，你的角色就會死亡。在 CTE2 中，&4死亡&r不會讓你失去裝備，但從 50 級開始，你會損失相當大一部分的經驗值。"
+				""
+				"角色的防禦可分為 3 大類：&4護甲&r（板甲）、&2迴避&r（皮甲）與&9魔法護盾&r（布甲），但也可能存在混合類型（&8鎖甲&r＝&4護甲&r／&2迴避&r）。"
+				""
+				"護甲能減少受到的物理傷害，迴避能讓你有機率完全免疫任何攻擊，魔法護盾則是一層會緩慢回復的額外生命緩衝。你主要可以透過裝備、屬性點與天賦樹來提升這些數值。"
+				""
+				"還有&e其他減傷手段&r，例如元素抗性、法術迴避與傷害減免。你可以在裝備、天賦樹以及珠寶上找到這些屬性。"
+				""
+				"天賦樹上有些選項會改變你的防禦運作方式，例如把生命值固定為 1，並大幅提升魔法護盾！"
+				""
+				"&o如果你不喜歡護甲的外觀，可以用時裝系統（Cosmetic Armor）把它蓋起來！&r"
+			]
+			icon: "minecraft:book"
+			id: "7B22B96E95E5DA09"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "5D5755216C597FF1"
+					table_id: 8672695084726290362L
+					type: "choice"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "3FE70BFEB5ED2D52"
+					table_id: 7074154712315855923L
+					type: "choice"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "5DC2202B09680066"
+					table_id: 8493327020853369464L
+					type: "choice"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "6D6A4A9389EE9F37"
+					table_id: 5741053327200068691L
+					type: "choice"
+				}
+				{
+					id: "45990E4571B1B2EA"
+					item: "minecraft:skeleton_spawn_egg"
+					title: "骷髏刷怪蛋"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 250"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "4B863DDA4942C800"
+					silent: true
+					title: "250 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "第9頁"
+			tasks: [{
+				id: "4B40DF289BF860BF"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "全副武裝"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["1C852F78D386B77E"]
+			description: [
+				"恭喜你完成了序章任務線。完成這最後一頁後，你終於可以&e展開第一章的旅程&r了！"
+				""
+				"在 CTE2 中，&e即使還沒完成前置任務，你也可以先完成後續任務中的目標&r。不過要等到你實際解鎖該任務後，才能領取獎勵。"
+				""
+				"記得去看看&e支線任務&r，裡面有很多非常實用的資訊，也會帶你認識 CTE2 中使用的其他模組。透過這些任務線，你可以發現其他模組與 Mine and Slash 之間的各種整合！"
+			]
+			icon: "minecraft:writable_book"
+			id: "0CDFB8E5BB59B981"
+			rewards: [
+				{
+					count: 15
+					id: "58E255CF9F588325"
+					item: "lightmanscurrency:coin_iron"
+					title: "金錢"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 500"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "513F1792134DC311"
+					silent: true
+					title: "500 經驗值"
+					type: "command"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "5786D74604BF83D1"
+					table_id: 405550839613976496L
+					type: "choice"
+				}
+			]
+			subtitle: "附錄"
+			tasks: [{
+				id: "4DE938BD22A26E0A"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "拾取。升級。探索。"
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7B22B96E95E5DA09"]
+			description: [
+				"寶石與符文可以鑲嵌到擁有可用插槽的裝備上。你可以透過某些 Mine and Slash 通貨來增加插槽。"
+				""
+				"&b寶石&r分為多個階級。你可以&e合成 3 顆同階寶石以升級成下一階&r。將寶石鑲嵌進裝備的方式，是在滑鼠游標拿著寶石時點擊該物品。鑲嵌到裝備後，寶石就會提供額外屬性。"
+				""
+				"&c符文&r也可以加到裝備上，提供額外屬性。如果你在&e符文裝備&7中插入特定組合的符文，就能合成出&e符文之語&r，賦予裝備一組特定加成！請注意，符文裝備的插槽數可能比符文之語所需的符文數還多！"
+				""
+				"&e手持符文並按右鍵，即可查看可合成的符文之語！&r &e符文之語&r只能在&e符文&r稀有度的物品上合成。"
+				""
+				"使用&e萃取通貨石&r，可以把寶石與符文從物品上取出！"
+			]
+			icon: "ftbquests:book"
+			id: "4C9F8B8F01189196"
+			rewards: [
+				{
+					id: "76247AC0012E1810"
+					item: "mmorpg:gems/azurite/1"
+					title: "碎裂天青石"
+					type: "item"
+				}
+				{
+					id: "5722F71FCCB83AB8"
+					item: "mmorpg:gems/topaz/1"
+					title: "碎裂黃玉"
+					type: "item"
+				}
+				{
+					id: "45878D000E81C7B4"
+					item: "mmorpg:runes/ano"
+					title: "Ano 符文"
+					type: "item"
+				}
+				{
+					id: "549B167A69E67CFA"
+					item: "mmorpg:currency/extract_gem"
+					type: "item"
+				}
+			]
+			shape: "circle"
+			subtitle: "第9c頁"
+			tasks: [{
+				id: "1DADE93D8FAB373D"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "寶石與符文"
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["7B22B96E95E5DA09"]
+			description: [
+				"在戰鬥中測試你的新法術與護甲吧！"
+				""
+				"&e請勿在村莊裡召喚生物，鐵魔像可能會殺死你的骷髏！在白天召喚也要小心！建議在洞穴裡召喚。&r"
+			]
+			icon: "minecraft:book"
+			id: "1895A7A94BE0A4B6"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 250"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "23B96BB571FA8D03"
+				silent: true
+				title: "250 經驗值"
+				type: "command"
+			}]
+			subtitle: "第10頁"
+			tasks: [{
+				entity: "minecraft:skeleton"
+				icon: "ftb_ph:skeleton"
+				id: "33E51DA632612F0F"
+				type: "kill"
+				value: 1L
+			}]
+			title: "輕鬆一擊"
+			x: 3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["30403B3DE1E47F33"]
+			description: [
+				"&o「金錢能買到幸福嗎？」&r"
+				""
+				"呃，至少在這裡，金錢可以用來購買許多實用的工具與資源。你可以用金錢向村民及其他模組的商人交易物品。當然，你也可以用金錢跟其他玩家交易，如果你在伺服器上，還能購買領地方塊！"
+				""
+				"你可以&l透過擊殺怪物或搜刮寶箱來賺取金錢&r。有時候你也可以把物品賣給商人換取金錢。"
+				""
+				"&e交易終端機／易物看板&r在取得特定資源時也是相當實用的工具。&r"
+				""
+				"把錢好好收在你從這個任務獲得的&e錢包&r裡。之後可以升級錢包，讓它能裝更多錢！"
+				""
+				"&e如果你需要把金錢兌換成較小面額，可以使用 ATM。&r"
+			]
+			icon: "minecraft:book"
+			id: "04849611F904771C"
+			rewards: [{
+				id: "409F7C072512843C"
+				item: {
+					Count: 1
+					id: "lightmanscurrency:wallet_gold"
+					tag: {
+						AutoConvert: 1b
+					}
+				}
+				title: "錢包"
+				type: "item"
+			}]
+			subtitle: "第1頁"
+			tasks: [{
+				id: "33258148F7D6B004"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "金錢"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3059FF2D6DB1AC9F"]
+			description: [
+				"在 CTE2 中，你會合成並找到許多裝備。這些&e裝備必須先套用裝備屬性魂魄，才會提供任何屬性&r，也就是為它們注入 Mine and Slash 屬性。"
+				""
+				"&c沒有魂魄的裝備，無論攻防都不會有任何效果！&r"
+				""
+				"裝備屬性魂魄可以用在任何同類型的裝備上。舉例來說，Aquaculture 和 Farmer's Delight 的小刀都屬於「匕首（Dagger）」類型。只要手持「匕首」類型的裝備屬性魂魄，&e點擊該物品&r，就能為小刀套用 Mine and Slash 的屬性！"
+				""
+				"想了解更多&e如何合成裝備屬性魂魄&r嗎？前往&aM\&S Professions&r任務章節看看吧！"
+			]
+			icon: "ftbquests:book"
+			id: "289350CF47F41D69"
+			rewards: [
+				{
+					id: "5B729B2C8440BDF5"
+					item: {
+						Count: 1
+						id: "aquaculture:wooden_fillet_knife"
+						tag: {
+							Damage: 0
+						}
+					}
+					title: "木製魚片刀"
+					type: "item"
+				}
+				{
+					id: "31743DFDD664B202"
+					item: {
+						Count: 1
+						id: "mmorpg:stat_soul"
+						tag: {
+							CustomModelData: 15
+							mmorpg_stat_soul: "{\"tier\":0,\"slot\":\"dagger\",\"rar\":\"common\",\"fam\":\"NONE\",\"uniq\":\"\",\"can_sal\":true}"
+						}
+					}
+					title: "匕首屬性魂魄"
+					type: "item"
+				}
+			]
+			shape: "circle"
+			subtitle: "第5b頁"
+			tasks: [{
+				id: "1C99B6F792983F96"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "裝備屬性魂魄"
+			x: 6.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["7B22B96E95E5DA09"]
+			description: [
+				"盾牌（護甲）、圖騰（迴避）與法典（魔法護盾）都是可以提升你防禦屬性的副手裝備。"
+				""
+				"戰鬥中的其中一種防禦手段是翻滾（預設按鍵：Alt），所有人都能使用。不過，如果你裝備了盾牌，還可以用它來格擋傷害。"
+				""
+				"舉盾防禦時會消耗&a能量&r，只要面向正確方向，就能抵銷受到的傷害。"
+				""
+				"你知道嗎？&e盾牌其實有被動機率可以抵銷傷害&r（類似迴避）。你可以透過裝備或天賦樹獲得格擋機率，讓你&o就算沒有舉盾，也有機率抵銷傷害&r！"
+			]
+			icon: "ftbquests:book"
+			id: "119B706F79F22360"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "206EE0F673CCC5EB"
+				table_id: 7401807202655080641L
+				type: "choice"
+			}]
+			shape: "circle"
+			subtitle: "第9b頁"
+			tasks: [{
+				id: "0662DB198465C67A"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "格擋"
+			x: -1.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["1895A7A94BE0A4B6"]
+			description: [
+				"傳送石碑（Waystone）散布在世界各地，一旦被發現，就能透過其他傳送石碑、傳送卷軸或傳送石傳送過去。"
+				""
+				"傳送石碑會在世界中隨機生成，但&e經常能在村莊裡找到&r。帶幾張傳送卷軸在身上，就能輕鬆返回任何已發現的傳送石碑！"
+			]
+			icon: "ftbquests:book"
+			id: "19319F327C09E772"
+			rewards: [{
+				count: 8
+				id: "1361F172A8236025"
+				item: "waystones:warp_scroll"
+				type: "item"
+			}]
+			shape: "circle"
+			subtitle: "第10c頁"
+			tasks: [{
+				id: "302BF9765FDEFFE8"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "傳送石碑"
+			x: 3.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["48075B2F138A9C2C"]
+			description: [
+				"你可以&e圈地&r來保護區域，避免不受歡迎的玩家進入。使用任意&e金鋤頭&r在地面上按右鍵即可進行圈地。"
+				""
+				"&o更多詳情請參考 &e愉快的合作&r 章節底下的「&e使用 FLAN 圈地&r」任務！&r"
+			]
+			icon: "ftbquests:book"
+			id: "31B023681AC62535"
+			rewards: [{
+				id: "13CF773EDFCB3C2E"
+				item: {
+					Count: 1
+					id: "minecraft:golden_hoe"
+					tag: {
+						Damage: 0
+						display: {
+							Lore: [
+								"{\"text\":\"Right-click to set Claim Point\",\"color\":\"light_purple\",\"italic\":false}"
+								"{\"text\":\"Click separate corners of your Base/Home to setup claim\",\"color\":\"green\",\"italic\":false}"
+								"{\"text\":\"Edit claim permissions by using the command\",\"color\":\"gold\",\"italic\":false}"
+								"{\"text\":\"/flan menu\",\"color\":\"white\",\"italic\":false}"
+							]
+							Name: "{\"text\":\"Claiming Hoe\",\"color\":\"gold\",\"italic\":false}"
+						}
+					}
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			subtitle: "第2c頁"
+			tasks: [{
+				id: "5848EBF021C0262E"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "圈地"
+			x: 3.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1895A7A94BE0A4B6"]
+			description: ["在你的旅途中，你會找到&e精靈球&r（Spirit Orb），可以在&e女神像&r（Goddess Statue）兌換成&c心之容器&r（Heart Container）。每個心之容器能讓你的基礎生命值提升 2 點，最多可達 200 點生命值（100 個心之容器）。在 Craft to Exile 2 中，你也可以從&e首領身上獲得心之容器&r。"]
+			icon: "minecraft:book"
+			id: "1C852F78D386B77E"
+			rewards: [{
+				id: "605680F58634B88E"
+				item: "paraglider:heart_container"
+				type: "item"
+			}]
+			subtitle: "第11頁"
+			tasks: [{
+				id: "5C49990F810F10CF"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "心之容器"
+			x: 4.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["1C852F78D386B77E"]
+			description: [
+				"你很快就會發現，&eCraft to Exile 2&r 有非常多的戰利品可以收集。大部分的戰利品都來自 RPG 模組 &eMine and Slash&r。最讓人頭痛的事情之一，就是要讓背包保持整齊，並保有足夠空間來撿東西。"
+				""
+				"這個&e大師袋&r（Master Bag）會專門&b拾取並存放&r來自&eMine and Slash&r的物品，協助你整理戰利品。你可以把這個袋子裝備在飾品（Curio）插槽中，並透過「&eAlt + B&r」開啟它！"
+				""
+				"如果你還是覺得戰利品數量太多難以應付，也可以考慮使用中樞介面裡的&e自動分解功能&r。想了解更多，請前往&e專業章節&r。"
+			]
+			icon: "ftbquests:book"
+			id: "351118C34DCDFEB4"
+			rewards: [{
+				id: "76C1849A7E4A48AC"
+				item: "mmorpg:master_bag"
+				type: "item"
+			}]
+			shape: "circle"
+			subtitle: "第11b頁"
+			tasks: [{
+				id: "6E5BF0F42C1A3C85"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "整理你的背包"
+			x: 4.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["04849611F904771C"]
+			description: [
+				"&eCraft to Exile 2&r 內建了&e自訂按鍵設定&r。不過，&c曾出現自訂按鍵設定未能套用的情況&r。你可以按 R 來確認：如果按 R 會叫出選單輪盤，就代表自訂按鍵設定沒有套用成功（正確應該是按 H）。"
+				""
+				"要解決這個問題，按 Esc 進入&b選項 > 操作設定 > 按鍵設定 > 點擊「重設按鍵」&r。"
+			]
+			icon: "ftbquests:book"
+			id: "5CA9B71D52F01485"
+			rewards: [{
+				id: "59679DF2D778DA7F"
+				item: "lightmanscurrency:coin_gold"
+				type: "item"
+			}]
+			shape: "circle"
+			subtitle: "第1b頁"
+			tasks: [{
+				id: "6F2223761F2F7200"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "按鍵設定"
+			x: 1.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["1895A7A94BE0A4B6"]
+			description: [
+				"在 CTE2 中，同一個區塊（chunk）內能擊殺的怪物數量有上限，超過之後怪物就會&c不再掉落任何戰利品或經驗值！&r該區塊會隨著時間慢慢恢復。"
+				""
+				"這麼設計是為了鼓勵旅行與探索，而不是使用自動化的刷經驗手段。"
+				""
+				"&o去探索、去發現吧！這個世界中有許多建築與危險等著你。"
+			]
+			icon: "ftbquests:book"
+			id: "151EDFFBB525349E"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 50"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "2CD733C2EAA8C466"
+				silent: true
+				title: "50 經驗值"
+				type: "command"
+			}]
+			shape: "circle"
+			subtitle: "第10b頁"
+			tasks: [{
+				id: "321AFA63AEF2B67B"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "反刷怪機制"
+			x: 3.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["30403B3DE1E47F33"]
+			description: [
+				"Craft to Exile 2 內建了&eVR 支援&r！你&l必須&r具備以下條件："
+				"- SteamVR"
+				"- VR 頭戴裝置"
+				"- Minecraft 視窗必須是電腦上的作用中視窗"
+				""
+				"確認以上條件後，開啟你的頭戴裝置並連接到電腦。接著就可以從主選單開啟 VR。系統已經幫你設定好一些按鍵，不過你可能還是會想&e調整 SteamVR 的輸入設定&r，讓 Vivecraft 更符合你的需求。"
+				""
+				"預設情況下，&lVR 輪盤選單&r用於 Mine and Slash 的技能快捷鍵以及其他一些重要選單項目。叫出輪盤選單時，你可以&l按住握把鍵（Grip）來切換到第二組選項&r！"
+				""
+				"此外，VR 整合支援也涵蓋了 Minecraft 的大部分內容，例如工作台，以及沉浸式揮砍與弓箭使用！你也可以調整移動方式，開啟原地跑步來移動！"
+				""
+				"&l請依照以下步驟操作，以避免介面載入失敗。退出遊戲前，你需要先在主選單關閉 VR，之後再登入時重新啟用它。&r"
+			]
+			icon: "simplehats:goggles"
+			id: "3FD1760A231D429D"
+			rewards: [{
+				id: "08FDBED97918BF5A"
+				item: "simplehats:goggles"
+				type: "item"
+			}]
+			shape: "circle"
+			tasks: [{
+				id: "7A2278B60D17AB84"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "VR 支援"
+			x: 0.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["22EAD61501470768"]
+			description: [
+				"{image:cte2:textures/skill_bar.png width:120 height:120 align:center}"
+				""
+				"點擊中樞介面裡的&e技能快捷欄&r（Skill Hotbar），就能把&e技能&r指派到你的快捷欄上。"
+				""
+				"{image:cte2:textures/skill_hotbar.png width:160 height:120 align:center}"
+				""
+				"&e你可以移動技能快捷欄的位置&r，方法是按 ESC > Mods > Mine and Slash > Config > mine_and_slash-client > General > Overlays > &e把 SPELL HOTBAR OVERLAY TYPE 設定為切換水平／垂直模式，並透過 SPELL HOTBAR VERTICAL/HORIZONTAL CONFIGs 進行調整&r。"
+			]
+			icon: "ftbquests:book"
+			id: "33E4003EA7B05BA4"
+			rewards: [{
+				count: 5
+				id: "7909F546B1BEADEA"
+				item: "lightmanscurrency:coin_copper"
+				type: "item"
+			}]
+			shape: "circle"
+			subtitle: "第8b頁"
+			tasks: [{
+				id: "24E6BC2E8058814E"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "法術欄"
+			x: -1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1C852F78D386B77E"]
+			description: ["CTE2 有大量的資訊，有時候這些資訊會分散在整個任務流程中。如果你想把這些資訊整合在同一個地方查閱，可以使用 Patchouli 的&e冒險者手冊&r！"]
+			icon: "ftbquests:book"
+			id: "7343515F10544FDE"
+			rewards: [{
+				id: "416C4B559784D2D8"
+				item: {
+					Count: 1
+					id: "patchouli:guide_book"
+					tag: {
+						"patchouli:book": "patchouli:CTE2"
+					}
+				}
+				type: "item"
+			}]
+			shape: "circle"
+			subtitle: "第11c頁"
+			tasks: [{
+				id: "2D60441D0A153B0F"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "資訊彙整"
+			x: 4.5d
+			y: 7.0d
+		}
+	]
+	title: "序章"
+}

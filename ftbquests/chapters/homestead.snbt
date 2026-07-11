@@ -1,0 +1,1044 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "homestead"
+	group: "5F2CCE8075FCC994"
+	icon: "handcrafted:bamboo_fancy_bed"
+	id: "08A3CE628804D7D6"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"每個&e風鈴&r會依材質發出不同的環境音效，還會嚇跑25格範圍內的夜魅。"
+				""
+				"&e玻璃風鈴&r可以染色做出自訂圖案。對著水源方塊右鍵點擊即可洗掉圖案。"
+				""
+				"你可以蹲下並空手右鍵點擊風鈴方塊來&e綁起/解開&r風鈴，藉此停止嚇跑夜魅的效果。"
+			]
+			id: "0E7863B918B4B195"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "05957DDC02A24CC9"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "風鈴"
+			tasks: [{
+				id: "3355405161F752F4"
+				item: "chimes:glass_bells"
+				type: "item"
+			}]
+			title: "起風了"
+			x: 4.5d
+			y: -4.5d
+		}
+		{
+			description: ["&e夜燈（Night Lights）&r新增了可以開關的裝飾性光源。"]
+			id: "31C042465B27EC87"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "28E649D855379875"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "夜燈"
+			tasks: [
+				{
+					id: "77BD1CD948CBC5A5"
+					item: "nightlights:hanging_lights_default"
+					type: "item"
+				}
+				{
+					id: "1A360D0080ACEB31"
+					item: "nightlights:fairy_lights_default"
+					type: "item"
+				}
+			]
+			title: "時尚點燈術"
+			x: -4.5d
+			y: -6.0d
+		}
+		{
+			description: ["&eSupplementaries&r 和 &eSupplementaries Squared&r 新增了許多容易製作與使用的&e裝飾與功能性&r方塊。"]
+			id: "74E14D9A9F4799D4"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "12CDA68D5F398808"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "Supplementaries"
+			tasks: [
+				{
+					id: "3D5A39806227B36B"
+					item: "supplementaries:flag_white"
+					type: "item"
+				}
+				{
+					id: "2417CC783542CB88"
+					item: "supplementaries:candle_holder"
+					type: "item"
+				}
+				{
+					id: "46B341261AC67D12"
+					item: "supplementaries:item_shelf"
+					type: "item"
+				}
+				{
+					id: "2552629E3C335847"
+					item: "supplementaries:wind_vane"
+					type: "item"
+				}
+				{
+					id: "0F14FADDFB78FF74"
+					item: "supplementaries:sconce"
+					type: "item"
+				}
+			]
+			title: "室內設計師"
+			x: -3.0d
+			y: -6.0d
+		}
+		{
+			description: [
+				"&eHandcrafted&r 新增了家具，例如&e豪華床、櫃檯和椅子&r，可以用不同顏色的&e床單&r和&e枕頭&r自訂樣式。"
+				""
+				"&e槌子（Hammer）&r可以改變方塊的外觀，例如不用拆掉重放就能改變樓梯種類。"
+			]
+			id: "6A465BF497661001"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "45138A03C0BDB5AC"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "Handcrafted"
+			tasks: [
+				{
+					id: "7C737EF24A0DD366"
+					item: "handcrafted:white_cushion"
+					type: "item"
+				}
+				{
+					id: "31FE8C4D49C42EA5"
+					item: "handcrafted:white_sheet"
+					type: "item"
+				}
+				{
+					id: "4A94BB46A7D9D52C"
+					item: "handcrafted:hammer"
+					type: "item"
+				}
+			]
+			title: "特製家具"
+			x: -3.0d
+			y: -4.5d
+		}
+		{
+			description: [
+				"&eMacaw's Doors&r 新增了許多可製作的門樣式與主題。"
+				""
+				"&eMacaw's Bridges&r 新增了橋樑與各種橋樑變化款。"
+				""
+				"&eMacaw's Lights and Lamps&r 新增了許多種類的燈具與光源。"
+			]
+			id: "3C9F2AB674921503"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "3F7E8E123A70AC50"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "Macaw's Decorations"
+			tasks: [
+				{
+					id: "6B06D8650053E266"
+					item: "mcwdoors:oak_barn_door"
+					type: "item"
+				}
+				{
+					id: "3BEA773995483823"
+					item: "mcwbridges:pliers"
+					type: "item"
+				}
+				{
+					id: "3C698BB503A1FAEC"
+					item: "mcwlights:lava_lamp"
+					type: "item"
+				}
+			]
+			title: "強化建築"
+			x: -4.5d
+			y: -4.5d
+		}
+		{
+			description: ["&eFloral Enchantment&r 新增了花叢，可以從中取得每種花的&e藤蔓&r。花藤是從&e花叢&r取得的。你也能從每種花取得&e青苔石&r來裝飾，此模組還新增了一些花卉主題的&e裝備&r與裝飾品。"]
+			id: "32823645E2FE4F43"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "4BD548221E47022A"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "Floral Enchantment"
+			tasks: [{
+				id: "4F4158D32907A7C0"
+				item: "floralench:floral_basket"
+				type: "item"
+			}]
+			title: "進階園丁"
+			x: 3.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["5E71DC1D9E7A83BB"]
+			description: [
+				"Chipped 新增了可以製作方塊變化款的工作台。&eChipped 與 FramedBlocks 相容！&r"
+				""
+				"&e鍊金台（Alchemy Bench）&r可以製作黑曜石、螢石、海燈籠和靈魂沙的變化款。"
+				""
+				"&e植物學家工作台（Botanist's Workbench）&r可以製作植物類方塊的變化款。"
+				""
+				"&e木匠桌（Carpenter's Table）&r可以製作木板和火把的變化款。"
+				""
+				"&e玻璃工坊（Glassblower）&r可以製作玻璃方塊和玻璃片的變化款。"
+				""
+				"&e織布機（Loom）&r可以製作羊毛方塊和地毯的變化款。"
+				""
+				"&e石匠桌（Mason's Table）&r可以製作類石頭方塊的變化款。"
+				""
+				"&e修補台（Tinkering Table）&r可以製作紅石燈、火把和燈籠的變化款。"
+			]
+			id: "3A66909746F7E06D"
+			rewards: [
+				{
+					id: "349B4A117F7BD340"
+					item: "simplehats:tinkerhat"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give xp_times_lvl @p 250"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "7BF0D4BE713CE528"
+					silent: true
+					title: "250 經驗值 x 等級"
+					type: "command"
+				}
+			]
+			size: 1.25d
+			subtitle: "Chipped"
+			tasks: [
+				{
+					id: "4D48B532F654158B"
+					item: "chipped:alchemy_bench"
+					type: "item"
+				}
+				{
+					id: "5FD900BDF5AFACED"
+					item: "chipped:botanist_workbench"
+					type: "item"
+				}
+				{
+					id: "01B19695667C65A6"
+					item: "chipped:carpenters_table"
+					type: "item"
+				}
+				{
+					id: "7B6D1A3CA7E94CF5"
+					item: "chipped:glassblower"
+					type: "item"
+				}
+				{
+					id: "1B8FF702B10E8DA9"
+					item: "chipped:loom_table"
+					type: "item"
+				}
+				{
+					id: "7E39A28EC72BC4C8"
+					item: "chipped:mason_table"
+					type: "item"
+				}
+				{
+					id: "50DE9684F0DB3A91"
+					item: "chipped:tinkering_table"
+					type: "item"
+				}
+			]
+			title: "應有盡有的 Chipped"
+			x: 6.0d
+			y: -4.5d
+		}
+		{
+			description: [
+				"&eMCA: Reborn&r 為玩家帶來沉浸式的遊戲體驗，以下列出部分特色功能："
+				""
+				"- 不再是魷魚人了，現在他們是可以互動的人類！"
+				"- 與村民有許多互動選項，例如送禮、聊天等等！"
+				"- 你可以透過與村民互動來建立關係，每位村民都有自己的個性與心情。"
+				"- 當好感度（愛心）夠高時，你就可以和他們結婚！"
+				"- 結婚後，你可以生小孩，他們能幫忙做家務，例如種田、砍樹等等！"
+				"- 你的小孩最終會長大，並開始自己的人生。"
+				"- 你可以在區域網路（LAN）或 SMP 伺服器上與其他玩家結婚。"
+				"- 幫助擴展村莊並提升你的等級，最終成為國王！"
+			]
+			id: "5DEC625AAF61ADAE"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "3BE249E997A6481F"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "Minecraft Comes Alive!"
+			tasks: [{
+				id: "7DF2002BF8966859"
+				item: "mca:book_romance"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5DEC625AAF61ADAE"]
+			description: ["夢想過成為國王嗎？你可以管理自己的村莊，讓它繁榮興盛！閱讀書本以取得更多資訊。"]
+			id: "57B5209F6744960D"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "5238432C6F96151E"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "村莊管理"
+			tasks: [{
+				id: "1B52B998DACA2A94"
+				item: "mca:book_blueprint"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5DEC625AAF61ADAE"]
+			description: [
+				"在 MCA 中，你可以透過啟動&e命運（Destiny）&r來選擇自己的外觀。"
+				""
+				"&e命運&r功能可以讓你自訂角色外觀——&c但請注意，每個世界只能使用一次！&r"
+				""
+				"指令：/mca destiny"
+				""
+				"&b&o請注意，製作藥水需要在鍊金術專業上有一定技能。&r&r"
+			]
+			id: "405A63031F2B3DD4"
+			rewards: [
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give xp_times_lvl @p 100"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "38CE3E0A09909566"
+					silent: true
+					title: "100 經驗值 x 等級"
+					type: "command"
+				}
+				{
+					command: "/mca destiny"
+					elevate_perms: true
+					icon: "mca:villager_editor"
+					id: "52498BF9583E22B2"
+					silent: true
+					title: "&e啟動角色命運自訂器&r &c（僅限使用一次）&r"
+					type: "command"
+				}
+			]
+			subtitle: "命運"
+			tasks: [
+				{
+					id: "18B7CA6CFEC6E3A0"
+					item: "mca:potion_of_feminity"
+					type: "item"
+				}
+				{
+					id: "3D44930F8FDA61E0"
+					item: "mca:potion_of_masculinity"
+					type: "item"
+				}
+			]
+			title: "梳妝打扮"
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5DEC625AAF61ADAE"]
+			description: ["&e玫瑰金（Rose Gold）&r用於製作與人際關係相關的特殊物品。閱讀書本了解詳情！"]
+			id: "6B0990886F0D079E"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "4923C57810A678C4"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "人際關係"
+			tasks: [{
+				id: "5E26B808ED87038B"
+				item: "mca:book_rose_gold"
+				type: "item"
+			}]
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6B0990886F0D079E"]
+			description: ["透過這本新版書籍學習如何管理你的家庭！"]
+			id: "17AF31897E44E881"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "1A9495733A04F89B"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "人際關係"
+			tasks: [{
+				id: "73C366ABDCFD9554"
+				item: "mca:book_family"
+				type: "item"
+			}]
+			x: 1.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["6B0990886F0D079E"]
+			description: ["你可以用&e生金礦（Raw Gold）&r和&e生銅礦（Raw Copper）&r製作&e玫瑰金&r。"]
+			id: "5610D44E742948CC"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "269A6DF9AC9FD22D"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "人際關係"
+			tasks: [{
+				id: "156DCFFEED6DD7D6"
+				item: "mca:rose_gold_dust"
+				type: "item"
+			}]
+			title: "昂貴的材料"
+			x: 3.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["5DEC625AAF61ADAE"]
+			id: "7581AE7038A4357A"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "1D4D510D6BD7D1BF"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "人際關係"
+			tasks: [{
+				id: "7E892780F9050184"
+				item: "mca:bouquet"
+				type: "item"
+			}]
+			title: "一份禮物"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["57B5209F6744960D"]
+			description: ["你可以用這本書查看村莊的歷史！"]
+			id: "3366932C88556127"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "7E70154BB9F7355A"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "村莊管理"
+			tasks: [{
+				id: "2D10ACB81E6A6877"
+				item: "mca:civil_registry"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["57B5209F6744960D"]
+			description: ["在村莊中使用&e藍圖（Blueprint）&r來管理它。"]
+			id: "6E074D0EF3EC5B70"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "1A10F71B3BA1F601"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "村莊管理"
+			tasks: [{
+				id: "0C15C2D4DB69840D"
+				item: "mca:blueprint"
+				type: "item"
+			}]
+			title: "邁向進步的藍圖"
+			x: -3.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["57B5209F6744960D"]
+			description: ["在少數情況下，村民可能會受到感染，進而導致死亡。閱讀相關疾病與治療方法，以避免這種情況發生！"]
+			id: "6AEF98877F6AF6CA"
+			rewards: [
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give xp_times_lvl @p 100"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "24CC02F15B2D516B"
+					silent: true
+					title: "100 經驗值 x 等級"
+					type: "command"
+				}
+				{
+					id: "037FB8A8F0CBF9EB"
+					item: "simplehats:doctorhat"
+					type: "item"
+				}
+			]
+			subtitle: "村莊管理"
+			tasks: [{
+				id: "1A7691EF79F81ED9"
+				item: "mca:book_infection"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["6AEF98877F6AF6CA"]
+			description: ["有時我們的村民會死去（不論是意外還是刻意的……）。但透過 MCA，你有機會讓他們死而復生！這本典籍說明了具體方法，但要有心理準備，因為你必須與死神本身戰鬥。"]
+			id: "009437C8BB7D9892"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "77C26525CBA1DE0C"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "村莊管理"
+			tasks: [{
+				id: "07B0F92FC4E41DE3"
+				item: "mca:book_death"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["5610D44E742948CC"]
+			description: [
+				"在 MCA 中，你可以和村民結婚，甚至可以和其他玩家結婚。要與村民結婚，你必須先向他們求婚。希望你們的關係良好，讓對方願意答應！"
+				""
+				"要和其他玩家結婚，可以使用「/mca propose」指令。"
+			]
+			id: "03DAE0F3497FF661"
+			rewards: [
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give xp_times_lvl @p 250"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "0B8FCD61D3E2F9DE"
+					silent: true
+					title: "250 經驗值 x 等級"
+					type: "command"
+				}
+				{
+					id: "0230537D62321FCF"
+					item: "simplehats:milady_doll"
+					type: "item"
+				}
+			]
+			subtitle: "人際關係"
+			tasks: [{
+				id: "2FE89D39632D7B42"
+				item: "mca:engagement_ring_rg"
+				type: "item"
+			}]
+			x: 4.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["009437C8BB7D9892"]
+			description: [
+				"擊敗&e死神（Grim Reaper）&r，讓你逝去的村民復活！"
+				""
+				"要召喚&e死神&r，你必須建造一座「&e祭壇&r」"
+				"&e祭壇&r由3根至少&e2格高&r的&b黑曜石&r柱組成。"
+				"在柱子的&e中心&r，你必須放置一個「&a綠寶石方塊&r」。"
+				"用打火石&e點燃&r所有3根柱子的&e頂端&r，"
+				"最後點燃&a綠寶石方塊&r來召喚&e死神&r"
+				""
+				"{image:cte2:textures/mca_grimreaper.png width:160 height:140 align:center}"
+				""
+				"&e死神&r&4只能在&e夜晚&r召喚&r"
+				""
+				""
+				"&c死神最低會在30級時出現。&r"
+				""
+				"死神擁有："
+				"&b+1% 生命偷取&r"
+				"&a10% 機率掉落 Owd Rune&r"
+			]
+			id: "564F958C07802B5B"
+			rewards: [
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give xp_times_lvl @p 500"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "6D63A4B38E0C681C"
+					silent: true
+					title: "500 經驗值 x 等級"
+					type: "command"
+				}
+				{
+					id: "1B2624ED552C3789"
+					item: "simplehats:bigbrain"
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			subtitle: "村莊管理"
+			tasks: [{
+				entity: "mca:grim_reaper"
+				icon: {
+					Count: 1
+					id: "mca:scythe"
+					tag: {
+						Damage: 0
+					}
+				}
+				id: "3C838778447C9753"
+				type: "kill"
+				value: 1L
+			}]
+			title: "施與受"
+			x: 0.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["564F958C07802B5B"]
+			description: ["你可以使用&e生命權杖（Staff of Life）&r讓死去的村民復活！"]
+			id: "171F2819791E3C2F"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 250"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "33C5158A421806ED"
+				silent: true
+				title: "250 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "村莊管理"
+			tasks: [{
+				id: "7194C831C004317D"
+				item: {
+					Count: 1
+					id: "mca:staff_of_life"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "復活"
+			x: 0.0d
+			y: -7.5d
+		}
+		{
+			description: [
+				"使用建造魔杖（Construction Wand）可以一次放置多個方塊，往你面對的方向延伸建築。如果這樣還不夠：你可以為魔杖升級額外的核心，讓你能在面對的方塊後方放置方塊，或是在半空中憑空放置方塊。"
+				""
+				"每支魔杖都附帶一個建造核心。你可以放入額外的核心讓魔杖變得更強大。把新核心和魔杖一起放進合成格中即可安裝。要切換核心，按住 OPTKEY（CTRL）並用魔杖左鍵點擊空氣。&c石製魔杖無法升級。&r"
+				""
+				"&e建造核心&r"
+				""
+				"往你面對的方向延伸建築。可延伸的最大方塊數取決於魔杖等級。按住 OPTKEY（CTRL）並滾動滑鼠滾輪可以更改放置限制（水平、垂直、南北向、東西向、無鎖定）。"
+			]
+			id: "130759BFC47D58DE"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "1BE7D312966DC021"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "建造魔杖"
+			tasks: [{
+				id: "6BD0E93EAF4C4C9E"
+				item: {
+					Count: 1
+					id: "constructionwand:stone_wand"
+					tag: {
+						Damage: 0
+						wand_options: { }
+					}
+				}
+				type: "item"
+			}]
+			x: -4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["130759BFC47D58DE"]
+			description: ["有用石頭、鐵和鑽石製成的基礎魔杖，等級越高的魔杖威力越強，耐久也越久。"]
+			id: "7DDC60601812FEA6"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "300917AC34F03D82"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "建造魔杖"
+			tasks: [{
+				id: "50DEC00FF30F8074"
+				item: {
+					Count: 1
+					id: "constructionwand:iron_wand"
+					tag: {
+						Damage: 0
+						wand_options: { }
+					}
+				}
+				type: "item"
+			}]
+			x: -4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["7DDC60601812FEA6"]
+			description: [
+				"&e天使核心&r"
+				""
+				"在你面對的方塊（或一排方塊）的另一側放置方塊。最大距離取決於魔杖等級。對著空氣右鍵可以在半空中放置方塊（類似天使方塊，因此得名）。要這麼做，你需要把想放置的方塊放在副手上。如果你已經墜落超過10格深，就無法在半空中放置方塊（掉進虛空可沒有簡單的救援工具）。"
+			]
+			id: "13B7B1C35F13C86D"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "1B26FC45F4717F75"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "建造魔杖"
+			tasks: [{
+				id: "72C3C6230D81D4E4"
+				item: "constructionwand:core_angel"
+				type: "item"
+			}]
+			x: -3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["7DDC60601812FEA6"]
+			description: [
+				"&e限制（Restriction）&r：啟用限制後，魔杖只會沿一行或一列放置方塊（水平面可選南北向、東西向，垂直面可選水平、垂直）。如果關閉方向鎖定，魔杖會延伸整個所指向的建築表面。此選項在天使模式下無效。"
+				""
+				"&e方向（Direction）&r：設為「Player」時，魔杖會以你自己放置方塊的方向來放置。目標模式（Target）則會以支撐方塊的方向來放置。"
+				""
+				"&e替換（Replacement）&r：啟用/停用可替換方塊（液體、雪、高草）的替換功能。"
+				""
+				"&e匹配（Matching）&r：選擇魔杖要延伸哪些方塊。設為「EXACT」時，只會延伸與選定方塊完全相同的方塊。"
+				"「SIMILAR」會將相似的方塊視為相同（例如同時延伸泥土和草地方塊）。"
+				"「ANY」會延伸你所看建築表面上的任何方塊。"
+				""
+				"&e隨機（Random）&r：啟用隨機模式後，魔杖會從你的快捷欄中隨機放置方塊。"
+			]
+			id: "619A04B3428907F1"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 500"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "2CD67EABBBECB4C4"
+				silent: true
+				title: "500 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "建造魔杖"
+			tasks: [{
+				id: "52E3A18F1E4BE3F5"
+				item: {
+					Count: 1
+					id: "constructionwand:diamond_wand"
+					tag: {
+						Damage: 0
+						wand_options: { }
+					}
+				}
+				type: "item"
+			}]
+			x: -4.5d
+			y: -3.0d
+		}
+		{
+			description: [
+				"&eFramedBlocks&r 新增了各種形狀的方塊，可以做成幾乎和遊戲中任何其他方塊一樣的外觀。你可以先製作基本的&e框架方塊（Framed Block）&r來開始。"
+				""
+				"製作&e製框鋸（Framing Saw）&r，其功能就像切石機一樣，但是專門用於框架方塊。它可以讓你輕鬆選擇想要的框架方塊形狀。"
+			]
+			id: "03D703094F2DC94A"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "0370DBFA598A59EC"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "FramedBlocks"
+			tasks: [{
+				id: "48E8FEFCED620C0A"
+				item: "framedblocks:framing_saw"
+				type: "item"
+			}]
+			title: "框架方塊入門！"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["03D703094F2DC94A"]
+			description: ["使用&e製框鋸&r，製作一個&e框架斜坡（Framed Slope）&r。"]
+			id: "7D4D72D4B936240C"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "6548E28FCD6DB0A3"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "FramedBlocks"
+			tasks: [{
+				id: "62E342C0A2DED1C9"
+				item: "framedblocks:framed_slope"
+				type: "item"
+			}]
+			x: 6.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["7D4D72D4B936240C"]
+			description: [
+				"&e框架扳手（Framed Wrench）&r可以用來旋轉框架方塊。對大多數方塊來說，旋轉方式取決於你點擊的面。"
+				""
+				"&e框架槌子（Framed Hammer）&r可以把方塊從框架中取出，讓它恢復預設狀態。"
+				""
+				"&e框架螺絲起子（Framed Screwdriver）&r可以用來循環切換偽裝方塊的不同狀態。"
+				""
+				"&e框架鑰匙（Framed Key）&r可以將特定框架方塊鎖定在目前的形狀，藉此抑制相鄰方塊更新。這讓你能放置一些原本因為缺少必要相鄰方塊而無法形成的配置（例如在不保留必要相鄰方塊的情況下，把框架樓梯放成轉角形狀）。"
+				""
+				"還有其他框架方塊工具可用，快去&eJEI&r裡看看吧！"
+			]
+			id: "5E71DC1D9E7A83BB"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "337D19FEE194795C"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "FramedBlocks"
+			tasks: [
+				{
+					id: "2CD93E35DB4888B6"
+					item: "framedblocks:framed_wrench"
+					type: "item"
+				}
+				{
+					id: "26B02CB43C3D8E5E"
+					item: "framedblocks:framed_hammer"
+					type: "item"
+				}
+				{
+					id: "346E0C173E6BEB68"
+					item: "framedblocks:framed_screwdriver"
+					type: "item"
+				}
+				{
+					id: "72ECCC291DE1738D"
+					item: "framedblocks:framed_key"
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["7D4D72D4B936240C"]
+			description: ["&e框架強化件（Framed Reinforcements）&r可以讓你放入的任何框架方塊獲得&e黑曜石&r的硬度與特性！"]
+			id: "49ED3E0B2E317DF6"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "7D808B6752D831FC"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "FramedBlocks"
+			tasks: [{
+				id: "63B204F32F396EF5"
+				item: "framedblocks:framed_reinforcement"
+				type: "item"
+			}]
+			x: 4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5DEC625AAF61ADAE"]
+			description: ["如果你遇到了空無一人的村莊，或只是想用金錢的力量讓村莊更熱鬧，你可以使用&e交易終端機（Trading Terminal）&r來購買村民刷怪蛋！"]
+			id: "20AB86BF7E21FD3B"
+			rewards: [
+				{
+					count: 5
+					id: "4159A4D6D2EE46E3"
+					item: "lightmanscurrency:coin_emerald"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give xp_times_lvl @p 100"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "2A2C8679E7193891"
+					silent: true
+					title: "100 經驗值 x 等級"
+					type: "command"
+				}
+			]
+			subtitle: "交易終端機"
+			tasks: [
+				{
+					id: "7590F368349C7E55"
+					item: "mca:male_villager_spawn_egg"
+					type: "item"
+				}
+				{
+					id: "0C9856B277D7C90B"
+					item: "mca:female_villager_spawn_egg"
+					type: "item"
+				}
+			]
+			title: "鬼城"
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			description: ["&e超級火把（Mega Torch）&r是基地建築師的夢想，因為它能在廣達&964格半徑&r的範圍內阻止所有敵對怪物生成！空手右鍵可以顯示確切的作用範圍，Shift+右鍵則可隱藏顯示。"]
+			id: "25A4EFCBB5F8AC31"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "6327B1498874B28B"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "再也不會有討厭的驚喜。"
+			tasks: [{
+				id: "34E000AEDA4852D2"
+				item: "torchmaster:megatorch"
+				type: "item"
+			}]
+			title: "照亮全世界"
+			x: 3.0d
+			y: -6.0d
+		}
+	]
+	title: "家園"
+}

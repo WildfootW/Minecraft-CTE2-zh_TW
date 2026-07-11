@@ -1,0 +1,15 @@
+{
+  "tooltip.legendarytabs.tab.backpack.description": "背包",
+  "tooltip.legendarytabs.tab.body_damage.description": "身體生命值",
+  "tooltip.legendarytabs.tab.ftb_quests.description": "任務",
+  "tooltip.legendarytabs.tab.ftb_teams.description": "隊伍",
+  "tooltip.legendarytabs.tab.inventory.description": "物品欄",
+  "tooltip.legendarytabs.tab.reskillable.description": "技能",
+  "tooltip.legendarytabs.tab.reskillable_reimagined.description": "技能",
+  "tooltip.legendarytabs.tab.map_atlases.description": "地圖",
+  "tooltip.legendarytabs.tab.xaeros_map.description": "地圖",
+  "tooltip.legendarytabs.tab.journey_map.description": "地圖",
+  "tooltip.legendarytabs.tab.diet.description": "飲食",
+  "tooltip.legendarytabs.tab.passive_skill_tree.description": "技能樹",
+  "tooltip.legendarytabs.tab.pufferfish_skills.description": "技能樹"
+}

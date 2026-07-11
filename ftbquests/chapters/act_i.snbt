@@ -1,0 +1,2363 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "act_i"
+	group: "1E3C4B5FFAE48A39"
+	icon: {
+		Count: 1
+		id: "minecraft:iron_sword"
+		tag: {
+			Damage: 0
+		}
+	}
+	id: "6F8D9CB650A8A0C6"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["0CDFB8E5BB59B981"]
+			description: [
+				"斥候回報顯示掠奪者(Illager)的活動有增加的跡象。甚至有回報指出死靈活動也變得更加頻繁！"
+				""
+				"搜查這一帶，找出任何不死生物，然後&e殺掉它們&r。"
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:wooden_sword"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "313921A7833269CF"
+			rewards: [
+				{
+					id: "523A80564F5B3B6A"
+					item: {
+						Count: 1
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "gateways:basic/zombie"
+						}
+					}
+					title: "殭屍傳送門"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 125"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "72B420BFEB4D2F50"
+					silent: true
+					title: "125 經驗值"
+					type: "command"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "主線任務"
+			tasks: [
+				{
+					entity: "minecraft:zombie"
+					icon: "ftb_ph:zombie"
+					id: "1CF03CBB118CB4BD"
+					type: "kill"
+					value: 5L
+				}
+				{
+					entity: "minecraft:skeleton"
+					icon: "ftb_ph:skeleton"
+					id: "6912869AEEF02CF4"
+					type: "kill"
+					value: 5L
+				}
+			]
+			title: "訓練篇"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["313921A7833269CF"]
+			description: [
+				"你從剛才擊敗的生物身上找到了一顆&e殭屍傳送門（Zombie Gateway）&r。奇怪的是，你感覺到一股令人不安的能量從中散發出來。"
+				""
+				"這會不會就是不死生物增加的原因？值得去查看看。試著在遠離村莊的地方使用這顆珍珠，感覺它好像會在使用時開啟一道傳送門……"
+			]
+			icon: {
+				Count: 1
+				id: "gateways:gate_pearl"
+				tag: {
+					gateway: "gateways:basic/zombie"
+				}
+			}
+			id: "4956C0B5633CE91E"
+			rewards: [
+				{
+					id: "1397C9FF3BAFD9BD"
+					item: {
+						Count: 1
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "gateways:basic/witch"
+						}
+					}
+					title: "女巫傳送門"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 250"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "602249117C6F72CE"
+					silent: true
+					title: "250 經驗值"
+					type: "command"
+				}
+				{
+					auto: "enabled"
+					icon: "ftb_ph:talent"
+					id: "34AE80E5F42D3E80"
+					title: "1 天賦點"
+					type: "custom"
+				}
+			]
+			subtitle: "升級方法"
+			tasks: [
+				{
+					entity: "minecraft:zombie"
+					icon: "ftb_ph:zombie"
+					id: "3A09F9D7E19A7E9E"
+					type: "kill"
+					value: 20L
+				}
+				{
+					entity: "minecraft:husk"
+					icon: "ftb_ph:husk"
+					id: "0081A1F923E703C9"
+					type: "kill"
+					value: 4L
+				}
+			]
+			title: "空氣中的異狀"
+			x: 3.0d
+			y: -3.0d
+		}
+		{
+			can_repeat: false
+			dependencies: ["313921A7833269CF"]
+			description: [
+				"斥候又帶回了一份新的回報！有人目擊到異常巨大的殭屍、骷髏和苦力怕出現在主世界各地。"
+				""
+				"這肯定是&e女巫（Witches）&r搞的鬼。你得找到一名女巫，審問她，並搜刮任何可疑的物品。"
+			]
+			icon: "minecraft:cauldron"
+			id: "0388547EAFE52B5F"
+			rewards: [
+				{
+					count: 4
+					id: "5E5370AF7FBC8339"
+					item: {
+						Count: 1
+						id: "minecraft:splash_potion"
+						tag: {
+							Potion: "mutantmonsters:chemical_x"
+						}
+					}
+					title: "X化學藥劑潑濺藥水"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 150"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "44AC5FC2AAB8AE3B"
+					silent: true
+					title: "150 經驗值"
+					type: "command"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "40C763D5F39FDA94"
+					table_id: 3790783906717981347L
+					type: "choice"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "主線任務"
+			tasks: [{
+				entity: "minecraft:witch"
+				icon: "ftb_ph:witch"
+				id: "02C46D668A930502"
+				type: "kill"
+				value: 3L
+			}]
+			title: "釀出來的麻煩"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0388547EAFE52B5F"]
+			description: [
+				"看來這名女巫正在釀造一種可疑的藥水，標籤上寫著&e「X化學藥劑（Chemical X）」&r。或許你該看看它的效果，說不定就是那些巨大生物的成因。"
+				""
+				"試著把它丟到一隻&e普通骷髏&r身上，看看會發生什麼事。要是運氣不好，你可能會自己碰上一隻&e變異骷髏（Mutant Skeleton）&r。"
+				""
+				"&e注意：如果你遇到變異殭屍，除非牠是在燃燒中死亡，否則牠最多會復活 4 次！&r"
+			]
+			icon: {
+				Count: 1
+				id: "mutantmonsters:mutant_skeleton_skull"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "5FCA8577C7DB792D"
+			rewards: [
+				{
+					id: "004160CB2EF9E66B"
+					item: "mmorpg:currency/level_up_orb"
+					title: "無限石"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 250"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "2E30BFE015E9A7C4"
+					silent: true
+					title: "250 經驗值"
+					type: "command"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "53538166A40324CB"
+					table_id: 8277515430762442209L
+					type: "choice"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "主線任務"
+			tasks: [{
+				entity: "mutantmonsters:mutant_skeleton"
+				icon: {
+					Count: 1
+					id: "mutantmonsters:mutant_skeleton_skull"
+					tag: {
+						Damage: 0
+					}
+				}
+				id: "1D20D3BF3B9BD554"
+				type: "kill"
+				value: 1L
+			}]
+			title: "失控的實驗"
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5FCA8577C7DB792D"]
+			dependency_requirement: "one_completed"
+			description: [
+				"你已經證實女巫們一直在釀造 X化學藥劑，用來對付主世界的生物，把牠們變成醜陋的怪物。"
+				""
+				"不過，牠們會集體開始釀造 X化學藥劑，背後一定有什麼原因……或許該是你親自去打探的時候了。你的直覺指向了那群卑劣的&e掠奪者（Illagers）。&r"
+				""
+				"或許你可以去打探掠奪者到底在搞什麼鬼。過去他們曾把藥水製作外包給女巫。你可以在主世界常見的&e掠奪者前哨站（Vanilla Pillager Outposts）&r中找到&e掠奪者（Pillagers）&r。"
+				""
+				"&o&7完成後將解鎖「重複任務」章節中的一個可重複任務！&r&r"
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:splash_potion"
+				tag: {
+					Potion: "goblintraders:absorption"
+				}
+			}
+			id: "783CA457464E8E3D"
+			rewards: [
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 250"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "55703D37D362DFBB"
+					silent: true
+					title: "250 經驗值"
+					type: "command"
+				}
+				{
+					id: "39BEDAFB0052494D"
+					item: "mmorpg:currency/upgrade_common_affix"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "主線任務"
+			tasks: [
+				{
+					entity: "minecraft:pillager"
+					icon: "ftb_ph:pillager"
+					id: "14618CB75F8DA2F8"
+					type: "kill"
+					value: 12L
+				}
+				{
+					entity: "minecraft:vindicator"
+					icon: "ftb_ph:vindicator"
+					id: "7BD8E97358F51C77"
+					type: "kill"
+					value: 6L
+				}
+			]
+			title: "調查"
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["783CA457464E8E3D"]
+			description: [
+				"這些&e掠奪者&r一直沒幹什麼好事。他們四處洗劫村莊，而且經常出沒在&e主世界的建築結構&r中。"
+				""
+				"既然你已經知道是誰在幕後導致敵對生物增加，現在該&e主動出擊&r了。"
+			]
+			icon: "simplehats:hockeymask"
+			id: "56FF2D399F956629"
+			rewards: [
+				{
+					id: "354515A8CAD6A367"
+					item: {
+						Count: 1
+						id: "mmorpg:chest/rare_gear"
+						tag: {
+							mmorpg_loot_chest: "{\"num\":5,\"rar\":\"rare\",\"lvl\":5,\"id\":\"gear\",\"key\":\"\"}"
+						}
+					}
+					title: "稀有裝備戰利品箱（5 級）"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 500"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "2DA88FAF6ABE615D"
+					silent: true
+					title: "500 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "掠奪者篇"
+			tasks: [
+				{
+					entity: "illagerinvasion:basher"
+					icon: "ftb_ph:basher"
+					id: "111624BAC6AD7E0E"
+					type: "kill"
+					value: 4L
+				}
+				{
+					entity: "illagerinvasion:marauder"
+					icon: "ftb_ph:savager"
+					id: "416E99E238B786D4"
+					type: "kill"
+					value: 4L
+				}
+				{
+					entity: "illagerinvasion:provoker"
+					icon: "ftb_ph:provoker"
+					id: "40CF23F638C07E93"
+					type: "kill"
+					value: 4L
+				}
+			]
+			title: "阻止擴散"
+			x: 7.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["783CA457464E8E3D"]
+			description: ["這些掠奪者只能透過強制開啟的&e掠奪者傳送門（Gateway of the Raiders）&r輕鬆找到。"]
+			icon: {
+				Count: 1
+				id: "minecraft:iron_axe"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "67D7938E14CD96D4"
+			rewards: [
+				{
+					id: "322956878C8086DC"
+					item: {
+						Count: 1
+						id: "mmorpg:chest/currency"
+						tag: {
+							mmorpg_loot_chest: "{\"num\":5,\"rar\":\"common\",\"lvl\":5,\"id\":\"currency\",\"key\":\"\"}"
+						}
+					}
+					title: "普通通貨戰利品箱（5 級）"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 500"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "332F58B90C64735B"
+					silent: true
+					title: "500 經驗值"
+					type: "command"
+				}
+				{
+					id: "6F15877F9B2450C1"
+					item: "lightmanscurrency:coin_emerald"
+					type: "item"
+				}
+			]
+			subtitle: "掠奪者篇"
+			tasks: [
+				{
+					entity: "illagerinvasion:archivist"
+					icon: "ftb_ph:archivist"
+					id: "48EB8067150A2569"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "illagerinvasion:sorcerer"
+					icon: "ftb_ph:sorcerer"
+					id: "3466BA58F158032F"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "突襲隊"
+			x: 7.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["783CA457464E8E3D"]
+			dependency_requirement: "one_completed"
+			description: [
+				"看來你的懷疑是對的。經過審問後，你得知掠奪者&e喚魔者（Invoker）&r就是這一切邪惡陰謀的幕後主使。"
+				""
+				"追蹤喚魔者的下落，終結他的邪惡計畫。據說可以在&e林地府邸（Woodland Mansions）&r中找到他……似乎也能透過強制開啟的&e掠奪者傳送門&r遇到他。"
+				""
+				"&c喚魔者最低會在 15 級時出現。&r"
+				""
+				"喚魔者擁有："
+				"&b+20% 元素抗性&r"
+				"&a10% 機率掉落 Owd 符文&r"
+			]
+			icon: "simplehats:crown"
+			id: "3E1EC6A042CC9310"
+			rewards: [
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 2500"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "61C78A9757B59F10"
+					silent: true
+					title: "2500 經驗值"
+					type: "command"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "708A11185AA6E12C"
+					table_id: 847184936680359530L
+					type: "choice"
+				}
+				{
+					id: "4DE8F79CE150A66E"
+					item: "simplehats:crown"
+					title: "皇冠"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					icon: "ftb_ph:talent"
+					id: "3AE054E2C8C68607"
+					title: "2 天賦點"
+					type: "custom"
+				}
+			]
+			shape: "rsquare"
+			size: 1.25d
+			subtitle: "主線任務"
+			tasks: [{
+				entity: "illagerinvasion:invoker"
+				icon: "ftb_ph:invoker"
+				id: "25E3A4A8CE375525"
+				type: "kill"
+				value: 1L
+			}]
+			title: "幕後主使"
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["783CA457464E8E3D"]
+			description: ["&e幻術師（Illusioner）&r狡猾又善於欺瞞。難怪牠會是喚魔者的左護法。你可以在&e幻術師之塔（Illusioner Towers）&r中找到牠們，也能透過強制開啟的&e掠奪者傳送門&r遇到牠們。"]
+			icon: {
+				Count: 1
+				id: "mmorpg:weapon/staff/iron"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "35796166DD6A69CE"
+			rewards: [
+				{
+					id: "6AFB125691B58647"
+					item: {
+						Count: 1
+						id: "mmorpg:chest/common_gear"
+						tag: {
+							mmorpg_loot_chest: "{\"num\":5,\"rar\":\"common\",\"lvl\":5,\"id\":\"rune\",\"key\":\"\"}"
+						}
+					}
+					title: "普通符文戰利品箱（5 級）"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 750"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "5D215F1369125AE0"
+					silent: true
+					title: "750 經驗值"
+					type: "command"
+				}
+				{
+					id: "0BD1A1A9272CE58B"
+					item: {
+						Count: 1
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "gateways:basic/enderman"
+						}
+					}
+					type: "item"
+				}
+			]
+			subtitle: "掠奪者篇"
+			tasks: [{
+				entity: "minecraft:illusioner"
+				icon: "ftb_ph:illusioner"
+				id: "2BE997397056C5BC"
+				type: "kill"
+				value: 1L
+			}]
+			title: "掠奪者謀士 II"
+			x: 9.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["783CA457464E8E3D"]
+			description: [
+				"&e審判官（Inquisitor）&r是喚魔者的右護法。擊敗一名審判官會對喚魔者的勢力造成重創。"
+				""
+				"你可以在&e掠奪者要塞（Illager Fortress）&r中找到審判官，也能透過強制開啟的&e掠奪者傳送門&r遇到牠們。"
+			]
+			icon: {
+				Count: 1
+				id: "mmorpg:weapon/staff/wood"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "664D834AA6B16719"
+			rewards: [
+				{
+					id: "2043E25FA87E8E56"
+					item: {
+						Count: 1
+						id: "mmorpg:chest/rare_gear"
+						tag: {
+							mmorpg_loot_chest: "{\"num\":5,\"rar\":\"rare\",\"lvl\":10,\"id\":\"gem\",\"key\":\"\"}"
+						}
+					}
+					title: "稀有裝備戰利品箱（10 級）"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 750"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "78A0C5335BFD302F"
+					silent: true
+					title: "750 經驗值"
+					type: "command"
+				}
+				{
+					id: "73D187CA3C9EC9E3"
+					item: {
+						Count: 1
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "gateways:basic/slime"
+						}
+					}
+					type: "item"
+				}
+			]
+			subtitle: "掠奪者篇"
+			tasks: [{
+				entity: "illagerinvasion:inquisitor"
+				icon: "ftb_ph:inquisitor"
+				id: "2CB01FCE39A1B730"
+				type: "kill"
+				value: 1L
+			}]
+			title: "掠奪者謀士 I"
+			x: 9.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["727ADA9C4F420BDC"]
+			description: [
+				"你已經擊敗了掠奪者喚魔者……但主世界還沒有真正安全。"
+				""
+				"由於掠奪者的活動，主世界中出現了通往其他次元的裂隙。你必須前往每個次元，穩定次元間的連結。否則，主世界終將被異界生物淹沒！"
+				""
+				"是時候前往&e地獄（Nether）&r了——那是一片充滿烈焰的煉獄景象。&e你可以透過搭建黑曜石傳送門前往。用打火石啟動傳送門，就能進入地獄。&r"
+				""
+				"{image:cte2:textures/nether_portal.png width:160 height:128 align:1}"
+			]
+			icon: "minecraft:nether_star"
+			id: "18E09A4B9FC1B43F"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 1000"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "28B6646CDD4EB2CA"
+				silent: true
+				title: "1000 經驗值"
+				type: "command"
+			}]
+			shape: "rsquare"
+			subtitle: "主線任務"
+			tasks: [{
+				dimension: "minecraft:the_nether"
+				icon: "minecraft:nether_star"
+				id: "1E9044A8D48D9197"
+				title: "造訪地獄"
+				type: "dimension"
+			}]
+			title: "未知的領域"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3E1EC6A042CC9310"]
+			description: [
+				"CTE2 的主線任務分成好幾個章節（Act），每個章節都對應不同的次元，並在此之前有一段序章任務線（你應該已經很熟悉了）。"
+				""
+				"當你完成主線任務時，會解鎖更多支線任務。而當你完成整條主線任務（通常長度為 5 到 7 個任務）後，就會收到前往下一章節/次元的任務。"
+				""
+				"隨著你從一個次元前進到下一個次元，怪物會變得更強，戰利品品質也會提升。雖然怪物會依玩家等級調整強度，但在每個次元中都有上限，所以如果你在某個次元卡關，也可以「超等級」來輕鬆應付。"
+				""
+				"&6此任務將解鎖主線商店中的新商店。"
+			]
+			icon: "minecraft:paper"
+			id: "727ADA9C4F420BDC"
+			rewards: [
+				{
+					count: 50
+					id: "0416D44C116837AA"
+					item: "lightmanscurrency:coin_iron"
+					title: "金錢"
+					type: "item"
+				}
+				{
+					id: "09AB98FCA60D923A"
+					item: "mmorpg:potions/full_reset_talent"
+					type: "item"
+				}
+				{
+					id: "28DCAFAF13E5B4B4"
+					item: "mmorpg:potions/full_reset_spell"
+					type: "item"
+				}
+				{
+					id: "322B2479DC5B0063"
+					item: "mmorpg:potions/full_reset_passive"
+					type: "item"
+				}
+				{
+					id: "4109830D72D5DC3B"
+					item: "mmorpg:potions/full_reset_stat"
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "遺失的書頁"
+			tasks: [{
+				id: "6FA3A47AFDD25C96"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "章節"
+			x: 10.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["15C2A55BAFCA5084"]
+			description: [
+				"會發光的生物潛伏在地底，吸引著眾人的目光。找到一些&e螢光骷髏（Glow Skeletons）&r，擊殺牠們，然後繼續探索地底深處。"
+				""
+				"&o&7完成後將解鎖「重複任務」章節中的一個可重複任務！&r&r"
+			]
+			icon: {
+				Count: 1
+				id: "twilightforest:skeleton_skull_candle"
+				tag: {
+					BlockEntityTag: {
+						CandleAmount: 1
+						CandleColor: 0
+					}
+				}
+			}
+			id: "0D9B68F2990B8E94"
+			rewards: [
+				{
+					count: 5
+					id: "1A0A49388DA210A9"
+					item: "lightmanscurrency:coin_iron"
+					title: "金錢"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 150"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "7C2C1418BEA78297"
+					silent: true
+					title: "150 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "地底世界"
+			tasks: [{
+				entity: "monsterplus:glow_skeleton"
+				icon: "ftb_ph:glow_skeleton"
+				id: "60852F7DA78E9C10"
+				type: "kill"
+				value: 8L
+			}]
+			title: "黑暗中的發光問題"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["051DB401E3A08D89"]
+			description: [
+				"骷髏為什麼一開始會發光呢？牠們原本孕育出來的生物在黑暗中並不會發光……"
+				""
+				"為了調查這種潛在的骨骼變異，去找到一隻&e隱居深淵行者（Hermit Abysswalker）&r。聽說可以透過&e主世界之夜傳送門（Gateway of Overworldian Nights）&r找到牠。"
+				""
+				"小心，牠能施展各種法術，並召喚爪牙來協助牠戰鬥。"
+				""
+				"隱居深淵行者擁有："
+				"&b+30% 護甲&r"
+				"&a5% 機率掉落 Owd 符文&r"
+			]
+			icon: {
+				Count: 1
+				id: "monsterplus:darkstar"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "152D52A88F776A70"
+			rewards: [
+				{
+					id: "0579BD5D35950F36"
+					item: {
+						Count: 1
+						id: "mmorpg:chest/rare_gear"
+						tag: {
+							mmorpg_loot_chest: "{\"num\":5,\"rar\":\"rare\",\"lvl\":10,\"id\":\"gem\",\"key\":\"\"}"
+						}
+					}
+					title: "稀有裝備戰利品箱（10 級）"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 750"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "2B3FC6937853FEFE"
+					silent: true
+					title: "750 經驗值"
+					type: "command"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "71705EA50FC99C7F"
+					table_id: 6943149240522624098L
+					type: "choice"
+				}
+				{
+					auto: "enabled"
+					icon: "ftb_ph:talent"
+					id: "63D9C567E093E023"
+					title: "1 天賦點"
+					type: "custom"
+				}
+			]
+			shape: "diamond"
+			subtitle: "地底世界"
+			tasks: [{
+				entity: "monsterplus:abyssologer"
+				icon: {
+					Count: 1
+					id: "monsterplus:darkstar"
+					tag: {
+						Damage: 0
+					}
+				}
+				id: "60D90D429BE94FBC"
+				type: "kill"
+				value: 1L
+			}]
+			title: "變異源頭"
+			x: 6.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["0D9B68F2990B8E94"]
+			description: ["你聽過許多關於地底&e哥布林（Goblins）&r和&e狗頭人（Kobolds）&r的傳說。有些故事說這些生物很有攻擊性，不容小覷。但也有人說狗頭人和哥布林其實是地底最友善的生物……只要你&e帶點錢&r就行。"]
+			icon: "mmorpg:loot_table_chest"
+			id: "6FF06A68E8DA88F2"
+			rewards: [{
+				id: "0266EEA438D94B03"
+				item: "lightmanscurrency:coin_gold"
+				type: "item"
+			}]
+			subtitle: "地底世界"
+			tasks: [{
+				id: "749BBB5B3A9895C3"
+				item: "lightmanscurrency:coin_emerald"
+				type: "item"
+			}]
+			title: "隱藏商人"
+			x: 3.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["15C2A55BAFCA5084"]
+			description: [
+				"&e經驗方塊（XP Blocks）&r是可以合成並放置的方塊。它們能讓你把&e原版經驗值&r儲存到方塊裡。"
+				""
+				"使用方式："
+				"- 潛行 + 空手右鍵，將你目前所有的經驗值存入方塊。"
+				"- 右鍵可從方塊中取出一級經驗，加到你的經驗值條上。"
+				""
+				"&c注意：你的副手必須是空的！&r"
+			]
+			id: "6286EB870319776D"
+			rewards: [
+				{
+					id: "397DC27BBDC43B1B"
+					item: "minecraft:emerald"
+					title: "綠寶石"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 125"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "25DDEDBC06834D92"
+					silent: true
+					title: "125 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "額外要素"
+			tasks: [{
+				id: "36690510781ADE4D"
+				item: "globalxp:xp_block"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4956C0B5633CE91E"]
+			description: [
+				"在 CTE2 中，有許多自訂武器類型。以下列出所有武器類型，自訂的武器類型會以&e黃色&r標示。"
+				""
+				"劍、斧、弓、弩、&e法杖、匕首、長矛、戰鎚、巨劍、鐮刀、拳套&r。"
+				""
+				"記得在製作這些武器時，你需要裝備屬性靈魂（Gear Stat Souls）才能賦予它們 Mine and Slash 屬性。"
+				""
+				"在 CTE2 中你也可以裝備&e雙手武器&r。目前，&e長矛、巨劍和鐮刀&r屬於雙手武器。"
+				""
+				"你也可以&e雙持任何單手武器&r！副手武器會提供其屬性的&e25%&r。"
+			]
+			icon: "minecraft:paper"
+			id: "1367285A94791954"
+			rewards: [
+				{
+					id: "4DA65E4DA5733C27"
+					item: {
+						Count: 1
+						id: "roe_weapons:hammer_1"
+						tag: {
+							Damage: 0
+							mmorpg_gear: "{\"baseStats\":{\"p\":68},\"imp\":{\"p\":22,\"imp\":\"cleric_staff\"},\"affixes\":{\"suf\":[{\"p\":28,\"id\":\"of_vampirism\",\"rar\":\"common\",\"ty\":\"suffix\"}],\"pre\":[{\"p\":37,\"id\":\"heal_crit_prefix\",\"rar\":\"uncommon\",\"ty\":\"prefix\"}],\"cor\":[]},\"sockets\":{\"so\":[],\"sl\":2,\"rw\":\"\",\"rp\":0},\"rar\":\"uncommon\",\"lvl\":5,\"gtype\":\"hammer\"}"
+							mmorpg_potential: "{\"potential\":10}"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "3EAFA2F1B038FF69"
+					item: {
+						Count: 1
+						id: "roe_weapons:spear_1"
+						tag: {
+							Damage: 0
+							mmorpg_gear: "{\"baseStats\":{\"p\":23},\"imp\":{\"p\":69,\"imp\":\"war_spear\"},\"affixes\":{\"suf\":[{\"p\":38,\"id\":\"of_vampirism\",\"rar\":\"uncommon\",\"ty\":\"suffix\"}],\"pre\":[{\"p\":16,\"id\":\"catalyzing\",\"rar\":\"uncommon\",\"ty\":\"prefix\"}],\"cor\":[]},\"sockets\":{\"so\":[],\"sl\":2,\"rw\":\"\",\"rp\":0},\"rar\":\"uncommon\",\"lvl\":5,\"gtype\":\"spear\"}"
+							mmorpg_potential: "{\"potential\":10}"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "1A5D7C2FB9AF7997"
+					item: {
+						Count: 1
+						id: "roe_weapons:dagger_1"
+						tag: {
+							Damage: 0
+							mmorpg_gear: "{\"baseStats\":{\"p\":93},\"imp\":{\"p\":91,\"imp\":\"imp_dagger\"},\"affixes\":{\"suf\":[{\"p\":27,\"id\":\"of_devastation\",\"rar\":\"uncommon\",\"ty\":\"suffix\"}],\"pre\":[{\"p\":33,\"id\":\"wep_item_flat\",\"rar\":\"uncommon\",\"ty\":\"prefix\"}],\"cor\":[]},\"sockets\":{\"so\":[],\"sl\":0,\"rw\":\"\",\"rp\":0},\"rar\":\"uncommon\",\"lvl\":5,\"gtype\":\"dagger\"}"
+							mmorpg_potential: "{\"potential\":10}"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "4C9C6B58399AD149"
+					item: {
+						Count: 1
+						id: "roe_weapons:gauntlet_1"
+						tag: {
+							Damage: 0
+							mmorpg_gear: "{\"baseStats\":{\"p\":54},\"imp\":{\"p\":22,\"imp\":\"ceremonial_gauntlet\"},\"affixes\":{\"suf\":[{\"p\":20,\"id\":\"of_vampirism\",\"rar\":\"uncommon\",\"ty\":\"suffix\"}],\"pre\":[{\"p\":25,\"id\":\"warlords\",\"rar\":\"uncommon\",\"ty\":\"prefix\"}],\"cor\":[]},\"sockets\":{\"so\":[],\"sl\":2,\"rw\":\"\",\"rp\":0},\"rar\":\"uncommon\",\"lvl\":5,\"gtype\":\"gauntlet\"}"
+							mmorpg_potential: "{\"potential\":10}"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "171773CCFD2DABA4"
+					item: {
+						Count: 1
+						id: "roe_weapons:scythe_1"
+						tag: {
+							Damage: 0
+							mmorpg_gear: "{\"baseStats\":{\"p\":60},\"imp\":{\"p\":3,\"imp\":\"rusted_scythe\"},\"affixes\":{\"suf\":[{\"p\":36,\"id\":\"of_devastation\",\"rar\":\"uncommon\",\"ty\":\"suffix\"}],\"pre\":[{\"p\":19,\"id\":\"wep_item_perc\",\"rar\":\"common\",\"ty\":\"prefix\"}],\"cor\":[]},\"sockets\":{\"so\":[],\"sl\":1,\"rw\":\"\",\"rp\":0},\"rar\":\"uncommon\",\"lvl\":5,\"gtype\":\"scythe\"}"
+							mmorpg_potential: "{\"potential\":10}"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "2DED2F461AED8A69"
+					item: {
+						Count: 1
+						id: "roe_weapons:greatsword_1"
+						tag: {
+							Damage: 0
+							mmorpg_gear: "{\"baseStats\":{\"p\":64},\"imp\":{\"p\":81,\"imp\":\"broad_greatsword\"},\"affixes\":{\"suf\":[{\"p\":30,\"id\":\"of_sweeping\",\"rar\":\"uncommon\",\"ty\":\"suffix\"}],\"pre\":[{\"p\":29,\"id\":\"physical_wep_dmg\",\"rar\":\"uncommon\",\"ty\":\"prefix\"}],\"cor\":[]},\"sockets\":{\"so\":[],\"sl\":0,\"rw\":\"\",\"rp\":0},\"rar\":\"uncommon\",\"lvl\":5,\"gtype\":\"greatsword\"}"
+							mmorpg_potential: "{\"potential\":10}"
+						}
+					}
+					type: "item"
+				}
+			]
+			subtitle: "遺失的書頁"
+			tasks: [{
+				id: "3C66E63FF35763F6"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "其他武器類型、雙手武器與雙持"
+			x: 3.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["0D9B68F2990B8E94"]
+			description: [
+				"在&e主線&r任務線中，各個任務會有不同的背景形狀，用來表示任務的類型。"
+				""
+				"&a圓角正方形：主線任務&r"
+				"&e圓形：支線任務&r"
+				"&3齒輪：可重複任務&r"
+				"&4菱形：小首領&r"
+				"&d八角形：商店&r"
+				"&b六角形：成就&r"
+				""
+				"此外，你會找到帶有紙張圖示的&e「遺失的書頁」&r。這些是只要點擊即可完成的簡單任務，提供額外的資訊。"
+			]
+			icon: "minecraft:paper"
+			id: "051DB401E3A08D89"
+			rewards: [{
+				id: "123F37A228E151D5"
+				item: "farmersdelight:cake_slice"
+				type: "item"
+			}]
+			subtitle: "遺失的書頁"
+			tasks: [{
+				id: "14B3CF645A1BD777"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "任務形狀"
+			x: 4.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["313921A7833269CF"]
+			description: [
+				"在冒險過程中，你會發現自己不斷在尋找更強大的裝備。裝備的強度主要可以從 3 個方面來評估："
+				""
+				"1. 裝備的&e等級&r，決定了裝備屬性的強度。裝備等級通常取決於被擊殺怪物的等級。"
+				""
+				"2. 裝備的&e稀有度&r，決定了屬性能出現的數量與數值高低，以及能擁有多少插槽。共有 7 種可掉落的稀有度：&7普通&r、&a非凡&r、&9稀有&r、&d史詩&r、&4傳說&r、&5神話&r，以及&c傳奇&r。傳奇裝備比較特殊，因為它們的屬性是預先決定好的。它們非常強大，有時還能開啟特殊的玩法風格。"
+				""
+				"3. 裝備的&e品質&r，能進一步小幅提升裝備強度。"
+				""
+				"其中一些屬性可以透過 Mine and Slash 的&e通貨&r來改變，例如可以提升裝備等級的無限石（Orb of Infinity）。此外，有些通貨也能透過 Mine and Slash 的專業系統製作出來，以進一步強化你的裝備。"
+			]
+			icon: "minecraft:paper"
+			id: "6A8C03172A7F61C3"
+			rewards: [
+				{
+					id: "12EB15177FBCDD7B"
+					item: "mmorpg:currency/level_up_orb"
+					title: "無限石"
+					type: "item"
+				}
+				{
+					count: 5
+					id: "1BEC2669FFDBCD9F"
+					item: "mmorpg:currency/sharpening_stone_0"
+					type: "item"
+				}
+				{
+					id: "402AFECF820302A3"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							Parent: {
+								Items: [ ]
+								SelectedSlot: 0
+								Size: 6
+							}
+						}
+						id: "supplementaries:quiver"
+					}
+					title: "箭袋"
+					type: "item"
+				}
+			]
+			shape: "circle"
+			subtitle: "遺失的書頁"
+			tasks: [{
+				id: "0E7658B0923F7FFA"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "裝備強化"
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["313921A7833269CF"]
+			description: [
+				"恩寵（Favor）是一套獎勵玩家「活下去」的系統。每分鐘你都會累積少量的恩寵。&e恩寵軟上限為 1000&r。不過，你可以透過開啟箱子突破這個上限。"
+				""
+				"{image:cte2:textures/favor.png width:140 height:100 align:1}"
+				""
+				"當恩寵達到 250 以上時，你會獲得 2% 的戰利品掉落加成。隨著恩寵值提高，你的戰利品掉落加成也會跟著提升。"
+				""
+				"在&e上限 2500&r時，你將獲得 25% 的戰利品與經驗值加成！"
+				""
+				"注意，某些稀有度需要達到一定等級才會開始出現："
+				""
+				"&d史詩&r：10 級以上"
+				"&4傳說&r：25 級以上"
+				"&5神話&r：50 級以上"
+				""
+				"不過要小心，&c死亡會讓你損失 500 點恩寵！&r"
+			]
+			icon: "minecraft:paper"
+			id: "0B7C635945E7F3AA"
+			rewards: [{
+				id: "4A985BD8BB918BA2"
+				item: "mmorpg:currency/level_up_orb"
+				title: "無限石"
+				type: "item"
+			}]
+			shape: "circle"
+			subtitle: "遺失的書頁"
+			tasks: [{
+				id: "562B84F769A52A5D"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "恩寵"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"1367285A94791954"
+				"051DB401E3A08D89"
+				"6A8C03172A7F61C3"
+				"727ADA9C4F420BDC"
+				"0B7C635945E7F3AA"
+				"2C9B55C8C05E20E2"
+				"5DA2E0EE110431E0"
+				"4AF5F24C4B770EA5"
+				"2FC973866E3F8A8A"
+			]
+			description: ["讀完第一章所有的&e遺失的書頁&r以完成這項成就。完成後就能戴上新帽子炫耀一番！"]
+			hide_dependency_lines: true
+			icon: "simplehats:rabbitears"
+			id: "245FE9BAB6F6F545"
+			rewards: [
+				{
+					id: "64F19AB06C8D2784"
+					item: "simplehats:rabbitears"
+					title: "兔耳朵"
+					type: "item"
+				}
+				{
+					id: "662036FEEC802916"
+					item: "lightmanscurrency:coin_gold"
+					title: "金錢"
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			subtitle: "成就"
+			tasks: [{
+				id: "1FEDB2A08602B52A"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "讀完第一章所有遺失的書頁！"
+			x: 12.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["727ADA9C4F420BDC"]
+			description: ["&eComforts&r 模組新增了冒險時可以使用的&e睡袋&r。不用再帶著笨重的床到處走，只要放下睡袋就能&e休息！&r"]
+			id: "76483BF6DF35C463"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 750"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "66A431F69E17BCEF"
+				silent: true
+				title: "750 經驗值"
+				type: "command"
+			}]
+			subtitle: "Comforts"
+			tasks: [{
+				id: "43A73897ACED59B9"
+				item: "comforts:sleeping_bag_white"
+				type: "item"
+			}]
+			x: 10.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["313921A7833269CF"]
+			description: [
+				"按住&e`&r鍵可啟用&e極限採礦（Ultiminer）&r，這是一種進階的&e連礦（veinmining）&r功能。畫面上會出現外框，顯示將被挖掘的方塊範圍。按住 shift + ` 可以選擇&e挖掘模式（pattern）&r，例如會挖出樓梯狀通道的採礦隧道模式。只有&e無形狀模式（Shapeless）才會進行連礦&r，其餘模式則依照各自的形狀挖掘。 "
+				""
+				"使用極限採礦會消耗&e額外的耐久度與飢餓值&r，並且需要對應的合適工具。"
+			]
+			id: "15C2A55BAFCA5084"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "598543904735A2F9"
+				silent: true
+				title: "100 經驗值"
+				type: "command"
+			}]
+			subtitle: "效率"
+			tasks: [{
+				id: "4DB46C0682811F67"
+				item: {
+					Count: 1
+					id: "minecraft:iron_pickaxe"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "FTB Ultimine"
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5FCA8577C7DB792D"]
+			description: ["&e探險家指南針（Explorer's Compass）&r可以讓你定位&e建築結構&r，而&e自然指南針（Nature's Compass）&r則可以讓你找到&e特定生態域&r。你可能需要移動到別的地方才能找到你要的目標。"]
+			id: "472D5441B6FCD6EC"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 250"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "76647498F1F2AB21"
+				silent: true
+				title: "250 經驗值"
+				type: "command"
+			}]
+			subtitle: "額外要素"
+			tasks: [
+				{
+					id: "5AC3D8ABA379DF8D"
+					item: {
+						Count: 1
+						id: "explorerscompass:explorerscompass"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "72F9B32EEF288BE1"
+					item: {
+						Count: 1
+						id: "naturescompass:naturescompass"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["727ADA9C4F420BDC"]
+			description: [
+				"&e竹刺（Bamboo Spikes）&r會傷害任何踩上去的東西。你也可以在上面附加&e藥水效果&r。"
+				""
+				"吹奏&e笛子（Flute）&r可以吸引任何走失的&e馴服生物&r。用笛子右鍵點擊一隻生物，即可將笛子與該寵物連結。"
+				""
+				"使用&e籠子（Cage）&r可以&e抓取&r生物（尤其是馴服的生物）以便運送牠們。"
+				""
+				"&e公告板（Notice Boards）&r可以顯示成書的文字內容。"
+				""
+				"&e補充罐子（Supplementary Jars）&r可以儲存 4 桶，或&e12&r瓶任何原版液體（例如蜂蜜、牛奶、熔岩、藥水、湯、龍息或經驗值），也能裝螢火蟲。罐子也能裝小型生物，例如史萊姆和蜜蜂。要&e捕捉&r惱鬼和末影蟎，你需要使用染色過的罐子。&e潛行右鍵&r可以直接放置裝有生物的罐子，而不會放出裡面的生物。"
+			]
+			id: "44B1B924A5A4D16F"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 250"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "20F3E066F9F557B2"
+				silent: true
+				title: "250 經驗值"
+				type: "command"
+			}]
+			subtitle: "額外要素"
+			tasks: [
+				{
+					id: "2111C6DB7FD6A0F3"
+					item: "supplementaries:bamboo_spikes"
+					type: "item"
+				}
+				{
+					id: "508D00FB1DD255C8"
+					item: {
+						Count: 1
+						id: "supplementaries:flute"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "6BD689A99314A241"
+					item: "supplementaries:jar"
+					type: "item"
+				}
+				{
+					id: "7DC6717C3A2C5AB8"
+					item: "supplementaries:notice_board"
+					type: "item"
+				}
+				{
+					id: "07731E16BE8F3E4E"
+					item: "supplementaries:cage"
+					type: "item"
+				}
+			]
+			title: "Supplementaries 的實用道具"
+			x: 12.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5FCA8577C7DB792D"]
+			description: ["看來這種&e「X化學藥劑」&r會引發劇烈的演化突變。&e豬&r既單純又弱小，應該是個既簡單又&e安全&r的實驗對象。餵豬吃一顆&e發酵蜘蛛眼&r，然後對牠丟&eX化學藥劑&r。這個過程有機率會失敗，更多的&eX化學藥劑&r可以在&e交易終端機/以物易物看板&r購買。"]
+			id: "65D73BD10CCCD984"
+			rewards: [
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 350"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "033A0EE9F9202F38"
+					silent: true
+					title: "350 經驗值"
+					type: "command"
+				}
+				{
+					count: 3
+					id: "1C1C2E212F58C7DA"
+					item: "lightmanscurrency:coin_gold"
+					title: "金錢"
+					type: "item"
+				}
+			]
+			subtitle: "你自己的實驗室"
+			tasks: [{
+				entity: "mutantmonsters:spider_pig"
+				icon: { Count: 2, id: "simplehats:pighead" }
+				id: "13735D779752C9AC"
+				type: "kill"
+				value: 2L
+			}]
+			title: "能有多糟？"
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["727ADA9C4F420BDC"]
+			description: [
+				"這樣跑來跑去一定很累……或許是時候找隻&e坐騎&r了。合成&e陸行鳥百科（Chocopedia）&r，了解陸行鳥的&e繁殖&r與&e馴服&r方法。你甚至可以培育出擁有&e飛行&r能力的特殊陸行鳥！"
+				""
+				"你可以透過&e傳送石碑（Waystones）&r&e運送&r任何坐騎和寵物，只要把牠們裝進&e籠子&r，或用&e拴繩&r牽著就行。即使沒有籠子或拴繩，牠們也能跟著你一起透過傳送石碑傳送！"
+			]
+			id: "730BE78211A1573B"
+			rewards: [
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 250"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "400C5F606A015EFD"
+					silent: true
+					title: "250 經驗值"
+					type: "command"
+				}
+				{
+					auto: "enabled"
+					icon: "ftb_ph:talent"
+					id: "7A7B4EE2BBE28627"
+					title: "1 天賦點"
+					type: "custom"
+				}
+			]
+			subtitle: "野生陸行鳥"
+			tasks: [{
+				id: "7280DA5550AACF38"
+				item: "chococraft:chocopedia"
+				type: "item"
+			}]
+			title: "陸行鳥與坐騎"
+			x: 10.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5FCA8577C7DB792D"]
+			description: [
+				"煉金專業（Alchemy Profession）釀造出的藥水能提供有用的效果，例如治療和增益。你可以在「&aM\&S 專業&r」章節中看到更詳細的藥水製作方法。或者，如果你對專業系統沒興趣，&e也可以直接向各種商人（村民、哥布林商人）購買這些藥水&r。"
+				""
+				"&l&e快速使用藥水可以按 Y 鍵！&r&r"
+				""
+				"用以下材料釀造&a非凡治療藥水&r："
+				""
+				"3x &7靈魂之肉&r"
+				"1x &7普通石頭&r"
+				"1x 烤雞肉"
+				"1x 番茄"
+				"5x 銅幣"
+			]
+			id: "044F1A64E4751E01"
+			rewards: [
+				{
+					count: 8
+					id: "309303AF9483B825"
+					item: {
+						Count: 1
+						id: "mmorpg:potion/health/2"
+						tag: {
+							level: 1
+							tier: 0
+						}
+					}
+					title: "稀有回復藥水"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 250"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "0860A55C77EDCD28"
+					silent: true
+					title: "250 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "M\\&S 專業"
+			tasks: [{
+				count: 4L
+				id: "7FEE130B9F995355"
+				item: {
+					Count: 1
+					id: "mmorpg:potion/health/1"
+					tag: {
+						level: 1
+						tier: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "接下工作"
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["472D5441B6FCD6EC"]
+			description: [
+				"&e傳送石碑（Waystones）&r可以讓你在已解鎖的石碑之間互相傳送。全域傳送石碑可以跨次元使用。"
+				""
+				"&e傳送石（Warp Stone）&r可以讓你傳送到任何已解鎖的傳送石碑，但有冷卻時間。"
+				""
+				"此外還有&e許多卷軸&r可以合成，能作為&e一次性的傳送石&r，或是傳送到&e特定的傳送石碑&r。"
+			]
+			id: "749948B3A454617E"
+			rewards: [
+				{
+					count: 4
+					id: "28EFCAAD2342E7CA"
+					item: "waystones:warp_scroll"
+					title: "傳送卷軸"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 250"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "608D719FC25BE82F"
+					silent: true
+					title: "250 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "額外要素"
+			tasks: [{
+				id: "65C065AB07D8CE15"
+				item: {
+					Count: 1
+					id: "waystones:warp_stone"
+					tag: {
+						Damage: 0
+					}
+				}
+				match_nbt: false
+				type: "item"
+			}]
+			title: "四處傳送"
+			x: 6.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["152D52A88F776A70"]
+			description: [
+				"在 Craft to Exile 2 中，你能找到&e次元專屬符文&r，可以鑲嵌到你的裝備上，或用來製作強大的符文之語。"
+				""
+				"這些符文總共有&e7 種&r，只能從次元首領身上取得，例如喚魔者（Invoker）或終界龍。"
+				""
+				"&c------------------------------&r"
+				""
+				"&eOwd 符文&r - Hermit Abysswalker（&b5%&r）、Invoker（&b10%&r）、Frostmaw（&b15%&r）、Grim Reaper（&b10%&r）"
+				"&eNet 符文&r - Warped Mosco（&b10%&r）、Wildfire（&b5%&r）、Mother Lava Squid（&b5%&r）、Wither（&b10%&r）、Awful Ghast（&b15%&r）、Nether Keeper（&b15%&r）"
+				"&eUnd 符文&r - Ferrous Wroughtnaut（&b10%&r）、Umvuthi（&b10%&r）、Tongbi, the Sculptor（&b10%&r）、Forgotten Guardian（&b10%&r）、Eel（&b15%&r）、Mother of the Maze（&b50%&r）、Ghost of Captain Cornelia（&b10%&r）"
+				"&eBri 符文&r - Summoner（&b10%&r）、Starlit Crusher（&b25%&r）"
+				"&eDaw 符文&r - Alchemist（&b10%&r）、Arachnarch（&b25%&r）"
+				"&eEnd 符文&r - Ender Dragon（&b7.5%&r）、Void Worm（&b5%&r）、Shelterer（&b15%&r）"
+				"&eSid 符文&r - Warden（&b10%&r）、Night Lich（&b15%&r）、Nether Gauntlet（&b15%&r）、Void Blossom（&b15%&r）、Obsidilith（&b15%&r）"
+			]
+			icon: "minecraft:paper"
+			id: "2C9B55C8C05E20E2"
+			rewards: [
+				{
+					id: "0B08CCCE242A1619"
+					item: "mmorpg:runes/owd"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "5D11A9399E68F7CA"
+					table_id: 385353338452370382L
+					type: "choice"
+				}
+			]
+			subtitle: "遺失的書頁"
+			tasks: [{
+				id: "78F79A58FE29C912"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "次元符文"
+			x: 7.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["0388547EAFE52B5F"]
+			description: ["&e滑翔傘（Paragliders）&r可以讓你輕鬆飛越大範圍的開闊地形——前提是你要從夠高的地方開始。你可以利用火源製造上升氣流，讓自己向上飄浮。"]
+			id: "4A46491D07C3EED0"
+			rewards: [
+				{
+					id: "50A326F655E21EFF"
+					item: "paraglider:heart_container"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 75"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "50EBE487632EBE6A"
+					silent: true
+					title: "75 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "跨越空間"
+			tasks: [{
+				id: "540B918DC067979F"
+				item: "paraglider:paraglider"
+				type: "item"
+			}]
+			title: "滑翔飛行"
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["051DB401E3A08D89"]
+			description: [
+				"&e幻化台（Transmogrification Tables）&r可以合成並用來改變你物品的外觀。"
+				""
+				"將幻化台放置在世界中並右鍵點擊它。從左到右，插槽依序為："
+				"1. &e燃料槽&r - 使用紫水晶碎片作為燃料。"
+				"2. &e目標槽&r - 放在這裡的物品，其外觀會被改變。"
+				"3. &e外觀槽&r - 放在這裡的物品，其外觀會被複製到目標物品上。這裡的物品在幻化後&e不會&r被消耗！"
+				""
+				"此外，你也可以把&e虛空碎片&r放進外觀槽，讓物品變得隱形！"
+			]
+			id: "5883B9DEF98B079F"
+			rewards: [
+				{
+					count: 3
+					id: "1AB0EB102E137C29"
+					item: "minecraft:amethyst_shard"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 750"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "1606255B78C8641A"
+					silent: true
+					title: "750 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "額外要素"
+			tasks: [{
+				id: "06F088656E20DBC2"
+				item: "transmog:transmogrification_table"
+				type: "item"
+			}]
+			title: "變得更帥氣"
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["5FCA8577C7DB792D"]
+			description: [
+				"你是玩&5黑術士（Warlock）&r、&2獵人（Hunter）&r，還是&9元素使（Elementalist）&r？你知道這些職業都能召喚生物嗎？"
+				""
+				"你可以在 Mine and Slash 中樞（左下角）的&e特色（Features）&r分頁中設定&e召喚物行為&r。你可以將牠們設為主動攻擊，或是被動。若設為被動，召喚物只會攻擊你先攻擊過的目標。"
+				""
+				"此外，你隨時可以用取消召喚快捷鍵（預設：&eDelete&r）來&e解除召喚&r你的召喚物！"
+			]
+			icon: "minecraft:paper"
+			id: "5DA2E0EE110431E0"
+			rewards: [{
+				count: 8
+				id: "429A832BAB3604F6"
+				item: {
+					Count: 1
+					id: "mmorpg:potion/health/0"
+					tag: {
+						level: 1
+						tier: 0
+					}
+				}
+				type: "item"
+			}]
+			subtitle: "遺失的書頁"
+			tasks: [{
+				id: "13B1D70D3301273C"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "召喚系職業"
+			x: 4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0388547EAFE52B5F"]
+			description: [
+				"覺得很難活下去嗎？"
+				""
+				"&eSpice of Life: Onion Edition &r模組讓每種食物都有一個&e「多樣性」&r係數。吃各式各樣的食物能獲得&e加成，&r只吃少數幾種食物則不會。&e在你的 MineMenu（預設：H）中查看食物之書&r，可以確認你目前的多樣性與加成效果。&e持續攝取不同的食物，提升你的生命值、方塊觸及距離、移動速度等等！&r"
+				""
+				"&e午餐袋（Lunchbag）&r可以合成並升級，讓你&e一次攜帶所有食物&r，只要手持它&e潛行 + 右鍵&r，再右鍵點擊即可用它進食。"
+			]
+			icon: "minecraft:paper"
+			id: "4AF5F24C4B770EA5"
+			rewards: [
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 50"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "1EDD4D6B60F3D507"
+					silent: true
+					title: "50 經驗值"
+					type: "command"
+				}
+				{
+					id: "238CA135B4FDF78D"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							Parent: {
+								Items: [ ]
+								Size: 5
+							}
+						}
+						id: "solonion:lunchbag"
+					}
+					type: "item"
+				}
+			]
+			subtitle: "遺失的書頁"
+			tasks: [{
+				id: "109366712B105500"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "Spice of Life: Onion Edition"
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["313921A7833269CF"]
+			description: [
+				"&e不安的靈魂（Restless Spirits）&r是會在夜晚出現的憤怒亡靈。牠們可以在任何地方出現。"
+				""
+				"不安的靈魂擁有："
+				"&b+30% 閃避率&r"
+			]
+			hide_dependency_lines: true
+			icon: "mca:book_supporters"
+			id: "1DEC808C04130184"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "786CEB796300A021"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "墓園"
+			tasks: [{
+				entity: "born_in_chaos_v1:restless_spirit"
+				icon: "ftb_ph:restless_spirit"
+				id: "630C5043103095CC"
+				type: "kill"
+				value: 15L
+			}]
+			title: "怪物圖鑑 II"
+			x: 3.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["313921A7833269CF"]
+			description: [
+				"&e靈魂嚮導（Spirit Guides）&r可以在&e乾燥炎熱的生態域&r中找到。牠們戴著帽子，所以不會被陽光燒傷。戰鬥時，牠會召喚盟友前來協助。"
+				""
+				"&c靈魂嚮導最低會在 10 級時出現。&r"
+				""
+				"靈魂嚮導擁有："
+				"&b+10% 傷害抑制機率&r"
+				"&b+40% 元素抗性&r"
+			]
+			hide_dependency_lines: true
+			hide_text_until_complete: false
+			icon: "mca:book_supporters"
+			id: "39A431C3F5565DCC"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 150"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "659249CB38D17C7E"
+				silent: true
+				title: "150 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "10 級 - 靈魂指引"
+			tasks: [{
+				entity: "born_in_chaos_v1:spirit_guide"
+				icon: "ftb_ph:spirit_guide"
+				id: "21E70282049DD20C"
+				type: "kill"
+				value: 10L
+			}]
+			title: "怪物圖鑑 III"
+			x: 4.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["313921A7833269CF"]
+			description: [
+				"&e門衛騎士（Door Knight）&r與&e骷髏毆擊者（Skeleton Thrasher）&r是防禦型的不死生物。牠們可以在任何地方出現。要完成這個任務，你必須找到野生的個體。"
+				""
+				"門衛騎士擁有："
+				"&b+40% 護甲&r"
+				""
+				"骷髏毆擊者擁有："
+				"&b+100% 護甲&r"
+				"&b+25% 元素抗性&r"
+			]
+			hide_dependency_lines: true
+			icon: "mca:book_supporters"
+			id: "761BC90863C35627"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 150"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "0A9CB394B575F1E7"
+				silent: true
+				title: "150 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "不死守衛"
+			tasks: [
+				{
+					entity: "born_in_chaos_v1:door_knight"
+					icon: "ftb_ph:door_knight"
+					id: "7900CC0A0431834E"
+					type: "kill"
+					value: 15L
+				}
+				{
+					entity: "born_in_chaos_v1:skeleton_thrasher"
+					icon: "ftb_ph:skeleton_thrasher"
+					id: "2C3E695872E63BE2"
+					type: "kill"
+					value: 5L
+				}
+			]
+			title: "怪物圖鑑 IV"
+			x: 6.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["313921A7833269CF"]
+			description: [
+				"&e傳教士（Missionary）&r是一種外表看似普通、實則強大的不死生物。你可以在任何地方找到牠們。若與其交戰，牠會開始召喚不死生物來協助自己。"
+				""
+				"傳教士擁有："
+				"&b+100% 物理轉冰霜傷害&r"
+				"&b+25% 冰凍機率&r"
+				"&b+50% 元素抗性&r"
+			]
+			hide_dependency_lines: true
+			icon: "mca:book_supporters"
+			id: "58995DE0C6EBA1AB"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 200"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "4FB3264B31FDBA13"
+				silent: true
+				title: "200 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "第五號任務"
+			tasks: [{
+				entity: "born_in_chaos_v1:missioner"
+				icon: "ftb_ph:missioner"
+				id: "4C85300D7B4ECA09"
+				type: "kill"
+				value: 5L
+			}]
+			title: "怪物圖鑑 V"
+			x: 7.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["75454F0A3C4C3596"]
+			description: [
+				"&e&o需要先完成第四章的「終界」。&r&r"
+				""
+				"&eFrostmaw&r是一種生活在雪地生態域的古老生物。牠們體型龐大、速度驚人，還擁有威力強大的冰息攻擊，是幾乎不可能戰勝的對手。"
+				""
+				"&cFrostmaw 最低會在 50 級時出現。&r"
+				""
+				"Frostmaw 擁有："
+				"&b+20% 生命值&r"
+				"&b+100% 物理轉冰霜傷害&r"
+				"&b+33% 冰凍機率&r"
+				"&b+50% 元素抗性&r"
+				"&b+30% 混沌抗性&r"
+				"&a15% 機率掉落 Owd 符文&r"
+			]
+			hide_dependency_lines: true
+			icon: "mca:book_supporters"
+			id: "0CE7FFFDD4066916"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 16000"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "428905CD2D70AC2E"
+				silent: true
+				title: "16000 經驗值"
+				type: "command"
+			}]
+			subtitle: "50 級 - 極寒荒地"
+			tasks: [{
+				entity: "mowziesmobs:frostmaw"
+				icon: "ftb_ph:frostmaw"
+				id: "3C5F14EBFB344FB5"
+				type: "kill"
+				value: 2L
+			}]
+			title: "怪物圖鑑 VII"
+			x: 10.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["313921A7833269CF"]
+			description: [
+				"&e蜘蛛之母（Spiders Mother）&r是一種棲息在&e洞穴&r中的大型掠食蜘蛛。牠們能召喚較小的蜘蛛協助戰鬥。"
+				""
+				"蜘蛛之母擁有："
+				"&b+100% 物理轉混沌傷害&r"
+				"&b+33% 中毒機率&r"
+				""
+				"&e&o怪物圖鑑書籍將隨著你在各章節中的進度逐步解鎖。&r&r"
+			]
+			hide_dependency_lines: true
+			icon: "mca:book_supporters"
+			id: "7032850A1F1FFF32"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 100"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "6FF4F59F68177438"
+				silent: true
+				title: "100 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "腐臭之地"
+			tasks: [{
+				entity: "born_in_chaos_v1:mother_spider"
+				icon: "ftb_ph:mother_spider"
+				id: "20AB098D30A443A3"
+				type: "kill"
+				value: 5L
+			}]
+			title: "怪物圖鑑 I"
+			x: 1.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["4956C0B5633CE91E"]
+			description: ["你可以製作裝備，為冒險做好準備。想深入了解，請查看「M\\&S 專業」章節！"]
+			id: "4C68E7AC4C59F2EB"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 350"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "50ED13731B6C4940"
+				silent: true
+				title: "350 經驗值"
+				type: "command"
+			}]
+			subtitle: "M\\&S 專業"
+			tasks: [{
+				id: "5F2746C9F73F6032"
+				item: {
+					Count: 1
+					id: "mmorpg:stat_soul/family/armor/uncommon"
+					tag: {
+						tier: 0
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			title: "全副武裝 II"
+			x: 4.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["4956C0B5633CE91E"]
+			description: [
+				"&e修理包（Repair Kits）&r每 10 秒會自動修理你身上裝備的裝備與工具。修理量取決於修理包的等級。"
+				""
+				"它們的使用次數有限，以充能量表示。你可以餵它&eMine and Slash 石頭&r來補充充能！"
+			]
+			icon: {
+				Count: 1
+				id: "auto_repair_kit:leather_kit"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "60D950E97EA8E2B7"
+			rewards: [
+				{
+					id: "7E70520E2DA233F8"
+					item: {
+						Count: 1
+						id: "auto_repair_kit:leather_kit"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 250"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "6745F9E1DFB1E3DF"
+					silent: true
+					title: "250 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "裝備保養"
+			tasks: [{
+				count: 8L
+				id: "7773BDB87F5C4B52"
+				item: { Count: 8, id: "minecraft:leather" }
+				type: "item"
+			}]
+			title: "自動修理"
+			x: 4.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["313921A7833269CF"]
+			description: [
+				"&e南瓜頭爵士（Sir Pumpkinhead）&r是一個只在十月出沒的神秘幽靈……不過，你也可以透過破壞世界中一顆被蠟燭圍繞的&e特殊南瓜&r來召喚他。"
+				""
+				"南瓜頭爵士擁有："
+				"&b+30% 護甲&r"
+				"&b+30% 元素抗性&r"
+				"&b+30% 混沌抗性&r"
+			]
+			hide_dependency_lines: true
+			icon: "mca:book_supporters"
+			id: "0D04908025368D7B"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 200"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "13D41258E79CCB8D"
+				silent: true
+				title: "200 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "南瓜王"
+			tasks: [{
+				entity: "born_in_chaos_v1:sir_the_headless"
+				icon: "ftb_ph:lord_of_pumpkin"
+				id: "55A5454CCB82C6A1"
+				type: "kill"
+				value: 1L
+			}]
+			title: "怪物圖鑑 VI"
+			x: 9.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["0D04908025368D7B"]
+			description: [
+				"&e南瓜頭領主（Lord Pumpkinhead）&r是&e南瓜頭爵士&r更強大的最終型態。你可以召喚他來與他戰鬥。用&e轉化萬靈藥&r右鍵點擊一顆&e地獄邪惡南瓜&r（可製作或尋獲）即可召喚。"
+				""
+				"注意，&e轉化萬靈藥&r的其中一項材料——&e混沌成分&r，可以用&e釀造台&r在&e水瓶&r中釀造&e混沌種子&r製成。"
+				""
+				"&c南瓜頭領主最低會在 60 級並具有神話稀有度時出現。&r"
+				""
+				"南瓜頭領主擁有："
+				"&b+50% 護甲&r"
+				"&b+50% 元素抗性&r"
+				"&b+50% 混沌抗性&r"
+			]
+			icon: "mca:book_supporters"
+			id: "32228E2B053EF761"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 16000"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "7591A16B2A0D894F"
+				silent: true
+				title: "16000 經驗值"
+				type: "command"
+			}]
+			subtitle: "60 級 - 南瓜王 II"
+			tasks: [{
+				entity: "born_in_chaos_v1:lord_the_headless"
+				icon: "ftb_ph:lord_of_pumpkin"
+				id: "45B7B9E1EFF6B3F1"
+				type: "kill"
+				value: 1L
+			}]
+			title: "怪物圖鑑 VIb"
+			x: 9.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["1DEC808C04130184"]
+			description: [
+				"&e殭屍小丑（Zombie Clowns）&r是動作緩慢但相當強韌的敵人。牠們攻擊命中時會施加迷醉藥劑效果。可以在&e小丑馬車隊（Clown Caravans）&r中找到牠們。"
+				""
+				"殭屍小丑擁有："
+				"&b+25% 物理轉混沌傷害&r"
+				"&b+75% 混沌抗性&r"
+			]
+			icon: "mca:book_supporters"
+			id: "4E589D39C44CAAD2"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 120"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "04E41165D049095A"
+				silent: true
+				title: "120 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "被耍了吧！"
+			tasks: [{
+				entity: "born_in_chaos_v1:zombie_clown"
+				icon: "ftb_ph:zombie_clown"
+				id: "0229F6B999DF46D0"
+				type: "kill"
+				value: 30L
+			}]
+			title: "怪物圖鑑 IIb"
+			x: 3.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["749948B3A454617E"]
+			description: ["你可以合成或找到屬於自己的&e傳送石碑（Waystone）&r來傳送。這些造價相對昂貴，但絕對值得！"]
+			id: "4BA92370D0D0DC32"
+			rewards: [
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 500"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "597C6F3B17BA40CF"
+					silent: true
+					title: "500 經驗值"
+					type: "command"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "2D408A43E66CF473"
+					table_id: 385353338452370382L
+					type: "choice"
+				}
+			]
+			subtitle: "額外要素"
+			tasks: [{
+				id: "4A411B6E171AC9B2"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "waystones:waystone"
+							}
+							{
+								Count: 1b
+								id: "waystones:mossy_waystone"
+							}
+							{
+								Count: 1b
+								id: "waystones:sandy_waystone"
+							}
+						]
+					}
+				}
+				title: "傳送石碑"
+				type: "item"
+			}]
+			x: 7.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["7032850A1F1FFF32"]
+			description: [
+				"&e惡靈獵犬首領（Dire Hound Leader）&r是一種大型獵犬，會在各種生態域中於&b夜晚&r遊蕩。牠們能召喚較小的惡靈獵犬協助戰鬥。"
+				""
+				"惡靈獵犬首領擁有："
+				"&b+30% 閃避機率&r"
+				"&b+60% 流血機率&r"
+			]
+			icon: "mca:book_supporters"
+			id: "6F1CBC071DD2414C"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 120"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "3F5DE85074BA9ED5"
+				silent: true
+				title: "120 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "嚎叫獵犬"
+			tasks: [{
+				entity: "born_in_chaos_v1:dire_hound_leader"
+				icon: "ftb_ph:direhound_leader"
+				id: "377631AE3921C331"
+				type: "kill"
+				value: 6L
+			}]
+			title: "怪物圖鑑 Ib"
+			x: 1.5d
+			y: 9.0d
+		}
+		{
+			dependencies: ["761BC90863C35627"]
+			description: [
+				"&e墮落混沌騎士（Fallen Chaos Knight）&r曾是一名驕傲的騎士，如今已向混沌屈服。牠們會在&b夜晚&r出現"
+				""
+				"墮落混沌騎士擁有："
+				"&b+50% 護甲&r"
+				"&b+100% 物理轉混沌傷害&r"
+			]
+			icon: "mca:book_supporters"
+			id: "16739950F16AB006"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give xp_times_lvl @p 150"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "2FE4336CA3038867"
+				silent: true
+				title: "150 經驗值 x 等級"
+				type: "command"
+			}]
+			subtitle: "墮落騎士"
+			tasks: [{
+				entity: "born_in_chaos_v1:fallen_chaos_knight"
+				icon: "ftb_ph:fallen_chaos_knight"
+				id: "029D495A65716B1F"
+				type: "kill"
+				value: 5L
+			}]
+			title: "怪物圖鑑 IVb"
+			x: 6.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["0D9B68F2990B8E94"]
+			description: [
+				"在旅途中，你可能會在箱子裡找到&e方尖碑地圖（Obelisk Maps）&r。這些地圖可以用在&e方尖碑（Obelisks）&r上，觸發波次型的獨立戰鬥副本！"
+				""
+				"生成的怪物會受到地圖本身詞綴的影響。這些詞綴會讓戰鬥變得更困難，但也會提高獎勵。"
+				""
+				"方尖碑戰鬥中生成的怪物會依你的等級調整強度。"
+			]
+			id: "7BE77FBF663D995C"
+			rewards: [{
+				id: "45AB4D5BADF27EBE"
+				item: "ancient_obelisks:obelisk_map"
+				type: "item"
+			}]
+			subtitle: "波次型副本"
+			tasks: [{
+				id: "2E5E647AF53CF519"
+				item: "ancient_obelisks:obelisk"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["044F1A64E4751E01"]
+			description: [
+				"&e懸賞獵人（Bounty Hunting）&r是一種 Mine and Slash 專業，會隨著你完成豐饒的賞金委託而升級。完成賞金委託可以獲得懸賞獵人經驗值和&e賞金券&r！"
+				""
+				"&e賞金看板（Bounty Boards）&r會為你生成&e隨機的賞金委託&r。從看板介面上領取一份&e委託&r，並在&e時限&r內完成，即可獲得列出的獎勵！"
+				""
+				"你可以自己合成賞金看板，或是在世界各地隨機發現它們——通常會出現在村莊裡！"
+				""
+				"如需更多資訊，請參閱："
+				"{ \"text\": \"懸賞獵人\", \"color\": \"yellow\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"4E27A84CE1F030A1\" } }"
+			]
+			id: "0726C033448D45CE"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 500"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "10A31C7272F8C27A"
+				silent: true
+				title: "500 經驗值"
+				type: "command"
+			}]
+			subtitle: "M\\&S 專業"
+			tasks: [
+				{
+					id: "164D7BC468D2116C"
+					item: "bountiful:bountyboard"
+					type: "item"
+				}
+				{
+					id: "264FCC3C7B7531D6"
+					item: {
+						Count: 1
+						id: "bountiful:decree"
+						tag: {
+							"bountiful:decree_data": "{}"
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "賞金看板"
+			x: 7.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6FF06A68E8DA88F2"]
+			description: [
+				"紋飾用在你的護甲上可以提供詞綴加成。世界中有許多不同的紋飾可以找到，每一種都能提供不同的好處。你需要一張&e鍛造台&r才能套用紋飾。"
+				""
+				"舉例來說，&e狗頭人鍛造樣板（Kobold Smithing Templates）&r可以為護甲提供以下加成："
+				""
+				"&e#頭盔&r：擊殺怪物可獲得更多原版經驗值。"
+				"&e#胸甲&r：使用不合適或空手時，方塊破壞速度更快。"
+				"&e#護腿&r：進行動作時，飢餓值消耗更慢。"
+				"&e#靴子&r：耕地不再會被踩壞。"
+				""
+				"找出其他紋飾，自訂你的裝備！"
+			]
+			id: "40803605D59A3AE1"
+			rewards: [
+				{
+					count: 4
+					id: "7DEF1F37A42B4449"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "60D76996779B5FEE"
+					item: "minecraft:wayfinder_armor_trim_smithing_template"
+					type: "item"
+				}
+			]
+			subtitle: "地底世界"
+			tasks: [{
+				id: "3002A87574C474C4"
+				item: "kobolds:kobold_template"
+				type: "item"
+			}]
+			title: "免費紋飾"
+			x: 3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["727ADA9C4F420BDC"]
+			description: [
+				"Craft to Exile 中的怪物都擁有屬性，而且除了隨機生成的屬性外，有些怪物一定會附帶特定的屬性。某些任務有時會提到相關怪物會附帶哪些屬性。舉例來說，你會在第二章發現，任務中提到的大部分怪物都帶有某種&c火焰&r詞綴。"
+				""
+				"你也可以按下「&e=&r」來查看你正在看著的怪物的確切屬性。"
+			]
+			icon: "minecraft:paper"
+			id: "2FC973866E3F8A8A"
+			rewards: [{
+				id: "428CC4A744D4C7B9"
+				item: "mmorpg:currency/gear_rarity_random"
+				type: "item"
+			}]
+			subtitle: "遺失的書頁"
+			tasks: [{
+				id: "2D89449C24CD6554"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "怪物屬性"
+			x: 12.0d
+			y: -1.5d
+		}
+	]
+	subtitle: ["1-15 級"]
+	title: "第一章"
+}

@@ -1,0 +1,19 @@
+{
+  "key.categories.mns_extras": "MnS Extras",
+  "item.mns_extras.bounty_slip": "懸賞單",
+  "item.mns_extras.empowered_bounty_slip": "強化懸賞單",
+  "itemGroup.mns_extras": "MnS Extras",
+  "key.mns_extras.open_profession_shop": "開啟專業商店",
+  "gui.mns_extras.profession_shop.title": "專業商店",
+  "gui.mns_extras.profession_shop.cost": "花費：%s x %s",
+  "gui.mns_extras.profession_shop.required": "需求：%s 等級 %s",
+  "profession.farming": "農業",
+  "profession.mining": "採礦",
+  "profession.husbandry": "懸賞獵人",
+  "profession.fishing": "釣魚",
+  "profession.cooking": "烹飪",
+  "profession.alchemy": "煉金術",
+  "profession.enchanting": "灌注",
+  "profession.gear_crafting": "裝備製作",
+  "profession.salvaging": "分解"
+}

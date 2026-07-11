@@ -1,0 +1,4 @@
+{
+  "commands.terrablender.biomeparams.success": "位置 %s %s %s 的參數：%s",
+  "commands.terrablender.biomeparams.failed": "無法判斷參數"
+}

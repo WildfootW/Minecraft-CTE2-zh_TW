@@ -1,0 +1,16 @@
+{
+  "emi.category.emitrades.villager_trades": "村民交易",
+
+  "emi.emitrades.random_colored": "隨機顏色",
+  "emi.emitrades.random_structure": "隨機建築",
+  "emi.emitrades.random_effect": "隨機狀態效果",
+  "emi.emitrades.enchantments.possible": "可能的附魔",
+
+  "emi.emitrades.profession.lvl.1": "見習",
+  "emi.emitrades.profession.lvl.2": "學徒",
+  "emi.emitrades.profession.lvl.3": "熟練",
+  "emi.emitrades.profession.lvl.4": "專家",
+  "emi.emitrades.profession.lvl.5": "大師",
+
+  "emi.emitrades.placeholder.wandering_trader": "流浪商人"
+}

@@ -1,0 +1,15 @@
+{
+  "block.tfbr.respawn_naga" : "納迦重生台座",
+  "block.tfbr.respawn_lich" : "巫妖重生台座",
+  "block.tfbr.respawn_hydra" : "九頭蛇重生台座",
+  "block.tfbr.respawn_ur_ghast" : "烏爾地獄幽靈重生台座",
+  "block.tfbr.respawn_snow_queen" : "冰雪女王重生台座",
+
+  "creativetab.tfbr_tab": "暮光森林：首領復活",
+
+  "message.naga.incorrect": "§7請將§f %s§7 放在標示處，並將§a %s §7放在台座上方。",
+  "message.lich.incorrect": "§7請將§6 %s§7 放在標示處，並將§5 %s §7放在台座上方。",
+  "message.hydra.incorrect": "§7請將§f %s§7 放在標示處，並將§6 %s §7放在台座上方。",
+  "message.ur_ghast.incorrect": "§7請將§c %s§7 放在標示處，並將§e %s §7放在台座上方。",
+  "message.snow_queen.incorrect": "§7請將§f %s§7 放在標示處，並將§b %s §7放在台座上方。"
+}

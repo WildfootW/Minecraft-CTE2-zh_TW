@@ -1,0 +1,1435 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "act_iii"
+	group: "1E3C4B5FFAE48A39"
+	icon: "undergarden:catalyst"
+	id: "31B544F80AB89D6E"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["2AFB98683E249B7D"]
+			description: ["看來&e腐化怪（Rotling）&r並不是唯一的腐化生物,牠們其實還有許多不同的種類。"]
+			icon: "minecraft:rotten_flesh"
+			id: "5E98541EEB25174A"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "58382CF9AB2A0A3E"
+					table_id: 1433159522818962256L
+					type: "choice"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 6000"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "1206AB15279F8FA5"
+					silent: true
+					title: "6000 經驗值"
+					type: "command"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "主線任務"
+			tasks: [
+				{
+					entity: "undergarden:rotbeast"
+					icon: "ftb_ph:rotbeast"
+					id: "2C4A8A938CB95DE1"
+					type: "kill"
+					value: 12L
+				}
+				{
+					entity: "undergarden:rotwalker"
+					icon: "ftb_ph:rotwalker"
+					id: "03FF1260F86F8A4E"
+					type: "kill"
+					value: 12L
+				}
+			]
+			title: "腐化生物"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["18D44E8B9226FB02"]
+			description: ["有人告訴你這個維度又濕又悶,但你沒想到它居然在腐爛。殺掉一直來攻擊你的討厭&e腐化怪（Rotling）&r,牠們似乎就是造成腐化的元兇。"]
+			icon: "alexsmobs:cockroach_wing_fragment"
+			id: "2AFB98683E249B7D"
+			rewards: [
+				{
+					count: 2
+					id: "5DCBFD4165D4B05B"
+					item: "lightmanscurrency:coin_gold"
+					title: "金錢"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 5000"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "495F3EA9B5202D6E"
+					silent: true
+					title: "5000 經驗值"
+					type: "command"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "主線任務"
+			tasks: [{
+				entity: "undergarden:rotling"
+				icon: "ftb_ph:rotling"
+				id: "5C9A9DA8C7B9EEFC"
+				type: "kill"
+				value: 6L
+			}]
+			title: "異域敵人"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5C25A5681CC704B8"]
+			description: [
+				"既然你已經武裝完畢,是時候去看看究竟是什麼造成了海洋裡的這些異常現象了。你注意到&e主世界的冰之迷宮&r有些動靜……或許值得去查看一下。這些冰之迷宮可以在&e靠近深凍海洋的地表&r找到。 "
+				""
+				"據說有一種叫做&e氧膠礦（Oxygelium）&r的稀有植物,可以在這些冰之迷宮&e海底最深處&r找到。你也可以從&e受折磨的靈魂（Tortured Souls）&r身上取得。如果你找不到&e受折磨的靈魂&r,可以試著挑戰&e冰之迷宮傳送門（Gateway of the Ice Maze）&r!"
+				""
+				"你會需要&e螺栓裝甲（Bolt Armor）&r才能在寒冷中生存,這套裝備可以合成。"
+				""
+				"&cAquamirae 模組的生物最低會以 35 級生成!&r"
+				""
+				"&e需要完成全部的前置任務。&r"
+			]
+			icon: "minecraft:ice"
+			id: "217637D12CF3011E"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "6A6264B5A2D68399"
+					table_id: 5102974831465220002L
+					type: "choice"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 7250"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "513C3E0F390949B6"
+					silent: true
+					title: "7250 經驗值"
+					type: "command"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "主線任務"
+			tasks: [
+				{
+					icon: "minecraft:ice"
+					id: "7D9182428353834C"
+					structure: "aquamirae:ice_maze/common"
+					title: "尋找一座冰之迷宮"
+					type: "structure"
+				}
+				{
+					id: "66A2C43CB2DC02D9"
+					title: "閱讀完畢請點擊"
+					type: "checkmark"
+				}
+			]
+			title: "隱藏的深處"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5E98541EEB25174A"]
+			description: [
+				"你和一位村民聊過,對方說自己曾經住在 Undergarden。根據他所說,那裡曾經有強大的存在棲息在遍布各地的神殿中,守護文明不受蔓延的腐化侵襲。你需要找到 Undergarden 的&e地下墓穴（Catacombs）&r才能完成這個任務。"
+				""
+				"不過,那似乎都是過去的事了。最新的調查顯示,有些新的生物正遊蕩在主世界的深處。"
+				""
+				"&o&7完成後會在「可重複任務」章節解鎖一個可重複任務!&r&r"
+			]
+			id: "775A13E1924D6C9A"
+			rewards: [
+				{
+					id: "22D6AB0E769C0B19"
+					item: {
+						Count: 1
+						id: "mmorpg:chest/rare_gear"
+						tag: {
+							mmorpg_loot_chest: "{\"num\":5,\"rar\":\"rare\",\"lvl\":35,\"id\":\"gear\",\"key\":\"\"}"
+						}
+					}
+					title: "稀有裝備戰利品箱（35 級）"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 6250"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "235DECB54BBFBDE3"
+					silent: true
+					title: "6250 經驗值"
+					type: "command"
+				}
+				{
+					auto: "enabled"
+					icon: "ftb_ph:talent"
+					id: "1E135904CF7ED95A"
+					title: "1 天賦點"
+					type: "custom"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "主線任務"
+			tasks: [{
+				entity: "undergarden:forgotten"
+				icon: {
+					Count: 1
+					id: "undergarden:forgotten_pickaxe"
+					tag: {
+						Damage: 0
+					}
+				}
+				id: "074321BF73A109FA"
+				type: "kill"
+				value: 12L
+			}]
+			title: "過去的文明"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2AFB98683E249B7D"]
+			description: ["你從村里一位年長的居民那裡聽說,他原本來自 Undergarden!據他所說,由於蔓延的腐化,Undergarden 已經沒有任何村莊了。不過,或許還有定居在當地、願意進行交易的&e石生種（Stoneborn）&r生物。"]
+			id: "34AE4F64C6DCC76B"
+			rewards: [
+				{
+					id: "3598048059AFC907"
+					item: {
+						Count: 1
+						id: "mmorpg:chest/currency"
+						tag: {
+							mmorpg_loot_chest: "{\"num\":5,\"rar\":\"common\",\"lvl\":30,\"id\":\"currency\",\"key\":\"\"}"
+						}
+					}
+					title: "普通通貨戰利品箱（30 級）"
+					type: "item"
+				}
+				{
+					count: 5
+					id: "7B53CAD7E3888851"
+					item: "lightmanscurrency:coin_gold"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 5500"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "4AB967C7D0BC5EA0"
+					silent: true
+					title: "5500 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "外交使節"
+			tasks: [{
+				advancement: "undergarden:undergarden/stoneborn_trade"
+				criterion: ""
+				id: "41919A014FCB8BFF"
+				type: "advancement"
+			}]
+			title: "異域友人"
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2AFB98683E249B7D"]
+			description: ["探索 Undergarden 的深處,你會找到一些可以用來製作裝備的實用資源!"]
+			id: "73CB23341BA13CD0"
+			rewards: [
+				{
+					count: 3
+					id: "61183E226D5E94A5"
+					item: "mmorpg:stone/3"
+					title: "史詩之石"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 5000"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "6B975E6A9D52282E"
+					silent: true
+					title: "5000 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "MINE and Slash"
+			tasks: [{
+				advancement: "undergarden:undergarden/mine_ore"
+				criterion: ""
+				id: "5E1546F833807E4F"
+				type: "advancement"
+			}]
+			title: "新資源"
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["217637D12CF3011E"]
+			description: ["如果你找不到&e終界傳送門框架（End Portal Frame）&r,而且&e終界之眼（Eye of Ender）&r也快用完了,或許是時候合成一個&e終界定位器（Endolocator）&r了,它的功能和終界之眼一樣,但可以無限次使用!"]
+			id: "2E0F302F9BBF7E36"
+			rewards: [
+				{
+					count: 3
+					id: "04EA5114ACF663AF"
+					item: "lightmanscurrency:coin_gold"
+					title: "金錢"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 7500"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "1FC44A6913452913"
+					silent: true
+					title: "7500 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "回聲定位"
+			tasks: [{
+				id: "40F07F24ADE9D1A4"
+				item: {
+					Count: 1
+					id: "alexsmobs:endolocator"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "尋找建築的好幫手"
+			x: 6.0d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"59A29FC72CB20EB7"
+				"6BA03D598BD6C2AD"
+				"360C736C3975B377"
+				"43D444B5C1395F3E"
+				"2A8673F98F14484D"
+				"11DB53435CA1D59E"
+				"5E98541EEB25174A"
+				"2E0F302F9BBF7E36"
+				"2AFB98683E249B7D"
+				"217637D12CF3011E"
+				"18B4B295493669DD"
+				"775A13E1924D6C9A"
+				"60A18C940B623CDA"
+				"73CB23341BA13CD0"
+				"46DB9530C236A4AD"
+				"55F9F418C4CA3B3A"
+				"0998037F5701A2D7"
+				"5C25A5681CC704B8"
+				"0AFF7911E9C10C1B"
+				"3054F5AA249874B1"
+				"58F782F592F2ADEB"
+				"34AE4F64C6DCC76B"
+				"45EA60D4FE6CFFAC"
+				"713FE37BCF17FA27"
+				"4F6C1721D3A47BFC"
+				"3242634F49140F5F"
+				"3984F3F1D86ADE21"
+				"45501F3F04639DB1"
+				"5FEC85CF65C29ED6"
+			]
+			description: ["完成第三章的所有任務即可完成這項成就。接著就可以戴上你的新帽子到處炫耀了!"]
+			hide_dependency_lines: true
+			icon: "simplehats:babydolphin"
+			id: "6852C249CA093735"
+			rewards: [
+				{
+					id: "07B40C2CAFFA4A41"
+					item: "lightmanscurrency:coin_emerald"
+					title: "金錢"
+					type: "item"
+				}
+				{
+					id: "69E1F9E5F47DE548"
+					item: "simplehats:babydolphin"
+					title: "小海豚"
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			subtitle: "成就"
+			tasks: [{
+				id: "7F4620276B50AC30"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "完成第三章的所有任務!"
+			x: 10.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["2E0F302F9BBF7E36"]
+			description: ["&e怪異魚類探測器（Strange Fish Finder）&r可以定位附近含有&e傳奇魚類和戰利品&r的惡魔之洞（Devil's Hole）區塊。"]
+			id: "58F782F592F2ADEB"
+			rewards: [
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 8000"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "479F2BD1BBE7BC9A"
+					silent: true
+					title: "8000 經驗值"
+					type: "command"
+				}
+				{
+					auto: "enabled"
+					icon: "ftb_ph:talent"
+					id: "2B95DBCDDE09AA83"
+					title: "1 天賦點"
+					type: "custom"
+				}
+				{
+					id: "2CD9791B813A37F2"
+					item: "simplehats:seaweedhat"
+					type: "item"
+				}
+			]
+			subtitle: "回聲定位"
+			tasks: [{
+				id: "0B89633D93313B67"
+				item: {
+					Count: 1
+					id: "alexsmobs:pupfish_locator"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 6.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["217637D12CF3011E"]
+			dependency_requirement: "one_completed"
+			description: ["這套&e裝甲&r讓你可以輕鬆地在水中&e挖礦與戰鬥&r。你可以用在冰之迷宮水底找到的&e氧膠礦（Oxygelium）&r,或是同樣在該區域出現的&e受折磨的靈魂&r身上取得的素材,來合成&e氧氣瓶&r。你也可以考慮使用從釣魚取得的&e海王素（Neptunium）&r裝備,在水中作戰!"]
+			id: "43D444B5C1395F3E"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 6750"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "482D24E3915BCF42"
+				silent: true
+				title: "6750 經驗值"
+				type: "command"
+			}]
+			shape: "circle"
+			subtitle: "潛水裝備"
+			tasks: [
+				{
+					id: "7B1370680492A67F"
+					item: {
+						Count: 1
+						id: "aquamirae:three_bolt_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "15969F7FC51090F2"
+					item: {
+						Count: 1
+						id: "aquamirae:three_bolt_suit"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["217637D12CF3011E"]
+			description: [
+				"有人目擊這些不死生物在&e深凍海洋附近、地下庇護所裡的冰之迷宮&r中遊蕩。"
+				""
+				"&o&7完成後會在「可重複任務」章節解鎖一個可重複任務!&r&r"
+			]
+			id: "60A18C940B623CDA"
+			rewards: [
+				{
+					count: 8
+					id: "4C7692645F8A7345"
+					item: "mmorpg:material/fishing/1"
+					type: "item"
+				}
+				{
+					id: "023076E4060597AE"
+					item: "mmorpg:material/fishing/2"
+					title: "天界生魚"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 8500"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "132D51D143AFAECD"
+					silent: true
+					title: "8500 經驗值"
+					type: "command"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "海底冒險"
+			tasks: [{
+				entity: "aquamirae:tortured_soul"
+				icon: {
+					Count: 1
+					id: "betterarcheology:soul_totem"
+					tag: {
+						Damage: 0
+					}
+				}
+				id: "6DC389E918151695"
+				type: "kill"
+				value: 16L
+			}]
+			title: "不得安息的亡者"
+			x: 7.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["217637D12CF3011E"]
+			description: ["這些魚看起來就很可疑……而且牠們竟然生活在陸地上!這些生物可以在&e靠近深凍海洋的冰之迷宮&r中找到。"]
+			id: "3054F5AA249874B1"
+			rewards: [
+				{
+					count: 4
+					id: "18127D8F7D2FE528"
+					item: "mmorpg:material/fishing/2"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 8750"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "2D6BC5CAD878B4F4"
+					silent: true
+					title: "8750 經驗值"
+					type: "command"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "海底冒險"
+			tasks: [{
+				entity: "aquamirae:maw"
+				icon: "alexsmobs:flying_fish"
+				id: "64029E0952041AA3"
+				type: "kill"
+				value: 12L
+			}]
+			title: "陸地上的恐怖生物"
+			x: 7.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["217637D12CF3011E"]
+			description: ["在&e冰之迷宮&r水中的&e鮟鱇魚（Anglerfish）&r看起來似乎很正常……"]
+			id: "59A29FC72CB20EB7"
+			rewards: [
+				{
+					id: "5623647895FDB31F"
+					item: "mmorpg:material/fishing/3"
+					title: "天使生魚"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 8750"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "325506065E24D465"
+					silent: true
+					title: "8750 經驗值"
+					type: "command"
+				}
+				{
+					id: "13A003531A29BE48"
+					item: {
+						Count: 1
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "gateways:ice_maze"
+						}
+					}
+					type: "item"
+				}
+			]
+			subtitle: "海底冒險"
+			tasks: [{
+				entity: "aquamirae:anglerfish"
+				icon: "aquamirae:anglers_fang"
+				id: "793FAAC99A394C65"
+				type: "kill"
+				value: 8L
+			}]
+			title: "深海生物"
+			x: 7.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["59A29FC72CB20EB7"]
+			description: [
+				"這種滑溜溜、蜿蜒爬行的生物可以在&e冰之迷宮&r旁的&e庇護所&r中找到。你也可以在&e冰之迷宮傳送門&r中找到牠。"
+				""
+				"&c鰻魚最低會以 35 級生成。&r"
+				""
+				"鰻魚擁有:"
+				"&b+50% 物理轉冰冷傷害&r"
+				"&a15% 機率掉落 Und 符文&r"
+			]
+			id: "46DB9530C236A4AD"
+			rewards: [
+				{
+					count: 2
+					id: "16C206CAA7691022"
+					item: "mmorpg:stone/3"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 9250"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "5E42161C284D2B09"
+					silent: true
+					title: "9250 經驗值"
+					type: "command"
+				}
+				{
+					auto: "enabled"
+					icon: "ftb_ph:talent"
+					id: "0F7E84FB337FE624"
+					title: "1 天賦點"
+					type: "custom"
+				}
+				{
+					auto: "enabled"
+					icon: "ftb_ph:ascend"
+					id: "61E1F9C240855D16"
+					title: "殘酷昇華"
+					type: "custom"
+				}
+			]
+			shape: "diamond"
+			subtitle: "海底冒險"
+			tasks: [{
+				entity: "aquamirae:eel"
+				icon: "alexsmobs:shed_snake_skin"
+				id: "05F31113091D1241"
+				type: "kill"
+				value: 1L
+			}]
+			title: "滑溜的泳者"
+			x: 9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3054F5AA249874B1"]
+			description: [
+				"從未真正被任何生物親眼見過,傳說中&e冰之迷宮之母（Mother of the Ice Maze）&r是一種在海中遊蕩、攻擊水手與海盜的強大生物。如果你想找到牠,據說牠有機率&e跟著鮟鱇魚一起生成&r(&7鮟鱇魚死亡時有 5.0% 機率生成牠&r)。也有傳言說,在這頭生物的腹中,你能找到稀有的古代海盜寶藏……"
+				""
+				"&c冰之迷宮之母最低會以 35 級生成。&r"
+				""
+				"冰之迷宮之母擁有:"
+				"&b+50% 物理轉冰冷傷害&r"
+				"&a50% 機率掉落 Und 符文&r"
+			]
+			id: "18B4B295493669DD"
+			rewards: [
+				{
+					count: 8
+					id: "3E4E7CF7278690E7"
+					item: "lightmanscurrency:coin_gold"
+					title: "金錢"
+					type: "item"
+				}
+				{
+					id: "0DDB0EF1FF5F5BA3"
+					item: {
+						Count: 1
+						id: "mmorpg:chest/rare_gear"
+						tag: {
+							mmorpg_loot_chest: "{\"num\":5,\"rar\":\"rare\",\"lvl\":35,\"id\":\"gear\",\"key\":\"\"}"
+						}
+					}
+					title: "稀有裝備戰利品箱（35 級）"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 14000"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "7153FEA8AA828FFB"
+					silent: true
+					title: "14000 經驗值"
+					type: "command"
+				}
+				{
+					auto: "enabled"
+					icon: "ftb_ph:talent"
+					id: "060035A5B1D52952"
+					title: "1 天賦點"
+					type: "custom"
+				}
+			]
+			shape: "diamond"
+			subtitle: "海底冒險"
+			tasks: [{
+				entity: "aquamirae:maze_mother"
+				icon: {
+					Count: 1
+					id: "aquamirae:maze_rose"
+					tag: {
+						Damage: 0
+						Enchantments: [
+							{
+								id: "obscure_api:distance"
+								lvl: 3s
+							}
+							{
+								id: "obscure_api:fast_spin"
+								lvl: 5s
+							}
+						]
+					}
+				}
+				id: "0962A21E9E55A320"
+				type: "kill"
+				value: 1L
+			}]
+			title: "深海之母"
+			x: 9.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"3054F5AA249874B1"
+				"60A18C940B623CDA"
+			]
+			dependency_requirement: "one_completed"
+			description: [
+				"&e柯妮莉亞船長的幽靈（Ghost of Captain Cornelia）&r會在某種聲音從&e號角&r中吹響時出現……"
+				""
+				"有人說&e號角&r可以從潛伏在&e深凍海洋&r中、一頭巨大的母體生物身上找到,也可以透過完成&e冰之迷宮傳送門&r取得。"
+				""
+				"&e柯妮莉亞船長的幽靈&r十分頑強……當她的血量偏低時,會開始&c快速回復生命值&r。你可以使用&e虛弱噴濺藥水&r來對付這一點。"
+				""
+				"&c柯妮莉亞船長的幽靈最低會以 40 級生成。&r"
+				""
+				"柯妮莉亞船長的幽靈擁有:"
+				"&b+50% 物理轉冰冷傷害&r"
+				"&b+25% 暴擊率&r"
+				"&a10% 機率掉落 Und 符文&r"
+				""
+				"&e需要完成 1 項前置任務。&r"
+				""
+				"&6這個任務會在戰役商店中解鎖新的商店。"
+				"&o&7完成後會在「可重複任務」章節解鎖一個可重複任務!&r&r"
+			]
+			id: "55F9F418C4CA3B3A"
+			rewards: [
+				{
+					id: "3460CB6300D902AD"
+					item: "lightmanscurrency:coin_emerald"
+					title: "金錢"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "2A9A07576D36CFDF"
+					item: "mmorpg:material/fishing/3"
+					title: "天使生魚"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 15000"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "59ABA7C0A346C178"
+					silent: true
+					title: "15000 經驗值"
+					type: "command"
+				}
+			]
+			shape: "rsquare"
+			size: 1.0d
+			subtitle: "主線任務"
+			tasks: [{
+				entity: "aquamirae:captain_cornelia"
+				icon: "aquamirae:pirate_pouch"
+				id: "36993DF8C06FCE11"
+				type: "kill"
+				value: 1L
+			}]
+			title: "柯妮莉亞船長的寶箱"
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["73CB23341BA13CD0"]
+			description: ["這些&e寒冷錠&r可以用來合成強大的&e霜鋼（Froststeel）&r裝備。可以在&e寒冷地底生態域&r中找到,例如&e霜原（Frostfields）、霜霧莖森林（Frosty Smogstem Forest）&r和&e冰海（Icy Sea）&r生態域。"]
+			id: "0AFF7911E9C10C1B"
+			rewards: [
+				{
+					count: 4
+					id: "0D451539F1EC255E"
+					item: "mmorpg:material/mining/1"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 5000"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "052C4DC20201AB66"
+					silent: true
+					title: "5000 經驗值"
+					type: "command"
+				}
+				{
+					auto: "enabled"
+					icon: "ftb_ph:talent"
+					id: "0CBDF4F483A66437"
+					title: "1 天賦點"
+					type: "custom"
+				}
+			]
+			subtitle: "MINE and Slash"
+			tasks: [{
+				count: 8L
+				id: "154C7E9E60887877"
+				item: "undergarden:froststeel_ingot"
+				type: "item"
+			}]
+			title: "寒冷錠"
+			x: 1.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["55F9F418C4CA3B3A"]
+			description: [
+				"是時候去拜訪村民學者了。他們或許知道一些關於蘊藏強大生物的異次元的事情。"
+				""
+				"你可以在&e守門人小屋（Gatekeeper Houses）&r中找到&e守門人（Gatekeeper）&r,這種小屋會生成在&e山地、平原或雪地村莊&r中。"
+				""
+				"不過你可能需要一些手段來逼他們吐露情報……或許可以用&a綠寶石&r?"
+			]
+			id: "0998037F5701A2D7"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 9250"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "4BE8EDFC75B0DD85"
+				silent: true
+				title: "9250 經驗值"
+				type: "command"
+			}]
+			shape: "rsquare"
+			subtitle: "主線任務"
+			tasks: [{
+				icon: "blue_skies:blinding_key"
+				id: "0C15001804C8AF74"
+				structure: "#blue_skies:gatekeeper_houses"
+				title: "尋找一位守門人"
+				type: "structure"
+			}]
+			title: "守門人"
+			x: 10.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["775A13E1924D6C9A"]
+			dependency_requirement: "one_completed"
+			description: [
+				"在&e地下墓穴（Catacombs）&r深處,你偶爾可能會找到已經失去作用的守衛者。據說這些守衛者曾經保護人們免受腐化生物的侵害,但早已失去了牠們的魔力。當然,這只是傳言……"
+				""
+				"如果你找不到這些守衛者,或許用&e迷宮傳送門（Gateway of the Labyrinth）&r強行開啟一道通往過去的傳送門,運氣會比較好。"
+				""
+				"&c被遺忘的守衛者最低會以 35 級生成。&r"
+				""
+				"被遺忘的守衛者擁有:"
+				"&b+50% 元素抗性&r"
+				"&a10% 機率掉落 Und 符文&r"
+			]
+			icon: {
+				Count: 1
+				id: "undergarden:forgotten_sword"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "5C25A5681CC704B8"
+			rewards: [
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 12500"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "45269ACB23D984A3"
+					silent: true
+					title: "12500 經驗值"
+					type: "command"
+				}
+				{
+					id: "2EFCEBBD529078B6"
+					item: {
+						Count: 1
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "gateways:endless/labyrinth"
+						}
+					}
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "413C00B019997763"
+					table_id: 7143075762642060613L
+					type: "choice"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "主線任務"
+			tasks: [{
+				entity: "undergarden:forgotten_guardian"
+				icon: "ftb_ph:forgotten_guardian"
+				id: "68ABFF4A22C968A4"
+				type: "kill"
+				value: 1L
+			}]
+			title: "隱藏的祕密"
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5C25A5681CC704B8"]
+			description: [
+				"對付某些怪物有困難嗎?你可以透過 Mine and Slash 的&e灌注專業（Infusing Profession）&r來強化自己。&e卷軸&r可以用在你的裝備上,&e隨機賦予一項有益的屬性&r。這項屬性可以透過使用後續的灌注卷軸來升級。"
+				""
+				"詳情請參閱&eM\\&S Professions&r章節,了解如何使用這套系統!"
+			]
+			icon: "minecraft:paper"
+			id: "360C736C3975B377"
+			rewards: [
+				{
+					count: 4
+					id: "45BD213CEE617FC1"
+					item: {
+						Count: 1
+						id: "mmorpg:enchantment/family/armor/common"
+						tag: {
+							level: 1
+							tier: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					count: 2
+					id: "06864F652BEF71AF"
+					item: {
+						Count: 1
+						id: "mmorpg:enchantment/family/armor/uncommon"
+						tag: {
+							level: 1
+							tier: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			subtitle: "遺失的頁面"
+			tasks: [{
+				id: "1CF415B71E5C7734"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "非原版附魔"
+			x: 4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["4F6C1721D3A47BFC"]
+			description: [
+				"在 CTE2 中,部分原版屬性與 Mine and Slash 相容!"
+				""
+				"原版 : &aMine and Slash&r"
+				"生命值 : &b+0.5% 魔法護盾&r"
+				"護甲 : &b+0.1% 裝備防禦&r"
+				"護甲韌性 : &b+0.1% 裝備防禦&r"
+				"攻擊力 : &b+0.5% 總傷害&r"
+				"幸運 : &b+3% 魔法尋物&r"
+				""
+				"此外,附魔相容性也包含在內。你可以在&b藍色的附魔描述文字&r中看到該附魔如何影響 Mine and Slash 的屬性。"
+				""
+				"附魔屬性加成在每件裝備上的上限,等於該附魔的最大等級加 1。舉例來說,保護附魔每級提供 +2% 護甲,但即使你不知怎麼取得了保護 VIII 的裝備,單一件裝備也只能提供 +12% 的加成。不過,還有一個全域上限,是單件裝備上限的 3 倍。如果你裝備了 4 件保護 VI 的裝備,你也只會獲得 +36% 護甲。"
+			]
+			icon: "minecraft:paper"
+			id: "11DB53435CA1D59E"
+			rewards: [{
+				id: "050336E8ABF73D0D"
+				item: {
+					Count: 1
+					id: "minecraft:enchanted_book"
+					tag: {
+						StoredEnchantments: [{
+							id: "minecraft:protection"
+							lvl: 2s
+						}]
+					}
+				}
+				type: "item"
+			}]
+			subtitle: "遺失的頁面"
+			tasks: [{
+				id: "28690175BDCF5B11"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "屬性與附魔相容性"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["34AE4F64C6DCC76B"]
+			description: [
+				"&e灌注台（Imbuing Table）&r讓你可以&e合併已達最高等級&r的附魔。你可以用這張台子,將裝備上已達最高等級的附魔再提升&e1&r級。舉例來說,用一本&e幸運 III&r附魔書,升級一把已經擁有&e幸運 III&r的鎬子,就會得到擁有&e幸運 IV&r的鎬子。"
+				""
+				"&o請注意,並非所有附魔都支援這套系統。"
+			]
+			id: "6BA03D598BD6C2AD"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 5500"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "7B45C6A08AC082FC"
+				silent: true
+				title: "5500 經驗值"
+				type: "command"
+			}]
+			subtitle: "合成一張灌注台"
+			tasks: [{
+				id: "50C250274B0E7598"
+				item: "illagerinvasion:imbuing_table"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["60A18C940B623CDA"]
+			description: ["&e海藍寶石（Aquamarine）&r會從&e溺屍、魷魚和守衛者&r身上掉落,可以用來與&e海棲民（Sea Dwellers）&r交易!海棲民是生活在&e海洋深處&r的魚人,你通常可以看到牠們聚集在&e海底村莊&r中。"]
+			id: "2A8673F98F14484D"
+			rewards: [
+				{
+					id: "2623FECED1EC26D4"
+					item: {
+						Count: 1
+						id: "seadwellers:depth_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 8000"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "0E5CD2D42DE0C09E"
+					silent: true
+					title: "8000 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "海底冒險"
+			tasks: [{
+				id: "59C725105DC08072"
+				item: "seadwellers:aquamarine"
+				type: "item"
+			}]
+			title: "海棲民"
+			x: 9.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["2AFB98683E249B7D"]
+			description: [
+				"抗性在維持你的生存上扮演著重要角色。共有 3 種元素:&c火焰&r、&b冰冷&r與&e閃電&r。此外還有&7物理&r與&5混沌&r兩種傷害類型。"
+				""
+				"從現在開始,&6元素傷害&r會變得愈來愈重要,大多數怪物都會帶有某種形式的元素傷害(不論是天生具備,還是來自詞綴)。你必須&e務必&r維持自己的&6元素抗性&r!&5混沌抗性&r同樣至關重要,只是相對較難取得。"
+				""
+				"隨著你變得更強,怪物也會變得更強。&l&c每 25 級,你的抗性就會永久下降 25%!&r&r"
+				""
+				"&eLv. 1-24:&r &b+25% 元素/混沌抗性&r"
+				"&eLv. 25-49:&r +0% 元素/混沌抗性"
+				"&eLv. 50-74:&r &c-25% 元素/混沌抗性&r"
+				"&eLv. 75+:&r &c-50% 元素/混沌抗性&r"
+			]
+			icon: "minecraft:paper"
+			id: "45EA60D4FE6CFFAC"
+			rewards: [
+				{
+					id: "40026BEF380DF951"
+					item: "mmorpg:runes/und"
+					type: "item"
+				}
+				{
+					id: "2CA2591F8F90D243"
+					item: "mmorpg:gems/emerald/3"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 6000"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "1698C3C7A8EAD812"
+					silent: true
+					title: "6000 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "遺失的頁面"
+			tasks: [{
+				id: "3C2F08373F7EA7F7"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "抗性"
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["360C736C3975B377"]
+			description: ["試著合成更高稀有度的灌注卷軸吧!鞋類灌注特別強大,因為你可以獲得只有鞋類灌注才有的特殊屬性!"]
+			id: "713FE37BCF17FA27"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 7500"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "794C0235E593BB75"
+				silent: true
+				title: "7500 經驗值"
+				type: "command"
+			}]
+			subtitle: "M\\&S 專業"
+			tasks: [{
+				id: "3909083DF06CD4CE"
+				item: {
+					Count: 1
+					id: "mmorpg:enchantment/family/armor/rare"
+					tag: {
+						tier: 1
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			title: "保護你的腳腳"
+			x: 4.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["775A13E1924D6C9A"]
+			description: [
+				"&e納迦（Naga）&r是遍布在 Undergarden 各處的飛行生物。"
+				""
+				"納迦擁有:"
+				"&b+75% 物理轉混沌傷害&r"
+				"&b+50% 中毒機率&r"
+				"&b+50% 毒素傷害&r"
+			]
+			icon: "mowziesmobs:naga_fang"
+			id: "4F6C1721D3A47BFC"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 7500"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "1F0BB657CC303C1D"
+				silent: true
+				title: "7500 經驗值"
+				type: "command"
+			}]
+			subtitle: "Undergarden"
+			tasks: [{
+				entity: "mowziesmobs:naga"
+				icon: "ftb_ph:naga_mowzie"
+				id: "6D0F50A483937869"
+				type: "kill"
+				value: 4L
+			}]
+			title: "在……Undergarden 底下?"
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["775A13E1924D6C9A"]
+			description: [
+				"&e太陽鳥溫弗西（Umvuthi, the Sunbird）&r是一種大型中立首領怪物——牠是「阿巴弗薩納（Abavuthana）」的創造者,一位太陽使者。"
+				""
+				"溫弗西可以在&e深淵傳送門（Gateway of the Depths）&r中找到。"
+				""
+				"如果一名玩家戴著阿巴弗薩納面具（Umvuthana Mask）接近牠,該玩家就能與溫弗西進行交易。"
+				""
+				"&c溫弗西最低會以 35 級生成。&r"
+				""
+				"溫弗西擁有:"
+				"&b+100% 物理轉火焰傷害&r"
+				"&b+50% 燃燒機率&r"
+				"&b+50% 火焰抗性&r"
+				"&b+50% 閃電抗性&r"
+				"&a10% 機率掉落 Und 符文&r"
+			]
+			icon: "mowziesmobs:grant_suns_blessing"
+			id: "3242634F49140F5F"
+			rewards: [
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 10000"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "57410F6F9D28BDAF"
+					silent: true
+					title: "10000 經驗值"
+					type: "command"
+				}
+				{
+					id: "74337A0D2AD5AE80"
+					item: "handcrafted:golden_thick_pot"
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			subtitle: "Undergarden"
+			tasks: [{
+				advancement: "mowziesmobs:kill_umvuthi"
+				criterion: ""
+				icon: "ftb_ph:umvuthithesunbird"
+				id: "12AECD7958F2AB3C"
+				title: "擊殺:1 隻太陽鳥溫弗西"
+				type: "advancement"
+			}]
+			title: "太陽酋長"
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["4F6C1721D3A47BFC"]
+			description: [
+				"&e鐵鑄戰甲兵（Ferrous Wroughtnaut）&r一開始會靜止不動,雙手靠在自己的斧頭上。當有玩家靠近或牠們受到攻擊時,就會做好準備並開始攻擊。當不在戰鬥中時,戰甲兵會迅速回復生命值。"
+				""
+				"&c&l警告!鐵鑄戰甲兵能夠打破你的盾牌,請小心行動!&r&r"
+				""
+				"你可以在 Undergarden 各處的競技場中找到牠們。"
+				""
+				"&c鐵鑄戰甲兵最低會以 35 級生成。&r"
+				""
+				"鐵鑄戰甲兵擁有:"
+				"&b+50% 流血機率&r"
+				"&b+50% 護甲&r"
+				"&b+40% 元素抗性&r"
+				"&a10% 機率掉落 Und 符文&r"
+			]
+			icon: {
+				Count: 1
+				id: "mowziesmobs:wrought_helmet"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "3984F3F1D86ADE21"
+			rewards: [
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 11000"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "62F5C57610CB66C2"
+					silent: true
+					title: "11000 經驗值"
+					type: "command"
+				}
+				{
+					count: 3
+					id: "180E05BD7E85DF3F"
+					item: "mmorpg:material/mining/1"
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			subtitle: "Undergarden"
+			tasks: [{
+				id: "74A2D2C74D0310B4"
+				item: {
+					Count: 1
+					id: "mowziesmobs:wrought_helmet"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "鋼鐵般的意志"
+			x: 4.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["59A29FC72CB20EB7"]
+			description: ["需要一點經驗值加成嗎?考慮吃些透過專業合成的&e經驗提升海鮮&r吧!"]
+			id: "0E47D45B630AF684"
+			rewards: [
+				{
+					id: "39D6AD6223534A8D"
+					item: "mmorpg:material/fishing/1"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 8500"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "4A1C2918189AC326"
+					silent: true
+					title: "8500 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "M\\&S 專業"
+			tasks: [{
+				id: "16B63C712B862DD3"
+				item: {
+					Count: 1
+					id: "mmorpg:seafood/rare_exp"
+					tag: {
+						tier: 1
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			title: "有點餓了"
+			x: 7.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["55F9F418C4CA3B3A"]
+			description: [
+				"曾經想回到主世界探索,卻發現等級太低而無法好好享受嗎?在特定的等級門檻,過去的維度會「狂暴化」,提升等級範圍,讓玩家有機會回去重新體驗這些過去的維度!"
+				""
+				"&c------------------------------&r"
+				""
+				"&e主世界&r - Lv. &b50-70&r"
+				"&e地獄&r - Lv. &b55-75&r"
+				"&eUndergarden&r - Lv. &b60-80&r"
+				"&eEverbright/Everdawn&r - Lv. &b65-85&r"
+				"&e終界&r - Lv. &b70-90&r"
+				"&eThe Otherside&r - Lv. &b75-95&r"
+			]
+			icon: "minecraft:paper"
+			id: "45501F3F04639DB1"
+			rewards: [{
+				id: "231B1473E7401DAA"
+				item: "mmorpg:currency/enchant_reroll"
+				type: "item"
+			}]
+			subtitle: "遺失的頁面"
+			tasks: [{
+				id: "69D1987CC32E4D4C"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "回頭旅行"
+			x: 10.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["775A13E1924D6C9A"]
+			description: [
+				"&e雕刻師通碧（Tongbi, the Sculptor）&r是一種強大的地術士怪物,可以在&e寺院（Monastery）&r中找到。"
+				""
+				"雕刻師通碧可以在&e深淵傳送門&r中找到。"
+				""
+				"&c雕刻師通碧最低會以 35 級生成。&r"
+				""
+				"雕刻師通碧擁有:"
+				"&b+25% 物理轉冰冷傷害&r"
+				"&b+25% 物理轉混沌傷害&r"
+				"&b+40% 冰冷抗性&r"
+				"&b+40% 混沌抗性&r"
+				"&a10% 機率掉落 Und 符文&r"
+			]
+			id: "5FEC85CF65C29ED6"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 10000"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "3E1B0097332F1A41"
+				silent: true
+				title: "10000 經驗值"
+				type: "command"
+			}]
+			subtitle: "Undergarden"
+			tasks: [{
+				entity: "mowziesmobs:sculptor"
+				icon: {
+					Count: 1
+					id: "mowziesmobs:sculptor_staff"
+					tag: {
+						Damage: 0
+					}
+				}
+				id: "04AB6B426D446BA9"
+				type: "kill"
+				value: 1L
+			}]
+			title: "雕刻師"
+			x: 4.5d
+			y: 1.5d
+		}
+	]
+	subtitle: ["Lv. 25-40"]
+	title: "第三章"
+}

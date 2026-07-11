@@ -1,0 +1,1304 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "act_ii"
+	group: "1E3C4B5FFAE48A39"
+	icon: "minecraft:nether_star"
+	id: "5381722ABA7D14DD"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: [
+				"18E09A4B9FC1B43F"
+				"29CADE48F14D6436"
+			]
+			description: ["呃,這些&eLemurians&r（勒姆爾人）看起來不該出現在這裡..."]
+			id: "52DAC9E8213D2624"
+			rewards: [
+				{
+					id: "545891FC6956AAC5"
+					item: {
+						Count: 1
+						id: "mmorpg:chest/rare_gear"
+						tag: {
+							mmorpg_loot_chest: "{\"num\":5,\"rar\":\"rare\",\"lvl\":15,\"id\":\"gear\",\"key\":\"\"}"
+						}
+					}
+					title: "稀有裝備戰利品箱 (Lv. 15)"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 1250"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "0D1D6AA7D64C4EE8"
+					silent: true
+					title: "1250 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "Risk of Rain"
+			tasks: [{
+				entity: "riskofrain_mobs:lemurian_entity"
+				icon: "nightlights:octopus_purple"
+				id: "13BF61F2B380DC9E"
+				type: "kill"
+				value: 24L
+			}]
+			title: "異界生物 II"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["29CADE48F14D6436"]
+			description: [
+				"蚊子在主世界就已經夠煩人了……這些傢伙又大又會黏在你臉上,而且超難殺!"
+				""
+				"這些噁心的變異飛行昆蟲棲息在&e地獄的森林&r裡。"
+			]
+			icon: "alexsmobs:mosquito_proboscis"
+			id: "322725A82ADAA810"
+			rewards: [
+				{
+					count: 8
+					id: "6846F506D4DBBC18"
+					item: {
+						Count: 1
+						id: "mmorpg:potion/health/2"
+						tag: {
+							level: 1
+							tier: 0
+						}
+					}
+					title: "稀有回復藥水"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 1250"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "124DB96872E3BE33"
+					silent: true
+					title: "1250 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "緋紅森林"
+			tasks: [{
+				entity: "alexsmobs:crimson_mosquito"
+				icon: "ftb_ph:crimson_mosquito"
+				id: "3EADF779EE3B6C1A"
+				type: "kill"
+				value: 4L
+			}]
+			title: "嗜血害蟲"
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["45535AECCE43183A"]
+			description: ["看來你的直覺沒錯。地獄要塞裡到處都是奇怪的敵人。&e凋靈骷髏&r似乎會掉落頭骨碎片,而這些碎片似乎散發著某種能量。"]
+			icon: "minecraft:wither_skeleton_skull"
+			id: "63F4CAF1CA065949"
+			rewards: [
+				{
+					id: "33816632385BF1A6"
+					item: {
+						Count: 1
+						id: "mmorpg:chest/rare_gear"
+						tag: {
+							mmorpg_loot_chest: "{\"num\":5,\"rar\":\"rare\",\"lvl\":25,\"id\":\"gear\",\"key\":\"\"}"
+						}
+					}
+					title: "稀有裝備戰利品箱 (Lv. 25)"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 2000"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "6F4E216D74BB3692"
+					silent: true
+					title: "2000 經驗值"
+					type: "command"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "主線任務"
+			tasks: [{
+				entity: "minecraft:wither_skeleton"
+				icon: "ftb_ph:wither_skeleton"
+				id: "672F0F6E02A6D254"
+				type: "kill"
+				value: 12L
+			}]
+			title: "頭骨收集者"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["18E09A4B9FC1B43F"]
+			description: [
+				"看來這裡不是所有生物都天生充滿敵意。不過我們得讓牠們知道我們是認真的。"
+				""
+				"是時候教訓一下&e豬布林（Piglin）&r和&e豬布獸（Hoglin）&r了。你最常會在&e地獄荒地&r和&e緋紅森林&r找到牠們。"
+			]
+			icon: "minecraft:piglin_head"
+			id: "29CADE48F14D6436"
+			rewards: [
+				{
+					id: "27D034D602B200EA"
+					item: "lightmanscurrency:coin_gold"
+					title: "金錢"
+					type: "item"
+				}
+				{
+					id: "69DCE5D67CC781CF"
+					item: "mmorpg:stone/2"
+					title: "稀有石頭"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 1250"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "01CC496042A47CC6"
+					silent: true
+					title: "1250 經驗值"
+					type: "command"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "主線任務"
+			tasks: [
+				{
+					entity: "minecraft:piglin"
+					icon: "ftb_ph:piglin"
+					id: "0709550781191C90"
+					type: "kill"
+					value: 12L
+				}
+				{
+					entity: "minecraft:hoglin"
+					icon: "ftb_ph:hoglin"
+					id: "6ACD5F7F9447DCCB"
+					type: "kill"
+					value: 4L
+				}
+			]
+			title: "異界生物"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["45535AECCE43183A"]
+			description: [
+				"在地獄裡,你可能會遇到充滿攻擊性的火焰生物。雖然&e飛龍（Wyrm）&r和&e烈焰使者&r看起來很強,但以地獄的規模和深度來看,幾乎可以肯定還有更強大的岩漿生物存在。"
+				""
+				"最好先做好防火準備。試著找到並擊敗這些怪物來考驗自己吧。"
+				""
+				"&o&7完成後會在「可重複任務」章節解鎖一個可重複任務!&r&r"
+			]
+			icon: "minecraft:blaze_powder"
+			id: "1D01AD334C7C70F1"
+			rewards: [
+				{
+					count: 5
+					id: "1E1B2C1F4FA4CF20"
+					item: "lightmanscurrency:coin_iron"
+					title: "金錢"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 1750"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "3544639BC2E3A192"
+					silent: true
+					title: "1750 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "熾焰冒險"
+			tasks: [
+				{
+					entity: "minecraft:blaze"
+					icon: "ftb_ph:blaze"
+					id: "0B92DB0E2C3ACA8E"
+					type: "kill"
+					value: 12L
+				}
+				{
+					entity: "realmrpg_wyrms:red_wyrm"
+					icon: "minecraft:blaze_powder"
+					id: "123E1ECFC39D0945"
+					type: "kill"
+					value: 4L
+				}
+			]
+			title: "熾焰之敵"
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["277A8C4C5D50ED00"]
+			description: [
+				"你肯定已經遇過這些會飛的小東西了……你有種預感,每個角落都潛伏著成百上千隻。"
+				""
+				"牠們一定是從某種東西演變來的……"
+			]
+			icon: {
+				Count: 1
+				id: "minecraft:tipped_arrow"
+				tag: {
+					Potion: "alexsmobs:lava_vision"
+				}
+			}
+			id: "1EA8FC97142B16A7"
+			rewards: [
+				{
+					count: 3
+					id: "5486B8641330278A"
+					item: "mmorpg:soul_extractor/rare"
+					title: "稀有裝備靈魂萃取器"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 2250"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "2604E2CD0966E3DD"
+					silent: true
+					title: "2250 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "熾焰冒險"
+			tasks: [{
+				entity: "monsterplus:lava_squid"
+				icon: "ftb_ph:lava_squid"
+				id: "6EC7ADFF37CD9E71"
+				type: "kill"
+				value: 18L
+			}]
+			title: "噴火者"
+			x: 4.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1EA8FC97142B16A7"]
+			description: [
+				"就是&e這個東西。&r"
+				""
+				"熔岩魷魚之母擁有:"
+				"&b+50% 物理轉火焰傷害&r"
+				"&a5% 機率掉落 Net 符文&r"
+			]
+			icon: "simplehats:burning_m_bison"
+			id: "05AD0B9A77F0325F"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "535DAF2AABB78097"
+					table_id: 1687722018226746788L
+					type: "choice"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 2500"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "79DBFB1E7228F818"
+					silent: true
+					title: "2500 經驗值"
+					type: "command"
+				}
+				{
+					auto: "enabled"
+					icon: "ftb_ph:talent"
+					id: "3669A04AB95A4666"
+					title: "1 天賦點"
+					type: "custom"
+				}
+			]
+			shape: "diamond"
+			subtitle: "熾焰冒險"
+			tasks: [{
+				entity: "monsterplus:mother_lava_squid"
+				icon: "ftb_ph:lava_squid"
+				id: "01A75F2295A67935"
+				type: "kill"
+				value: 1L
+			}]
+			title: "母體"
+			x: 4.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["75447684ADAD02D8"]
+			description: [
+				"把&e靈魂沙&r排成 T 字形,再放上&e3 顆凋靈骷髏頭&r,即可召喚&e凋靈。&r"
+				""
+				"這隻首領非常難纏,第一階段需要遠程武器或法術才能應付。到了第二階段,凋靈就會靠近跟你近身肉搏,做好心理準備……"
+				""
+				"&o&e小提示:&r &o打不贏凋靈嗎?你知道嗎,怪物等級如果比你高,受到的傷害會變少、造成的傷害會變多。這個加成從等級差 3 級開始生效。&r"
+				""
+				"&c凋靈最低會以 30 級生成。&r"
+				""
+				"凋靈擁有:"
+				"&b+50% 物理轉火焰傷害&r"
+				"&b+20% 元素抗性&r"
+				"&a10% 機率掉落 Net 符文&r"
+				""
+				"&6這個任務會在戰役商店中解鎖新商店。"
+			]
+			icon: "minecraft:wither_rose"
+			id: "114D74DF8284ACC3"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "77CCFAF579DA3451"
+					table_id: 2150601229175429082L
+					type: "choice"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 7500"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "2D5BE1067A169265"
+					silent: true
+					title: "7500 經驗值"
+					type: "command"
+				}
+				{
+					auto: "enabled"
+					icon: "ftb_ph:talent"
+					id: "351D370BEAFABF0E"
+					title: "1 天賦點"
+					type: "custom"
+				}
+			]
+			shape: "rsquare"
+			size: 1.25d
+			subtitle: "主線任務"
+			tasks: [{
+				entity: "minecraft:wither"
+				icon: "ftb_ph:wither"
+				id: "17530C3BC3EA0BB2"
+				type: "kill"
+				value: 1L
+			}]
+			title: "黑暗儀式"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["277A8C4C5D50ED00"]
+			description: [
+				"好了,這就是你被交付要除掉的大魔王之一。&e野火者（Wildfire）&r是個強敵——你得做好萬全準備。"
+				""
+				"&e野火者&r身邊旋轉的護盾板必須先被打掉,牠才會開始受到傷害。"
+				""
+				"你可以在&e城塞（Citadel）&r裡找到&e野火者&r。你也可以使用&e煉獄要塞傳送門&r。"
+				""
+				"野火者擁有:"
+				"&b+50% 物理轉火焰傷害&r"
+				"&b+25% 燃燒機率&r"
+				"&a5% 機率掉落 Net 符文&r"
+			]
+			icon: {
+				Count: 1
+				id: "friendsandfoes:wildfire_crown"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "42A954877474A58F"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "74422C75EF7AACE2"
+					table_id: 4329773747337249676L
+					type: "choice"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 2500"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "777824462105E261"
+					silent: true
+					title: "2500 經驗值"
+					type: "command"
+				}
+				{
+					auto: "enabled"
+					icon: "ftb_ph:talent"
+					id: "6E3B5E2EB562F8D7"
+					title: "1 天賦點"
+					type: "custom"
+				}
+			]
+			shape: "diamond"
+			subtitle: "熾焰冒險"
+			tasks: [{
+				entity: "friendsandfoes:wildfire"
+				icon: "ftb_ph:wildfire"
+				id: "6541A85B5313AC4F"
+				type: "kill"
+				value: 1L
+			}]
+			title: "烈焰之王"
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["114D74DF8284ACC3"]
+			description: [
+				"你已經向村莊守衛回報了你的功績,也拿到了獎勵。是時候前往下一個維度——&e下界園（Undergarden）&r了。這是個潮濕、黏膩,大致上還算宜居的維度,住著一些奇特的生物……牠們或許沒有變異,但還是值得去瞧瞧。"
+				""
+				"用你的&e地獄之星&r合成一個&e催化劑（Catalyst）&r,再用&e石磚排成和地獄傳送門相同的形狀&r來建造傳送門,即可前往下界園。用催化劑啟動傳送門。"
+				""
+				"{image:cte2:textures/undergarden.png width:160 height:140 align:center}"
+			]
+			icon: "undergarden:catalyst"
+			id: "18D44E8B9226FB02"
+			rewards: [
+				{
+					count: 3
+					id: "281851AAA2C7DC0E"
+					item: "lightmanscurrency:coin_gold"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 4500"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "4E1BE362EAFA93B2"
+					silent: true
+					title: "4500 經驗值"
+					type: "command"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "主線任務"
+			tasks: [
+				{
+					id: "4F61CA02549D0BF8"
+					item: "undergarden:catalyst"
+					type: "item"
+				}
+				{
+					dimension: "undergarden:undergarden"
+					icon: "undergarden:depthrock"
+					id: "21C702BD4DC49479"
+					title: "造訪下界園"
+					type: "dimension"
+				}
+			]
+			title: "旅行催化劑"
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"63F4CAF1CA065949"
+				"1D01AD334C7C70F1"
+			]
+			dependency_requirement: "one_completed"
+			description: [
+				"你在地獄要塞裡看到了另一座建築的線索。要塞牆上多處刻著「城塞（The Citadel）」的字樣。或許你可以找到&e城塞&r並一探究竟。"
+				""
+				"&e需要完成 1 項前置任務。&r"
+			]
+			id: "277A8C4C5D50ED00"
+			min_required_dependencies: 1
+			rewards: [
+				{
+					id: "08F3F886C4A30C65"
+					item: {
+						Count: 1
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "gateways:basic/blaze"
+						}
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 2000"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "6FEAA0D1FF245EA5"
+					silent: true
+					title: "2000 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "熾焰冒險"
+			tasks: [{
+				advancement: "friendsandfoes:nether/find_citadel"
+				criterion: ""
+				id: "6E38DD14F2F2B52D"
+				type: "advancement"
+			}]
+			title: "黑暗中的城堡"
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["322725A82ADAA810"]
+			description: ["如果你發現自己常常死掉,可以合成一個&e重生錨&r。要合成它,你得先找到一些&e哭泣的黑曜石&r!"]
+			id: "0A37821899EAE5B4"
+			rewards: [
+				{
+					count: 5
+					id: "297CFA167CCC5830"
+					item: "lightmanscurrency:coin_iron"
+					title: "金錢"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 1750"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "46A8D34E894763CE"
+					silent: true
+					title: "1750 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "緋紅森林"
+			tasks: [{
+				advancement: "minecraft:nether/obtain_crying_obsidian"
+				criterion: ""
+				id: "79B01E4A345318F7"
+				type: "advancement"
+			}]
+			title: "乾涸的淚水"
+			x: 1.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["29CADE48F14D6436"]
+			description: [
+				"偶爾你會在地獄裡看到巨大而顯眼的建築物。這怎麼可能?難道這裡有文明存在?"
+				""
+				"或許找到其中一座建築並探索一番,能提供你尋找強大生物的線索。"
+			]
+			id: "45535AECCE43183A"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 1500"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "3F6B3CF23487B7AE"
+				silent: true
+				title: "1500 經驗值"
+				type: "command"
+			}]
+			shape: "rsquare"
+			subtitle: "主線任務"
+			tasks: [{
+				advancement: "minecraft:nether/find_fortress"
+				criterion: ""
+				id: "110553725D320A0F"
+				type: "advancement"
+			}]
+			title: "地獄要塞"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["29CD881773D976E5"]
+			description: [
+				"如果&e緋紅蚊子（Crimson Mosquito）&r吸食了沾滿&e扭曲菌類&r的&eMungus&r的血液,牠就會變成藍色並開始長大——最終變成&e扭曲莫斯科（Warped Mosco）&r。"
+				""
+				"或者,你也可以用&e扭曲混合物餵食緋紅蚊子&r。不知道要去哪找嗎?你可以&e在交易終端機/以物易物看板購買&r!"
+				""
+				"聽起來是個非常容易誘發突變的過程……"
+				""
+				"扭曲莫斯科擁有:"
+				"&b+40% 護甲&r"
+				"&a10% 機率掉落 Net 符文&r"
+			]
+			icon: "alexsmobs:warped_muscle"
+			id: "37167129D6D6A280"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "2B1573668D8133F2"
+					table_id: 2180584499743187208L
+					type: "choice"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 2000"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "55F31513DD96482E"
+					silent: true
+					title: "2000 經驗值"
+					type: "command"
+				}
+				{
+					auto: "enabled"
+					icon: "ftb_ph:talent"
+					id: "6AF21C1384426C0B"
+					title: "1 天賦點"
+					type: "custom"
+				}
+			]
+			shape: "diamond"
+			subtitle: "緋紅森林"
+			tasks: [{
+				entity: "alexsmobs:warped_mosco"
+				icon: "ftb_ph:warped_mosco"
+				id: "3A77AF5EDDC8EE67"
+				type: "kill"
+				value: 1L
+			}]
+			title: "森林猛男"
+			x: 4.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1EA8FC97142B16A7"]
+			description: [
+				"&e裝備靈魂萃取器&r可以用在裝備上。使用後你會得到裝備的「屬性」變成一個靈魂,而基底物品會在過程中被摧毀。之後你就可以把這個靈魂用在另一件裝備上!"
+				""
+				"相反地,&e裝備靈魂清除器&r則是用來清除裝備上的屬性,同時保留基底物品。"
+				""
+				"&e寶石萃取器&r用來從已插槽的裝備上取出&e寶石&r。這麼做沒有任何懲罰,但萃取器會被消耗掉。另外還有&e符文萃取器&r,但使用它會消耗&e1 點裝備潛力&r。"
+			]
+			icon: "minecraft:paper"
+			id: "60D44B70BB06539B"
+			rewards: [
+				{
+					count: 5
+					id: "06397D5030906CA7"
+					item: "mmorpg:soul_extractor/uncommon"
+					title: "罕見裝備靈魂萃取器"
+					type: "item"
+				}
+				{
+					id: "019842FB37A2A722"
+					item: "mmorpg:currency/extract_gem"
+					type: "item"
+				}
+				{
+					id: "14ADF13CF85D2BDC"
+					item: "mmorpg:soul_cleaner"
+					title: "裝備靈魂清除器"
+					type: "item"
+				}
+			]
+			subtitle: "遺失的書頁"
+			tasks: [{
+				id: "5222FCC05296547A"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "裝備靈魂萃取器"
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4343A66299F26319"]
+			description: [
+				"&e地獄守護者（Nether Keeper）&r是在地獄的&e守護城堡（Keeping Castle）&r中出現的強敵。守護城堡可以在&e地獄荒地和緋紅森林的地底&r找到。你可以在&e祭壇中放置地獄之星&r來召喚牠。"
+				""
+				"&c請注意,這些建築無法用探索指南針正常找到,你可能需要自行手動尋找。&r"
+				""
+				"{image:cte2:textures/nether_keeper.png width:192 height:108 align:center}"
+				""
+				"地獄守護者擁有:"
+				"&b+50% 物理轉火焰傷害&r"
+				"&b+40% 護甲&r"
+				"&a15% 機率掉落 Net 符文&r"
+			]
+			id: "4B57F45BE30AA5F2"
+			rewards: [
+				{
+					id: "6D6B60B2B13A812C"
+					item: {
+						Count: 1
+						id: "mmorpg:chest/rare_gear"
+						tag: {
+							mmorpg_loot_chest: "{\"num\":5,\"rar\":\"rare\",\"lvl\":30,\"id\":\"gear\",\"key\":\"\"}"
+						}
+					}
+					title: "稀有裝備戰利品箱 (Lv. 30)"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 5000"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "603037141A03BB23"
+					silent: true
+					title: "5000 經驗值"
+					type: "command"
+				}
+				{
+					id: "2B90EDAC5DA53732"
+					item: {
+						Count: 1
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "gateways:hellish_fortress"
+						}
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					icon: "ftb_ph:talent"
+					id: "40EEEAB2C09C5FCA"
+					title: "3 天賦點"
+					type: "custom"
+				}
+				{
+					auto: "enabled"
+					icon: "ftb_ph:ascend"
+					id: "0B062AF006F72FED"
+					title: "初階昇華"
+					type: "custom"
+				}
+			]
+			shape: "diamond"
+			subtitle: "大魔王們"
+			tasks: [{
+				id: "3D45F31ADFFF1165"
+				item: {
+					Count: 1
+					id: "stalwart_dungeons:ancient_fire"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "地獄守衛者 II"
+			x: 7.5d
+			y: -3.0d
+		}
+		{
+			dependencies: [
+				"4B57F45BE30AA5F2"
+				"42A954877474A58F"
+				"05AD0B9A77F0325F"
+				"37167129D6D6A280"
+				"3F61325EA08B6DAA"
+			]
+			description: ["擊敗第二章的所有迷你首領以完成這項成就。然後戴上你的新帽子到處炫耀吧!"]
+			hide_dependency_lines: true
+			icon: "simplehats:fakefire"
+			id: "389CFAF34A692969"
+			rewards: [
+				{
+					id: "42E82408B8908750"
+					item: "simplehats:fakefire"
+					type: "item"
+				}
+				{
+					count: 5
+					id: "0C37E20EAA887073"
+					item: "lightmanscurrency:coin_gold"
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			subtitle: "成就"
+			tasks: [{
+				id: "5285A75C058C5073"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "擊敗第二章所有迷你首領!"
+			x: 7.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["52DAC9E8213D2624"]
+			description: ["磁鐵在地城探索時非常好用,能把掉落的物品吸到你身邊。手持磁鐵並按下潛行+右鍵即可設定範圍與過濾條件。甚至還能升級來獲得更大的範圍!"]
+			id: "25F1A1475A6E6F1D"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 1000"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "35B0C955A02DD55F"
+				silent: true
+				title: "1000 經驗值"
+				type: "command"
+			}]
+			subtitle: "磁鐵"
+			tasks: [{
+				id: "2A9C784EEF5930E4"
+				item: {
+					Count: 1
+					id: "simplemagnets:basicmagnet"
+					tag: { }
+				}
+				type: "item"
+			}]
+			title: "它們是怎麼運作的?"
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["322725A82ADAA810"]
+			description: [
+				"&eLightman's Currency&r是一個會加入你擊殺怪物時獲得的硬幣的模組。你可以用這些硬幣和村民交易、在每個章節結尾購買輔助寶石與增幅寶石,或是開設商店和其他玩家交易。"
+				""
+				"即使在單人遊戲中,你也可以向商人購買物品。Craft to Exile 2 內建了一些不管在哪個世界都能購買的預設商品。架設一台&e交易終端機/以物易物看板&r來看看吧!"
+				""
+				"你可以購買的東西範例:"
+				"- Mine and Slash 專業材料"
+				"- 畫作調色盤與樂譜"
+				"- 稀有資源"
+				"- 常見方塊(泥土、石頭等)"
+				""
+				"如果你在玩多人遊戲,甚至可以用 FLAN 購買選項來購買&eFLAN 領地方塊&r。"
+				""
+				"&o想知道更多資訊,可以參考&e愉快的合作&r章節裡的「&eLightman's Currency&r」任務!&r"
+			]
+			id: "29CD881773D976E5"
+			rewards: [{
+				id: "2ECADA7B5FE7D7E1"
+				item: "lightmanscurrency:coin_gold"
+				type: "item"
+			}]
+			subtitle: "通貨"
+			tasks: [{
+				id: "165EE02B3146E124"
+				item: "lightmanscurrency:terminal"
+				type: "item"
+			}]
+			title: "花錢買快樂"
+			x: 3.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["114D74DF8284ACC3"]
+			description: ["合成一個&e訓練假人&r並放置它。打它就可以看到你的每秒傷害(DPS)!你也可以在&eMNS Hub&r的&e功能&r分頁中啟用&5傷害聊天記錄&r選項,來查看&e精確的傷害數值明細&r。"]
+			id: "12B20146ED616389"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 1000"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "1E68A513E06D4438"
+				silent: true
+				title: "1000 經驗值"
+				type: "command"
+			}]
+			subtitle: "DPS 計量器"
+			tasks: [{
+				id: "201D6D22A54727D4"
+				item: "dummmmmmy:target_dummy"
+				type: "item"
+			}]
+			x: 7.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1D01AD334C7C70F1"]
+			description: [
+				"&e通貨&r是可以直接用在你裝備上的各種物品。它們會改造你的裝備,使其變得更強大。"
+				""
+				"每件裝備都帶有固定數量的&e潛力&r。在裝備上使用通貨會消耗裝備的&e潛力&r。一旦潛力歸零,需要消耗潛力的通貨就無法再套用到該裝備上。不過並非所有通貨都需要消耗潛力,有些隨時都可以使用。"
+				""
+				""
+				"某些通貨,例如&e混沌石&r,可以附加非常強大的效果,但也可能對你的裝備造成負面影響。&c使用混沌石時,有 25% 的機率你的物品會變成煤炭&r。"
+			]
+			icon: "minecraft:paper"
+			id: "68EB4F5B367C3C47"
+			rewards: [
+				{
+					id: "63FF5032A26E8ACD"
+					item: "mmorpg:currency/affix_tier_up_down"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "67548D99572EA451"
+					table_id: 2792550926235851709L
+					type: "choice"
+				}
+			]
+			subtitle: "遺失的書頁"
+			tasks: [{
+				id: "5B5346C72F51EAD5"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "關於通貨的更多資訊"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["45535AECCE43183A"]
+			description: [
+				"你可能已經注意到有些&e地獄&r的怪物會造成更多&c火焰傷害。&r原生於特定維度的怪物通常會對特定元素有親和性。舉例來說,在地獄裡,有些怪物會造成火焰與物理的複合傷害。"
+				""
+				"&o另外請注意,這並不代表牠們對自己親和的元素會受到較少傷害。&r"
+				""
+				"&n元素親和性&r"
+				""
+				"&l主世界:&r &7無&r"
+				"&l地獄:&r &c火焰&r"
+				"&l下界園:&r &5混沌&r"
+				"&lAquamirae&r 怪物:&b冰冷&r"
+				"&lEverbright:&r &b冰冷&r + &e閃電&r"
+				"&lEverdawn:&r &c火焰&r + &5混沌&r"
+				"&l終界:&r &c火焰&r + &e閃電&r + &5混沌&r"
+				"&lThe Otherside:&r &5混沌&r"
+				"&lThe Twilight Forest:&r &7無&r"
+			]
+			icon: "minecraft:paper"
+			id: "3F61325EA08B6DAA"
+			rewards: [
+				{
+					count: 2
+					id: "486CB77D39ED6397"
+					item: "minecraft:blaze_powder"
+					type: "item"
+				}
+				{
+					id: "56C4CFD439EAE625"
+					item: {
+						Count: 1
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "gateways:endless/blaze"
+						}
+					}
+					type: "item"
+				}
+			]
+			subtitle: "遺失的書頁"
+			tasks: [{
+				id: "5CE8B1EB861233D7"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "怪物親和性"
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["29CADE48F14D6436"]
+			description: [
+				"Mine and Slash 的專業有時候練起來很枯燥……你知道嗎?透過戰鬥獲得經驗值時,也會累積&e休息中的專業經驗值&r。這些經驗值會累積起來,並在你進行專業活動時被消耗,藉此提升你獲得的經驗值。"
+				""
+				"同樣地,進行專業活動也會給你&e休息中的戰鬥經驗值&r!"
+				""
+				"你可以在 Mine and Slash Hub 中把滑鼠移到專業圖示上,查看你目前累積了多少休息經驗值。"
+			]
+			icon: "minecraft:paper"
+			id: "256EB6DAF1808F35"
+			rewards: [{
+				id: "6313F964AAACAA08"
+				item: "mmorpg:currency/enchant_reroll"
+				type: "item"
+			}]
+			subtitle: "遺失的書頁"
+			tasks: [{
+				id: "41373A88D8FE08D7"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "片刻喘息"
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["114D74DF8284ACC3"]
+			description: [
+				"&e昇華&r是透過完成高難度任務進一步強化角色的方式。要開始的話,你必須&e完成「地獄守衛者」任務&r,這樣就會解鎖&e昇華章節&r。"
+				""
+				"你完成的第一個任務會給你 1 點昇華點數,剛好夠你選擇專精。之後每完成一個挑戰,你就會獲得更多昇華點數!"
+				""
+				"這些點數上限為 7 點,使用方式與天賦點數類似,可以在&eMine and Slash Hub&r的昇華分頁中使用。"
+				""
+				"你一次只能選擇一個昇華樹。要選擇另一個昇華樹,你必須先重置技能點,收回目前昇華樹裡的所有點數。"
+			]
+			icon: "minecraft:paper"
+			id: "3C2D7F2998CC495F"
+			rewards: [
+				{
+					id: "7048624200E724FF"
+					item: "mmorpg:potions/reset_points_ascendancy"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 2500"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "3EC017DEA512E603"
+					silent: true
+					title: "2500 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "遺失的書頁"
+			tasks: [{
+				id: "24A37C91BE150CC6"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "昇華"
+			x: 6.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["45535AECCE43183A"]
+			description: ["合成一份豐盛的餐點來保住你的小命!吃下食物後,你會在一段時間內獲得額外屬性加成。"]
+			id: "75349B31576A3930"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 1250"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "031D6995F7F53586"
+				silent: true
+				title: "1250 經驗值"
+				type: "command"
+			}]
+			subtitle: "M\\&S 專業"
+			tasks: [{
+				id: "08BE1394EA5B782D"
+				item: {
+					Count: 1
+					id: "mmorpg:food/uncommon_life"
+					tag: {
+						tier: 1
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			title: "耐人尋味的食物"
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1EA8FC97142B16A7"]
+			description: ["試著動手打造一把客製化武器,助你冒險一臂之力!"]
+			id: "575DEFDB9962966C"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 2000"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "49B99CB75F267628"
+				silent: true
+				title: "2000 經驗值"
+				type: "command"
+			}]
+			subtitle: "M\\&S 專業"
+			tasks: [{
+				id: "21E5841575537E9D"
+				item: {
+					Count: 1
+					id: "mmorpg:stat_soul/family/weapon/rare"
+					tag: {
+						tier: 0
+					}
+				}
+				match_nbt: true
+				type: "item"
+			}]
+			title: "最鋒利"
+			x: 6.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["52DAC9E8213D2624"]
+			description: [
+				"&e幻影苦力怕&r會在&e扭曲森林&r和&e終界&r生成。牠們接觸到東西就會分裂,所以你得小心應付!"
+				""
+				"幻影苦力怕擁有:"
+				"&b+25% 閃避評等&r"
+			]
+			icon: "born_in_chaos_v1:phantom_bomb"
+			id: "3B1B7EC7FF90C8E4"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 1500"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "266DF2422C836890"
+				silent: true
+				title: "1500 經驗值"
+				type: "command"
+			}]
+			subtitle: "會爆炸的隱形炸彈"
+			tasks: [{
+				entity: "born_in_chaos_v1:phantom_creeper_copy"
+				icon: "ftb_ph:phantom_creeper"
+				id: "549C3B917A1ABE21"
+				type: "kill"
+				value: 10L
+			}]
+			title: "異界生物 III"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"730BE78211A1573B"
+				"75447684ADAD02D8"
+			]
+			description: [
+				"&c這個任務需要先完成:&r"
+				""
+				"{ \"text\": \"陸行鳥與坐騎\", \"color\": \"yellow\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"730BE78211A1573B\" } }"
+				""
+				"「巧克鳥圖鑑（Chocopedia）」提到地獄裡存在一種能飛的巧克鳥品種……"
+			]
+			id: "6A023A63B5FEE4A0"
+			rewards: [
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 1500"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "4746DD37A746BEE2"
+					silent: true
+					title: "1500 經驗值"
+					type: "command"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "3ACE0F8EB8A95A72"
+					table_id: 2792550926235851709L
+					type: "choice"
+				}
+			]
+			subtitle: "野生巧克鳥"
+			tasks: [
+				{
+					id: "14037C63F43DB96D"
+					item: "supplementaries:cage"
+					type: "item"
+				}
+				{
+					count: 32L
+					id: "52D1CE65EA3CECD6"
+					item: { Count: 32, id: "chococraft:gysahl_green" }
+					type: "item"
+				}
+				{
+					id: "4959FE52F1E77C4D"
+					item: "chococraft:chocobo_saddle"
+					type: "item"
+				}
+			]
+			title: "空中探索"
+			x: 4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3C2D7F2998CC495F"]
+			description: [
+				"&e駭人地獄幽靈（Awful Ghast）&r可以在地獄的&e駭人地城（Awful Dungeon）&r中找到。駭人地城會出現在&e靈魂沙峽谷和扭曲森林&r,外觀是漂浮的環形建築。你可以在&e祭壇中放置地獄之星&r來召喚牠。"
+				""
+				"&c請注意,這些建築無法用探索指南針正常找到,你可能需要自行手動尋找。&r"
+				""
+				"{image:cte2:textures/awful_ghast.png width:192 height:108 align:center}"
+				""
+				"駭人地獄幽靈擁有:"
+				"&b+50% 物理轉火焰傷害&r"
+				"&b+30% 元素抗性&r"
+				"&a15% 機率掉落 Net 符文&r"
+			]
+			id: "4343A66299F26319"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 5000"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "7E7FC3B9C75BC6F8"
+				silent: true
+				title: "5000 經驗值"
+				type: "command"
+			}]
+			shape: "diamond"
+			subtitle: "大魔王們"
+			tasks: [{
+				id: "02751A7FE39DD1D0"
+				item: "stalwart_dungeons:awful_crystal"
+				type: "item"
+			}]
+			title: "地獄守衛者"
+			x: 7.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["63F4CAF1CA065949"]
+			description: [
+				"鍛造模板是用在&e鍛造台&r上,用來改造工具和盔甲的物品。使用後會被消耗,但可以用現有的模板、其材料和鑽石來複製。"
+				""
+				"獄髓升級鍛造模板是用&e獄髓錠&r升級鑽石裝備所需的物品。這種模板只會在&e要塞遺跡&r中找到,且只有寶藏室保證會出現。"
+			]
+			id: "75447684ADAD02D8"
+			rewards: [
+				{
+					count: 4
+					id: "1388E7CF795CFEF5"
+					item: "minecraft:netherite_scrap"
+					type: "item"
+				}
+				{
+					id: "789F010B43E38AEB"
+					item: {
+						Count: 1
+						id: "minecraft:netherite_shovel"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 2500"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "7CB1E8320DED257E"
+					silent: true
+					title: "2500 經驗值"
+					type: "command"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "主線任務"
+			tasks: [{
+				id: "02B914E0382A57F7"
+				item: "minecraft:netherite_upgrade_smithing_template"
+				type: "item"
+			}]
+			title: "準備工作"
+			x: 4.5d
+			y: 0.0d
+		}
+	]
+	subtitle: ["Lv. 10-30"]
+	title: "第二章"
+}

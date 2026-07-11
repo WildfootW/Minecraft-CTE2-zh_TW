@@ -1,0 +1,58 @@
+{
+	"command.solonion.no_permissions": "你沒有權限對其他玩家套用此指令！",
+
+	"command.solonion.clear.success": "食物清單已重置！",
+	"command.solonion.diversity_feedback": "食物多樣性：%.2f",
+	"command.solonion.sync.success": "食物清單已同步！",
+	"command.solonion.origin.invalidated": "已重置玩家的快取來源！",
+	"command.solonion.origin.cleared": "已清除所有快取來源！",
+	"command.solonion.origin.inapplicable": "未安裝 Origins 模組。仍已清除來源資料。",
+
+	"item.solonion.food_book": "食物之書",
+	"item.solonion.lunchbox": "便當盒",
+	"item.solonion.container.lunchbox": "便當盒",
+    "item.solonion.golden_lunchbox": "黃金便當盒",
+    "item.solonion.container.golden_lunchbox": "黃金便當盒",
+	"item.solonion.lunchbag": "午餐袋",
+	"item.solonion.container.lunchbag": "午餐袋",
+
+	"item.solonion.container.open": "%s + %s 開啟",
+
+	"key.solonion.open_food_book": "開啟食物之書",
+	"key.solonion.category": "Spice of Life Onion",
+
+	"gui.solonion.food_book.stats": "總覽",
+	"gui.solonion.food_book.stats.current_diversity": "目前食物多樣性",
+	"gui.solonion.food_book.stats.min_warning1": "還需再進食 %d 次",
+	"gui.solonion.food_book.stats.min_warning2": "才能啟用加成",
+	"gui.solonion.food_book.active_benefits_header": "已啟用加成",
+	"gui.solonion.food_book.inactive_benefits_header": "未啟用加成",
+	"gui.solonion.food_book.benefits.threshold_label": "門檻",
+	"gui.solonion.food_book.benefits.active_tooltip": "因為你的食物多樣性超過此門檻，此加成已啟用。",
+	"gui.solonion.food_book.benefits.inactive_tooltip": "若你的食物多樣性超過此門檻，此加成將會啟用。",
+	"gui.solonion.food_book.food_queue_label": "已食用食物",
+	"gui.solonion.food_book.food_queue_tooltip": "過去食用過、對你的食物多樣性有貢獻的食物列表。",
+
+	"gui.solonion.food_book.fraction": "%1$s/%2$s",
+
+    "gui.solonion.tooltip.disabled": "此食物不會影響食物多樣性。",
+	"gui.solonion.tooltip.diversity": "多樣性",
+	"gui.solonion.tooltip.last_eaten": "上次食用：%d 餐前",
+	"gui.solonion.tooltip.last_eaten_singular": "上次食用：%d 餐前",
+
+	"config.solonion.att": "屬性",
+	"config.solonion.eff": "生物效果",
+
+	"config.solonion.addition": "加法",
+	"config.solonion.multiply_base": "乘以基礎值",
+	"config.solonion.multiply_total": "乘以總值",
+
+	"config.solonion.trackCount.comment": "應追蹤多少種食物。\n請注意此數值越大，你的潛在多樣性數值就能越高，若你要自訂上方的門檻/加成，請留意這一點。",
+    "config.solonion.minFoodsToActivate.comment": "玩家需要吃過的食物種類最低數量，達到後才會套用任何加成。",
+
+    "config.solonion.complexityStandardNutrition.comment": "預設為麵包的飽食值。\n每種食物都會與此值比較並據以計算。",
+    "config.solonion.complexityStandardSaturation.comment": "預設為麵包的飽和度值。\n每種食物都會與此值比較並據以計算。",
+    "config.solonion.complexityBenefitEffectModifier.comment": "食物每帶有一個正面效果（含等級）會增加多少複雜度。\n效果的機率也會納入考量。",
+    "config.solonion.complexityNeutralEffectModifier.comment": "食物每帶有一個中性效果（含等級）會增加多少複雜度。\n效果的機率也會納入考量。",
+    "config.solonion.complexityHarmEffectModifier.comment": "食物每帶有一個負面效果（含等級）會增加多少複雜度。\n效果的機率也會納入考量。"
+}

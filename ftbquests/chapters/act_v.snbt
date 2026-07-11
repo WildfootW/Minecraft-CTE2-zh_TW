@@ -1,0 +1,1236 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "act_v"
+	group: "1E3C4B5FFAE48A39"
+	icon: "minecraft:ender_eye"
+	id: "13CF8F9062A19FA5"
+	order_index: 5
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["75454F0A3C4C3596"]
+			description: [
+				"就是現在！&e打倒終界龍&r，為這場瘋狂畫下一個「終」點吧！"
+				""
+				"&o看起來你或許能用那對翅膀做點什麼……&r"
+				""
+				"&c終界龍最低於等級 50 時出現。&r"
+				""
+				"終界龍擁有："
+				"&b+25% 物理傷害轉換為閃電傷害&r"
+				"&b+25% 物理傷害轉換為混沌傷害&r"
+				"&b+25% 元素抗性&r"
+				"&b+35% 混沌抗性&r"
+				"&a7.5% 機率掉落終界符文&r"
+			]
+			icon: "minecraft:dragon_head"
+			id: "6F0D75895E507FFD"
+			rewards: [
+				{
+					id: "2912DA754B1FC7E8"
+					item: {
+						Count: 1
+						id: "mmorpg:chest/rare_gear"
+						tag: {
+							mmorpg_loot_chest: "{\"num\":5,\"rar\":\"rare\",\"lvl\":55,\"id\":\"gear\",\"key\":\"\"}"
+						}
+					}
+					title: "稀有裝備戰利品箱（Lv. 55）"
+					type: "item"
+				}
+				{
+					id: "4CEB9753CEE68DF0"
+					item: {
+						Count: 1
+						id: "customizableelytra:elytra_wing"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "748848F226B0215D"
+					item: "stalwart_dungeons:chorundum"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 25000"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "720DE9C64034C331"
+					silent: true
+					title: "25000 經驗值"
+					type: "command"
+				}
+			]
+			shape: "rsquare"
+			size: 1.25d
+			subtitle: "主線任務"
+			tasks: [{
+				entity: "minecraft:ender_dragon"
+				icon: "ftb_ph:ender_dragon"
+				id: "2877FD26AC97C50D"
+				type: "kill"
+				value: 1L
+			}]
+			title: "屠龍任務"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6F0D75895E507FFD"]
+			description: [
+				"你從一名村莊守衛那裡收到了&e指示&r，潦草地寫在一片鬆脫的竹片上。"
+				""
+				"&o1. 抵達終界。&r"
+				"&o2. 從島上取得終界水晶。&r"
+				"&o3. 把水晶放置在——&r"
+				""
+				"剩下的部分在你的冒險途中被&e磨損掉了&r。"
+			]
+			id: "531BDC3DFCE88A6E"
+			rewards: [
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 17050"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "6D064F971867F5AB"
+					silent: true
+					title: "17050 經驗值"
+					type: "command"
+				}
+				{
+					id: "237C14AD78034F20"
+					item: "lightmanscurrency:coin_diamond"
+					type: "item"
+				}
+			]
+			subtitle: "主線任務"
+			tasks: [{
+				advancement: "minecraft:end/respawn_dragon"
+				criterion: ""
+				id: "1B0D7898F4168083"
+				type: "advancement"
+			}]
+			title: "召喚儀式"
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["6F0D75895E507FFD"]
+			description: ["你已經屠殺了那條龍，但看起來終界的內容比你想像的還要多。現在或許是使用你新得到的&e鞘翅&r，&e探索外圍島嶼&r的好時機。"]
+			id: "7EA6A0131C5FF143"
+			rewards: [
+				{
+					id: "3EC5E98649245554"
+					item: {
+						Count: 1
+						id: "mmorpg:chest/currency"
+						tag: {
+							mmorpg_loot_chest: "{\"num\":5,\"rar\":\"common\",\"lvl\":50,\"id\":\"currency\",\"key\":\"\"}"
+						}
+					}
+					title: "普通通貨戰利品箱（Lv. 50）"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "022C5AE3B9A81349"
+					item: "mmorpg:currency/sharpening_stone_2"
+					title: "天穹磨刀石（Empyrean Sharpening Stones）"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 18250"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "3763B6E506B98B16"
+					silent: true
+					title: "18250 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "終界冒險"
+			tasks: [{
+				advancement: "minecraft:end/enter_end_gateway"
+				criterion: ""
+				id: "04D2837E3F91A62E"
+				type: "advancement"
+			}]
+			title: "彼方"
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6F0D75895E507FFD"]
+			description: [
+				"你得知並不是終界龍導致裂隙開啟。儘管那頭野獸邪惡，但牠終究只是——一頭邪惡的野獸。"
+				""
+				"看來終界的內情比你想像的還要複雜……有人說另一個危險潛伏在虛空之中，也有人說把一隻&e神秘蠕蟲&r丟進去就能把它引出來。"
+				""
+				"擊殺&e終界龍&r即可取得&e神秘蠕蟲&r。"
+			]
+			id: "56A3604D9BAD661C"
+			rewards: [
+				{
+					count: 16
+					id: "1B2A6B57387B7711"
+					item: {
+						Count: 1
+						id: "aquaculture:worm"
+						tag: {
+							Damage: 0
+						}
+					}
+					title: "蠕蟲"
+					type: "item"
+				}
+				{
+					id: "561F1DE4EB9C5CE9"
+					item: "lightmanscurrency:coin_emerald"
+					title: "金錢"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 15750"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "3799D574CFAF86F6"
+					silent: true
+					title: "15750 經驗值"
+					type: "command"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "主線任務"
+			tasks: [{
+				id: "1FD4027C3E5A4B93"
+				item: "alexsmobs:mysterious_worm"
+				title: "取得一隻神秘蠕蟲"
+				type: "item"
+			}]
+			title: "基因改造"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["56A3604D9BAD661C"]
+			description: [
+				"做好準備，因為這隻恐怖的生物有著多節的身軀。此外，牠會朝附近的玩家發射追蹤水晶。若靠得太近，你會被擊退——小心別被打出島外！"
+				""
+				"&c虛空蠕蟲最低於等級 55 時出現。&r"
+				""
+				"虛空蠕蟲擁有："
+				"&b+25% 元素抗性&r"
+				"&a5% 機率掉落終界符文&r"
+			]
+			icon: "alexsmobs:void_worm_eye"
+			id: "3944DD7AC4667137"
+			rewards: [
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 27500"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "45B406CDBD1F2A26"
+					silent: true
+					title: "27500 經驗值"
+					type: "command"
+				}
+				{
+					auto: "enabled"
+					icon: "ftb_ph:talent"
+					id: "71B0768A7BF842A5"
+					title: "2 天賦點"
+					type: "custom"
+				}
+			]
+			shape: "rsquare"
+			size: 1.25d
+			subtitle: "主線任務"
+			tasks: [{
+				entity: "alexsmobs:void_worm"
+				icon: "ftb_ph:void_worm"
+				id: "4CDAF67DC07C1B5A"
+				type: "kill"
+				value: 1L
+			}]
+			title: "來自虛空的蠕蟲"
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3944DD7AC4667137"]
+			description: ["有報告指出，一隻地底生物正在地底商人之間肆虐破壞。有人稱牠為&e「監守者」。&r有人說可以在深處的&e遠古城市&r找到牠。"]
+			id: "0424E768816CB314"
+			rewards: [
+				{
+					id: "6FEA654635C8F438"
+					item: {
+						Count: 1
+						id: "mmorpg:chest/epic_gear"
+						tag: {
+							mmorpg_loot_chest: "{\"num\":5,\"rar\":\"epic\",\"lvl\":60,\"id\":\"gear\",\"key\":\"\"}"
+						}
+					}
+					title: "史詩裝備戰利品箱（Lv. 60）"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 20500"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "69E5D302B19DFCB4"
+					silent: true
+					title: "20500 經驗值"
+					type: "command"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "主線任務"
+			tasks: [{
+				advancement: "deeperdarker:main/find_ancient_city"
+				criterion: ""
+				id: "73ECBABFC177A3AF"
+				type: "advancement"
+			}]
+			title: "回家"
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0424E768816CB314"]
+			description: [
+				"&e監守者&r完全失明，依靠震動、氣味與觸覺來偵測玩家。你可以透過潛行躲避牠，或用箭矢之類的東西轉移牠的注意力。牠擁有強力的近戰攻擊，還能釋放毀滅性的追蹤音爆攻擊。"
+				""
+				"&c監守者最低於等級 60 時出現。&r"
+				""
+				"監守者擁有："
+				"&b+50% 物理轉混沌傷害&r"
+				"&b+50% 護甲&r"
+				"&b+35% 元素抗性&r"
+				"&b+35% 混沌抗性&r"
+				"&a10% 機率掉落希德符文（Sid Rune）&r"
+			]
+			icon: {
+				Count: 1
+				id: "deeperdarker:warden_chestplate"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "6B5AFF6897A7AE6D"
+			rewards: [
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 30000"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "32BBAFAF37E1995B"
+					silent: true
+					title: "30000 經驗值"
+					type: "command"
+				}
+				{
+					count: 3
+					id: "3E70206312D555CB"
+					item: "lightmanscurrency:coin_gold"
+					title: "金錢"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "31CEEC8EB6246EED"
+					table_id: 7157812384472883171L
+					type: "loot"
+				}
+			]
+			shape: "rsquare"
+			size: 1.25d
+			subtitle: "主線任務"
+			tasks: [{
+				entity: "minecraft:warden"
+				icon: "ftb_ph:warden"
+				id: "7C4B9B0973E6EA67"
+				type: "kill"
+				value: 1L
+			}]
+			title: "次元守護者"
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6B5AFF6897A7AE6D"]
+			description: ["哇，誰能想到呢？&e監守者&r似乎一直在守護一道通往&e未知新次元&r的傳送門。&e另一邊&r究竟有什麼呢？"]
+			id: "707C5CDB48B487F8"
+			rewards: [
+				{
+					id: "5E5119647591EC7F"
+					item: {
+						Count: 1
+						id: "mmorpg:chest/currency"
+						tag: {
+							mmorpg_loot_chest: "{\"num\":5,\"rar\":\"common\",\"lvl\":50,\"id\":\"currency\",\"key\":\"\"}"
+						}
+					}
+					title: "普通通貨戰利品箱（Lv. 50）"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 24750"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "3201ACAD0D312816"
+					silent: true
+					title: "24750 經驗值"
+					type: "command"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "00AA3A8290A71518"
+					table_id: 5361966167457701780L
+					type: "choice"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "主線任務"
+			tasks: [{
+				dimension: "deeperdarker:otherside"
+				icon: "deeperdarker:warden_carapace"
+				id: "1ACA80128E406BE5"
+				title: "造訪 The Otherside"
+				type: "dimension"
+			}]
+			title: "The Otherside"
+			x: 7.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["707C5CDB48B487F8"]
+			description: [
+				"繼續&e探索&r，深入&e黑暗之中……&r你永遠不知道會找到什麼&e好東西&r。"
+				""
+				"&b&o恭喜你完成主線戰役！繼續前往終章收尾，或是繼續探索這些世界所提供的一切。別忘了看看支線任務！持續練等並自訂你的角色，試著在地圖中征服最大的挑戰吧！&r&r"
+			]
+			id: "6149D163ABF06A15"
+			rewards: [
+				{
+					id: "42E63F9488C11281"
+					item: {
+						Count: 1
+						id: "mmorpg:chest/legendary_gear"
+						tag: {
+							mmorpg_loot_chest: "{\"num\":5,\"rar\":\"legendary\",\"lvl\":60,\"id\":\"gear\",\"key\":\"\"}"
+						}
+					}
+					title: "傳說裝備戰利品箱（Lv. 60）"
+					type: "item"
+				}
+				{
+					id: "360850EC6B27579B"
+					item: "lightmanscurrency:coin_netherite"
+					title: "金錢"
+					type: "item"
+				}
+				{
+					id: "3422F45908DFFA9A"
+					item: "simplehats:paperbag"
+					title: "紙袋"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 35000"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "1E6490E881BC5AA2"
+					silent: true
+					title: "35000 經驗值"
+					type: "command"
+				}
+				{
+					id: "2113E9C1A471A8B9"
+					item: {
+						Count: 1
+						id: "gateways:gate_pearl"
+						tag: {
+							gateway: "gateways:endless/darkness"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "rsquare"
+			subtitle: "主線任務"
+			tasks: [{
+				advancement: "deeperdarker:main/find_ancient_temple"
+				criterion: ""
+				icon: "deeperdarker:smooth_sculk_stone_stairs"
+				id: "779882C7510983D8"
+				type: "advancement"
+			}]
+			title: "解開未竟之事"
+			x: 10.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6F0D75895E507FFD"]
+			description: [
+				"儘管你已經&e屠殺了那條龍&r，你仍會發現這頭野獸的殘餘。擊殺牠的&e後裔&r，以防止進一步的破壞。"
+				""
+				"注意，你可以使用&e終界水晶&r再次&e重生&r終界龍！方法與&e原版&r相同。"
+				""
+				"&o&7完成後將於「可重複任務」章節解鎖一項可重複任務！&r&r"
+			]
+			id: "61FF2CADDF0013F6"
+			rewards: [
+				{
+					id: "07F863054E4C3F13"
+					item: {
+						Count: 1
+						id: "mmorpg:chest/common_gear"
+						tag: {
+							mmorpg_loot_chest: "{\"num\":5,\"rar\":\"common\",\"lvl\":50,\"id\":\"gem\",\"key\":\"\"}"
+						}
+					}
+					title: "普通寶石戰利品箱（Lv. 50）"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 19000"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "568A68D30118ED12"
+					silent: true
+					title: "19000 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "終界冒險"
+			tasks: [{
+				entity: "realmrpg_wyrms:ender_wyrm"
+				icon: "simplehats:dragonskullender"
+				id: "18796A37D4AFC777"
+				type: "kill"
+				value: 12L
+			}]
+			title: "巨龍後裔"
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["30FA1CCB6BBA7125"]
+			description: [
+				"謠傳&e遠見者&r是源自虛空的預言生物。"
+				""
+				"&o&7完成後將於「可重複任務」章節解鎖一項可重複任務！&r&r"
+			]
+			icon: "alexsmobs:farseer_arm"
+			id: "69FD852AE0306BD2"
+			rewards: [
+				{
+					id: "13410512A1AB33A9"
+					item: {
+						Count: 1
+						id: "waystones:warp_stone"
+						tag: {
+							Damage: 0
+						}
+					}
+					title: "傳送石"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 20500"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "7E4B99CDF9BF72C0"
+					silent: true
+					title: "20500 經驗值"
+					type: "command"
+				}
+				{
+					auto: "enabled"
+					icon: "ftb_ph:talent"
+					id: "4EFEDC6802D42BF3"
+					title: "1 天賦點"
+					type: "custom"
+				}
+				{
+					auto: "enabled"
+					icon: "ftb_ph:ascend"
+					id: "7D71C44B4C0FD103"
+					title: "無情昇華"
+					type: "custom"
+				}
+			]
+			subtitle: "終界冒險"
+			tasks: [{
+				entity: "alexsmobs:farseer"
+				icon: "ftb_ph:farseer"
+				id: "4917CEEBC063FE78"
+				type: "kill"
+				value: 2L
+			}]
+			title: "他們早知道你會來"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"531BDC3DFCE88A6E"
+				"61FF2CADDF0013F6"
+				"0424E768816CB314"
+				"69FD852AE0306BD2"
+				"6B5AFF6897A7AE6D"
+				"6F0D75895E507FFD"
+				"7EA6A0131C5FF143"
+				"707C5CDB48B487F8"
+				"56A3604D9BAD661C"
+				"3944DD7AC4667137"
+				"6149D163ABF06A15"
+				"6BA03D598BD6C2AD"
+				"081AD91A178C3A3F"
+				"6DEBCC2B2DAE67AD"
+				"0C894EBBB7C6F380"
+				"4FEFBA3770769DA9"
+				"4E2506271B43A29C"
+				"201E621A52FFCE65"
+				"010FF3BF22DA9AED"
+				"28759D610FF8B6BE"
+				"5596C3E03B25B9C8"
+				"30FA1CCB6BBA7125"
+				"594A647C82F46BD8"
+				"68ADEBE337D75CA7"
+				"373410F7773044D4"
+				"600F5339B6C0975C"
+				"6EBB1D7F4A2F96D4"
+			]
+			description: ["&e完成&r第五章中所有的&e任務&r，即可達成此成就。然後戴上你的新帽子炫耀一下吧！"]
+			hide_dependency_lines: true
+			icon: "simplehats:rgbsunglasses"
+			id: "4ABF5C9676202847"
+			rewards: [
+				{
+					id: "32163DBB344176A5"
+					item: "simplehats:rgbsunglasses"
+					type: "item"
+				}
+				{
+					id: "132CB6623C41E78B"
+					item: "lightmanscurrency:coin_diamond"
+					title: "金錢"
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			subtitle: "成就"
+			tasks: [{
+				id: "3F2676327EA7C4ED"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "完成所有第五章任務！"
+			x: 12.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["3944DD7AC4667137"]
+			dependency_requirement: "one_completed"
+			description: [
+				"地圖是 Mine and Slash 中的&e副本地城&r。要取得地圖，你需要找到一張地圖，或&e合成一台地圖產生器&r，它會生成一張&7普通&r&e地圖&r。這些地圖&e要到等級 55 才能使用&r。"
+				""
+				"要進入這些副本地城，你還需要合成一台&e地圖裝置&r。放置後，即可在地圖裝置方塊上使用地圖。你也需要合成一顆&e歸家珍珠&r，以確保你能安全返回。"
+				""
+				"地圖會有對應的稀有度與階級。稀有度與階級決定了怪物的難度與戰利品的品質。"
+				""
+				"&7普通&r－階級 0-10"
+				"&a罕見&r－階級 11-20"
+				"&9稀有&r－階級 21-40"
+				"&d史詩&r－階級 41-60"
+				"&6傳說&r－階級 61-80"
+				"&5神話&r－階級 81-100"
+				""
+				"地圖也可以擁有各種詞綴。&e詞綴&r是隨機套用在玩家身上（通常是負面效果）或怪物身上（通常是正面效果）的修飾符。"
+			]
+			icon: "dungeon_realm:dungeon_map"
+			id: "4FEFBA3770769DA9"
+			rewards: [
+				{
+					id: "1F60294488F2F786"
+					item: "mmorpg:map_creator"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "49D8A1AB5BCE23A9"
+					item: "lightmanscurrency:coin_iron"
+					title: "金錢"
+					type: "item"
+				}
+			]
+			subtitle: "練等方式"
+			tasks: [
+				{
+					id: "0ABCAE5B4B3DEF92"
+					item: "dungeon_realm:map_device"
+					type: "item"
+				}
+				{
+					id: "0256418371FC7439"
+					item: "dungeon_realm:home_pearl"
+					type: "item"
+				}
+			]
+			title: "地圖"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4FEFBA3770769DA9"]
+			description: [
+				"既然你已經擁有必要的材料，試著挑戰一張&e地圖&r吧！"
+				""
+				"當你在地圖中擊殺怪物並探索時，你會注意到擊殺百分比逐漸上升。這個擊殺百分比可以視為一種探索指標。探索度越高，擊殺&e地圖首領&r時獲得的獎勵就越好。隨著你探索得更多，你的探索稀有度也會開始提升，第一個里程碑就是&a非凡&r探索度。"
+				""
+				"你需要找到傳送方塊，才能把你傳送到&c首領房間&r。這個方塊可能出現在地圖中的任何位置。擊殺&c首領&r即可進入專屬的&c獎勵房間&r，&d戰利品的品質會依照你的進度百分比而提升&r！"
+			]
+			id: "201E621A52FFCE65"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 17500"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "43413049B841CA66"
+				silent: true
+				title: "17500 經驗值"
+				type: "command"
+			}]
+			subtitle: "練等方式"
+			tasks: [{
+				dimension: "dungeon_realm:dungeon"
+				icon: "dungeon_realm:map_device"
+				id: "34B289DE6AAD0206"
+				title: "進入一張地圖"
+				type: "dimension"
+			}]
+			title: "次元難題"
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7EA6A0131C5FF143"]
+			description: [
+				"&e鞘翅&r現在可以用&e旗幟、染料、披風、盔甲紋樣與發光魷魚墨水&r來自訂外觀。"
+				""
+				"將一整副鞘翅與任意旗幟、染料、盔甲紋樣和／或發光魷魚墨水&e組合&r，即可將其&e套用&r到整副鞘翅上。 "
+				""
+				"把&e一整副鞘翅&r放入合成格中，即可將它拆分成&e兩片鞘翅翼&r，讓你能分別自訂它們，之後再合成回&e一起。&r"
+				""
+				"你也可以把它和一張&e紙&r一起合成，讓你的&e披風&r不會顯示在鞘翅上。"
+			]
+			id: "4E2506271B43A29C"
+			rewards: [
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 20500"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "1D82E166861E21EA"
+					silent: true
+					title: "20500 經驗值"
+					type: "command"
+				}
+				{
+					auto: "enabled"
+					icon: "ftb_ph:talent"
+					id: "05704C868E5A6025"
+					title: "1 天賦點"
+					type: "custom"
+				}
+			]
+			subtitle: "終界冒險"
+			tasks: [{
+				id: "27EE139609297829"
+				item: {
+					Count: 1
+					id: "customizableelytra:elytra_wing"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "可自訂的鞘翅"
+			x: 4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6F0D75895E507FFD"]
+			description: ["&e終界噬菌體&r可以在&e紫頌果生長&r的地方找到。這些東西會散播&e疾病&r，應該儘快處理掉！終界噬菌體可以透過放置一根&e頂端有莢殼的終界燭，並在裡面放入終界之眼&r來建造。"]
+			id: "30FA1CCB6BBA7125"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 16500"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "09276F91256B5A16"
+				silent: true
+				title: "16500 經驗值"
+				type: "command"
+			}]
+			subtitle: "終界冒險"
+			tasks: [{
+				entity: "alexsmobs:enderiophage"
+				icon: "alexsmobs:enderiophage_rocket"
+				id: "25D5719253570957"
+				type: "kill"
+				value: 8L
+			}]
+			title: "病毒浩劫"
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["707C5CDB48B487F8"]
+			description: ["&e尖嘯蟲&r是在&eThe Otherside&r出沒的恐怖生物。如果你&e踩到受感染的隱跡磚&r，就會迎來一場驚喜。"]
+			id: "081AD91A178C3A3F"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 25500"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "4C937CC2C36181EE"
+				silent: true
+				title: "25500 經驗值"
+				type: "command"
+			}]
+			subtitle: "Deeper and Darker"
+			tasks: [{
+				entity: "deeperdarker:shriek_worm"
+				icon: {
+					Count: 1
+					id: "deeperdarker:warden_helmet"
+					tag: {
+						Damage: 0
+					}
+				}
+				id: "0BAB29DF028FA3B2"
+				type: "kill"
+				value: 12L
+			}]
+			title: "死亡陷阱"
+			x: 7.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["707C5CDB48B487F8"]
+			description: [
+				"&e潛行者&r是在&eThe Otherside&r出沒的詭異又強大的生物。牠們會被刺耳的聲響吸引，所以如果你想找到牠們，不妨&e打破一些罐子&r試試？"
+				""
+				"如果你運氣不好，可以考慮試試&e黑暗傳送門&r。"
+			]
+			icon: "alexsmobs:froststalker_horn"
+			id: "6DEBCC2B2DAE67AD"
+			rewards: [
+				{
+					id: "45F0FAFA0E031718"
+					item: "lightmanscurrency:coin_emerald"
+					title: "金錢"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 26750"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "23D7F4B1237A1E14"
+					silent: true
+					title: "26750 經驗值"
+					type: "command"
+				}
+				{
+					auto: "enabled"
+					icon: "ftb_ph:talent"
+					id: "7D8679A30B65CDA7"
+					title: "1 天賦點"
+					type: "custom"
+				}
+			]
+			shape: "diamond"
+			subtitle: "Deeper and Darker"
+			tasks: [{
+				entity: "deeperdarker:stalker"
+				icon: "alexsmobs:froststalker_horn"
+				id: "0E11112090553BD8"
+				type: "kill"
+				value: 2L
+			}]
+			title: "詭異存在"
+			x: 9.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["707C5CDB48B487F8"]
+			description: ["在&e回聲森林&r中，你會找到失去靈魂的生物。牠們曾被認為是人類，如今只剩下昔日自己的空殼。"]
+			id: "0C894EBBB7C6F380"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 25500"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "2902961DDA1F44C2"
+				silent: true
+				title: "25500 經驗值"
+				type: "command"
+			}]
+			subtitle: "Deeper and Darker"
+			tasks: [{
+				entity: "deeperdarker:shattered"
+				icon: {
+					Count: 1
+					id: "deeperdarker:warden_sword"
+					tag: {
+						Damage: 0
+					}
+				}
+				id: "25B6045192B3F552"
+				type: "kill"
+				value: 32L
+			}]
+			title: "絕望之人"
+			x: 7.5d
+			y: 4.5d
+		}
+		{
+			can_repeat: false
+			dependencies: ["30FA1CCB6BBA7125"]
+			description: ["感染終界流感效果。透過吃下大量&e紫頌果&r或&e喝牛奶&r來治癒它。時間正在流逝……"]
+			id: "010FF3BF22DA9AED"
+			rewards: [
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 18000"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "5AA6257209EEFA31"
+					silent: true
+					title: "18000 經驗值"
+					type: "command"
+				}
+				{
+					count: 3
+					id: "40C03DB4E7F7BAE8"
+					item: "lightmanscurrency:coin_gold"
+					title: "金錢"
+					type: "item"
+				}
+			]
+			subtitle: "終界冒險"
+			tasks: [{
+				advancement: "alexsmobs:alexsmobs/ender_flu"
+				criterion: ""
+				id: "6EA193412C2E12A0"
+				type: "advancement"
+			}]
+			title: "與時間賽跑"
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["201E621A52FFCE65"]
+			description: [
+				"在 Mine and Slash 的地圖中，還會發生一些額外的事件。"
+				""
+				"&e遠古方尖碑&r：寶箱有機率生成特殊的波次地圖，可以用在&e方尖碑&r上！ "
+				""
+				"&e預言事件&r：在地圖中找到能對自己施加詛咒的祭壇。你身上的詛咒越多，擊殺怪物時獲得的&e預言硬幣&r就越多。利用這些硬幣，透過樞紐在地圖中購買獎勵！請注意，&6傳說&r與&5神話&r獎勵分別要到階級 20 與階級 40 的地圖才會出現。"
+				""
+				"&e收割事件&r：在地圖中找到能把你帶到新收割房間的傳送門。在這些房間中擊殺怪物即可獲得&e混沌寶石&r，可用來合成特殊通貨！"
+				""
+				"&e遺物&r：擊殺首領可以獲得遺物，能鑲入&e地圖裝置&r來強化你的地圖！使用遺物鑰匙與地圖裝置互動，即可鑲入遺物！"
+				""
+				"&n&c終極首領&r&r"
+				""
+				"此外，&6傳說&r與&5神話&r地圖中的&c首領&r有機率掉落&e終極碎片&r。合併後，它們會變成&e地城地圖終極升級&r。你可以在地圖上使用這些道具來面對&e終極首領&r——非常強大的生物，會掉落大量戰利品。牠們甚至可能掉落特殊的&e傳奇珠寶&r！"
+				""
+				"終極首領的池子由你在戰役中面對過的舊首領，以及一些新的首領組成！"
+			]
+			icon: "minecraft:paper"
+			id: "28759D610FF8B6BE"
+			rewards: [{
+				id: "6AF6B32CD6AC5B32"
+				item: "dungeon_realm:uber_fragment"
+				type: "item"
+			}]
+			subtitle: "遺失的頁面"
+			tasks: [{
+				id: "719DDCB789B36A34"
+				title: "閱讀完畢請點擊"
+				type: "checkmark"
+			}]
+			title: "更多地圖內容"
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0424E768816CB314"]
+			description: ["儘管材料所費不貲，&e去魔器&r能讓你以&e耐久度為代價&r，把物品上的所有附魔全部移除。"]
+			id: "5596C3E03B25B9C8"
+			rewards: [
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 22750"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "7EC6BA5FD16D04E9"
+					silent: true
+					title: "22750 經驗值"
+					type: "command"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "2053355660EE0346"
+					table_id: 7157812384472883171L
+					type: "loot"
+				}
+			]
+			subtitle: "實用工具"
+			tasks: [{
+				id: "613E6DBC63B51865"
+				item: "disenchanting:disenchanter"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["7EA6A0131C5FF143"]
+			description: [
+				"終界中可以找到兩種新的結構：&e終界塔與地下墓穴&r。你可以在這些結構中找到有趣的新戰利品，還有&e紫珀魔像&r！"
+				""
+				"紫珀魔像擁有："
+				"&b+30% 護甲&r"
+				"&b+25% 混沌抗性&r"
+			]
+			id: "68ADEBE337D75CA7"
+			rewards: [
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 22000"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "03B6539402A8BCD3"
+					silent: true
+					title: "22000 經驗值"
+					type: "command"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "220EAAFECD7CE693"
+					table_id: 5361966167457701780L
+					type: "choice"
+				}
+			]
+			subtitle: "Outer End"
+			tasks: [{
+				entity: "outer_end:purpur_golem"
+				icon: "stalwart_dungeons:purpur_bricks_wall"
+				id: "34A5EB2CC3DF0793"
+				type: "kill"
+				value: 3L
+			}]
+			title: "遙不可及的結構"
+			x: 4.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["7EA6A0131C5FF143"]
+			description: ["你會在新的終界生物群系中找到&e潛行者、封棺者&r，以及許多其他來自虛空的兇殘生物。快去看看&e蒼藍森林、水晶峭壁與原初水潭&r吧！"]
+			icon: "outer_end:cooked_stalker_meat"
+			id: "594A647C82F46BD8"
+			rewards: [
+				{
+					count: 16
+					id: "1D9BB7AD9EAF4F79"
+					item: "minecraft:purple_dye"
+					type: "item"
+				}
+				{
+					id: "4567579F8FBA9072"
+					item: "mmorpg:runes/oru"
+					type: "item"
+				}
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 21500"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "7FAF80D19C2F9781"
+					silent: true
+					title: "21500 經驗值"
+					type: "command"
+				}
+			]
+			subtitle: "Outer End"
+			tasks: [
+				{
+					entity: "outer_end:stalker"
+					icon: "outer_end:cooked_stalker_meat"
+					id: "6317E691F5CE9B74"
+					type: "kill"
+					value: 8L
+				}
+				{
+					entity: "outer_end:entombed"
+					icon: "chipped:simple_purpur_block_pillar"
+					id: "7E34EBD5D2D398F9"
+					type: "kill"
+					value: 8L
+				}
+			]
+			title: "虛空的居民"
+			x: 3.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["68ADEBE337D75CA7"]
+			description: [
+				"庇護者是一種在&e終界地城&r中可以找到的有趣生物。用&e地獄之星&r在牠的&e祭壇&r上釋放牠，牠就能把自己鎖進一個充滿能量的界伏盒中。"
+				""
+				"庇護者擁有："
+				"&b+100% 生命值&r"
+				"&b+25% 傷害抑制機率&r"
+				"&a15% 機率掉落終界符文&r"
+			]
+			id: "373410F7773044D4"
+			rewards: [
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 25000"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "6EE60480A254A4A7"
+					silent: true
+					title: "25000 經驗值"
+					type: "command"
+				}
+				{
+					count: 3
+					id: "579E9E1A7706290A"
+					item: "mmorpg:material/mining/2"
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			subtitle: "終界冒險"
+			tasks: [{
+				entity: "stalwart_dungeons:shelterer_without_armor"
+				icon: "stalwart_dungeons:shelterer_altar"
+				id: "62D0B75824CE2C88"
+				type: "kill"
+				value: 1L
+			}]
+			title: "困於盒中"
+			x: 6.0d
+			y: -3.0d
+		}
+		{
+			dependencies: [
+				"775A13E1924D6C9A"
+				"68ADEBE337D75CA7"
+			]
+			description: [
+				"在&e地獄&r屠殺完&e幻影苦力怕&r後，你發現自己在&e終界&r又跟牠們正面相遇了！"
+				""
+				"&e幻影苦力怕&r會在&e扭曲森林&r與&e終界&r中出現。牠們接觸到東西時會分裂，所以你需要小心應付牠們！"
+				""
+				"幻影苦力怕擁有："
+				"&b+25% 閃避值&r"
+			]
+			id: "600F5339B6C0975C"
+			rewards: [
+				{
+					auto: "enabled"
+					command: "/mine_and_slash give exp @p 22500"
+					elevate_perms: true
+					icon: "ftb_ph:exp"
+					id: "375D153441230272"
+					silent: true
+					title: "22500 經驗值"
+					type: "command"
+				}
+				{
+					count: 5
+					id: "6400D613013852A6"
+					item: "mmorpg:material/meat/1"
+					type: "item"
+				}
+			]
+			subtitle: "終界冒險"
+			tasks: [{
+				entity: "born_in_chaos_v1:phantom_creeper_copy"
+				icon: "born_in_chaos_v1:phantom_bomb"
+				id: "6F04C7381C916B26"
+				type: "kill"
+				value: 50L
+			}]
+			title: "異界生物 IV"
+			x: 4.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["6149D163ABF06A15"]
+			description: [
+				"你覺得自己好像在哪見過一個似乎完美吻合&e虛空蠕蟲之眼&r的凹槽……那是在哪來著？……是老家的&e惡地&r嗎？還是某處&e遠古遺跡&r？或許我可以用&e殘餘傳送門&r把它召喚出來。"
+				""
+				"&cOssukage 最低於等級 60 時出現。&r"
+				""
+				"Ossukage 擁有："
+				"&b+8 護甲穿透（隨等級增長）&r"
+				"&b+30% 命中率&r"
+				"&b+20% 暴擊率&r"
+				"&b+50% 暴擊傷害&r"
+				"&b+30% 元素抗性&r"
+				"&b+20% 移動速度&r"
+			]
+			id: "6EBB1D7F4A2F96D4"
+			rewards: [{
+				auto: "enabled"
+				command: "/mine_and_slash give exp @p 30000"
+				elevate_perms: true
+				icon: "ftb_ph:exp"
+				id: "6BB4ACC18BB30125"
+				silent: true
+				title: "30000 經驗值"
+				type: "command"
+			}]
+			subtitle: "甜蜜的家"
+			tasks: [{
+				entity: "remnant_bosses:ossukage"
+				icon: "remnant_bosses:ossukage_sword"
+				id: "32F61D09125C7156"
+				type: "kill"
+				value: 1L
+			}]
+			title: "武士戰士"
+			x: 12.0d
+			y: 3.0d
+		}
+	]
+	subtitle: [
+		"Lv. 50-65"
+		"Lv. 60-75"
+	]
+	title: "第五章"
+}

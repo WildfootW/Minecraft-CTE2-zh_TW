@@ -1,0 +1,3 @@
+# Keep all files byte-exact: no line-ending conversion.
+# Game files (snbt/json) should round-trip identically through git.
+* -text
