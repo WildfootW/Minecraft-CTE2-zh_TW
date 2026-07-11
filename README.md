@@ -21,9 +21,12 @@ Craft to Exile 2(CTE2)v1.1.3 模組包的完整台灣繁體中文化(繁中機�
 resourcepack/   本專案翻譯原始檔(pack.mcmeta + assets/**/lang/zh_tw.json,63 個模組命名空間)
 community/      內建的社群翻譯包(已依優先序合併,約 770 個 lang 檔 + Patchouli 手冊翻譯)
 ftbquests/      任務書翻譯(chapters/、reward_tables/、chapter_groups.snbt)
+extras/         選配內容(MineMenu 輪盤選單中文設定檔)
 docs/           翻譯規範、術語表、英中標題對照表(title_map.tsv)
-build.ps1       一鍵打包:community/ 墊底 + resourcepack/ 覆蓋 → 單一資源包 zip
+setup.ps1       互動式安裝程式(安裝/解除安裝/建置 zip,自動偵測實例位置)
 ```
+
+資源包 zip 由 GitHub Actions 自動建置,可直接到 [Releases](../../releases) 下載,不必自己打包。
 
 ---
 
@@ -35,31 +38,39 @@ build.ps1       一鍵打包:community/ 墊底 + resourcepack/ 覆蓋 → 單一
 2. 搜尋並安裝模組包 **Craft to Exile 2**,版本選 **1.1.3**(Minecraft 1.20.1 / Forge 47.4.10)
 3. 先啟動一次遊戲到主選單再關閉(確保實例初始化完成)
 
+## 方法 A:互動式安裝(推薦)
+
+1. 取得本翻譯:
+   ```
+   git clone <本 repo 網址>
+   ```
+   或在 GitHub 頁面 Code → Download ZIP 後解壓縮。
+2. 在 repo 資料夾開 PowerShell,執行:
+   ```powershell
+   powershell -ExecutionPolicy Bypass -File setup.ps1
+   ```
+3. 依選單操作:程式會**自動偵測** CurseForge 的 CTE2 實例位置(也可手動輸入路徑),一鍵完成:
+   - 建置並放置資源包
+   - 安裝任務書翻譯(原版自動備份)
+   - 語言設為 zh_tw、啟用資源包
+   - 選配:H 鍵輪盤選單中文化
+
+   之後想移除,執行同一支程式選「解除安裝」即可全部還原。
+
+## 方法 B:手動安裝
+
 以下用 `<實例>` 代表你的實例資料夾,通常是:
 ```
 C:\Users\<你>\curseforge\minecraft\Instances\Craft to Exile 2
 ```
 
-## 步驟 1:取得本翻譯
+## 步驟 1:取得資源包 zip
 
-```
-git clone <本 repo 網址>
-```
-或在 GitHub 頁面 Code → Download ZIP 後解壓縮。
+到本 repo 的 [Releases](../../releases) 頁下載 `CTE2-v1.1.3-zh_tw-WildfootW.zip`(由 GitHub Actions 自動建置)。
 
-## 步驟 2:打包資源包
+想自己建置的話:clone repo 後執行 `powershell -ExecutionPolicy Bypass -File setup.ps1 -Build`,產出在 `dist\`。
 
-在 repo 資料夾開 PowerShell,執行:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File build.ps1
-```
-
-會產出 `dist\CTE2-v1.1.3-zh_tw-WildfootW.zip`。
-
-> 手動打包也可以:把 `resourcepack\` **裡面的內容**(`pack.mcmeta` 和 `assets\` 要在 zip 的最上層)壓成 zip。注意:請用 7-Zip 等工具,Windows 內建「傳送到壓縮資料夾」有時會產生 Minecraft 讀不到的路徑格式,build.ps1 已避開這個問題。
-
-## 步驟 3:放置資源包
+## 步驟 2:放置資源包
 
 把 `dist\CTE2-v1.1.3-zh_tw-WildfootW.zip` 複製到:
 
@@ -69,7 +80,7 @@ powershell -ExecutionPolicy Bypass -File build.ps1
 
 (此資料夾由 OpenLoader 模組提供,CTE2 內建;沒有的話手動建立即可)
 
-## 步驟 4:安裝任務書翻譯
+## 步驟 3:安裝任務書翻譯
 
 1. **先備份原檔**:把 `<實例>\config\ftbquests\quests\` 整個資料夾複製一份留存(例如改名 `quests_english_backup`)
 2. 把 repo 的 `ftbquests\` 底下的內容複製進 `<實例>\config\ftbquests\quests\`,覆蓋同名檔案:
@@ -77,13 +88,13 @@ powershell -ExecutionPolicy Bypass -File build.ps1
    - `reward_tables\*.snbt`(48 個檔)
    - `chapter_groups.snbt`
 
-## 步驟 5:切換遊戲語言
+## 步驟 4:切換遊戲語言
 
 進遊戲 → Options → Language → 選 **繁體中文(台灣)**。
 
 (或直接編輯 `<實例>\options.txt`,把 `lang:` 那行改成 `lang:zh_tw`)
 
-## 步驟 6:啟用資源包
+## 步驟 5:啟用資源包
 
 進遊戲 → 選項 → 資源包,把 **CTE2 v1.1.3 zh_TW by WildfootW** 啟用並**移到最上層**(優先度最高)。
 
@@ -100,7 +111,7 @@ resourcePacks:["vanilla","mod_resources", ... ,"resources/CTE2-v1.1.3-zh_tw-Wild
 
 > 編輯 options.txt 前務必先關閉遊戲,否則會被遊戲覆寫。
 
-## 步驟 7(選配):H 鍵輪盤選單中文化
+## 步驟 6(選配):H 鍵輪盤選單中文化
 
 按 `H` 的輪盤選單(MineMenu)文字存在**設定檔**而非語言檔,資源包翻不到。要中文化的話,**先關閉遊戲**,把 repo 的 `extras\minemenu\menu.json` 複製到:
 
@@ -117,16 +128,16 @@ resourcePacks:["vanilla","mod_resources", ... ,"resources/CTE2-v1.1.3-zh_tw-Wild
 ## 常見問題
 
 **Q:模組包更新後任務書變回英文?**
-CurseForge 更新模組包會重置 `config\ftbquests\quests\`,重做「步驟 4」即可。資源包在 `openloader\resources\` 一般不會被動到,但建議確認 options.txt 的啟用項還在。
+CurseForge 更新模組包會重置 `config\ftbquests\quests\`,重跑一次 `setup.ps1` 安裝(或手動重做步驟 3)即可。資源包在 `openloader\resources\` 一般不會被動到,但建議確認 options.txt 的啟用項還在。
 
 **Q:多人伺服器怎麼用?**
-任務書檔案(步驟 4)要裝在**伺服器端**的 `config\ftbquests\quests\`;資源包(步驟 2-3、6)裝在**每個玩家的客戶端**。
+任務書檔案(步驟 3)要裝在**伺服器端**的 `config\ftbquests\quests\`;資源包(步驟 1-2、5)裝在**每個玩家的客戶端**。
 
 **Q:部分物品還是英文?**
 該模組可能本來就沒有任何中文翻譯(本包 + 內建社群包已涵蓋絕大多數)。歡迎開 issue 回報。
 
 **Q:為什麼 repo 不直接放 zip?**
-純文字檔對 git 友善(可 diff、可 PR、改一行不用重傳整包),zip 由 `build.ps1` 隨時可重建。
+純文字檔對 git 友善(可 diff、可 PR、改一行不用重傳整包),zip 由 GitHub Actions 或 `setup.ps1 -Build` 隨時可重建。
 
 ## 社群翻譯來源與致謝
 
