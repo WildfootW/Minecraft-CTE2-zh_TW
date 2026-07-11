@@ -5,8 +5,14 @@ param([switch]$Build)
 
 $ErrorActionPreference = 'Stop'
 $root = $PSScriptRoot
+if (-not $root) { $root = (Get-Location).Path }
 $PackFile = 'CTE2-v1.1.3-zh_tw-WildfootW.zip'
 $BackupDirName = 'quests_backup_original'
+$ReleaseZipUrl = 'https://github.com/WildfootW/Minecraft-CTE2-zh_TW/releases/latest/download/CTE2-v1.1.3-zh_tw-WildfootW.zip'
+$RepoZipUrl = 'https://github.com/WildfootW/Minecraft-CTE2-zh_TW/archive/refs/heads/master.zip'
+
+# PS 5.1 預設 TLS 太舊,連 GitHub 需要 TLS 1.2
+try { [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12 } catch { }
 
 # ---------- 建置資源包 ----------
 function Build-Pack {
@@ -56,6 +62,44 @@ function Build-Pack {
 }
 
 if ($Build) { Build-Pack | Out-Null; exit 0 }
+
+# ---------- 取得檔案(本地優先,否則從 GitHub 下載) ----------
+function Get-PackZip {
+    $built = Join-Path $root "dist\$PackFile"
+    if (Test-Path $built) { return $built }
+    $beside = Join-Path $root $PackFile
+    if (Test-Path $beside) { return $beside }
+    if (Test-Path (Join-Path $root 'resourcepack')) {
+        Write-Host '尚未建置資源包,開始建置…'
+        return (Build-Pack)
+    }
+    Write-Host '本地沒有資源包,從 GitHub Release 下載…' -ForegroundColor Cyan
+    New-Item -ItemType Directory -Force (Join-Path $root 'dist') | Out-Null
+    Invoke-WebRequest -Uri $ReleaseZipUrl -OutFile $built -UseBasicParsing
+    Write-Host "✔ 已下載 $PackFile" -ForegroundColor Green
+    return $built
+}
+
+function Confirm-QuestFiles {
+    if (Test-Path (Join-Path $root 'ftbquests\chapters')) { return $true }
+    Write-Host '本地沒有任務書翻譯檔,從 GitHub 下載 repo…' -ForegroundColor Cyan
+    $tmpZip = Join-Path $env:TEMP 'cte2_zhtw_repo.zip'
+    Invoke-WebRequest -Uri $RepoZipUrl -OutFile $tmpZip -UseBasicParsing
+    Add-Type -AssemblyName System.IO.Compression.FileSystem
+    $zip = [System.IO.Compression.ZipFile]::OpenRead($tmpZip)
+    try {
+        foreach ($e in $zip.Entries) {
+            if ($e.FullName -match '^[^/]+/(ftbquests|extras)/(.+)$' -and -not $e.FullName.EndsWith('/')) {
+                $rel = ($Matches[1] + '\' + $Matches[2]).Replace('/', '\')
+                $dst = Join-Path $root $rel
+                New-Item -ItemType Directory -Force (Split-Path $dst) | Out-Null
+                [System.IO.Compression.ZipFileExtensions]::ExtractToFile($e, $dst, $true)
+            }
+        }
+    } finally { $zip.Dispose(); Remove-Item $tmpZip -Force -ErrorAction SilentlyContinue }
+    Write-Host '✔ 已下載任務書翻譯與選配檔案' -ForegroundColor Green
+    return (Test-Path (Join-Path $root 'ftbquests\chapters'))
+}
 
 # ---------- 工具 ----------
 function Test-GameRunning {
@@ -119,20 +163,19 @@ function Install-Translation([string]$inst) {
     }
 
     # 1) 資源包
-    $zipPath = Join-Path $root "dist\$PackFile"
-    if (-not (Test-Path $zipPath)) {
-        Write-Host '尚未建置資源包,開始建置…'
-        $zipPath = Build-Pack
-    }
+    $zipPath = Get-PackZip
     $resDir = Join-Path $inst 'config\openloader\resources'
     New-Item -ItemType Directory -Force $resDir | Out-Null
     Copy-Item $zipPath $resDir -Force
     Write-Host "✔ 資源包已放入 $resDir" -ForegroundColor Green
 
     # 2) 任務書(先備份原檔,只備份一次)
+    if (-not (Confirm-QuestFiles)) {
+        Write-Host '⚠ 無法取得任務書翻譯檔,略過任務書安裝' -ForegroundColor Yellow
+    }
     $questDir = Join-Path $inst 'config\ftbquests\quests'
     $backupDir = Join-Path $inst "config\ftbquests\$BackupDirName"
-    if (Test-Path $questDir) {
+    if ((Test-Path $questDir) -and (Test-Path (Join-Path $root 'ftbquests\chapters'))) {
         if (-not (Test-Path $backupDir)) {
             Copy-Item $questDir $backupDir -Recurse
             Write-Host "✔ 原版任務書已備份到 $backupDir" -ForegroundColor Green

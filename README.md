@@ -38,24 +38,25 @@ setup.ps1       互動式安裝程式(安裝/解除安裝/建置 zip,自動偵�
 2. 搜尋並安裝模組包 **Craft to Exile 2**,版本選 **1.1.3**(Minecraft 1.20.1 / Forge 47.4.10)
 3. 先啟動一次遊戲到主選單再關閉(確保實例初始化完成)
 
-## 方法 A:互動式安裝(推薦)
+## 方法 A:一鍵安裝(推薦)
 
-1. 取得本翻譯:
-   ```
-   git clone <本 repo 網址>
-   ```
-   或在 GitHub 頁面 Code → Download ZIP 後解壓縮。
-2. 在 repo 資料夾開 PowerShell,執行:
-   ```powershell
-   powershell -ExecutionPolicy Bypass -File setup.ps1
-   ```
-3. 依選單操作:程式會**自動偵測** CurseForge 的 CTE2 實例位置(也可手動輸入路徑),一鍵完成:
-   - 建置並放置資源包
-   - 安裝任務書翻譯(原版自動備份)
-   - 語言設為 zh_tw、啟用資源包
-   - 選配:H 鍵輪盤選單中文化
+不用 clone、不用手動下載任何東西。開一個 PowerShell,執行:
 
-   之後想移除,執行同一支程式選「解除安裝」即可全部還原。
+```powershell
+irm https://raw.githubusercontent.com/WildfootW/Minecraft-CTE2-zh_TW/master/setup.ps1 -OutFile setup.ps1
+powershell -ExecutionPolicy Bypass -File setup.ps1
+```
+
+依選單操作,程式會**自動完成全部**:
+
+- 自動偵測 CurseForge 的 CTE2 實例位置(也可手動輸入路徑)
+- 自動從 [Releases](../../releases) 下載資源包、從 repo 下載任務書翻譯
+- 安裝任務書(原版自動備份)、語言設為 zh_tw、啟用資源包
+- 選配:H 鍵輪盤選單中文化
+
+之後想移除,執行同一支程式選「解除安裝」即可全部還原。
+
+> 有 clone repo 的人直接在 repo 資料夾執行 `setup.ps1` 即可,會優先用本地檔案(自行建置資源包)。
 
 ## 方法 B:手動安裝
 
