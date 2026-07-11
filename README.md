@@ -1,6 +1,6 @@
 # Craft to Exile 2 v1.1.3 繁體中文化(台灣)
 
-Craft to Exile 2(CTE2)v1.1.3 模組包的完整台灣繁體中文化,由 WildfootW 製作(AI 輔助翻譯 + 人工校訂)。
+Craft to Exile 2(CTE2)v1.1.3 模組包的完整台灣繁體中文化(繁中機翻,由 Claude 產生)。
 
 ## 涵蓋範圍
 
@@ -129,6 +129,6 @@ CurseForge 更新模組包會重置 `config\ftbquests\quests\`,重做「步驟 4
 
 ## 授權與致謝
 
-- 翻譯文本以 Claude(Anthropic)輔助產生,WildfootW 統籌、校訂與整合
+- 翻譯文本為 Claude(Anthropic)機器翻譯,未經全面人工校對,如有錯漏歡迎開 issue 回報
 - Craft to Exile 2 及各模組之內容版權歸原作者所有;本 repo 僅含翻譯文本,不含任何模組程式或素材
 - 術語參考:流亡黯道(Path of Exile 台服)、Minecraft 台灣官方譯名
