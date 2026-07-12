@@ -65,15 +65,22 @@ powershell -ExecutionPolicy Bypass -File setup.ps1
 C:\Users\<你>\curseforge\minecraft\Instances\Craft to Exile 2
 ```
 
-## 步驟 1:取得資源包 zip
+## 步驟 1:下載檔案
 
-到本 repo 的 [Releases](../../releases) 頁下載 `CTE2-v1.1.3-zh_tw-WildfootW.zip`(由 GitHub Actions 自動建置)。
+到本 repo 的 [Releases](../../releases) 頁(檔案由 GitHub Actions 自動建置):
 
-想自己建置的話:clone repo 後執行 `powershell -ExecutionPolicy Bypass -File setup.ps1 -Build`,產出在 `dist\`。
+| 檔案 | 內容 |
+|---|---|
+| `CTE2-v1.1.3-zh_tw-full.zip` | **完整安裝包**:資源包 + 任務書翻譯 + 輪盤選單 + setup.ps1(手動安裝下載這個;解壓後直接跑 setup.ps1 也行) |
+| `CTE2-v1.1.3-zh_tw-WildfootW.zip` | 純資源包(只需要資源包的人用,例如伺服器已裝好任務書的玩家) |
+
+下載 `full.zip` 並解壓,以下步驟的檔案都從解壓後的資料夾取得。
+
+想自己建置的話:clone repo 後執行 `powershell -ExecutionPolicy Bypass -File setup.ps1 -Build`(純資源包)或 `-BuildFull`(完整包),產出在 `dist\`。
 
 ## 步驟 2:放置資源包
 
-把 `dist\CTE2-v1.1.3-zh_tw-WildfootW.zip` 複製到:
+把 `CTE2-v1.1.3-zh_tw-WildfootW.zip` 複製到:
 
 ```
 <實例>\config\openloader\resources\
@@ -84,7 +91,7 @@ C:\Users\<你>\curseforge\minecraft\Instances\Craft to Exile 2
 ## 步驟 3:安裝任務書翻譯
 
 1. **先備份原檔**:把 `<實例>\config\ftbquests\quests\` 整個資料夾複製一份留存(例如改名 `quests_english_backup`)
-2. 把 repo 的 `ftbquests\` 底下的內容複製進 `<實例>\config\ftbquests\quests\`,覆蓋同名檔案:
+2. 把解壓後的 `ftbquests\` 底下的內容複製進 `<實例>\config\ftbquests\quests\`,覆蓋同名檔案:
    - `chapters\*.snbt`(21 個檔)
    - `reward_tables\*.snbt`(48 個檔)
    - `chapter_groups.snbt`
@@ -114,7 +121,7 @@ resourcePacks:["vanilla","mod_resources", ... ,"resources/CTE2-v1.1.3-zh_tw-Wild
 
 ## 步驟 6(選配):H 鍵輪盤選單中文化
 
-按 `H` 的輪盤選單(MineMenu)文字存在**設定檔**而非語言檔,資源包翻不到。要中文化的話,**先關閉遊戲**,把 repo 的 `extras\minemenu\menu.json` 複製到:
+按 `H` 的輪盤選單(MineMenu)文字存在**設定檔**而非語言檔,資源包翻不到。要中文化的話,**先關閉遊戲**,把解壓後的 `extras\minemenu\menu.json` 複製到:
 
 ```
 <實例>\minemenu\menu.json
@@ -152,9 +159,9 @@ CurseForge 更新模組包會重置 `config\ftbquests\quests\`,重跑一次 `set
 | Craft-to-Exile-2-v0.9.2-vk | CTE2 舊版社群漢化(vk) |
 | CTE2-v0.9.5-maobing | CTE2 舊版社群漢化(毛餅) |
 
-來源討論串:
-- https://forum.gamer.com.tw/C.php?bsn=18673&snA=202909
-- https://forum.gamer.com.tw/C.php?bsn=18673&snA=204101
+來源討論串(巴哈姆特 Minecraft 板):
+- [【己更新v0.9.3版本】Craft to Exile 2 繁化中文模組包 [CTE2]](https://forum.gamer.com.tw/C.php?bsn=18673&snA=202909)
+- [【其他】Craft to Exile 2 0.95繁體中文化](https://forum.gamer.com.tw/C.php?bsn=18673&snA=204101)
 
 感謝以上社群譯者的貢獻。若原作者對收錄方式有任何意見,請開 issue 聯繫,將立即配合處理。
 

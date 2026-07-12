@@ -1,48 +1,28 @@
 ﻿# CTE2 v1.1.3 繁體中文化 安裝程式
-# 互動模式:  powershell -ExecutionPolicy Bypass -File setup.ps1
-# 僅建置 zip: powershell -ExecutionPolicy Bypass -File setup.ps1 -Build
-param([switch]$Build)
+# 互動模式:      powershell -ExecutionPolicy Bypass -File setup.ps1
+# 建置資源包:    powershell -ExecutionPolicy Bypass -File setup.ps1 -Build
+# 建置完整安裝包: powershell -ExecutionPolicy Bypass -File setup.ps1 -BuildFull
+param([switch]$Build, [switch]$BuildFull)
 
 $ErrorActionPreference = 'Stop'
 $root = $PSScriptRoot
 if (-not $root) { $root = (Get-Location).Path }
 $PackFile = 'CTE2-v1.1.3-zh_tw-WildfootW.zip'
+$FullFile = 'CTE2-v1.1.3-zh_tw-full.zip'
 $BackupDirName = 'quests_backup_original'
-$ReleaseZipUrl = 'https://github.com/WildfootW/Minecraft-CTE2-zh_TW/releases/latest/download/CTE2-v1.1.3-zh_tw-WildfootW.zip'
-$RepoZipUrl = 'https://github.com/WildfootW/Minecraft-CTE2-zh_TW/archive/refs/heads/master.zip'
+$ReleaseZipUrl = "https://github.com/WildfootW/Minecraft-CTE2-zh_TW/releases/latest/download/$PackFile"
+$FullZipUrl = "https://github.com/WildfootW/Minecraft-CTE2-zh_TW/releases/latest/download/$FullFile"
 
 # PS 5.1 預設 TLS 太舊,連 GitHub 需要 TLS 1.2
 try { [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12 } catch { }
 
-# ---------- 建置資源包 ----------
-function Build-Pack {
-    $community = Join-Path $root 'community'
-    $pack = Join-Path $root 'resourcepack'
-    $dist = Join-Path $root 'dist'
-    $zipPath = Join-Path $dist $PackFile
-
-    if (-not (Test-Path $pack)) { throw "找不到 resourcepack 資料夾: $pack" }
-    New-Item -ItemType Directory -Force $dist | Out-Null
-    if (Test-Path $zipPath) { [System.IO.File]::Delete($zipPath) }
-
-    # 疊層:community 墊底,resourcepack 覆蓋同路徑檔案
-    $files = @{}
-    if (Test-Path $community) {
-        Get-ChildItem $community -Recurse -File | ForEach-Object {
-            $rel = $_.FullName.Substring($community.Length + 1)
-            $files[$rel] = $_.FullName
-        }
-    }
-    Get-ChildItem $pack -Recurse -File | ForEach-Object {
-        $rel = $_.FullName.Substring($pack.Length + 1)
-        $files[$rel] = $_.FullName
-    }
-
-    Add-Type -AssemblyName System.IO.Compression
-    Add-Type -AssemblyName System.IO.Compression.FileSystem
-
+# ---------- 建置 ----------
+function Write-Zip([hashtable]$files, [string]$zipPath) {
     # 注意:.NET Framework 的 CreateFromDirectory 會用反斜線當 zip 路徑分隔,
     # Minecraft 讀不到,必須手動用正斜線建立條目。
+    Add-Type -AssemblyName System.IO.Compression
+    Add-Type -AssemblyName System.IO.Compression.FileSystem
+    if (Test-Path $zipPath) { [System.IO.File]::Delete($zipPath) }
     $fs = [System.IO.File]::Create($zipPath)
     $zip = New-Object System.IO.Compression.ZipArchive($fs, [System.IO.Compression.ZipArchiveMode]::Create)
     foreach ($rel in ($files.Keys | Sort-Object)) {
@@ -55,12 +35,52 @@ function Build-Pack {
     }
     $zip.Dispose()
     $fs.Dispose()
-
     $size = [math]::Round((Get-Item $zipPath).Length / 1MB, 2)
     Write-Host "已建置: $zipPath ($($files.Count) 個條目, $size MB)" -ForegroundColor Green
+}
+
+function Get-TreeFiles([string]$base, [string]$prefix) {
+    $map = @{}
+    Get-ChildItem $base -Recurse -File | ForEach-Object {
+        $rel = $_.FullName.Substring($base.Length + 1)
+        if ($prefix) { $rel = Join-Path $prefix $rel }
+        $map[$rel] = $_.FullName
+    }
+    return $map
+}
+
+function Build-Pack {
+    $pack = Join-Path $root 'resourcepack'
+    if (-not (Test-Path $pack)) { throw "找不到 resourcepack 資料夾: $pack" }
+    $dist = Join-Path $root 'dist'
+    New-Item -ItemType Directory -Force $dist | Out-Null
+    $zipPath = Join-Path $dist $PackFile
+
+    # 疊層:community 墊底,resourcepack 覆蓋同路徑檔案
+    $files = @{}
+    $community = Join-Path $root 'community'
+    if (Test-Path $community) { $files += Get-TreeFiles $community '' }
+    foreach ($kv in (Get-TreeFiles $pack '').GetEnumerator()) { $files[$kv.Key] = $kv.Value }
+
+    Write-Zip $files $zipPath
     return $zipPath
 }
 
+function Build-Full {
+    $packZip = Build-Pack
+    $dist = Join-Path $root 'dist'
+    $files = @{}
+    $files[$PackFile] = $packZip
+    $files['setup.ps1'] = Join-Path $root 'setup.ps1'
+    $files += Get-TreeFiles (Join-Path $root 'ftbquests') 'ftbquests'
+    $extras = Join-Path $root 'extras'
+    if (Test-Path $extras) { $files += Get-TreeFiles $extras 'extras' }
+    $zipPath = Join-Path $dist $FullFile
+    Write-Zip $files $zipPath
+    return $zipPath
+}
+
+if ($BuildFull) { Build-Full | Out-Null; exit 0 }
 if ($Build) { Build-Pack | Out-Null; exit 0 }
 
 # ---------- 取得檔案(本地優先,否則從 GitHub 下載) ----------
@@ -82,22 +102,22 @@ function Get-PackZip {
 
 function Confirm-QuestFiles {
     if (Test-Path (Join-Path $root 'ftbquests\chapters')) { return $true }
-    Write-Host '本地沒有任務書翻譯檔,從 GitHub 下載 repo…' -ForegroundColor Cyan
-    $tmpZip = Join-Path $env:TEMP 'cte2_zhtw_repo.zip'
-    Invoke-WebRequest -Uri $RepoZipUrl -OutFile $tmpZip -UseBasicParsing
+    Write-Host '本地沒有任務書翻譯檔,從 GitHub Release 下載完整安裝包…' -ForegroundColor Cyan
+    $tmpZip = Join-Path $env:TEMP 'cte2_zhtw_full.zip'
+    Invoke-WebRequest -Uri $FullZipUrl -OutFile $tmpZip -UseBasicParsing
     Add-Type -AssemblyName System.IO.Compression.FileSystem
     $zip = [System.IO.Compression.ZipFile]::OpenRead($tmpZip)
     try {
         foreach ($e in $zip.Entries) {
-            if ($e.FullName -match '^[^/]+/(ftbquests|extras)/(.+)$' -and -not $e.FullName.EndsWith('/')) {
-                $rel = ($Matches[1] + '\' + $Matches[2]).Replace('/', '\')
-                $dst = Join-Path $root $rel
+            $name = $e.FullName.Replace('\', '/')
+            if ($name -match '^(ftbquests|extras)/(.+)$' -and -not $name.EndsWith('/')) {
+                $dst = Join-Path $root ($name.Replace('/', '\'))
                 New-Item -ItemType Directory -Force (Split-Path $dst) | Out-Null
                 [System.IO.Compression.ZipFileExtensions]::ExtractToFile($e, $dst, $true)
             }
         }
     } finally { $zip.Dispose(); Remove-Item $tmpZip -Force -ErrorAction SilentlyContinue }
-    Write-Host '✔ 已下載任務書翻譯與選配檔案' -ForegroundColor Green
+    Write-Host '✔ 已取得任務書翻譯與選配檔案' -ForegroundColor Green
     return (Test-Path (Join-Path $root 'ftbquests\chapters'))
 }
 

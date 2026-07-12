@@ -15,9 +15,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build resource pack
+      - name: Build resource pack and full installer bundle
         shell: pwsh
-        run: ./setup.ps1 -Build
+        run: ./setup.ps1 -BuildFull
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
