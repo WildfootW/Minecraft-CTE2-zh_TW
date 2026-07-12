@@ -167,6 +167,8 @@ CurseForge 更新模組包會重置 `config\ftbquests\quests\`,重跑一次 `set
 
 ## 授權
 
-- 本專案新增之翻譯文本(resourcepack/、ftbquests/)為 Claude(Anthropic)機器翻譯,未經全面人工校對,如有錯漏歡迎開 issue 回報
+- 本專案自產內容(resourcepack/、ftbquests/、extras/、setup.ps1 等)以 [MIT License](LICENSE) 授權
+- 本專案翻譯文本為 Claude(Anthropic)機器翻譯,未經全面人工校對,如有錯漏歡迎開 issue 回報
+- `community/` 內容來自社群譯者(見上方致謝),版權歸原譯者所有,不在 MIT 授權範圍內
 - Craft to Exile 2 及各模組之內容版權歸原作者所有;本 repo 僅含翻譯文本,不含任何模組程式或素材
 - 術語參考:流亡黯道(Path of Exile 台服)、Minecraft 台灣官方譯名
