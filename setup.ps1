@@ -7,8 +7,9 @@ param([switch]$Build, [switch]$BuildFull)
 $ErrorActionPreference = 'Stop'
 $root = $PSScriptRoot
 if (-not $root) { $root = (Get-Location).Path }
-$PackFile = 'CTE2-v1.1.3-zh_tw-WildfootW.zip'
+$PackFile = 'CTE2-v1.1.3-zh_tw.zip'
 $FullFile = 'CTE2-v1.1.3-zh_tw-full.zip'
+$LegacyPackFiles = @('CTE2-v1.1.3-zh_tw-WildfootW.zip', 'CTE2-v1.1.3-zh_tw-claude.zip')
 $BackupDirName = 'quests_backup_original'
 $ReleaseZipUrl = "https://github.com/WildfootW/Minecraft-CTE2-zh_TW/releases/latest/download/$PackFile"
 $FullZipUrl = "https://github.com/WildfootW/Minecraft-CTE2-zh_TW/releases/latest/download/$FullFile"
@@ -124,7 +125,11 @@ function Confirm-QuestFiles {
 # ---------- 工具 ----------
 function Test-GameRunning {
     $p = Get-Process -Name javaw, java -ErrorAction SilentlyContinue | Select-Object -First 1
-    return [bool]$p
+    if ($p) {
+        Write-Host '偵測到 Minecraft 正在執行,請先關閉遊戲再操作!' -ForegroundColor Red
+        return $true
+    }
+    return $false
 }
 
 function Test-CTE2Instance([string]$path) {
@@ -175,48 +180,34 @@ function Select-Instance {
     }
 }
 
-# ---------- 安裝 ----------
-function Install-Translation([string]$inst) {
-    if (Test-GameRunning) {
-        Write-Host '偵測到 Minecraft 正在執行,請先關閉遊戲再安裝!' -ForegroundColor Red
-        return
-    }
-
-    # 1) 資源包
+# ---------- 分項安裝 ----------
+function Install-Pack([string]$inst) {
+    if (Test-GameRunning) { return }
     $zipPath = Get-PackZip
     $resDir = Join-Path $inst 'config\openloader\resources'
     New-Item -ItemType Directory -Force $resDir | Out-Null
+    # 移除舊命名的資源包
+    foreach ($legacy in $LegacyPackFiles) {
+        $old = Join-Path $resDir $legacy
+        if (Test-Path $old) { Remove-Item $old -Force }
+    }
     Copy-Item $zipPath $resDir -Force
     Write-Host "✔ 資源包已放入 $resDir" -ForegroundColor Green
 
-    # 2) 任務書(先備份原檔,只備份一次)
-    if (-not (Confirm-QuestFiles)) {
-        Write-Host '⚠ 無法取得任務書翻譯檔,略過任務書安裝' -ForegroundColor Yellow
-    }
-    $questDir = Join-Path $inst 'config\ftbquests\quests'
-    $backupDir = Join-Path $inst "config\ftbquests\$BackupDirName"
-    if ((Test-Path $questDir) -and (Test-Path (Join-Path $root 'ftbquests\chapters'))) {
-        if (-not (Test-Path $backupDir)) {
-            Copy-Item $questDir $backupDir -Recurse
-            Write-Host "✔ 原版任務書已備份到 $backupDir" -ForegroundColor Green
-        }
-        Copy-Item (Join-Path $root 'ftbquests\chapters\*.snbt') (Join-Path $questDir 'chapters') -Force
-        Copy-Item (Join-Path $root 'ftbquests\reward_tables\*.snbt') (Join-Path $questDir 'reward_tables') -Force
-        Copy-Item (Join-Path $root 'ftbquests\chapter_groups.snbt') $questDir -Force
-        Write-Host '✔ 任務書翻譯已安裝' -ForegroundColor Green
-    } else {
-        Write-Host '⚠ 找不到 config\ftbquests\quests,略過任務書(請先啟動過一次遊戲)' -ForegroundColor Yellow
-    }
-
-    # 3) options.txt:語言 + 啟用資源包
+    # options.txt:語言 + 啟用資源包
     $opt = Join-Path $inst 'options.txt'
     if (Test-Path $opt) {
         $lines = [System.IO.File]::ReadAllLines($opt)
         $entry = '"resources/' + $PackFile + '"'
         for ($i = 0; $i -lt $lines.Count; $i++) {
             if ($lines[$i].StartsWith('lang:')) { $lines[$i] = 'lang:zh_tw' }
-            if ($lines[$i].StartsWith('resourcePacks:') -and ($lines[$i].IndexOf($PackFile) -lt 0)) {
-                $lines[$i] = $lines[$i] -replace '\]$', (',' + $entry + ']')
+            if ($lines[$i].StartsWith('resourcePacks:')) {
+                foreach ($legacy in $LegacyPackFiles) {
+                    $lines[$i] = $lines[$i].Replace(',"resources/' + $legacy + '"', '')
+                }
+                if ($lines[$i].IndexOf($PackFile) -lt 0) {
+                    $lines[$i] = $lines[$i] -replace '\]$', (',' + $entry + ']')
+                }
             }
         }
         [System.IO.File]::WriteAllLines($opt, $lines, (New-Object System.Text.UTF8Encoding($false)))
@@ -224,34 +215,67 @@ function Install-Translation([string]$inst) {
     } else {
         Write-Host '⚠ 找不到 options.txt,請啟動遊戲後手動設定語言並啟用資源包' -ForegroundColor Yellow
     }
+}
 
-    # 4) MineMenu 輪盤(選配)
-    $mmSrc = Join-Path $root 'extras\minemenu\menu.json'
-    $mmDir = Join-Path $inst 'minemenu'
-    if ((Test-Path $mmSrc) -and (Test-Path $mmDir)) {
-        $ans = Read-Host '要一併中文化 H 鍵輪盤選單嗎?(y/N)'
-        if ($ans -match '^[Yy]') {
-            $mmDst = Join-Path $mmDir 'menu.json'
-            if ((Test-Path $mmDst) -and (-not (Test-Path "$mmDst.bak"))) { Copy-Item $mmDst "$mmDst.bak" }
-            Copy-Item $mmSrc $mmDst -Force
-            Write-Host '✔ 輪盤選單已中文化(原檔備份為 menu.json.bak)' -ForegroundColor Green
-        }
+function Install-Quests([string]$inst) {
+    if (Test-GameRunning) { return }
+    if (-not (Confirm-QuestFiles)) {
+        Write-Host '⚠ 無法取得任務書翻譯檔' -ForegroundColor Yellow
+        return
     }
+    $questDir = Join-Path $inst 'config\ftbquests\quests'
+    $backupDir = Join-Path $inst "config\ftbquests\$BackupDirName"
+    if (-not (Test-Path $questDir)) {
+        Write-Host '⚠ 找不到 config\ftbquests\quests(請先啟動過一次遊戲)' -ForegroundColor Yellow
+        return
+    }
+    if (-not (Test-Path $backupDir)) {
+        Copy-Item $questDir $backupDir -Recurse
+        Write-Host "✔ 原版任務書已備份到 $backupDir" -ForegroundColor Green
+    }
+    Copy-Item (Join-Path $root 'ftbquests\chapters\*.snbt') (Join-Path $questDir 'chapters') -Force
+    Copy-Item (Join-Path $root 'ftbquests\reward_tables\*.snbt') (Join-Path $questDir 'reward_tables') -Force
+    Copy-Item (Join-Path $root 'ftbquests\chapter_groups.snbt') $questDir -Force
+    Write-Host '✔ 任務書翻譯已安裝' -ForegroundColor Green
+}
 
+function Install-MineMenu([string]$inst) {
+    if (Test-GameRunning) { return }
+    $mmSrc = Join-Path $root 'extras\minemenu\menu.json'
+    if (-not (Test-Path $mmSrc)) {
+        if (-not (Confirm-QuestFiles)) { Write-Host '⚠ 無法取得輪盤選單檔案' -ForegroundColor Yellow; return }
+    }
+    if (-not (Test-Path $mmSrc)) { Write-Host '⚠ 找不到 extras\minemenu\menu.json' -ForegroundColor Yellow; return }
+    $mmDir = Join-Path $inst 'minemenu'
+    if (-not (Test-Path $mmDir)) {
+        Write-Host '⚠ 實例裡沒有 minemenu 資料夾(請先啟動過一次遊戲)' -ForegroundColor Yellow
+        return
+    }
+    $mmDst = Join-Path $mmDir 'menu.json'
+    if ((Test-Path $mmDst) -and (-not (Test-Path "$mmDst.bak"))) { Copy-Item $mmDst "$mmDst.bak" }
+    Copy-Item $mmSrc $mmDst -Force
+    Write-Host '✔ 輪盤選單已中文化(原檔備份為 menu.json.bak)' -ForegroundColor Green
+}
+
+function Install-All([string]$inst) {
+    Install-Pack $inst
+    Install-Quests $inst
+    $ans = Read-Host '要一併中文化 H 鍵輪盤選單嗎?(y/N)'
+    if ($ans -match '^[Yy]') { Install-MineMenu $inst }
     Write-Host ''
     Write-Host '安裝完成!啟動遊戲即可。' -ForegroundColor Cyan
 }
 
 # ---------- 解除安裝 ----------
 function Uninstall-Translation([string]$inst) {
-    if (Test-GameRunning) {
-        Write-Host '偵測到 Minecraft 正在執行,請先關閉遊戲再解除安裝!' -ForegroundColor Red
-        return
-    }
+    if (Test-GameRunning) { return }
 
-    # 1) 移除資源包
-    $zipDst = Join-Path $inst "config\openloader\resources\$PackFile"
-    if (Test-Path $zipDst) { Remove-Item $zipDst -Force; Write-Host '✔ 資源包已移除' -ForegroundColor Green }
+    # 1) 移除資源包(含舊命名)
+    $resDir = Join-Path $inst 'config\openloader\resources'
+    foreach ($name in (@($PackFile) + $LegacyPackFiles)) {
+        $zipDst = Join-Path $resDir $name
+        if (Test-Path $zipDst) { Remove-Item $zipDst -Force; Write-Host "✔ 已移除 $name" -ForegroundColor Green }
+    }
 
     # 2) 還原任務書
     $questDir = Join-Path $inst 'config\ftbquests\quests'
@@ -269,7 +293,9 @@ function Uninstall-Translation([string]$inst) {
         $lines = [System.IO.File]::ReadAllLines($opt)
         for ($i = 0; $i -lt $lines.Count; $i++) {
             if ($lines[$i].StartsWith('resourcePacks:')) {
-                $lines[$i] = $lines[$i].Replace(',"resources/' + $PackFile + '"', '')
+                foreach ($name in (@($PackFile) + $LegacyPackFiles)) {
+                    $lines[$i] = $lines[$i].Replace(',"resources/' + $name + '"', '')
+                }
             }
         }
         [System.IO.File]::WriteAllLines($opt, $lines, (New-Object System.Text.UTF8Encoding($false)))
@@ -298,17 +324,23 @@ if (-not $instance) { Write-Host '未選擇實例,結束。'; exit 0 }
 while ($true) {
     Write-Host ''
     Write-Host "目前實例: $instance" -ForegroundColor Cyan
-    Write-Host '  [1] 安裝 / 更新翻譯'
-    Write-Host '  [2] 解除安裝翻譯'
-    Write-Host '  [3] 重新建置資源包 zip'
-    Write-Host '  [4] 更換實例'
+    Write-Host '  [1] 完整安裝 / 更新(資源包 + 任務書,可選輪盤)'
+    Write-Host '  [2] 只安裝資源包(物品/介面翻譯)'
+    Write-Host '  [3] 只安裝任務書翻譯'
+    Write-Host '  [4] 只安裝 H 鍵輪盤選單中文化'
+    Write-Host '  [5] 解除安裝全部'
+    Write-Host '  [6] 重新建置資源包 zip'
+    Write-Host '  [7] 更換實例'
     Write-Host '  [0] 離開'
     $choice = Read-Host '請選擇'
     switch ($choice) {
-        '1' { Install-Translation $instance }
-        '2' { Uninstall-Translation $instance }
-        '3' { Build-Pack | Out-Null }
-        '4' { $sel = Select-Instance; if ($sel) { $instance = $sel } }
+        '1' { Install-All $instance }
+        '2' { Install-Pack $instance }
+        '3' { Install-Quests $instance }
+        '4' { Install-MineMenu $instance }
+        '5' { Uninstall-Translation $instance }
+        '6' { Build-Pack | Out-Null }
+        '7' { $sel = Select-Instance; if ($sel) { $instance = $sel } }
         '0' { exit 0 }
         default { Write-Host '無效選項' -ForegroundColor Yellow }
     }

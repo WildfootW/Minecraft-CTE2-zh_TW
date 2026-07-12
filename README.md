@@ -50,9 +50,9 @@ powershell -ExecutionPolicy Bypass -File setup.ps1
 依選單操作,程式會**自動完成全部**:
 
 - 自動偵測 CurseForge 的 CTE2 實例位置(也可手動輸入路徑)
-- 自動從 [Releases](../../releases) 下載資源包、從 repo 下載任務書翻譯
-- 安裝任務書(原版自動備份)、語言設為 zh_tw、啟用資源包
-- 選配:H 鍵輪盤選單中文化
+- 需要的檔案自動從 [Releases](../../releases) 下載
+- 可分項安裝:資源包(物品/介面)、任務書(原版自動備份)、H 鍵輪盤選單
+- 自動把語言設為 zh_tw、啟用資源包
 
 之後想移除,執行同一支程式選「解除安裝」即可全部還原。
 
@@ -72,7 +72,7 @@ C:\Users\<你>\curseforge\minecraft\Instances\Craft to Exile 2
 | 檔案 | 內容 |
 |---|---|
 | `CTE2-v1.1.3-zh_tw-full.zip` | **完整安裝包**:資源包 + 任務書翻譯 + 輪盤選單 + setup.ps1(手動安裝下載這個;解壓後直接跑 setup.ps1 也行) |
-| `CTE2-v1.1.3-zh_tw-WildfootW.zip` | 純資源包(只需要資源包的人用,例如伺服器已裝好任務書的玩家) |
+| `CTE2-v1.1.3-zh_tw.zip` | 純資源包(只需要資源包的人用,例如伺服器已裝好任務書的玩家) |
 
 下載 `full.zip` 並解壓,以下步驟的檔案都從解壓後的資料夾取得。
 
@@ -80,7 +80,7 @@ C:\Users\<你>\curseforge\minecraft\Instances\Craft to Exile 2
 
 ## 步驟 2:放置資源包
 
-把 `CTE2-v1.1.3-zh_tw-WildfootW.zip` 複製到:
+把 `CTE2-v1.1.3-zh_tw.zip` 複製到:
 
 ```
 <實例>\config\openloader\resources\
@@ -109,12 +109,12 @@ C:\Users\<你>\curseforge\minecraft\Instances\Craft to Exile 2
 或直接編輯 `<實例>\options.txt` 的 `resourcePacks:` 行,在陣列**最後**加上(最後 = 最高優先):
 
 ```
-"resources/CTE2-v1.1.3-zh_tw-WildfootW.zip"
+"resources/CTE2-v1.1.3-zh_tw.zip"
 ```
 
 例如:
 ```
-resourcePacks:["vanilla","mod_resources", ... ,"resources/CTE2-v1.1.3-zh_tw-WildfootW.zip"]
+resourcePacks:["vanilla","mod_resources", ... ,"resources/CTE2-v1.1.3-zh_tw.zip"]
 ```
 
 > 編輯 options.txt 前務必先關閉遊戲,否則會被遊戲覆寫。
