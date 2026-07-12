@@ -7,9 +7,9 @@ param([switch]$Build, [switch]$BuildFull)
 $ErrorActionPreference = 'Stop'
 $root = $PSScriptRoot
 if (-not $root) { $root = (Get-Location).Path }
-$PackFile = 'CTE2-v1.1.3-zh_tw.zip'
+$PackFile = 'CTE2-v1.1.3-zh_tw-resourcepack.zip'
 $FullFile = 'CTE2-v1.1.3-zh_tw-full.zip'
-$LegacyPackFiles = @('CTE2-v1.1.3-zh_tw-WildfootW.zip', 'CTE2-v1.1.3-zh_tw-claude.zip')
+$LegacyPackFiles = @('CTE2-v1.1.3-zh_tw.zip', 'CTE2-v1.1.3-zh_tw-WildfootW.zip', 'CTE2-v1.1.3-zh_tw-claude.zip')
 $BackupDirName = 'quests_backup_original'
 $ReleaseZipUrl = "https://github.com/WildfootW/Minecraft-CTE2-zh_TW/releases/latest/download/$PackFile"
 $FullZipUrl = "https://github.com/WildfootW/Minecraft-CTE2-zh_TW/releases/latest/download/$FullFile"

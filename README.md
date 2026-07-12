@@ -72,7 +72,7 @@ C:\Users\<你>\curseforge\minecraft\Instances\Craft to Exile 2
 | 檔案 | 內容 |
 |---|---|
 | `CTE2-v1.1.3-zh_tw-full.zip` | **完整安裝包**:資源包 + 任務書翻譯 + 輪盤選單 + setup.ps1(手動安裝下載這個;解壓後直接跑 setup.ps1 也行) |
-| `CTE2-v1.1.3-zh_tw.zip` | 純資源包(只需要資源包的人用,例如伺服器已裝好任務書的玩家) |
+| `CTE2-v1.1.3-zh_tw-resourcepack.zip` | 純資源包(只需要資源包的人用,例如伺服器已裝好任務書的玩家) |
 
 下載 `full.zip` 並解壓,以下步驟的檔案都從解壓後的資料夾取得。
 
@@ -80,7 +80,7 @@ C:\Users\<你>\curseforge\minecraft\Instances\Craft to Exile 2
 
 ## 步驟 2:放置資源包
 
-把 `CTE2-v1.1.3-zh_tw.zip` 複製到:
+把 `CTE2-v1.1.3-zh_tw-resourcepack.zip` 複製到:
 
 ```
 <實例>\config\openloader\resources\
@@ -109,12 +109,12 @@ C:\Users\<你>\curseforge\minecraft\Instances\Craft to Exile 2
 或直接編輯 `<實例>\options.txt` 的 `resourcePacks:` 行,在陣列**最後**加上(最後 = 最高優先):
 
 ```
-"resources/CTE2-v1.1.3-zh_tw.zip"
+"resources/CTE2-v1.1.3-zh_tw-resourcepack.zip"
 ```
 
 例如:
 ```
-resourcePacks:["vanilla","mod_resources", ... ,"resources/CTE2-v1.1.3-zh_tw.zip"]
+resourcePacks:["vanilla","mod_resources", ... ,"resources/CTE2-v1.1.3-zh_tw-resourcepack.zip"]
 ```
 
 > 編輯 options.txt 前務必先關閉遊戲,否則會被遊戲覆寫。
