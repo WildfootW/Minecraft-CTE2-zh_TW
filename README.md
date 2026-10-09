@@ -42,7 +42,7 @@ setup.ps1       互動式安裝程式(安裝/解除安裝/建置 zip,自動偵�
 不用 clone、不用手動下載任何東西。開一個 PowerShell,執行:
 
 ```powershell
-irm https://raw.githubusercontent.com/WildfootW/Minecraft-CTE2-zh_TW/master/setup.ps1 -OutFile setup.ps1
+irm https://raw.githubusercontent.com/WildfootW/Minecraft-CTE2-zh_TW/v1.1.3/setup.ps1 -OutFile setup.ps1
 powershell -ExecutionPolicy Bypass -File setup.ps1
 ```
 

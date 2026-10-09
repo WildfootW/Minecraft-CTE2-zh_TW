@@ -21,7 +21,7 @@ powershell -ExecutionPolicy Bypass -File setup.ps1 -BuildFull
 powershell -ExecutionPolicy Bypass -File setup.ps1
 ```
 
-`dist/` and `*.zip` are gitignored. CI (`.github/workflows/build.yml`) runs `-BuildFull` on every push to master and attaches the zips to the GitHub Release on `v*` tags, so zips are never committed.
+`dist/` and `*.zip` are gitignored. CI (`.github/workflows/build.yml`) runs `-BuildFull` on every push to the `v1.1.3` branch and attaches the zips to the GitHub Release on `v*` tags, so zips are never committed.
 
 Quick validation after editing translations (no formal tests exist):
 
