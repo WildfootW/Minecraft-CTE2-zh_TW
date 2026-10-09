@@ -1,0 +1,13 @@
+{
+  "Use /locate structure betterjungletemples:jungle_temple instead!": "請使用 /locate structure betterjungletemples:jungle_temple！",
+  "text.autoconfig.betterjungletemples-fabric-1_20.title": "YUNG 的更佳叢林神廟",
+  "text.autoconfig.betterjungletemples-fabric-1_20.option.betterJungleTemples": "YUNG 的更佳叢林神廟",
+  "text.autoconfig.betterjungletemples-fabric-1_20.option.betterJungleTemples.general": "一般設定",
+  "text.autoconfig.betterjungletemples-fabric-1_20.option.betterJungleTemples.general.@Tooltip": "一般設定",
+  "text.autoconfig.betterjungletemples-fabric-1_20.option.betterJungleTemples.compat": "模組相容性",
+  "text.autoconfig.betterjungletemples-fabric-1_20.option.betterJungleTemples.compat.@Tooltip": "模組相容性設定",
+  "text.autoconfig.betterjungletemples-fabric-1_20.option.betterJungleTemples.general.disableVanillaJungleTemples": "停用原版叢林神廟",
+  "text.autoconfig.betterjungletemples-fabric-1_20.option.betterJungleTemples.general.disableVanillaJungleTemples.@Tooltip": "是否停用原版叢林神廟。",
+  "text.autoconfig.betterjungletemples-fabric-1_20.option.betterJungleTemples.compat.pickYourPoisonEnabled": "啟動「選擇你的毒藥」相容性",
+  "text.autoconfig.betterjungletemples-fabric-1_20.option.betterJungleTemples.compat.pickYourPoisonEnabled.@Tooltip": "是否在更佳叢林神廟中生成 PYP 毒箭。"
+}

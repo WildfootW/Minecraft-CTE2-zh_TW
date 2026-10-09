@@ -1,0 +1,6 @@
+{
+  "majruszsaccessories.bonuses.potion_amplifier": "使你製作的非 Mine and Slash 藥水強化 %1$s 級。",
+  "majruszsaccessories.bonuses.potion_duration": "使你製作的非 Mine and Slash 藥水持續時間減少 %1$s。",
+  "majruszsaccessories.boosters.drop_chance": "%1$s使 Majrusz 飾品掉落機率提升 %2$s。",
+  "majruszsaccessories.boosters.experience_bonus": "%1$s使獲得的原版經驗值增加 %2$s。"
+}

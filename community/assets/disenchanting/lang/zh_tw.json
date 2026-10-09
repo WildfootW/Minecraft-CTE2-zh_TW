@@ -1,8 +1,0 @@
-{
-  "_comment": "使用者介面",
-  "block.disenchanting.disenchanter": "卻魔臺",
-  "block.disenchanting.disenchanter.tooltip": "消除你的物品上的附魔並將其放入書本中。",
-  "itemGroup.Disenchanting": "卻魔",
-  "gui.disenchanting.disenchanter.cost": "成本",
-  "tabs.disenchanting.tab": "消咒"
-}

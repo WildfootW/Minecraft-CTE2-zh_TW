@@ -13,16 +13,15 @@ Craft to Exile 2(CTE2)v1.1.3 模組包的完整台灣繁體中文化(繁中機�
 
 翻譯原則:Path of Exile 概念採**流亡黯道(Garena 台服)慣用譯名**(昇華、傳奇、詞綴、通貨、混沌石…),Minecraft 原版詞彙採台灣官方譯名(終界、地獄、苦力怕…),任務書與物品名稱**雙向對齊**(任務叫你拿的東西,名字跟物品顯示一致)。詳細規範見 [docs/](docs/)。
 
-此外,repo 內建了社群翻譯包(見下方[社群翻譯來源](#社群翻譯來源與致謝)),涵蓋其餘 200+ 個一般模組(暮光森林、Botania、家具、村莊結構等),打包後**一個資源包搞定全部**。
+此外,`resourcepack/` 已併入社群翻譯包(見下方[社群翻譯來源](#社群翻譯來源與致謝)),涵蓋其餘 200+ 個一般模組(暮光森林、Botania、家具、村莊結構等),**一個資源包搞定全部**。同一個模組若本專案與社群包都有翻,以本專案的 key 為準、社群包補其餘 key。
 
 ## 目錄結構
 
 ```
-resourcepack/   本專案翻譯原始檔(pack.mcmeta + assets/**/lang/zh_tw.json,63 個模組命名空間)
-community/      內建的社群翻譯包(已依優先序合併,約 770 個 lang 檔 + Patchouli 手冊翻譯)
+resourcepack/   資源包原始檔(pack.mcmeta + assets/**/lang/zh_tw.json,約 830 個模組命名空間;含本專案翻譯與已併入的社群翻譯、Patchouli 手冊翻譯)
 ftbquests/      任務書翻譯(chapters/、reward_tables/、chapter_groups.snbt)
 extras/         選配內容(MineMenu 輪盤選單中文設定檔)
-docs/           翻譯規範、術語表、英中標題對照表(title_map.tsv)
+docs/           翻譯規範、術語表、英中標題對照表(title_map.tsv)、社群包授權文件(community-licenses/)
 setup.ps1       互動式安裝程式(安裝/解除安裝/建置 zip,自動偵測實例位置)
 ```
 
@@ -149,12 +148,12 @@ CurseForge 更新模組包會重置 `config\ftbquests\quests\`,重跑一次 `set
 
 ## 社群翻譯來源與致謝
 
-`community/` 內建的社群翻譯包取自巴哈姆特 Minecraft 板的 CTE2 漢化分享串(依打包時的疊合優先序,由低到高):
+`resourcepack/` 併入的社群翻譯包取自巴哈姆特 Minecraft 板的 CTE2 漢化分享串(併入時的疊合優先序,由低到高;本專案自譯 key 最優先):
 
 | 包 | 說明 |
 |---|---|
 | ModsTranslationPack-1.20.x | 1.20.x 通用模組繁中包(含 Patchouli 手冊翻譯) |
-| ParaTranslationPack-1.20.x | 補充翻譯包(LICENSE 見 [docs/](docs/)) |
+| ParaTranslationPack-1.20.x | 補充翻譯包(LICENSE 見 [docs/community-licenses/](docs/community-licenses/)) |
 | Craft-to-Exile-2-v0.6.2 | CTE2 舊版社群漢化 |
 | Craft-to-Exile-2-v0.9.2-vk | CTE2 舊版社群漢化(vk) |
 | CTE2-v0.9.5-maobing | CTE2 舊版社群漢化(毛餅) |
@@ -167,8 +166,8 @@ CurseForge 更新模組包會重置 `config\ftbquests\quests\`,重跑一次 `set
 
 ## 授權
 
-- 本專案自產內容(resourcepack/、ftbquests/、extras/、setup.ps1 等)以 [MIT License](LICENSE) 授權
+- 本專案自產內容(ftbquests/、extras/、setup.ps1、docs/ 及 resourcepack/ 中由本專案翻譯的部分)以 [MIT License](LICENSE) 授權
 - 本專案翻譯文本為 Claude(Anthropic)機器翻譯,未經全面人工校對,如有錯漏歡迎開 issue 回報
-- `community/` 內容來自社群譯者(見上方致謝),版權歸原譯者所有,不在 MIT 授權範圍內
+- `resourcepack/` 中併入的社群翻譯內容來自社群譯者(見上方致謝),版權歸原譯者所有,不在 MIT 授權範圍內;各社群包的授權文件保存在 [docs/community-licenses/](docs/community-licenses/)
 - Craft to Exile 2 及各模組之內容版權歸原作者所有;本 repo 僅含翻譯文本,不含任何模組程式或素材
 - 術語參考:流亡黯道(Path of Exile 台服)、Minecraft 台灣官方譯名

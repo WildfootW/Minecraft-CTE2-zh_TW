@@ -1,0 +1,9 @@
+{
+  "embeddium.conflicting_mod": "Embeddium 檢測到已知會造成顯示問題／導致崩潰的模組。建議解除安裝這些模組。請參閱以下清單。",
+  "embeddium.conflicting_mod_list": "[{2}]",
+  "embeddium.search_bar_empty": "搜尋選項...",
+  "embeddium.options.added_by_mod_string": "由模組新增：%s",
+  "embeddium.options.fullscreen.resolution.tooltip": "控制遊戲在全螢幕模式下的解析度。",
+  "embeddium.options.use_quad_normals_for_lighting.name": "使用精確四邊形著色",
+  "embeddium.options.use_quad_normals_for_lighting.tooltip": "啟用後，Embeddium 會根據非原版方塊面實際朝向的方向（而非對齊座標軸的方向）來套用著色。當 Forge 實驗性光照管線停用時（建議停用以獲得最佳效能），這可以改善光照品質。\n\n若已啟用實驗性光照管線，則此選項無效。"
+}

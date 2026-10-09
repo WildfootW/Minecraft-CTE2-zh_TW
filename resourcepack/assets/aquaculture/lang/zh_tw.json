@@ -1,0 +1,20 @@
+{
+  "entity.aquaculture.water_arrow": "箭矢",
+  "aquaculture.subtitles.tackle_box_open": "釣具箱開啟",
+  "aquaculture.subtitles.tackle_box_close": "釣具箱關閉",
+  "aquaculture.subtitles.worm_farm_empty": "蚯蚓農場清空",
+  "aquaculture.subtitles.fish_mount_removed": "魚從魚類展示架上取下",
+  "aquaculture.subtitles.fish_mount_broken": "魚類展示架損壞",
+  "aquaculture.subtitles.fish_mount_placed": "魚類展示架已放置",
+  "aquaculture.subtitles.fish_mount_add_item": "魚被掛到魚類展示架上",
+  "aquaculture.subtitles.bobber_bait": "餌用完了",
+  "aquaculture.subtitles.bobber_note_catch": "魚接近魚鉤",
+  "aquaculture.subtitles.bobber_land_lava": "魚鉤落在熔岩上",
+  "aquaculture.subtitles.jellyfish_flop": "水母拍動",
+  "aquaculture.subtitles.fish_ambient": "魚游動",
+  "aquaculture.subtitles.fish_death": "魚死亡",
+  "aquaculture.subtitles.fish_flop": "魚拍動",
+  "aquaculture.subtitles.fish_hurt": "魚受傷",
+  "aquaculture.subtitles.fish_collide": "魚碰撞",
+  "aquaculture.subtitles.bottle_open": "瓶子破裂"
+}

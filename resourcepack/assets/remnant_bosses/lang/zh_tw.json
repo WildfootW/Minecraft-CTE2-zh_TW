@@ -54,5 +54,6 @@
   "key.remnant_bosses.throw_shuriken_key_bind": "投擲手裏劍按鍵",
   "key.remnant_ossukage.throw_shuriken_key_bind": "投擲手裏劍按鍵",
   "key.categories.remnant": "遺骸",
-  "item.remnant_ossukage.ossukage_sword.description_10": "§6不會損壞"
+  "item.remnant_ossukage.ossukage_sword.description_10": "§6不會損壞",
+  "block.remnant_bosses.ancient_ruin_block": "遠古遺跡方塊"
 }

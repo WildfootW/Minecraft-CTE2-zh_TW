@@ -97,8 +97,33 @@
   "tag.mine_and_meals.strange1_3": "奇異 Ⅰ",
   "tag.mine_and_meals.strange2_1": "奇異 Ⅱ",
   "tag.mine_and_meals.strange2_2": "奇異 Ⅱ",
-
-
-  "attribute.name.mine_and_meals.grain1_max_health": "穀物最大生命值加成"
-
+  "attribute.name.mine_and_meals.grain1_max_health": "穀物最大生命值加成",
+  "effect.mine_and_meals.dairy_2.description": "能量回復+（百分比）",
+  "effect.mine_and_meals.dairy_1.description": "能量回復（百分比）",
+  "effect.mine_and_meals.tea_2.description": "暴擊（固定值）",
+  "effect.mine_and_meals.tea_1.description": "暴擊+（固定值）",
+  "effect.mine_and_meals.sugar_1.description": "物品尋獲（固定值）",
+  "effect.mine_and_meals.sugar_2.description": "物品尋獲+（固定值）",
+  "effect.mine_and_meals.strange_1.description": "混沌傷害（固定值）",
+  "effect.mine_and_meals.strange_2.description": "混沌傷害+（固定值）",
+  "effect.mine_and_meals.ice_1.description": "冰冷傷害（固定值）",
+  "effect.mine_and_meals.ice_2.description": "冰冷傷害+（固定值）",
+  "effect.mine_and_meals.alcohol_1.description": "經驗值獲取（固定值）",
+  "effect.mine_and_meals.alcohol_2.description": "經驗值獲取+（固定值）",
+  "effect.mine_and_meals.fruit_2.description": "魔力回復+（百分比）",
+  "effect.mine_and_meals.fruit_1.description": "魔力回復（百分比）",
+  "effect.mine_and_meals.meat_2.description": "生命回復+（百分比）",
+  "effect.mine_and_meals.meat_1.description": "生命回復（百分比）",
+  "effect.mine_and_meals.grain_2.description": "生命+（百分比）",
+  "effect.mine_and_meals.grain_1.description": "生命（百分比）",
+  "effect.mine_and_meals.fish_1.description": "能量（百分比）",
+  "effect.mine_and_meals.fish_2.description": "能量+（百分比）",
+  "effect.mine_and_meals.vegetable_1.description": "魔力（百分比）",
+  "effect.mine_and_meals.vegetable_2.description": "魔力+（百分比）",
+  "effect.mine_and_meals.spice_2.description": "火焰傷害+（固定值）",
+  "effect.mine_and_meals.spice_1.description": "火焰傷害（固定值）",
+  "effect.mine_and_meals.sparkling_2.description": "閃電傷害+（固定值）",
+  "effect.mine_and_meals.sparkling_1.description": "閃電傷害（固定值）",
+  "effect.mine_and_meals.fried_2.description": "物理傷害+（固定值）",
+  "effect.mine_and_meals.fried_1.description": "物理傷害（固定值）"
 }

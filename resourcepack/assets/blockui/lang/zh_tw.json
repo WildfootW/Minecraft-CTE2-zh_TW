@@ -1,0 +1,6 @@
+{
+  "blockui.container_gui.client_side_only": "容器內容物僅在遊玩整合伺服器時可見（單人遊戲，未公開至區域網）。",
+  "blockui.container_gui.empty": "該容器為空。",
+  "blockui.tooltip.item_additional_info": "按住 %s 以顯示更多資訊",
+  "blockui.tooltip.properties": "方塊狀態屬性："
+}

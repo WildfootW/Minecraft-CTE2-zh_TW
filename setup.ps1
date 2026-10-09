@@ -56,14 +56,7 @@ function Build-Pack {
     $dist = Join-Path $root 'dist'
     New-Item -ItemType Directory -Force $dist | Out-Null
     $zipPath = Join-Path $dist $PackFile
-
-    # 疊層:community 墊底,resourcepack 覆蓋同路徑檔案
-    $files = @{}
-    $community = Join-Path $root 'community'
-    if (Test-Path $community) { $files += Get-TreeFiles $community '' }
-    foreach ($kv in (Get-TreeFiles $pack '').GetEnumerator()) { $files[$kv.Key] = $kv.Value }
-
-    Write-Zip $files $zipPath
+    Write-Zip (Get-TreeFiles $pack '') $zipPath
     return $zipPath
 }
 

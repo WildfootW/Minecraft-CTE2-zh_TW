@@ -1,0 +1,7 @@
+{
+  "text.skinlayers.tab.player": "玩家",
+  "text.skinlayers.tab.heads": "玩家頭顱",
+  "text.skinlayers.tab.other": "其他設定",
+  "text.skinlayers.irisCompatibilityMode.enable": "Iris 相容模式",
+  "text.skinlayers.irisCompatibilityMode.enable.tooltip": "另一種渲染皮膚層的方式，可修正使用 Iris 光影時出現的奇怪陰影／顏色。請僅在需要時啟用此設定。會破壞轉角處的連接。"
+}

@@ -1,6 +1,0 @@
-{
-  "block.globalxp.xp_block": "經驗方塊",
-  "info.globalxp.levels": "已保存 %s 級",
-  "info.globalxp.xp": "已保存 %s 經驗值",
-  "config.jade.plugin_globalxp.display": "顯示經驗資訊"
-}

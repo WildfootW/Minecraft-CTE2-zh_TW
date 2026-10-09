@@ -1,0 +1,16 @@
+{
+  "fml.menu.mods.filter_updates": "僅顯示可更新的模組",
+  "catalogue.gui.no_selection": "尚未選取模組...",
+  "catalogue.gui.info": "本選單由《Catalogue》重新設計。\n點擊此處開啟模組的 CurseForge 頁面！",
+  "catalogue.gui.internal_libraries": "顯示內部函式庫",
+  "catalogue.gui.mod_list": "模組",
+  "catalogue.gui.search": "搜尋",
+  "catalogue.gui.config": "設定",
+  "catalogue.gui.open_mods_folder": "開啟模組資料夾",
+  "catalogue.gui.licenses": "授權：%s",
+  "catalogue.gui.authors": "作者：%s",
+  "catalogue.gui.contributors": "貢獻者：%s",
+  "catalogue.gui.credits": "致謝：%s",
+  "catalogue.gui.version": "版本：%s",
+  "catalogue.gui.update_available": "更新：%s"
+}

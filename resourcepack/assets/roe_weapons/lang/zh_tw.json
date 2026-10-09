@@ -248,5 +248,7 @@
   "item.roe_weapons.bow_5_pulling_2": "弓 0",
   "item.roe_weapons.crossbow_3_charged": "稀有弩",
   "enchantment.roe_weapons.lightning_strike": "閃電打擊",
-  "enchantment.roe_weapons.lightning_strike.desc": "使用戰鎚時,有機率以閃電打擊敵人"
+  "enchantment.roe_weapons.lightning_strike.desc": "使用戰鎚時,有機率以閃電打擊敵人",
+  "item.roe_weapons.buster_greatsword": "斬擊大劍",
+  "item.roe_weapons.gauntletkatar": "卡塔劍"
 }

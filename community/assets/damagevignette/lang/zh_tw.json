@@ -1,6 +1,0 @@
-{
-  "config.damagevignette.enabled": "啟動傷害暗角",
-  "config.damagevignette.highthreshold": "高健康上限（最小強度）%",
-  "config.damagevignette.lowthreshold": "低健康上限（最大強度）%",
-  "config.damagevignette.title": "傷害暗角設定"
-}
